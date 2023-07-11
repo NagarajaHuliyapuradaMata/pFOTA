@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23.2)
+cmake_minimum_required(VERSION 3.25.3)
 
 project(
    pFOTA_R2024
@@ -21,6 +21,7 @@ add_definitions(
 add_executable(
    pFOTA_R2024
 
+   ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgSwcServiceStartUp.c
    ${PROJECT_SOURCE_DIR}/source/SwcServiceStartUp/SwcServiceStartUp.c
    ${PROJECT_SOURCE_DIR}/source/LibAutosar/LibAutosar_StateMachine.c
    ${PROJECT_SOURCE_DIR}/source/wrappers/wrappers.c
@@ -31,6 +32,7 @@ target_include_directories(
    "${PROJECT_SOURCE_DIR}/source/wrappers"
    "${PROJECT_SOURCE_DIR}/source/common"
    "${PROJECT_SOURCE_DIR}/source/LibAutosar"
+   "${PROJECT_SOURCE_DIR}/source/ProjectCfg"
    "${PROJECT_SOURCE_DIR}/source/SwcServiceStartUp"
 )
 
