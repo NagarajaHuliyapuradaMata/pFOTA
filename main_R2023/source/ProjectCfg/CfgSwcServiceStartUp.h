@@ -24,6 +24,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "CompilerCfg_SwcServiceStartUp.h"
 #include "LibAutosar_StateMachine.h"
 
 /******************************************************************************/
@@ -42,7 +43,7 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
-extern const Type_LibAutosarStateMachine_stInfoState CfgSwcServiceStartUp_castTableMachineStates[CfgSwcServiceStartUp_dNumMachineStates];
+extern CONST(Type_LibAutosarStateMachine_stInfoState, SWCSERVICESTARTUP_CONFIG_DATA) CfgSwcServiceStartUp_castTableMachineStates[CfgSwcServiceStartUp_dNumMachineStates];
 
 /******************************************************************************/
 /* PARAMS                                                                     */

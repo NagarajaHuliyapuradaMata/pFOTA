@@ -22,17 +22,24 @@ add_executable(
    pFOTA_R2024
 
    ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgSwcServiceStartUp.c
+   ${PROJECT_SOURCE_DIR}/source/McalMcu/McalMcu.c
+   ${PROJECT_SOURCE_DIR}/source/SwcApplStartUp/SwcApplStartUp.c
+   ${PROJECT_SOURCE_DIR}/source/SwcServiceDet/SwcServiceDet.c
    ${PROJECT_SOURCE_DIR}/source/SwcServiceStartUp/SwcServiceStartUp.c
-   ${PROJECT_SOURCE_DIR}/source/LibAutosar/LibAutosar_StateMachine.c
    ${PROJECT_SOURCE_DIR}/source/wrappers/wrappers.c
+   ${PROJECT_SOURCE_DIR}/source/LibAutosar/LibAutosar_StateMachine.c
 )
 
 target_include_directories(
    pFOTA_R2024 PUBLIC
-   "${PROJECT_SOURCE_DIR}/source/wrappers"
    "${PROJECT_SOURCE_DIR}/source/common"
-   "${PROJECT_SOURCE_DIR}/source/LibAutosar"
+   "${PROJECT_SOURCE_DIR}/source/ProjectCompiler"
    "${PROJECT_SOURCE_DIR}/source/ProjectCfg"
+   "${PROJECT_SOURCE_DIR}/source/LibAutosar"
+   "${PROJECT_SOURCE_DIR}/source/McalMcu"
+   "${PROJECT_SOURCE_DIR}/source/SwcServiceDet"
+   "${PROJECT_SOURCE_DIR}/source/SwcApplStartUp"
    "${PROJECT_SOURCE_DIR}/source/SwcServiceStartUp"
+   "${PROJECT_SOURCE_DIR}/source/wrappers"
 )
 

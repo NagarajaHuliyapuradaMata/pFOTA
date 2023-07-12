@@ -27,8 +27,7 @@
 
 #include "CfgSwcServiceStartUp.h"
 
-#include "SwcServiceStartUp.h" //TBD: Move to Det
-#include "LibAutosar.h"
+#include "infSwcApplStartUpCfgSwcServiceStartUp.h"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -74,171 +73,146 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallFailsafeUpdater_Entry             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUp_Entry           (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpInitCmac_Entry   (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpInitKey_Entry    (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpStayInBoot_Entry (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallTarget_Entry                      (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckApplStartFlag                    (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckKeyAvailability                  (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckReprogFlag                       (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckReprogLbt                        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpLbt             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpMacErased       (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpValidity        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpVerification    (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventDefault                               (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFail_Entry                            (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFailsafeUpdaterCheck                  (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFailsafeUpdaterSearchInit             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFailsafeUpdaterSearchNext             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventInit_Entry                            (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventPowerOn_Entry                         (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventTargetCheck                           (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventTargetListInit                        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventTargetListNext                        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent);
-
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCallFailsafeUpdater[CfgSwcServiceStartUp_dNumEventsMachineStateCallFailsafeUpdater] = {
-      {SwcServiceStartUp_eHandlerEventCallFailsafeUpdater_Entry,             LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCallFailsafeUpdater[CfgSwcServiceStartUp_dNumEventsMachineStateCallFailsafeUpdater] = {
+      {SwcApplStartUp_eHandlerEventCallFailsafeUpdater_Entry,             LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUp[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUp] = {
-      {SwcServiceStartUp_eHandlerEventCallSwcServiceStartUp_Entry,           LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUp[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUp] = {
+      {SwcApplStartUp_eHandlerEventCallSwcServiceStartUp_Entry,           LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpInitCmac[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpInitCmac] = {
-      {SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpInitCmac_Entry,   LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpInitCmac[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpInitCmac] = {
+      {SwcApplStartUp_eHandlerEventCallSwcServiceStartUpInitCmac_Entry,   LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpInitKey[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpInitKey] = {
-      {SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpInitKey_Entry,    LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpInitKey[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpInitKey] = {
+      {SwcApplStartUp_eHandlerEventCallSwcServiceStartUpInitKey_Entry,    LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpStayInBoot[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpStayInBoot] = {
-      {SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpStayInBoot_Entry, LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpStayInBoot[CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpStayInBoot] = {
+      {SwcApplStartUp_eHandlerEventCallSwcServiceStartUpStayInBoot_Entry, LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCallTarget[CfgSwcServiceStartUp_dNumEventsMachineStateCallTarget] = {
-      {SwcServiceStartUp_eHandlerEventCallTarget_Entry,                      LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCallTarget[CfgSwcServiceStartUp_dNumEventsMachineStateCallTarget] = {
+      {SwcApplStartUp_eHandlerEventCallTarget_Entry,                      LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckApplStartFlag[CfgSwcServiceStartUp_dNumEventsMachineStateCheckApplStartFlag] = {
-      {SwcServiceStartUp_eHandlerEventCheckApplStartFlag,                    LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpLbt}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerificationStayInBoot}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckApplStartFlag[CfgSwcServiceStartUp_dNumEventsMachineStateCheckApplStartFlag] = {
+      {SwcApplStartUp_eHandlerEventCheckApplStartFlag,                    LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpLbt}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerificationStayInBoot}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckKeyAvailability[CfgSwcServiceStartUp_dNumEventsMachineStateCheckKeyAvailability] = {
-      {SwcServiceStartUp_eHandlerEventCheckKeyAvailability,                  LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateInitSwcServiceStartUpMacEnabled}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUpInitKey}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckKeyAvailability[CfgSwcServiceStartUp_dNumEventsMachineStateCheckKeyAvailability] = {
+      {SwcApplStartUp_eHandlerEventCheckKeyAvailability,                  LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateInitSwcServiceStartUpMacEnabled}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUpInitKey}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckReprogFlag[CfgSwcServiceStartUp_dNumEventsMachineStateCheckReprogFlag] = {
-      {SwcServiceStartUp_eHandlerEventCheckReprogFlag,                       LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerification}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateStayInBootEnabled}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckReprogFlag[CfgSwcServiceStartUp_dNumEventsMachineStateCheckReprogFlag] = {
+      {SwcApplStartUp_eHandlerEventCheckReprogFlag,                       LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerification}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateStayInBootEnabled}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckReprogLbt[CfgSwcServiceStartUp_dNumEventsMachineStateCheckReprogLbt] = {
-      {SwcServiceStartUp_eHandlerEventCheckReprogLbt,                        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetListInit}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerification}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckReprogLbt[CfgSwcServiceStartUp_dNumEventsMachineStateCheckReprogLbt] = {
+      {SwcApplStartUp_eHandlerEventCheckReprogLbt,                        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetListInit}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerification}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpLbt[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpLbt] = {
-      {SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpLbt,             LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateReprogLbtEnabled}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpLbt[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpLbt] = {
+      {SwcApplStartUp_eHandlerEventCheckSwcServiceStartUpLbt,             LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateReprogLbtEnabled}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpMacErased[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpMacErased] = {
-      {SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpMacErased,       LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUpInitCmac}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckReprogFlag}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpMacErased[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpMacErased] = {
+      {SwcApplStartUp_eHandlerEventCheckSwcServiceStartUpMacErased,       LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUpInitCmac}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckReprogFlag}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpValidity[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpValidity] = {
-      {SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpValidity,        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateSecureBootEnabled}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterEnabled}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpValidity[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpValidity] = {
+      {SwcApplStartUp_eHandlerEventCheckSwcServiceStartUpValidity,        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateSecureBootEnabled}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterEnabled}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpVerification[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpVerification] = {
-      {SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpVerification,    LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUp}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpVerification[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpVerification] = {
+      {SwcApplStartUp_eHandlerEventCheckSwcServiceStartUpVerification,    LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUp}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpVerificationStayInBoot[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpVerificationStayInBoot] = {
-      {SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpVerification,    LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUpStayInBoot}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateCheckSwcServiceStartUpVerificationStayInBoot[CfgSwcServiceStartUp_dNumEventsMachineStateCheckSwcServiceStartUpVerificationStayInBoot] = {
+      {SwcApplStartUp_eHandlerEventCheckSwcServiceStartUpVerification,    LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallSwcServiceStartUpStayInBoot}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateFail[CfgSwcServiceStartUp_dNumEventsMachineStateFail] = {
-      {SwcServiceStartUp_eHandlerEventFail_Entry,                            LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateFail[CfgSwcServiceStartUp_dNumEventsMachineStateFail] = {
+      {SwcApplStartUp_eHandlerEventFail_Entry,                            LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterCheck[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterCheck] = {
-      {SwcServiceStartUp_eHandlerEventFailsafeUpdaterCheck,                  LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallFailsafeUpdater}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterSearchNext},
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterCheck[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterCheck] = {
+      {SwcApplStartUp_eHandlerEventFailsafeUpdaterCheck,                  LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallFailsafeUpdater}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterSearchNext},
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterEnabled] = {
-      {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateFailsafeUpdaterSearchInit}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterEnabled] = {
+      {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateFailsafeUpdaterSearchInit}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterSearchInit[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterSearchInit] = {
-      {SwcServiceStartUp_eHandlerEventFailsafeUpdaterSearchInit,             LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterCheck}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterSearchInit[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterSearchInit] = {
+      {SwcApplStartUp_eHandlerEventFailsafeUpdaterSearchInit,             LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterCheck}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterSearchNext[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterSearchNext] = {
-      {SwcServiceStartUp_eHandlerEventFailsafeUpdaterSearchNext,             LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterCheck}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateFailsafeUpdaterSearchNext[CfgSwcServiceStartUp_dNumEventsMachineStateFailsafeUpdaterSearchNext] = {
+      {SwcApplStartUp_eHandlerEventFailsafeUpdaterSearchNext,             LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFailsafeUpdaterCheck}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateInit[CfgSwcServiceStartUp_dNumEventsMachineStateInit] = {
-      {SwcServiceStartUp_eHandlerEventInit_Entry,                            LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpValidity}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateInit[CfgSwcServiceStartUp_dNumEventsMachineStateInit] = {
+      {SwcApplStartUp_eHandlerEventInit_Entry,                            LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpValidity}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateInitSwcServiceStartUpMacEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateInitSwcServiceStartUpMacEnabled] = {
-      {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckSwcServiceStartUpMacErased}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateInitSwcServiceStartUpMacEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateInitSwcServiceStartUpMacEnabled] = {
+      {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckSwcServiceStartUpMacErased}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStatePowerOn[CfgSwcServiceStartUp_dNumEventsMachineStatePowerOn] = {
-      {SwcServiceStartUp_eHandlerEventPowerOn_Entry,                         LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateInit}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStatePowerOn[CfgSwcServiceStartUp_dNumEventsMachineStatePowerOn] = {
+      {SwcApplStartUp_eHandlerEventPowerOn_Entry,                         LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_dStateDefault}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateInit}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateReprogLbtEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateReprogLbtEnabled] = {
-      {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckReprogLbt}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateReprogLbtEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateReprogLbtEnabled] = {
+      {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckReprogLbt}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateSecureBootEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateSecureBootEnabled] = {
-      {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckKeyAvailability}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateSecureBootEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateSecureBootEnabled] = {
+      {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckKeyAvailability}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateStayInBootEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateStayInBootEnabled] = {
-      {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckApplStartFlag}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateStayInBootEnabled[CfgSwcServiceStartUp_dNumEventsMachineStateStayInBootEnabled] = {
+      {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventEntry,    LibAutosarStateMachine_eStateCheckApplStartFlag}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateTargetCheck[CfgSwcServiceStartUp_dNumEventsMachineStateTargetCheck] = {
-      {SwcServiceStartUp_eHandlerEventTargetCheck,                           LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallTarget}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetListNext}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateTargetCheck[CfgSwcServiceStartUp_dNumEventsMachineStateTargetCheck] = {
+      {SwcApplStartUp_eHandlerEventTargetCheck,                           LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCallTarget}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetListNext}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateTargetListInit[CfgSwcServiceStartUp_dNumEventsMachineStateTargetListInit] = {
-      {SwcServiceStartUp_eHandlerEventTargetListInit,                        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetCheck}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateTargetListInit[CfgSwcServiceStartUp_dNumEventsMachineStateTargetListInit] = {
+      {SwcApplStartUp_eHandlerEventTargetListInit,                        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetCheck}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateFail}
 };
 
-static const Type_LibAutosarStateMachine_stInfoEvent SwcServiceStartUp_astTableInfoEventMachineStateTargetListNext[CfgSwcServiceStartUp_dNumEventsMachineStateTargetListNext] = {
-      {SwcServiceStartUp_eHandlerEventTargetListNext,                        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetCheck}
-   ,  {SwcServiceStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerification}
+static CONST(Type_LibAutosarStateMachine_stInfoEvent, SWCSERVICESTARTUP_CONFIG_DATA) SwcServiceStartUp_astTableInfoEventMachineStateTargetListNext[CfgSwcServiceStartUp_dNumEventsMachineStateTargetListNext] = {
+      {SwcApplStartUp_eHandlerEventTargetListNext,                        LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateTargetCheck}
+   ,  {SwcApplStartUp_eHandlerEventDefault,                               LibAutosarStateMachine_eEventContinue, LibAutosarStateMachine_eStateCheckSwcServiceStartUpVerification}
 };
 
-const Type_LibAutosarStateMachine_stInfoState CfgSwcServiceStartUp_castTableMachineStates[CfgSwcServiceStartUp_dNumMachineStates] = {
+CONST(Type_LibAutosarStateMachine_stInfoState, SWCSERVICESTARTUP_CONFIG_DATA) CfgSwcServiceStartUp_castTableMachineStates[CfgSwcServiceStartUp_dNumMachineStates] = {
       {CfgSwcServiceStartUp_dNumEventsMachineStateCallFailsafeUpdater,                          SwcServiceStartUp_astTableInfoEventMachineStateCallFailsafeUpdater,                          LibAutosarStateMachine_dStateDefault}
    ,  {CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUp,                        SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUp,                        LibAutosarStateMachine_dStateDefault}
    ,  {CfgSwcServiceStartUp_dNumEventsMachineStateCallSwcServiceStartUpInitCmac,                SwcServiceStartUp_astTableInfoEventMachineStateCallSwcServiceStartUpInitCmac,                LibAutosarStateMachine_dStateDefault}
@@ -277,47 +251,10 @@ const Type_LibAutosarStateMachine_stInfoState CfgSwcServiceStartUp_castTableMach
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-Type_SwcServiceStartUp_eError SwcServiceStartUp_eError; //TBD: Move to Det
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallFailsafeUpdater_Entry             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUp_Entry           (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpInitCmac_Entry   (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpInitKey_Entry    (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallSwcServiceStartUpStayInBoot_Entry (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCallTarget_Entry                      (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckApplStartFlag                    (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckKeyAvailability                  (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckReprogFlag                       (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckReprogLbt                        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpLbt             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpMacErased       (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpValidity        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventCheckSwcServiceStartUpVerification    (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventDefault                               (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFail_Entry                            (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFailsafeUpdaterCheck                  (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFailsafeUpdaterSearchInit             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventFailsafeUpdaterSearchNext             (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventInit_Entry                            (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventPowerOn_Entry(
-      Type_LibAutosarStateMachine_tptrContext const ctptrContext
-   ,  Type_LibAutosarStateMachine_eEvent            leEvent
-){
-   UNUSED(ctptrContext);
-   UNUSED(leEvent);
-
-   SwcServiceStartUp_eError = SwcServiceStartUp_eError_None;
-
-   return LibAutosarStateMachine_eGaurdTrue;
-}
-
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventTargetCheck                           (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventTargetListInit                        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
-static Type_LibAutosarStateMachine_eGaurd SwcServiceStartUp_eHandlerEventTargetListNext                        (Type_LibAutosarStateMachine_tptrContext const ctptrContext, Type_LibAutosarStateMachine_eEvent leEvent){UNUSED(ctptrContext); UNUSED(leEvent); return LibAutosarStateMachine_eGaurdTrue;}
 
 /******************************************************************************/
 /* EOF                                                                        */
