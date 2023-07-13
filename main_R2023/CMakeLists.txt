@@ -37,8 +37,9 @@ target_include_directories(
    "${PROJECT_SOURCE_DIR}/source/ProjectCfg"
    "${PROJECT_SOURCE_DIR}/source/LibAutosar"
    "${PROJECT_SOURCE_DIR}/source/McalMcu"
-   "${PROJECT_SOURCE_DIR}/source/SwcServiceDet"
    "${PROJECT_SOURCE_DIR}/source/SwcApplStartUp"
+   "${PROJECT_SOURCE_DIR}/source/SwcServiceDet"
+   "${PROJECT_SOURCE_DIR}/source/SwcServiceOs"
    "${PROJECT_SOURCE_DIR}/source/SwcServiceStartUp"
    "${PROJECT_SOURCE_DIR}/source/wrappers"
 )
