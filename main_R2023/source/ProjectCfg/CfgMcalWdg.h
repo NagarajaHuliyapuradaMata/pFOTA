@@ -1,6 +1,7 @@
-#pragma once
+#ifndef _CFGMCALWDG_H
+#define _CFGMCALWDG_H
 /******************************************************************************/
-/* File   : CfgSwcServiceStartUp.h                                            */
+/* File   : CfgMcalWdg.h                                                      */
 /*                                                                            */
 /* Author : Raajnaag HULIYAPURADA MATA                                        */
 /*                                                                            */
@@ -24,16 +25,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "CompilerCfg_SwcServiceStartUp.h"
-#include "Types_SwcServiceStartUp.h"
-
-#include "LibAutosar_StateMachine.h"
+#include "CompilerCfg_McalWdg.h"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define CfgSwcServiceStartUp_dNumMachineStates                                29
-#define CfgSwcServiceStartUp_dAddressHeader                         0x00000300uL
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -46,8 +42,6 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
-extern CONST(Type_LibAutosarStateMachine_stInfoState, SWCSERVICESTARTUP_CONFIG_DATA) CfgSwcServiceStartUp_castTableMachineStates[CfgSwcServiceStartUp_dNumMachineStates];
-extern CONST(Type_SwcServiceStartUp_stHeader,         SWCSERVICESTARTUP_CONFIG_DATA) CfgSwcServiceStartUp_cstHeader;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
@@ -64,4 +58,4 @@ extern CONST(Type_SwcServiceStartUp_stHeader,         SWCSERVICESTARTUP_CONFIG_D
 /******************************************************************************/
 /* EOF                                                                        */
 /******************************************************************************/
-
+#endif

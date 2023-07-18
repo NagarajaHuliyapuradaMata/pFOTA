@@ -23,6 +23,7 @@ add_executable(
 
    ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgSwcServiceStartUp.c
    ${PROJECT_SOURCE_DIR}/source/McalMcu/McalMcu.c
+   ${PROJECT_SOURCE_DIR}/source/McalWdg/McalWdg.c
    ${PROJECT_SOURCE_DIR}/source/SwcApplStartUp/SwcApplStartUp.c
    ${PROJECT_SOURCE_DIR}/source/SwcServiceDet/SwcServiceDet.c
    ${PROJECT_SOURCE_DIR}/source/SwcServiceStartUp/SwcServiceStartUp.c
@@ -37,6 +38,7 @@ target_include_directories(
    "${PROJECT_SOURCE_DIR}/source/ProjectCfg"
    "${PROJECT_SOURCE_DIR}/source/LibAutosar"
    "${PROJECT_SOURCE_DIR}/source/McalMcu"
+   "${PROJECT_SOURCE_DIR}/source/McalWdg"
    "${PROJECT_SOURCE_DIR}/source/SwcApplStartUp"
    "${PROJECT_SOURCE_DIR}/source/SwcServiceDet"
    "${PROJECT_SOURCE_DIR}/source/SwcServiceOs"

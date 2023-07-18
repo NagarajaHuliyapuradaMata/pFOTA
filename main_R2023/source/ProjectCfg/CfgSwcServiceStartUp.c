@@ -244,6 +244,19 @@ CONST(Type_LibAutosarStateMachine_stInfoState, SWCSERVICESTARTUP_CONFIG_DATA) Cf
    ,  {CfgSwcServiceStartUp_dNumEventsMachineStateTargetListNext,                               SwcServiceStartUp_astTableInfoEventMachineStateTargetListNext,                               LibAutosarStateMachine_dStateDefault}
 };
 
+extern void main_vBoot(void);
+extern void main_vAppl(void);
+CONST(Type_SwcServiceStartUp_stHeader, SWCSERVICESTARTUP_CONFIG_DATA) CfgSwcServiceStartUp_cstHeader = {
+      0x05ECB007u
+   ,  0x0001u
+   ,  0x0000u
+   ,  0x00000360uL
+   ,  (SwcServiceStartUp_tvfptr) main_vBoot
+   ,  (SwcServiceStartUp_tvfptr) main_vAppl
+   ,  0u
+   ,  0xCEC41160u
+};
+
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
