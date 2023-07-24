@@ -22,7 +22,9 @@ add_executable(
    pFOTA_R2024
 
    ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgSwcServiceStartUp.c
+   ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgMcalFls.c
    ${PROJECT_SOURCE_DIR}/source/McalMcu/McalMcu.c
+   ${PROJECT_SOURCE_DIR}/source/McalFls/McalFls.c
    ${PROJECT_SOURCE_DIR}/source/McalWdg/McalWdg.c
    ${PROJECT_SOURCE_DIR}/source/SwcApplStartUp/SwcApplStartUp.c
    ${PROJECT_SOURCE_DIR}/source/SwcServiceDet/SwcServiceDet.c
@@ -37,6 +39,7 @@ target_include_directories(
    "${PROJECT_SOURCE_DIR}/source/ProjectCompiler"
    "${PROJECT_SOURCE_DIR}/source/ProjectCfg"
    "${PROJECT_SOURCE_DIR}/source/LibAutosar"
+   "${PROJECT_SOURCE_DIR}/source/McalFls"
    "${PROJECT_SOURCE_DIR}/source/McalMcu"
    "${PROJECT_SOURCE_DIR}/source/McalWdg"
    "${PROJECT_SOURCE_DIR}/source/SwcApplStartUp"
