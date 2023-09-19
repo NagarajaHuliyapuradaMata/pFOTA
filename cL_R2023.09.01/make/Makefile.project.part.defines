@@ -1,0 +1,307 @@
+ROOT = ..\source
+GENTOOL_DIR = $(ROOT)\Generators\Components
+MPPD_VERSION = 32
+OBJ_PATH = obj
+ERR_PATH = err
+LST_PATH = lst
+LOG_PATH = log
+LIB_PATH = lib
+ERR_TO_STDOUT   = 1
+TGFGENDATA_DIR  = 
+
+ifneq ($(TGFGENDATA_DIR),)
+include $(TGFGENDATA_DIR)/Makefile.Appl
+endif
+
+###############################################################################
+#  Modules
+###############################################################################
+MODULE_LIST_PROJECT                                              += DRVEEP_DUMMY
+MODULE_LIST_PROJECT                                              += DRVFLS_RH850F1XREN01HISSUB
+MODULE_LIST_PROJECT                                              += FBLASRSTUBS
+MODULE_LIST_PROJECT                                              += FBLBM_HDR
+MODULE_LIST_PROJECT                                              += FBLBM_MAIN
+MODULE_LIST_PROJECT                                              += FBLDIAG_14229_CORE
+MODULE_LIST_PROJECT                                              += FBLDIAG_14229_UDS2
+MODULE_LIST_PROJECT                                              += FBLDRVCAN_RH850RSCANCRX
+MODULE_LIST_PROJECT                                              += FBLDRVFLASH_RH850RV40HIS_IMPL_MAIN
+MODULE_LIST_PROJECT                                              += FBLLIB_FSM
+MODULE_LIST_PROJECT                                              += FBLLIB_LBT
+MODULE_LIST_PROJECT                                              += FBLLIB_MEM
+MODULE_LIST_PROJECT                                              += FBLLIB_NVPATTERN
+MODULE_LIST_PROJECT                                              += FBLMAIN
+MODULE_LIST_PROJECT                                              += FBLMIO
+MODULE_LIST_PROJECT                                              += FBLVTAB_RH850
+MODULE_LIST_PROJECT                                              += FBLVTABAPPL_RH850
+MODULE_LIST_PROJECT                                              += FBLWD
+MODULE_LIST_PROJECT                                              += FBLWRAPPERCOM_PDUR
+MODULE_LIST_PROJECT                                              += FBLWRAPPERFLASH_RH850RV40HIS_IMPL_MAIN
+MODULE_LIST_PROJECT                                              += SYSSERVICE_SECMODHIS
+MODULE_LIST_PROJECT                                              += LIBRARY
+MODULE_LIST_PROJECT                                              += MSR_COMPONENTS
+
+DRVEEP_DUMMY_USED                                                = 1
+DRVFLS_RH850F1XREN01HISSUB_USED                                  = 0
+FBLASRSTUBS_USED                                                 = 1
+FBLBM_HDR_USED                                                   = 1
+FBLBM_MAIN_USED                                                  = 1
+FBLDIAG_14229_CORE_USED                                          = 1
+FBLDIAG_14229_UDS2_USED                                          = 1
+FBLDRVCAN_RH850RSCANCRX_USED                                     = 1
+FBLDRVFLASH_RH850RV40HIS_IMPL_MAIN_USED                          = 0
+FBLLIB_FSM_USED                                                  = 1
+FBLLIB_LBT_USED                                                  = 1
+FBLLIB_MEM_USED                                                  = 1
+FBLLIB_NVPATTERN_USED                                            = 1
+FBLMAIN_USED                                                     = 1
+FBLMIO_USED                                                      = 1
+FBLVTAB_RH850_USED                                               = 1
+FBLVTABAPPL_RH850_USED                                           = 1
+FBLWD_USED                                                       = 1
+FBLWRAPPERCOM_PDUR_USED                                          = 1
+FBLWRAPPERFLASH_RH850RV40HIS_IMPL_MAIN_USED                      = 1
+SYSSERVICE_SECMODHIS_USED                                        = 1
+# LIBRARY files: 1=compile files / 0=use library
+LIBRARY_USED                                                     = 1
+
+# Support for MSR components with makefile
+# Setting MSR_COMPONENTS_USED = 0 will exclude ALL MSR components at once
+MSR_COMPONENTS_USED                                              = 1
+
+DRVCAN__COREASR_USED                                             = 1
+GW_ASRPDURCFG5_USED                                              = 1
+IF_ASRIFCAN_USED                                                 = 1
+SYSSERVICE_ASRDET_USED                                           = 1
+TP_ASR4TPCAN_USED                                                = 1
+VSTDLIB_GENERICASR_USED                                          = 1
+# KF 13.01.2023 Added these from DemoFbl
+DRVCRYPTO_LIBCV_USED                                             = 1
+IF_ASRIFCRY_USED                                                 = 1
+SECURITY_ASRCSM_USED                                             = 1
+SECURITY_VSECPRIM_USED                                           = 1
+
+
+DRVEEP_DUMMY_SOURCES                                             += McalEep\EepIO.c
+
+# DrvFls_Rh850F1xRen01HisSub@Implementation
+DRVFLS_RH850F1XREN01HISSUB_SOURCES                               += McalFls\FlashLib\r_fcl_hw_access.c
+DRVFLS_RH850F1XREN01HISSUB_SOURCES                               += McalFls\FlashLib\r_fcl_user_if.c
+
+# FblAsrStubs@Impl_BswStub
+FBLASRSTUBS_SOURCES                                              += SwcServiceDem\SwcServiceDem.c
+FBLASRSTUBS_SOURCES                                              += SwcServiceEcuM\SwcServiceEcuM.c
+
+# FblBm_Hdr@Implementation
+FBLBM_HDR_SOURCES                                                += SwcServiceStartUp\bm_hdr.c
+FBLBM_HDR_DATA                                                   += $(ROOT)\ProjectCfg\FblBmHdr_Lcfg.c
+
+# FblBm_Main@Implementation
+FBLBM_MAIN_SOURCES                                               += SwcServiceStartUp\bm_main.c
+FBLBM_MAIN_SOURCES                                               += SwcServiceStartUp\bm_shared.c
+FBLBM_MAIN_DATA                                                  += $(ROOT)\ProjectCfg\FblBm_Lcfg.c
+
+# FblDiag_14229_Core@Implementation
+FBLDIAG_14229_CORE_SOURCES                                       += SwcServiceStartUp\fbl_diag_core.c
+
+# FblDiag_14229_Uds2@Implementation
+FBLDIAG_14229_UDS2_SOURCES                                       += SwcServiceStartUp\fbl_diag_oem.c
+FBLDIAG_14229_UDS2_DATA                                          += $(ROOT)\ProjectCfg\Fbl_Lbt.c
+
+# FblDrvCan_Rh850RscanCrx@Implementation
+FBLDRVCAN_RH850RSCANCRX_SOURCES                                  += SwcServiceStartUp\fbl_hw.c
+
+# FblDrvFlash_Rh850Rv40His@Impl_Main
+FBLDRVFLASH_RH850RV40HIS_IMPL_MAIN_SOURCES                       += McalFls\McalFls.c
+
+# FblLib_Fsm@Implementation
+FBLLIB_FSM_SOURCES                                               += SwcServiceStartUp\fbl_fsm.c
+
+# FblLib_Lbt@Implementation
+FBLLIB_LBT_SOURCES                                               += SwcServiceStartUp\fbl_lbt_access.c
+
+# FblLib_Mem@Implementation
+FBLLIB_MEM_SOURCES                                               += SwcServiceStartUp\fbl_mem.c
+
+# FblLib_NvPattern@Implementation
+FBLLIB_NVPATTERN_SOURCES                                         += SwcServiceStartUp\fbl_nvpattern.c
+
+# FblMain@Implementation
+FBLMAIN_SOURCES                                                  += SwcServiceStartUp\fbl_main.c
+
+# FblMio@Implementation
+FBLMIO_SOURCES                                                   += SwcServiceStartUp\fbl_mio.c
+FBLMIO_DATA                                                      += $(ROOT)\ProjectCfg\Fbl_Fbt.c
+
+# FblVtab_Rh850@Implementation
+FBLVTAB_RH850_SOURCES                                            += SwcServiceStartUp\fbl_vect.c
+
+# FblVtabAppl_Rh850@Implementation
+FBLVTABAPPL_RH850_SOURCES                                        += SwcServiceStartUp\fbl_applvect.c
+
+# FblWd@Implementation
+FBLWD_SOURCES                                                    += SwcServiceStartUp\fbl_wd.c
+
+# FblWrapperCom_PduR@Implementation
+FBLWRAPPERCOM_PDUR_SOURCES                                       += SwcServiceStartUp\fbl_cw.c
+FBLWRAPPERCOM_PDUR_DATA                                          += $(ROOT)\ProjectCfg\FblCw_Lcfg.c
+FBLWRAPPERCOM_PDUR_DATA                                          += $(ROOT)\ProjectCfg\FblCw_PBcfg.c
+
+# FblWrapperFlash_Rh850Rv40His@Impl_Main
+FBLWRAPPERFLASH_RH850RV40HIS_IMPL_MAIN_SOURCES                   += SwcServiceStartUp\fbl_flio.c
+
+# SysService_SecModHis@Impl_Crc
+SYSSERVICE_SECMODHIS_SOURCES                                     += wrappers\SwcServiceSecM\Sec_Crc.c
+
+# SysService_SecModHis@Impl_SeedKey
+SYSSERVICE_SECMODHIS_SOURCES                                     += wrappers\SwcServiceSecM\Sec_SeedKey.c
+
+# SysService_SecModHis@Impl_Verification
+SYSSERVICE_SECMODHIS_SOURCES                                     += wrappers\SwcServiceSecM\Sec_Verification.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += wrappers\SwcServiceSecM\Sec_Job.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += wrappers\SwcServiceSecM\Sec_Decryption.c
+
+# SysService_SecModHis@Implementation
+SYSSERVICE_SECMODHIS_SOURCES                                     += wrappers\SwcServiceSecM\Sec.c
+SYSSERVICE_SECMODHIS_DATA                                        += $(ROOT)\ProjectCfg\PbCfgSwcServiceSecM.c
+
+ifeq ($(SECURITY_VSECPRIM_USED),1)
+  include $(ROOT)\wrappers\vSecPrim\mak\vSecPrim_rules.mak
+  include $(ROOT)\wrappers\vSecPrim\mak\vSecPrim_defs.mak
+  include $(ROOT)\wrappers\vSecPrim\mak\vSecPrim_check.mak
+endif
+
+ifeq ($(VSTDLIB_GENERICASR_USED),1)
+  include $(ROOT)\wrappers\VStdLib\mak\VStdLib_rules.mak
+  include $(ROOT)\wrappers\VStdLib\mak\VStdLib_defs.mak
+  include $(ROOT)\wrappers\VStdLib\mak\VStdLib_check.mak
+endif
+
+MSR_COMPONENTS_SOURCES                                           += $(addprefix wrappers\,$(CC_FILES_TO_BUILD))
+MSR_COMPONENTS_ASM_SOURCES                                       += $(addprefix wrappers\,$(ASM_FILES_TO_BUILD))
+ADDITIONAL_INCLUDES                                              += $(addprefix $(ROOT)\wrappers\,$(CC_INCLUDE_PATH))
+
+###############################################################################
+#  Include
+###############################################################################
+ADDITIONAL_INCLUDES += $(ROOT)\common
+ADDITIONAL_INCLUDES += $(ROOT)\ProjectCompiler
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceStartUp
+ADDITIONAL_INCLUDES += $(ROOT)\ProjectCfg
+ADDITIONAL_INCLUDES += $(ROOT)\ProjectARA
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceBswM
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceCanTp
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceComM
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceCsm
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceDcm
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceDem
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceDet
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceEcuM
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceNvM
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceOs
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServicePduR
+ADDITIONAL_INCLUDES += $(ROOT)\SwcServiceSchM
+ADDITIONAL_INCLUDES += $(ROOT)\EcuabCanIf
+ADDITIONAL_INCLUDES += $(ROOT)\EcuabCanTrcv
+ADDITIONAL_INCLUDES += $(ROOT)\EcuabCryIf
+ADDITIONAL_INCLUDES += $(ROOT)\EcuabFee
+ADDITIONAL_INCLUDES += $(ROOT)\EcuabMemIf
+ADDITIONAL_INCLUDES += $(ROOT)\McalCan
+ADDITIONAL_INCLUDES += $(ROOT)\McalCry
+ADDITIONAL_INCLUDES += $(ROOT)\McalDio
+ADDITIONAL_INCLUDES += $(ROOT)\McalFls
+ADDITIONAL_INCLUDES += $(ROOT)\McalMcu
+ADDITIONAL_INCLUDES += $(ROOT)\LibAutosar
+
+###############################################################################
+#  Source
+###############################################################################
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\PbCfgSwcServiceCanTp.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\PbCfgSwcServicePduR.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\PbCfgEcuabCanIf.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\PbCfgMcalCan.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\PbCfgMcalFls.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgSwcServiceCanTp.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgSwcServiceCsm.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgSwcServiceDet.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgSwcServicePduR.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgEcuabCanIf.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgEcuabCryIf.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgEcuabFee.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgEcuabMemIf.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgMcalCan.c
+APP_SOURCE_LST += $(ROOT)\ProjectCfg\CfgMcalCry.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceCanTp\SwcServiceCanTp.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceCsm\SwcServiceCsm.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceDcm\SwcServiceDcm.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceDet\SwcServiceDet.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_Bm.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_Fm.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_IFQ.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_Lock.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_McQ.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_RmIf.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_RmTp.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_RmTp_TxInst.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\PduR_Sm.c
+APP_SOURCE_LST += $(ROOT)\SwcServicePduR\SwcServicePduR.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\aes.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\SUPPLIER1_CustomFunctions.cpp
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\SUPPLIER1_Seca.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\bm_ap.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\bm_hdr_ap.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\BrsHw.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\BrsIntTb.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\BrsStartup_c0.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\fbl_ap.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\fbl_apdi.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\fbl_apnv.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\fbl_apnv_fee.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\fbl_apwd.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\hmac_sha2.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\ProductionFlashInterface.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\Sec_SeedKeyVendor.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\sha2.c
+APP_SOURCE_LST += $(ROOT)\SwcServiceStartUp\version.c
+APP_SOURCE_LST += $(ROOT)\EcuabCanIf\EcuabCanIf.c
+APP_SOURCE_LST += $(ROOT)\EcuabCanTrcv\EcuabCanTrcv.c
+APP_SOURCE_LST += $(ROOT)\EcuabCryIf\EcuabCryIf.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_BlockHandler.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_DatasetHandler.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_FblBlockInterface.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_FlsCoordinator.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_InstanceHandler.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_Layer1_Read.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_Layer1_Write.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_Layer2_DatasetEraser.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_Layer2_InstanceFinder.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_Layer2_WriteInstance.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_Layer3_ReadManagementBytes.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_PartitionHandler.c
+APP_SOURCE_LST += $(ROOT)\EcuabFee\EcuabFee_TaskManager.c
+APP_SOURCE_LST += $(ROOT)\EcuabMemIf\EcuabMemIf.c
+APP_SOURCE_LST += $(ROOT)\McalCan\Can_Irq.c
+APP_SOURCE_LST += $(ROOT)\McalCan\McalCan.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_Aead.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_Cipher.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_Hash.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_KeyDerive.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_KeyExchange.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_KeyGenerate.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_KeyManagement.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_Mac.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_Random.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry_Signature.c
+APP_SOURCE_LST += $(ROOT)\McalCry\McalCry.c
+APP_SOURCE_LST += $(ROOT)\McalDio\McalDio.c
+APP_SOURCE_LST += $(ROOT)\McalFls\fdl_descriptor.c
+APP_SOURCE_LST += $(ROOT)\McalFls\flashrom.c
+APP_SOURCE_LST += $(ROOT)\McalFls\Fls.c
+APP_SOURCE_LST += $(ROOT)\McalFls\Fls_Internal.c
+APP_SOURCE_LST += $(ROOT)\McalFls\Fls_Irq.c
+APP_SOURCE_LST += $(ROOT)\McalFls\Fls_Ram.c
+APP_SOURCE_LST += $(ROOT)\McalFls\Fls_Version.c
+APP_SOURCE_LST += $(ROOT)\McalFls\r_fdl_hw_access.c
+APP_SOURCE_LST += $(ROOT)\McalFls\r_fdl_user_if.c
+APP_SOURCE_LST += $(ROOT)\McalFls\r_fdl_user_if_init.c
+APP_SOURCE_LST += $(ROOT)\LibAutosar\LibAutosar_Crc.c

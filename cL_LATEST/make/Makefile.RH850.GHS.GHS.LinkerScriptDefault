@@ -1,0 +1,156 @@
+INTVECT_COREEXCEPTIONS_CORE0 = 0x00
+INTVECT_EXTERNALINT_CORE0    = 0x200
+
+#############################################################################################################################################
+# MAIN LINKER SCRIPT CODE
+#############################################################################################################################################
+define LD_FILE
+ $(ECHO) "MEMORY {"                                                                                                                   > $@; \
+  $(ECHO) "  /* ROM / FLASH */"                                                                                                      >> $@; \
+  $(ECHO) "  iVect           : ORIGIN = 0x00000000, LENGTH = 0x300"                                                                  >> $@; \
+  $(ECHO) "  iBMHeader       : ORIGIN = 0x00000300, LENGTH = 0x60"                                                                   >> $@; \
+  $(ECHO) "  iFbl            : ORIGIN = 0x00000360, LENGTH = 0x20000-0x360-0x100-0x2800"                                             >> $@; \
+  $(ECHO) "  iFlashDrvRom    : ORIGIN = 0x0001D700, LENGTH = 0x2800   /* Flash driver im Rom */"                                     >> $@; \
+  $(ECHO) "  iFblDescBlock   : ORIGIN = 0x0001FF00, LENGTH = 0x100    /* 256 bytes for Rivian Bootloader descriptor block */"        >> $@; \
+  $(ECHO) "  iApplBMHeaderHdr: ORIGIN = 0x00020000, LENGTH = 0x100"                                                                  >> $@; \
+  $(ECHO) "  iAppl           : ORIGIN = 0x00020100, LENGTH = 0x57B00  /* application 20100-77C00 */"                                 >> $@; \
+  $(ECHO) "  iPresencePat    : ORIGIN = 0x00077C00, LENGTH = 0x400    /* FBL writes Presence Patterns here */"                       >> $@; \
+  $(ECHO) "  iROM_DATA       : ORIGIN = 0xFF200000, LENGTH = 0x800    /* 2k data flash for BH-SENS production data  */"              >> $@; \
+  $(ECHO) "  /* RAM */"                                                                                                              >> $@; \
+  $(ECHO) "  iFlashDrv       : ORIGIN = 0xFEDF8000, LENGTH = 0x2800"                                                                 >> $@; \
+  $(ECHO) "  iEeprom         : ORIGIN = 0xFEDFA800, LENGTH = 0x00000300"                                                             >> $@; \
+  $(ECHO) "  MAGICFL         : ORIGIN = 0xFEDFAB00, LENGTH = 0x00000010"                                                             >> $@; \
+  $(ECHO) "  iRAM2           : ORIGIN = 0xFEDFAB10, LENGTH = 0x000004F0"                                                             >> $@; \
+  $(ECHO) "  iStack          : ORIGIN = 0xFEDFB000, LENGTH = 0x00001000"                                                             >> $@; \
+  $(ECHO) "  iRAM            : ORIGIN = 0xFEDFC000, LENGTH = 0x0000BFE0  /* !! search for 0xFEDFC000 before changing here!!  */"     >> $@; \
+  $(ECHO) "  RRAM            : ORIGIN = 0xFEE07FE0, LENGTH = 0x00000010  /* -1008 Bytes retention RAM for standstill monitoring */"  >> $@; \
+  $(ECHO) "  RRAM_WUF        : ORIGIN = 0xFEE07FF0, LENGTH = 0x00000010  /* -16 Bytes for a copy of the Wakeup Factor register */"   >> $@; \
+  $(ECHO) "}"                                                                                                                        >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "SECTIONS {"                                                                                                               >> $@; \
+  $(ECHO) "  /********************************************************************************************************************/" >> $@; \
+  $(ECHO) "  /* ROM AREA (iROM_0A)*/"                                                                                                >> $@; \
+  $(ECHO) "  /********************************************************************************************************************/" >> $@; \
+  $(ECHO) "  .rom_start                                                :>iVect /* Start of code area */"                             >> $@; \
+  $(ECHO) "  .intvect  $(INTVECT_COREEXCEPTIONS_CORE0)                 :>. /* start of Core interrupt vector table, from BRS */"     >> $@; \
+  $(ECHO) "  .intvect_ExtExceptions   $(INTVECT_EXTERNALINT_CORE0)     :>. /* start of External interrupt vector table, from BRS */" >> $@; \
+  $(ECHO) "  .FBLBMHEADER                                              :>iBMHeader  /* Bootmanager header table */"                  >> $@; \
+  $(ECHO) "  .FBLBMHEADERHDR                                           :>.          /* Bootmanager header header table */"           >> $@; \
+  $(ECHO) "  .FBLHEADER                                                :>iFbl"                                                       >> $@; \
+  $(ECHO) "  .startup .: {"                                                                                                          >> $@; \
+  $(ECHO) "    BrsStartup_c0.o(.text)"                                                                                               >> $@; \
+  $(ECHO) "  } >."                                                                                                                   >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /* START OF CODE AREA */"                                                                                               >> $@; \
+  $(ECHO) "  .text                  align(4)         :>. /* program code area */"                                                    >> $@; \
+  $(ECHO) "  .R_FDL_Text            align(4)         :>. /* FDL code in ROM (used by MCAL) */"                                       >> $@; \
+  $(ECHO) "  /* END OF CODE AREA */"                                                                                                 >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /* START OF CONST AREA */"                                                                                              >> $@; \
+  $(ECHO) "  .rozdata                                :>. /* constant datas in ZDA area */"                                           >> $@; \
+  $(ECHO) "  .robase                align(4)         :>. /* initialize textpointer TP for SDA addressing */"                         >> $@; \
+  $(ECHO) "/*.rosdata               align(4)         :>.    constant datas in SDA area */"                                           >> $@; \
+  $(ECHO) "  .rodata                align(4)         :>. /* constant datas in normal area */"                                        >> $@; \
+  $(ECHO) "  .R_FDL_Const           align(4)         :>. /* constant datas for DrvFls */"                                            >> $@; \
+  $(ECHO) "  /* END OF CONST AREA */"                                                                                                >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  .fixaddr               align(4)         :>. /* ghs internal (compiler) */"                                              >> $@; \
+  $(ECHO) "  .fixtype               align(4)         :>. /* ghs internal (compiler) */"                                              >> $@; \
+  $(ECHO) "  .secinfo               align(4)         :>. /* ghs internal (runtime library) */"                                       >> $@; \
+  $(ECHO) "  .syscall               align(4)         :>. /* ghs internal (linker) */"                                                >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  .ROM.rosdata  align(4) ROM(.rosdata)    :>. /* ROM copy to initialize text in rosdata area */"                          >> $@; \
+  $(ECHO) "  .ROM.ramcopy  align(4) ROM(.ramcopy)    :>. /* ROM copy to initialize text in ramcopy area */"                          >> $@; \
+  $(ECHO) "  .ROM.RAMCODE  align(4) ROM(.RAMCODE)    :>. /* ROM copy to initialize text in RAMCODE area */"                          >> $@; \
+  $(ECHO) "  .ROM.RAMCONST align(4) ROM(.RAMCONST)   :>. /* ROM copy to initialize text in RAMCONST area */"                         >> $@; \
+  $(ECHO) "  .romdata               ROM(.data)       :>. /* init values for .data (copied to RAM at startup) */"                     >> $@; \
+  $(ECHO) "  .romzdata              ROM(.zdata)      :>. /* init values for .zdata (copied to RAM at startup) */"                    >> $@; \
+  $(ECHO) "  .romsdata              ROM(.sdata)      :>. /* init values for .sdata (copied to RAM at startup) */"                    >> $@; \
+  $(ECHO) "  .romtdata              ROM(.tdata)      :>. /* init values for .tdata (copied to RAM at startup) */"                    >> $@; \
+  $(ECHO) "  .roFlashDrvRom         align(4)         :>iFlashDrvRom   /* -RST- Flashdriver location */"                              >> $@; \
+  $(ECHO) "  .roFBL_METADATA        align(4)         :>iFblDescBlock  /* -RST- Rivian bootloader descriptor block */"                >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /********************************************************************************************************************/" >> $@; \
+  $(ECHO) "  /* ROM AREA (iROM_1)*/                                                                                                " >> $@; \
+  $(ECHO) "  /********************************************************************************************************************/" >> $@; \
+  $(ECHO) "  .APPLVECT              align(4)         :>iAppl     /* alternative interrupt vector table position */"                  >> $@; \
+  $(ECHO) "  .production_data       align(4)         :>iROM_DATA /* SUPPLIER1 production data area (data flash!) */"                 >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /********************************************************************************************************************/" >> $@; \
+  $(ECHO) "  /* RAM*/"                                                                                                               >> $@; \
+  $(ECHO) "  /********************************************************************************************************************/" >> $@; \
+  $(ECHO) "  .ram_start                              :>iFlashDrv /* Start of RAM area of MasterCore */"                              >> $@; \
+  $(ECHO) "  .FLASHDRV                align(4)       :>.         /* Space for FlashCode */"                                          >> $@; \
+  $(ECHO) "  .EEPDATA                 align(4)       :>iEeprom   /* Space Dummy EEPROM */"                                           >> $@; \
+  $(ECHO) "  .FBLMAGIC                align(4)       :>MAGICFL   /* Space for magic flag (Fbl Start feature) */"                     >> $@; \
+  $(ECHO) "  .bss                     align(4) CLEAR :>iRAM2     /* zero initialized data */"                                        >> $@; \
+  $(ECHO) "  .stack                   align(4) pad(SIZEOF(iStack)) :>iStack /* definition of stack size */"                          >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /* START OF NORMAL DATA RAM AREA */"                                                                                    >> $@; \
+  $(ECHO) "  .data                  align(4)         :>iRAM      /* initialized data */"                                             >> $@; \
+  $(ECHO) "  .R_FDL_Data            align(4)         :>.         /* data for DrvFls */"                                              >> $@; \
+  $(ECHO) "  .rosdata               align(4)         :>.         /* constant data in SDA area */"                                    >> $@; \
+  $(ECHO) "  .ramcopy               align(4)         :           /* Initialized code segment in RAM */"                              >> $@; \
+  $(ECHO) "  {"                                                                                                                      >> $@; \
+  $(ECHO) "    PbCfgSwcServiceCanTp.o(.text)"                                                                                        >> $@; \
+  $(ECHO) "    PbCfgSwcServicePduR.o(.text)"                                                                                         >> $@; \
+  $(ECHO) "    PbCfgEcuabCanIf.o(.text)"                                                                                             >> $@; \
+  $(ECHO) "    PbCfgMcalCan.o(.text)"                                                                                                >> $@; \
+  $(ECHO) "    CfgSwcServiceCanTp.o(.text)"                                                                                          >> $@; \
+  $(ECHO) "    CfgSwcServiceDet.o(.text)"                                                                                            >> $@; \
+  $(ECHO) "    CfgSwcServicePduR.o(.text)"                                                                                           >> $@; \
+  $(ECHO) "    CfgEcuabCanIf.o(.text)"                                                                                               >> $@; \
+  $(ECHO) "    CfgMcalCan.o(.text)"                                                                                                  >> $@; \
+  $(ECHO) "    McalCan.o(.text)"                                                                                                     >> $@; \
+  $(ECHO) "    SwcServiceCanTp.o(.text)"                                                                                             >> $@; \
+  $(ECHO) "    SwcServiceDet.o(.text)"                                                                                               >> $@; \
+  $(ECHO) "    PduR_Bm.o(.text)"                                                                                                     >> $@; \
+  $(ECHO) "    PduR_Fm.o(.text)"                                                                                                     >> $@; \
+  $(ECHO) "    PduR_Lock.o(.text)"                                                                                                   >> $@; \
+  $(ECHO) "    PduR_McQ.o(.text)"                                                                                                    >> $@; \
+  $(ECHO) "    PduR_RmIf.o(.text)"                                                                                                   >> $@; \
+  $(ECHO) "    PduR_RmTp.o(.text)"                                                                                                   >> $@; \
+  $(ECHO) "    PduR_RmTp_TxInst.o(.text)"                                                                                            >> $@; \
+  $(ECHO) "    PduR_Sm.o(.text)"                                                                                                     >> $@; \
+  $(ECHO) "    SwcServicePduR.o(.text)"                                                                                              >> $@; \
+  $(ECHO) "    EcuabCanIf.o(.text)"                                                                                                  >> $@; \
+  $(ECHO) "    Can_Irq.o(.text)"                                                                                                     >> $@; \
+  $(ECHO) "    fbl_hw.o(.text)"                                                                                                      >> $@; \
+  $(ECHO) "    FblCw_Lcfg.o(.text)"                                                                                                  >> $@; \
+  $(ECHO) "    vstdlib.o(.text)"                                                                                                     >> $@; \
+  $(ECHO) "    CfgSwcServiceCanTp.o(.rosdata)"                                                                                       >> $@; \
+  $(ECHO) "    CfgSwcServiceDet.o(.rosdata)"                                                                                         >> $@; \
+  $(ECHO) "    CfgSwcServicePduR.o(.rosdata)"                                                                                        >> $@; \
+  $(ECHO) "    CfgEcuabCanIf.o(.rosdata)"                                                                                            >> $@; \
+  $(ECHO) "    CfgMcalCan.o(.rosdata)"                                                                                               >> $@; \
+  $(ECHO) "    EcuabCanIf.o(.rosdata)"                                                                                               >> $@; \
+  $(ECHO) "    McalCan.o (.rosdata)"                                                                                                 >> $@; \
+  $(ECHO) "  } >."                                                                                                                   >> $@; \
+  $(ECHO) "  .RAMCODE  align(4)                             :>.     /* RAM code  */"                                                 >> $@; \
+  $(ECHO) "  .RAMCONST align(4)                             :>.     /* RAM const */"                                                 >> $@; \
+  $(ECHO) "  /* END OF NORMAL DATA RAM AREA */"                                                                                      >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /* START OF SDA RAM AREA */"                                                                                            >> $@; \
+  $(ECHO) "  .sda_start                                     :>. /* start of SDA RAM area */"                                         >> $@; \
+  $(ECHO) "  .sdabase               align(4)                :>. /* initialize globalpointer GP for SDA addressing */"                >> $@; \
+  $(ECHO) "  .sdata                 align(4)                :>. /* initialized data in SDA area */"                                  >> $@; \
+  $(ECHO) "  .sbss                  align(4) CLEAR          :>. /* zero initialized data in SDA area */"                             >> $@; \
+  $(ECHO) "  .sda_end                                       :>. /* end of SDA RAM area */"                                           >> $@; \
+  $(ECHO) "  /* END OF SDA RAM AREA */"                                                                                              >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  .zdata                 align(4)                :>. /* initialized data in ZDA area */"                                  >> $@; \
+  $(ECHO) "  .zbss                  align(4) CLEAR          :>. /* zero initialized data in ZDA area */"                             >> $@; \
+  $(ECHO) "  .tdata                 align(4) MAX_SIZE(256)  :>. /* initialized and zero-initialized data in TDA area */"             >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  /* START OF RETENTION RAM AREA FOR STANDSTILL MONITORING */"                                                            >> $@; \
+  $(ECHO) "  .rdata    align(4)                             :>RRAM"                                                                  >> $@; \
+  $(ECHO) "  .rwufcopy align(4)                             :>RRAM_WUF"                                                              >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  .ram_end               align(16)               :>."                                                                     >> $@; \
+  $(ECHO) ""                                                                                                                         >> $@; \
+  $(ECHO) "  _VECTORTABLE_START_ADDR    = ADDR(.intvect_ExtExceptions);"                                                             >> $@; \
+  $(ECHO) "  _EXCEPTIONTABLE_START_ADDR = ADDR(.intvect);"                                                                           >> $@; \
+  $(ECHO) "}"                                                                                                                        >> $@;
+endef
