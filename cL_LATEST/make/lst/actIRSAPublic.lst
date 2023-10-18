@@ -1,0 +1,184 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005h41.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/actIRSAPublic.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\actIRSAPublic.dbo -source=actIRSAPublic.c -o obj\gh_00005h41.o -list=lst/actIRSAPublic.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00005h41.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00005h41.s
+Source File: actIRSAPublic.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/actIRSAPublic.lst
+                           7 --		-object_dir=obj -stderr=err/actIRSAPublic.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/vSecPrim/actIRSAPublic.c
+                          28 --Source File:   ../source/wrappers/vSecPrim/actIRSAPublic.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:08:34 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CactIRSAPublic...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86BC2..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_actRSAInitPublicKeyOperation
+                          46 _actRSAInitPublicKeyOperation:
+00000000 86072300         47 	prepare	{r31},3,sp
+00000004 089d             48 	sld.w	16[ep],r19
+00000006 0a95             49 	sld.w	20[ep],r18
+                          50 --	    .bf
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005h41.s
+                          51 .LDW01:
+00000008 028a             52 	mov	2,r17
+0000000a 019d             53 	sst.w	r19,0[ep]
+0000000c 038d             54 	sst.w	r17,4[ep]
+0000000e 0595             55 	sst.w	r18,8[ep]
+                          56 	jarl	_actRSAInitExponentiation,lp
+                          56 <EXPANSION BEGIN>
+                          56 jarl22 _actRSAInitExponentiation , lp 
+00000010 80ff0000*        56 <EXPANSION END>
+                          57 --	    .ef
+                          58 .LDW11:
+                          59 --line21
+                          60 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CactIRSAPublic.1::
+                          61 .LDWlin1:
+00000014 46063f00         62 	dispose	3,{r31},[lp]
+                          63 	.type	_actRSAInitPublicKeyOperation,@function
+                          64 	.size	_actRSAInitPublicKeyOperation,.-_actRSAInitPublicKeyOperation
+                          65 	.align	2
+                          66 .LDW21:
+                          67 
+                          68 --_modulus	r6	param
+                          69 --_modulus_len	r7	param
+                          70 --_public_exponent	r8	param
+                          71 --_public_exponent_len	r9	param
+                          72 --_wkspBuf	r19	param
+                          73 --_watchdog	r18	param
+                          74 
+                          75 	.section ".bss","awb"
+                          76 .L33:
+                          77 	.type	.L33,@object
+                          78 	.size	.L33,0
+                          79 	.data
+                          80 	.section ".MSR_CODE","ax"
+                          81 	.align	2
+                          82 	.align	2
+                          83 ..gh.f.f.1.e.1:
+                          84 	.type	..gh.f.f.1.e.1,@object
+                          85 	.size	..gh.f.f.1.e.1,0
+                          86 	.global	_actRSAPublicKeyOperation
+                          87 _actRSAPublicKeyOperation:
+00000018 84072300         88 	prepare	{r31},2,sp
+0000001c 069d             89 	sld.w	12[ep],r19
+0000001e 0895             90 	sld.w	16[ep],r18
+                          91 --	    .bf
+                          92 .LDW31:
+00000020 019d             93 	sst.w	r19,0[ep]
+00000022 0395             94 	sst.w	r18,4[ep]
+                          95 	jarl	_actRSAExponentiation,lp
+                          95 <EXPANSION BEGIN>
+                          95 jarl22 _actRSAExponentiation , lp 
+00000024 80ff0000*        95 <EXPANSION END>
+                          96 --	    .ef
+                          97 .LDW41:
+                          98 --line32
+                          99 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CactIRSAPublic.2::
+                         100 .LDWlin2:
+00000028 44063f00        101 	dispose	2,{r31},[lp]
+                         102 	.type	_actRSAPublicKeyOperation,@function
+                         103 	.size	_actRSAPublicKeyOperation,.-_actRSAPublicKeyOperation
+                         104 	.align	2
+                         105 .LDW51:
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005h41.s
+                         106 
+                         107 --_message	r6	param
+                         108 --_message_len	r7	param
+                         109 --_cipher	r8	param
+                         110 --_cipher_len	r9	param
+                         111 --_wkspBuf	r19	param
+                         112 --_watchdog	r18	param
+                         113 
+                         114 	.section ".bss","awb"
+                         115 .L81:
+                         116 	.type	.L81,@object
+                         117 	.size	.L81,0
+                         118 	.data
+                         119 	.section ".MSR_CODE","ax"
+                         120 	.align	2
+                         121 	.align	2
+                         122 ..gh.f.f.1.e.2:
+                         123 	.type	..gh.f.f.1.e.2,@object
+                         124 	.size	..gh.f.f.1.e.2,0
+                         125 	.global	_actRSAPublicKeyGetBitLength
+                         126 _actRSAPublicKeyGetBitLength:
+0000002c 06f0            127 	mov	r6,ep
+                         128 --	    .bf
+                         129 .LDW61:
+0000002e 0035            130 	sld.w	0[ep],r6
+00000030 023d            131 	sld.w	4[ep],r7
+00000032 80070000*       132 	jr	_actBNGetBitLength
+                         133 --	    .ef
+                         134 .LDW71:
+                         135 	.type	_actRSAPublicKeyGetBitLength,@function
+                         136 	.size	_actRSAPublicKeyGetBitLength,.-_actRSAPublicKeyGetBitLength
+                         137 	.align	2
+                         138 .LDW81:
+                         139 
+                         140 --_n_ring	ep	param
+                         141 
+                         142 	.section ".bss","awb"
+                         143 .L129:
+                         144 	.type	.L129,@object
+                         145 	.size	.L129,0
+                         146 	.data
+                         147 	.section ".MSR_CODE","ax"
+                         148 	.align	2
+                         149 
+                         150 	.data
+                         151 	.ghsnote version,17
+                         152 	.ghsnote tools,3
+                         153 	.ghsnote options,144
+                         154 	.section ".MSR_CODE","ax"
+                         155 	.align	2
+                         156 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CactIRSAPublic...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86BC2..0::
+                         157 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

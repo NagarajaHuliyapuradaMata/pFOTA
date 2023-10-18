@@ -1,0 +1,346 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/Sec_Decryption.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\Sec_Decryption.dbo -source=Sec_Decryption.c -o obj\gh_00002oo1.o -list=lst/Sec_Decryption.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+Source File: Sec_Decryption.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/Sec_Decryption.lst
+                           7 --		-object_dir=obj -stderr=err/Sec_Decryption.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/SwcServiceSecM/Sec_Decryption.c
+                          28 --Source File:   ../source/wrappers/SwcServiceSecM/Sec_Decryption.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:07:15 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B73..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_SecM_DecryptionUpdate
+                          45 _SecM_DecryptionUpdate:
+00000000 9007e100         46 	prepare	{r28,r29,r31},8
+00000004 0690             47 	mov	r6,r18
+00000006 07e8             48 	mov	r7,r29
+00000008 08f0             49 	mov	r8,ep
+                          50 --	    .bf
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+                          51 .LDW01:
+0000000a 2056ff00         52 	movea	255,zero,r10
+0000000e e049             53 	cmp	zero,r9
+00000010 ca3d*            54 	bne	.L2
+                          55 --line30
+                          56 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.1::
+                          57 .LDWlin1:
+00000012 6830             58 	sld.bu	8[ep],r6
+00000014 0938             59 	mov	r9,r7
+00000016 c6061000         60 	andi	16,r6,zero
+0000001a d20d*            61 	be	.L6
+                          62 --line36
+                          63 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.2::
+                          64 .LDWlin2:
+0000001c 013a             65 	mov	1,r7
+0000001e c6060100         66 	andi	1,r6,zero
+00000022 b205*            67 	be	.L8
+                          68 --line39
+                          69 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.3::
+                          70 .LDWlin3:
+00000024 203e1100         71 	movea	17,zero,r7
+                          72 .L8:
+00000028 088d             73 	sld.w	16[ep],r17
+0000002a 7a80             74 	sld.hu	20[ep],r16
+0000002c 638f1100         75 	st.w	r17,16[sp]
+00000030 63871400         76 	st.h	r16,20[sp]
+                          77 .L6:
+00000034 f29f0500         78 	ld.hu	4[r18],r19
+00000038 e099             79 	cmp	zero,r19
+0000003a b205*            80 	be	.L10
+                          81 --line49
+                          82 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.4::
+                          83 .LDWlin4:
+0000003c 873e0200         84 	ori	2,r7,r7
+                          85 .L10:
+00000040 8632             86 	shr	6,r6
+00000042 b905*            87 	bnl	.L12
+                          88 --line54
+                          89 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.5::
+                          90 .LDWlin5:
+00000044 873e0400         91 	ori	4,r7,r7
+                          92 .L12:
+00000048 e039             93 	cmp	zero,r7
+0000004a f21d*            94 	be	.L2
+                          95 --line59
+                          96 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.6::
+                          97 .LDWlin6:
+0000004c 1df0             98 	mov	r29,ep
+0000004e 7270             99 	sld.hu	4[ep],r14
+00000050 324f0100        100 	ld.w	0[r18],r9
+00000054 639f0100        101 	st.w	r19,0[sp]
+00000058 006d            102 	sld.w	0[ep],r13
+0000005a 850709300000*   103 	ld.w	rosdaoff23(_SecM_DecryptionPrimitives+4)[r5],r6
+00000060 850709e00000*   104 	ld.w	rosdaoff23(_SecM_DecryptionPrimitives)[r5],r28
+00000066 03f0            105 	mov	sp,ep
+00000068 23660c00        106 	movea	12,sp,r12
+0000006c 63770d00        107 	st.w	r14,12[sp]
+00000070 23461000        108 	movea	16,sp,r8
+00000074 036d            109 	sst.w	r13,4[ep]
+00000076 0565            110 	sst.w	r12,8[ep]
+00000078 fcc760f9        111 	jarl	[r28],lp
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+                         112 --line62
+                         113 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.7::
+                         114 .LDWlin7:
+0000007c 235f0d00        115 	ld.w	12[sp],r11
+00000080 7d5f0400        116 	st.h	r11,4[r29]
+00000084 5006ff00        117 	dispose	8,{r28,r29,r31},[lp]
+                         118 .L2:
+                         119 --	    .ef
+                         120 .LDW11:
+                         121 --line66
+                         122 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption.8::
+                         123 .LDWlin8:
+00000088 5006ff00        124 	dispose	8,{r28,r29,r31},[lp]
+                         125 	.type	_SecM_DecryptionUpdate,@function
+                         126 	.size	_SecM_DecryptionUpdate,.-_SecM_DecryptionUpdate
+                         127 	.align	2
+                         128 .LDW21:
+                         129 --_result	r10	local
+                         130 --_opMode	r6	local
+                         131 --_outLength	12[sp]	local
+                         132 --_operationMode	r7	local
+                         133 --_aesKey	16[sp]	local
+                         134 
+                         135 --_pInBlock	r18	param
+                         136 --_pOutBlock	r29	param
+                         137 --_pDecParam	ep	param
+                         138 --_smhId	r9	param
+                         139 
+                         140 	.section ".bss","awb"
+                         141 .L130:
+                         142 	.type	.L130,@object
+                         143 	.size	.L130,0
+                         144 	.data
+                         145 	.text
+                         146 	.align	2
+                         147 	.align	2
+                         148 ..gh.f.f.1.e.1:
+                         149 	.type	..gh.f.f.1.e.1,@object
+                         150 	.size	..gh.f.f.1.e.1,0
+                         151 	.global	_SecM_InitDecryption
+                         152 _SecM_InitDecryption:
+                         153 --	    .bf
+                         154 .LDW31:
+0000008c 0052            155 	mov	0,r10
+                         156 --	    .ef
+                         157 .LDW41:
+0000008e 7f00            158 	jmp	[lp]
+                         159 	.type	_SecM_InitDecryption,@function
+                         160 	.size	_SecM_InitDecryption,.-_SecM_InitDecryption
+                         161 	.align	2
+                         162 .LDW51:
+                         163 
+                         164 --_init	none	param
+                         165 
+                         166 	.section ".bss","awb"
+                         167 .L273:
+                         168 	.type	.L273,@object
+                         169 	.size	.L273,0
+                         170 	.data
+                         171 	.text
+                         172 	.align	2
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+                         173 	.align	2
+                         174 ..gh.f.f.1.e.2:
+                         175 	.type	..gh.f.f.1.e.2,@object
+                         176 	.size	..gh.f.f.1.e.2,0
+                         177 	.global	_SecM_DeinitDecryption
+                         178 _SecM_DeinitDecryption:
+                         179 --	    .bf
+                         180 .LDW61:
+00000090 0052            181 	mov	0,r10
+                         182 --	    .ef
+                         183 .LDW71:
+00000092 7f00            184 	jmp	[lp]
+                         185 	.type	_SecM_DeinitDecryption,@function
+                         186 	.size	_SecM_DeinitDecryption,.-_SecM_DeinitDecryption
+                         187 	.align	2
+                         188 .LDW81:
+                         189 
+                         190 --_deinit	none	param
+                         191 
+                         192 	.section ".bss","awb"
+                         193 .L321:
+                         194 	.type	.L321,@object
+                         195 	.size	.L321,0
+                         196 	.data
+                         197 	.text
+                         198 	.align	2
+                         199 	.align	2
+                         200 ..gh.f.f.1.e.3:
+                         201 	.type	..gh.f.f.1.e.3,@object
+                         202 	.size	..gh.f.f.1.e.3,0
+                         203 	.global	_SecM_Decryption
+                         204 _SecM_Decryption:
+                         205 --	    .bf
+                         206 .LDW91:
+00000094 004a            207 	mov	0,r9
+00000096 bf076aff*       208 	jr	_SecM_DecryptionUpdate
+                         209 --	    .ef
+                         210 .LDW02:
+                         211 	.type	_SecM_Decryption,@function
+                         212 	.size	_SecM_Decryption,.-_SecM_Decryption
+                         213 	.align	2
+                         214 .LDW12:
+                         215 
+                         216 --_pInBlock	r6	param
+                         217 --_pOutBlock	r7	param
+                         218 --_pDecParam	r8	param
+                         219 
+                         220 	.section ".bss","awb"
+                         221 .L372:
+                         222 	.type	.L372,@object
+                         223 	.size	.L372,0
+                         224 	.data
+                         225 	.text
+                         226 	.align	2
+                         227 	.align	2
+                         228 ..gh.f.f.1.e.4:
+                         229 	.type	..gh.f.f.1.e.4,@object
+                         230 	.size	..gh.f.f.1.e.4,0
+                         231 	.global	_SecM_InitEncryption
+                         232 _SecM_InitEncryption:
+                         233 --	    .bf
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+                         234 .LDW22:
+0000009a 2056ff00        235 	movea	255,zero,r10
+                         236 --	    .ef
+                         237 .LDW32:
+0000009e 7f00            238 	jmp	[lp]
+                         239 	.type	_SecM_InitEncryption,@function
+                         240 	.size	_SecM_InitEncryption,.-_SecM_InitEncryption
+                         241 	.align	2
+                         242 .LDW42:
+                         243 
+                         244 --_init	none	param
+                         245 
+                         246 	.section ".bss","awb"
+                         247 .L417:
+                         248 	.type	.L417,@object
+                         249 	.size	.L417,0
+                         250 	.data
+                         251 	.text
+                         252 	.align	2
+                         253 	.align	2
+                         254 ..gh.f.f.1.e.5:
+                         255 	.type	..gh.f.f.1.e.5,@object
+                         256 	.size	..gh.f.f.1.e.5,0
+                         257 	.global	_SecM_DeinitEncryption
+                         258 _SecM_DeinitEncryption:
+                         259 --	    .bf
+                         260 .LDW52:
+000000a0 2056ff00        261 	movea	255,zero,r10
+                         262 --	    .ef
+                         263 .LDW62:
+000000a4 7f00            264 	jmp	[lp]
+                         265 	.type	_SecM_DeinitEncryption,@function
+                         266 	.size	_SecM_DeinitEncryption,.-_SecM_DeinitEncryption
+                         267 	.align	2
+                         268 .LDW72:
+                         269 
+                         270 --_deinit	none	param
+                         271 
+                         272 	.section ".bss","awb"
+                         273 .L465:
+                         274 	.type	.L465,@object
+                         275 	.size	.L465,0
+                         276 	.data
+                         277 	.text
+                         278 	.align	2
+                         279 	.align	2
+                         280 ..gh.f.f.1.e.6:
+                         281 	.type	..gh.f.f.1.e.6,@object
+                         282 	.size	..gh.f.f.1.e.6,0
+                         283 	.global	_SecM_Encryption
+                         284 _SecM_Encryption:
+                         285 --	    .bf
+                         286 .LDW82:
+000000a6 2056ff00        287 	movea	255,zero,r10
+                         288 --	    .ef
+                         289 .LDW92:
+000000aa 7f00            290 	jmp	[lp]
+                         291 	.type	_SecM_Encryption,@function
+                         292 	.size	_SecM_Encryption,.-_SecM_Encryption
+                         293 	.align	2
+                         294 .LDW03:
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00002oo1.s
+                         295 
+                         296 --_pInBlock	none	param
+                         297 --_pOutBlock	none	param
+                         298 --_pEncParam	none	param
+                         299 
+                         300 	.section ".bss","awb"
+                         301 .L513:
+                         302 	.type	.L513,@object
+                         303 	.size	.L513,0
+                         304 	.data
+                         305 	.text
+                         306 	.align	2
+                         307 --_SecM_DecryptionPrimitives	rosdaoff23(_SecM_DecryptionPrimitives)	import
+                         308 
+                         309 	.data
+                         310 	.ghsnote version,17
+                         311 	.ghsnote tools,3
+                         312 	.ghsnote options,144
+                         313 	.text
+                         314 	.align	2
+                         315 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_Decryption...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B73..0::
+                         316 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

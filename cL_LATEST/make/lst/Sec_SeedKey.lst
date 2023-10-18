@@ -1,0 +1,418 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/Sec_SeedKey.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\Sec_SeedKey.dbo -source=Sec_SeedKey.c -o obj\gh_0000bs41.o -list=lst/Sec_SeedKey.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+Source File: Sec_SeedKey.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/Sec_SeedKey.lst
+                           7 --		-object_dir=obj -stderr=err/Sec_SeedKey.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/SwcServiceSecM/Sec_SeedKey.c
+                          28 --Source File:   ../source/wrappers/SwcServiceSecM/Sec_SeedKey.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:07:17 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B76..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_SecM_LcgRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.
+                          45 _SecM_LcgRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.:
+                          46 _SecM_LcgRandom:
+                          47 --	    .bf
+                          48 .LDW01:
+00000000 2a06eda3f87f     49 	mov	2147001325,r10
+00000006 e6572202         50 	mulu	r6,r10,zero
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+0000000a 3306311da02a     51 	mov	715136305,r19
+00000010 d351             52 	add	r19,r10
+                          53 --	    .ef
+                          54 .LDW11:
+00000012 7f00             55 	jmp	[lp]
+                          56 	.type	_SecM_LcgRandom,@function
+                          57 	.size	_SecM_LcgRandom,.-_SecM_LcgRandom
+                          58 	.type	_SecM_LcgRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.,@function
+                          59 	.size	_SecM_LcgRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.,.-_SecM_LcgRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.
+                          60 	.align	2
+                          61 .LDW21:
+                          62 
+                          63 --_input	r6	param
+                          64 
+                          65 	.section ".bss","awb"
+                          66 .L33:
+                          67 	.type	.L33,@object
+                          68 	.size	.L33,0
+                          69 	.data
+                          70 	.text
+                          71 	.align	2
+                          72 	.align	2
+                          73 ..gh.f.f.1.e.1:
+                          74 	.type	..gh.f.f.1.e.1,@object
+                          75 	.size	..gh.f.f.1.e.1,0
+                          76 	.global	_SecM_GenerateRandomLcg..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.
+                          77 _SecM_GenerateRandomLcg..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.:
+                          78 _SecM_GenerateRandomLcg:
+00000014 8007e170         79 	prepare	{r25,r26,r27,r28,r29,r31},0
+00000018 06c8             80 	mov	r6,r25
+0000001a 07e0             81 	mov	r7,r28
+                          82 --	    .bf
+                          83 .LDW31:
+0000001c 27ef0100         84 	ld.w	0[r7],r29
+00000020 0638             85 	mov	r6,r7
+00000022 64ea             86 	cmp	4,r29
+00000024 e4ef1233         87 	cmovnl	4,r29,r6
+                          88 	jarl	_SecM_GetInteger,lp
+                          88 <EXPANSION BEGIN>
+                          88 jarl22 _SecM_GetInteger , lp 
+00000028 80ff0000*        88 <EXPANSION END>
+0000002c 0ad0             89 	mov	r10,r26
+                          90 --line148
+                          91 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.1::
+                          92 .LDWlin1:
+0000002e 3ce70100         93 	ld.w	0[r28],r28
+00000032 00da             94 	mov	0,r27
+00000034 8515*            95 	br	.L55
+                          96 .L57:
+                          97 --line153
+                          98 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.2::
+                          99 .LDWlin2:
+00000036 1a30            100 	mov	r26,r6
+                         101 	jarl	_SecM_LcgRandom,lp
+                         101 <EXPANSION BEGIN>
+                         101 jarl22 _SecM_LcgRandom , lp 
+00000038 bfffc8ff*       101 <EXPANSION END>
+                         102 --line155
+                         103 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.3::
+                         104 .LDWlin3:
+0000003c 64e2            105 	cmp	4,r28
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+0000003e e4e712eb        106 	cmovnl	4,r28,r29
+00000042 1b40            107 	mov	r27,r8
+00000044 0ad0            108 	mov	r10,r26
+00000046 1d30            109 	mov	r29,r6
+00000048 0a38            110 	mov	r10,r7
+0000004a d941            111 	add	r25,r8
+                         112 	jarl	_SecM_SetInteger,lp
+                         112 <EXPANSION BEGIN>
+                         112 jarl22 _SecM_SetInteger , lp 
+0000004c 80ff0000*       112 <EXPANSION END>
+                         113 --line166
+                         114 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.4::
+                         115 .LDWlin4:
+00000050 44da            116 	add	4,r27
+00000052 bde1            117 	sub	r29,r28
+                         118 .L55:
+00000054 e0e1            119 	cmp	zero,r28
+00000056 8af5*           120 	bne	.L57
+                         121 --line170
+                         122 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.5::
+                         123 .LDWlin5:
+00000058 1c50            124 	mov	r28,r10
+                         125 --	    .ef
+                         126 .LDW41:
+0000005a 4006ff70        127 	dispose	0,{r25,r26,r27,r28,r29,r31},[lp]
+                         128 	.type	_SecM_GenerateRandomLcg,@function
+                         129 	.size	_SecM_GenerateRandomLcg,.-_SecM_GenerateRandomLcg
+                         130 	.type	_SecM_GenerateRandomLcg..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.,@function
+                         131 	.size	_SecM_GenerateRandomLcg..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.,.-_SecM_GenerateRandomLcg..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.
+                         132 	.align	2
+                         133 .LDW51:
+                         134 --_index	r27	local
+                         135 --_remainderLength	r28	local
+                         136 --_byteCount	r29	local
+                         137 --_randomWord	r26	local
+                         138 
+                         139 --_pRandom	r25	param
+                         140 --_pLength	r28	param
+                         141 
+                         142 	.section ".bss","awb"
+                         143 .L129:
+                         144 	.type	.L129,@object
+                         145 	.size	.L129,0
+                         146 	.data
+                         147 	.text
+                         148 	.align	2
+                         149 	.align	2
+                         150 ..gh.f.f.1.e.2:
+                         151 	.type	..gh.f.f.1.e.2,@object
+                         152 	.size	..gh.f.f.1.e.2,0
+                         153 	.global	_SecM_GenerateRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.
+                         154 _SecM_GenerateRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.:
+                         155 _SecM_GenerateRandom:
+0000005e 8207e100        156 	prepare	{r28,r29,r31},1
+00000062 07e0            157 	mov	r7,r28
+                         158 --	    .bf
+                         159 .LDW61:
+00000064 633f0100        160 	st.w	r7,0[sp]
+00000068 20eeff00        161 	movea	255,zero,r29
+0000006c 0338            162 	mov	sp,r7
+                         163 	jarl	_SecM_GenerateRandomLcg,lp
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+                         163 <EXPANSION BEGIN>
+                         163 jarl22 _SecM_GenerateRandomLcg , lp 
+0000006e bfffa6ff*       163 <EXPANSION END>
+00000072 e051            164 	cmp	zero,r10
+00000074 ea05*           165 	bne	.L182
+                         166 --line115
+                         167 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.6::
+                         168 .LDWlin6:
+00000076 234f0100        169 	ld.w	0[sp],r9
+0000007a e9e1            170 	cmp	r9,r28
+0000007c e0ef04eb        171 	cmove	0,r29,r29
+                         172 .L182:
+00000080 1d50            173 	mov	r29,r10
+                         174 --	    .ef
+                         175 .LDW71:
+00000082 4206ff00        176 	dispose	1,{r28,r29,r31},[lp]
+                         177 	.type	_SecM_GenerateRandom,@function
+                         178 	.size	_SecM_GenerateRandom,.-_SecM_GenerateRandom
+                         179 	.type	_SecM_GenerateRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.,@function
+                         180 	.size	_SecM_GenerateRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.,.-_SecM_GenerateRandom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.
+                         181 	.align	2
+                         182 .LDW81:
+                         183 --_result	r29	local
+                         184 --_localLength	0[sp]	local
+                         185 
+                         186 --_pRandom	r6	param
+                         187 --_length	r28	param
+                         188 
+                         189 	.section ".bss","awb"
+                         190 .L230:
+                         191 	.type	.L230,@object
+                         192 	.size	.L230,0
+                         193 	.data
+                         194 	.text
+                         195 	.align	2
+                         196 	.align	2
+                         197 	.align	2
+                         198 ..gh.f.f.1.e.3:
+                         199 	.type	..gh.f.f.1.e.3,@object
+                         200 	.size	..gh.f.f.1.e.3,0
+                         201 	.global	_SecM_GenerateSeed
+                         202 _SecM_GenerateSeed:
+00000086 80072100        203 	prepare	{r31},0
+                         204 --	    .bf
+                         205 .LDW91:
+0000008a 203e1000        206 	movea	16,zero,r7
+                         207 	jarl	_SecM_GenerateRandom,lp
+                         207 <EXPANSION BEGIN>
+                         207 jarl22 _SecM_GenerateRandom , lp 
+0000008e bfffd0ff*       207 <EXPANSION END>
+                         208 --line418
+                         209 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.7::
+                         210 .LDWlin7:
+00000092 e051            211 	cmp	zero,r10
+00000094 fa05*           212 	bne	.L271
+                         213 --line420
+                         214 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.8::
+                         215 .LDWlin8:
+00000096 0a9a            216 	mov	10,r19
+00000098 a4070d980000*   217 	st.h	r19,sdaoff23(_secTimer)[gp]
+0000009e 40063f00        218 	dispose	0,{r31},[lp]
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+                         219 .L271:
+                         220 --	    .ef
+                         221 .LDW02:
+                         222 --line424
+                         223 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.9::
+                         224 .LDWlin9:
+000000a2 40063f00        225 	dispose	0,{r31},[lp]
+                         226 	.type	_SecM_GenerateSeed,@function
+                         227 	.size	_SecM_GenerateSeed,.-_SecM_GenerateSeed
+                         228 	.align	2
+                         229 .LDW12:
+                         230 --_result	r10	local
+                         231 
+                         232 --_seed	r6	param
+                         233 
+                         234 	.section ".bss","awb"
+                         235 .L320:
+                         236 	.type	.L320,@object
+                         237 	.size	.L320,0
+                         238 	.data
+                         239 	.text
+                         240 	.align	2
+                         241 	.align	2
+                         242 ..gh.f.f.1.e.4:
+                         243 	.type	..gh.f.f.1.e.4,@object
+                         244 	.size	..gh.f.f.1.e.4,0
+                         245 	.global	_SecM_ComputeKey
+                         246 _SecM_ComputeKey:
+                         247 --	    .bf
+                         248 .LDW22:
+000000a6 80070000*       249 	jr	_SecM_ComputeKeyVendor
+                         250 --	    .ef
+                         251 .LDW32:
+                         252 	.type	_SecM_ComputeKey,@function
+                         253 	.size	_SecM_ComputeKey,.-_SecM_ComputeKey
+                         254 	.align	2
+                         255 .LDW42:
+                         256 
+                         257 --_inputSeed	r6	param
+                         258 --_constant	r7	param
+                         259 --_computedKey	r8	param
+                         260 
+                         261 	.section ".bss","awb"
+                         262 .L388:
+                         263 	.type	.L388,@object
+                         264 	.size	.L388,0
+                         265 	.data
+                         266 	.text
+                         267 	.align	2
+                         268 	.align	2
+                         269 ..gh.f.f.1.e.5:
+                         270 	.type	..gh.f.f.1.e.5,@object
+                         271 	.size	..gh.f.f.1.e.5,0
+                         272 	.global	_SecM_CompareKey
+                         273 _SecM_CompareKey:
+000000aa 88076100        274 	prepare	{r29,r31},4
+000000ae 06e8            275 	mov	r6,r29
+                         276 --	    .bf
+                         277 .LDW52:
+000000b0 0092            278 	mov	0,r18
+                         279 .L411:
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+000000b2 03f0            280 	mov	sp,ep
+000000b4 d2f1            281 	add	r18,ep
+000000b6 4192            282 	add	1,r18
+000000b8 8003            283 	sst.b	zero,0[ep]
+000000ba 1206f0ff        284 	addi	-16,r18,zero
+000000be a9fd*           285 	bnl	.L411
+                         286 --line462
+                         287 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.10::
+                         288 .LDWlin10:
+000000c0 a40707300000*   289 	ld.hu	sdaoff23(_secTimer)[gp],r6
+000000c6 2056ff00        290 	movea	255,zero,r10
+000000ca e031            291 	cmp	zero,r6
+000000cc 921d*           292 	be	.L412
+                         293 --line476
+                         294 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.11::
+                         295 .LDWlin11:
+000000ce 0730            296 	mov	r7,r6
+000000d0 0340            297 	mov	sp,r8
+000000d2 1f3a            298 	mov	-1,r7
+                         299 	jarl	_SecM_ComputeKey,lp
+                         299 <EXPANSION BEGIN>
+                         299 jarl22 _SecM_ComputeKey , lp 
+000000d4 bfffd2ff*       299 <EXPANSION END>
+                         300 --line479
+                         301 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.12::
+                         302 .LDWlin12:
+000000d8 0092            303 	mov	0,r18
+                         304 .L416:
+000000da 03f0            305 	mov	sp,ep
+000000dc 1248            306 	mov	r18,r9
+000000de d2f1            307 	add	r18,ep
+000000e0 dd49            308 	add	r29,r9
+000000e2 899f0100        309 	ld.bu	0[r9],r19
+000000e6 6088            310 	sld.bu	0[ep],r17
+000000e8 f389            311 	cmp	r19,r17
+000000ea b205*           312 	be	.L417
+                         313 --line483
+                         314 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.13::
+                         315 .LDWlin13:
+000000ec 2056ff00        316 	movea	255,zero,r10
+                         317 .L417:
+000000f0 4192            318 	add	1,r18
+000000f2 1206f0ff        319 	addi	-16,r18,zero
+000000f6 a9f5*           320 	bnl	.L416
+                         321 --line494
+                         322 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.14::
+                         323 .LDWlin14:
+000000f8 a4070d000000*   324 	st.h	zero,sdaoff23(_secTimer)[gp]
+                         325 .L412:
+000000fe 0092            326 	mov	0,r18
+                         327 .L421:
+00000100 03f0            328 	mov	sp,ep
+00000102 d2f1            329 	add	r18,ep
+00000104 4192            330 	add	1,r18
+00000106 8003            331 	sst.b	zero,0[ep]
+00000108 1206f0ff        332 	addi	-16,r18,zero
+0000010c a9fd*           333 	bnl	.L421
+                         334 --	    .ef
+                         335 .LDW62:
+                         336 --line509
+                         337 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey.15::
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000bs41.s
+                         338 .LDWlin15:
+0000010e 48067f00        339 	dispose	4,{r29,r31},[lp]
+                         340 	.type	_SecM_CompareKey,@function
+                         341 	.size	_SecM_CompareKey,.-_SecM_CompareKey
+                         342 	.align	2
+                         343 .LDW72:
+                         344 --_result	r10	local
+                         345 --_computeVal	0[sp]	local
+                         346 --_index	r18	local
+                         347 
+                         348 --_key	r29	param
+                         349 --_lastSeed	r7	param
+                         350 
+                         351 	.section ".bss","awb"
+                         352 .L512:
+                         353 	.type	.L512,@object
+                         354 	.size	.L512,0
+                         355 	.data
+                         356 	.text
+                         357 	.align	2
+                         358 --_secTimer	sdaoff23(_secTimer)	import
+                         359 
+                         360 	.data
+                         361 	.ghsnote version,17
+                         362 	.ghsnote tools,3
+                         363 	.ghsnote options,144
+                         364 	.text
+                         365 	.align	2
+                         366 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSec_SeedKey...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B76..0::
+                         367 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

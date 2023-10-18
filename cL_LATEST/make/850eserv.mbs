@@ -1,0 +1,7 @@
+target rst
+
+// fill RAM with zeros
+target blockfill -d4 0xfedf0000 0x4000 0x0
+
+//fill Retention RAM with zeros
+target blockfill -d4 0xFEE00000 0x1000 0x0

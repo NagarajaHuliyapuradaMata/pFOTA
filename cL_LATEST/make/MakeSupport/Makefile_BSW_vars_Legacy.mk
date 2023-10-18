@@ -1,0 +1,2 @@
+BSW_MAKE_DIR = mak
+BSW_SRC_DIR  =

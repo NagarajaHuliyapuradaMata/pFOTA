@@ -1,0 +1,3545 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/SwcServiceCanTp.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\SwcServiceCanTp.dbo -source=SwcServiceCanTp.c -o obj\gh_000017k1.o -list=lst/SwcServiceCanTp.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+Source File: SwcServiceCanTp.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/SwcServiceCanTp.lst -object_dir=obj
+                           8 --		-stderr=err/SwcServiceCanTp.err -c -cpu=rh850 -sda=all -large_sda
+                           9 --		-prepare_dispose -pragma_asm_inline -no_callt -inline_prologue
+                          10 --		-notda -reserve_r2 -fsoft --unknown_pragma_warnings -list -g
+                          11 --		-Ogeneral -shortenum -registermode=32 -I../source/_common
+                          12 --		-I../source/common -I../source/ecuabcanif
+                          13 --		-I../source/ecuabcantrcv -I../source/ecuabcryif
+                          14 --		-I../source/ecuabfee -I../source/ecuabmemif
+                          15 --		-I../source/libautosar -I../source/mcalcan -I../source/mcalcry
+                          16 --		-I../source/mcaldio -I../source/mcaleep -I../source/mcalfls
+                          17 --		-I../source/mcalmcu -I../source/projectara -I../source/projectcfg
+                          18 --		-I../source/projectcompiler -I../source/swcservicebswm
+                          19 --		-I../source/swcservicecantp -I../source/swcservicecomm
+                          20 --		-I../source/swcservicecsm -I../source/swcservicedcm
+                          21 --		-I../source/swcservicedem -I../source/swcservicedet
+                          22 --		-I../source/swcserviceecum -I../source/swcservicenvm
+                          23 --		-I../source/swcserviceos -I../source/swcservicepdur
+                          24 --		-I../source/swcserviceschm -I../source/swcservicestartup
+                          25 --		-I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim
+                          26 --		-I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi
+                          27 --		-Ic:/ghs/comp_201517/include/v800 -Igendata
+                          28 --		../source/SwcServiceCanTp/SwcServiceCanTp.c
+                          29 --Source File:   ../source/SwcServiceCanTp/SwcServiceCanTp.c
+                          30 --Directory:     
+                          31 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          32 --Compile Date:  Wed Sep 06 14:07:21 2023
+                          33 --Host OS:       Win32
+                          34 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          35 --Release:       Compiler v2015.1.7
+                          36 --Revision Date: Thu Oct 22 08:06:12 2015
+                          37 --Release Date:  Thu Oct 22 09:34:32 2015
+                          38 -- ecom  -g -w -OM
+                          39 	.text
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B79..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_CanTp_RxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                          46 _CanTp_RxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                          47 _CanTp_RxInit:
+00000000 80076100         48 	prepare	{r29,r31},0
+00000004 08e8             49 	mov	r8,r29
+00000006 06f0             50 	mov	r6,ep
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000008 8700             51 	zxb	r7
+0000000a 9d00             52 	zxb	r29
+0000000c 8900             53 	zxb	r9
+                          54 --	    .bf
+                          55 .LDW01:
+0000000e 6a98             56 	sld.bu	10[ep],r19
+00000010 deef0100         57 	tst1	5,1[ep]
+00000014 0032             58 	mov	0,r6
+00000016 920d*            59 	be	.L825
+                          60 --line2243
+                          61 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.1::
+                          62 .LDWlin1:
+00000018 1f8a             63 	mov	-1,r17
+0000001a 0182             64 	mov	1,r16
+0000001c 84070d880000*    65 	st.b	r17,sdaoff23(_CanTp_TxSemaphores)[gp]
+00000022 84070d800000*    66 	st.b	r16,sdaoff23(_CanTp_TxSemaphores+1)[gp]
+                          67 .L825:
+00000028 070680ff         68 	addi	-128,r7,zero
+0000002c e205*            69 	be	.L833
+                          70 --line2251
+                          71 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.2::
+                          72 .LDWlin2:
+0000002e 9e971b00         73 	ld.bu	26[ep],r18
+00000032 6192             74 	cmp	1,r18
+00000034 e0971433         75 	cmovne	0,r18,r6
+                          76 .L833:
+00000038 1f7a             77 	mov	-1,r15
+0000003a 0472             78 	mov	4,r14
+0000003c 8a7b             79 	sst.b	r15,10[ep]
+0000003e 8073             80 	sst.b	r14,0[ep]
+00000040 8103             81 	sst.b	zero,1[ep]
+00000042 8104             82 	sst.h	zero,2[ep]
+00000044 8204             83 	sst.h	zero,4[ep]
+00000046 8304             84 	sst.h	zero,6[ep]
+00000048 8404             85 	sst.h	zero,8[ep]
+0000004a 8604             86 	sst.h	zero,12[ep]
+0000004c 8e03             87 	sst.b	zero,14[ep]
+0000004e 8f03             88 	sst.b	zero,15[ep]
+00000050 9703             89 	sst.b	zero,23[ep]
+00000052 9803             90 	sst.b	zero,24[ep]
+00000054 9903             91 	sst.b	zero,25[ep]
+00000056 9a03             92 	sst.b	zero,26[ep]
+00000058 e049             93 	cmp	zero,r9
+0000005a aa05*            94 	bne	.L835
+                          95 --line2261
+                          96 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.3::
+                          97 .LDWlin3:
+0000005c 8a9b             98 	sst.b	r19,10[ep]
+                          99 .L835:
+0000005e e031            100 	cmp	zero,r6
+00000060 920d*           101 	be	.L837
+                         102 --line2279
+                         103 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.4::
+                         104 .LDWlin4:
+00000062 f3f60900        105 	mulhi	9,r19,ep
+00000066 c5f1            106 	add	r5,ep
+00000068 be0705300000*   107 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         108 	jarl	_PduR_CanTpRxIndication,lp
+                         108 <EXPANSION BEGIN>
+                         108 jarl22 _PduR_CanTpRxIndication , lp 
+0000006e 80ff0000*       108 <EXPANSION END>
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                         109 .L837:
+                         110 --line2282
+                         111 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.5::
+                         112 .LDWlin5:
+00000072 1d0601ff        113 	addi	-255,r29,zero
+00000076 920d*           114 	be	.L823
+                         115 --line2283
+                         116 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.6::
+                         117 .LDWlin6:
+00000078 1d48            118 	mov	r29,r9
+0000007a 20362300        119 	movea	35,zero,r6
+0000007e 003a            120 	mov	0,r7
+00000080 20463400        121 	movea	52,zero,r8
+                         122 	jarl	_Det_ReportError,lp
+                         122 <EXPANSION BEGIN>
+                         122 jarl22 _Det_ReportError , lp 
+00000084 80ff0000*       122 <EXPANSION END>
+                         123 .L823:
+                         124 --	    .ef
+                         125 .LDW11:
+                         126 --line2292
+                         127 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.7::
+                         128 .LDWlin7:
+00000088 40067f00        129 	dispose	0,{r29,r31},[lp]
+                         130 	.type	_CanTp_RxInit,@function
+                         131 	.size	_CanTp_RxInit,.-_CanTp_RxInit
+                         132 	.type	_CanTp_RxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                         133 	.size	_CanTp_RxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_RxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         134 	.align	2
+                         135 .LDW21:
+                         136 --_lIndicationPduR	r6	local
+                         137 --_lRxHdl	r19	local
+                         138 
+                         139 --_pTpRxState	ep	param
+                         140 --_NotifyCode	r7	param
+                         141 --_DetError	r29	param
+                         142 --_ResetRequest	r9	param
+                         143 
+                         144 	.section ".bss","awb"
+                         145 .L941:
+                         146 	.type	.L941,@object
+                         147 	.size	.L941,0
+                         148 	.section ".sdata","aw"
+                         149 	.global	_SwcServiceCanTp_InitFunctionState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         150 _SwcServiceCanTp_InitFunctionState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+00000000 00              151 _SwcServiceCanTp_InitFunctionState:	.byte	0
+                         152 	.type	_SwcServiceCanTp_InitFunctionState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@object
+                         153 	.size	_SwcServiceCanTp_InitFunctionState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,1
+                         154 	.type	_SwcServiceCanTp_InitFunctionState,@object
+                         155 	.size	_SwcServiceCanTp_InitFunctionState,1
+                         156 	.data
+                         157 	.text
+                         158 	.align	2
+                         159 	.align	2
+                         160 ..gh.f.f.1.e.1:
+                         161 	.type	..gh.f.f.1.e.1,@object
+                         162 	.size	..gh.f.f.1.e.1,0
+                         163 	.global	_CanTp_CanIfTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         164 _CanTp_CanIfTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                         165 _CanTp_CanIfTransmitFrame:
+0000008c 80076100        166 	prepare	{r29,r31},0
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000090 07f0            167 	mov	r7,ep
+                         168 --	    .bf
+                         169 .LDW31:
+00000092 86470500        170 	ld.bu	4[r6],r8
+00000096 a40705480000*   171 	ld.bu	sdaoff23(_CanTp_TxSemaphores)[gp],r9
+0000009c 8244            172 	sst.h	r8,4[ep]
+0000009e 090601ff        173 	addi	-255,r9,zero
+000000a2 ba15*           174 	bne	.L1053
+000000a4 06e8            175 	mov	r6,r29
+                         176 --line2191
+                         177 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.8::
+                         178 .LDWlin8:
+000000a6 86370300        179 	ld.bu	2[r6],r6
+                         180 	jarl	_EcuabCanIf_Transmit,lp
+                         180 <EXPANSION BEGIN>
+                         180 jarl22 _EcuabCanIf_Transmit , lp 
+000000aa 80ff0000*       180 <EXPANSION END>
+                         181 --line2193
+                         182 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.9::
+                         183 .LDWlin9:
+000000ae e051            184 	cmp	zero,r10
+000000b0 fa0d*           185 	bne	.L1051
+                         186 --line2194
+                         187 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.10::
+                         188 .LDWlin10:
+000000b2 1df0            189 	mov	r29,ep
+000000b4 6038            190 	sld.bu	0[ep],r7
+000000b6 84070d380000*   191 	st.b	r7,sdaoff23(_CanTp_TxSemaphores+1)[gp]
+000000bc 6130            192 	sld.bu	1[ep],r6
+000000be 84070d300000*   193 	st.b	r6,sdaoff23(_CanTp_TxSemaphores)[gp]
+000000c4 40067f00        194 	dispose	0,{r29,r31},[lp]
+                         195 .L1053:
+                         196 --line2203
+                         197 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.11::
+                         198 .LDWlin11:
+000000c8 0f52            199 	mov	15,r10
+000000ca 40067f00        200 	dispose	0,{r29,r31},[lp]
+                         201 .L1051:
+                         202 --	    .ef
+                         203 .LDW41:
+                         204 --line2222
+                         205 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.12::
+                         206 .LDWlin12:
+000000ce 40067f00        207 	dispose	0,{r29,r31},[lp]
+                         208 	.type	_CanTp_CanIfTransmitFrame,@function
+                         209 	.size	_CanTp_CanIfTransmitFrame,.-_CanTp_CanIfTransmitFrame
+                         210 	.type	_CanTp_CanIfTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                         211 	.size	_CanTp_CanIfTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_CanIfTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         212 	.align	2
+                         213 .LDW51:
+                         214 --_lCanIfResult	r10	local
+                         215 
+                         216 --_pPduTxData	r29	param
+                         217 --_pTpData	ep	param
+                         218 
+                         219 	.section ".bss","awb"
+                         220 .L1116:
+                         221 	.type	.L1116,@object
+                         222 	.size	.L1116,0
+                         223 	.data
+                         224 	.text
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                         225 	.align	2
+                         226 	.align	2
+                         227 ..gh.f.f.1.e.2:
+                         228 	.type	..gh.f.f.1.e.2,@object
+                         229 	.size	..gh.f.f.1.e.2,0
+                         230 	.global	_CanTp_RxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         231 _CanTp_RxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                         232 _CanTp_RxTransmitFrame:
+000000d2 8c07e300        233 	prepare	{r28,r29,r31},6,sp
+000000d6 06e8            234 	mov	r6,r29
+                         235 --	    .bf
+                         236 .LDW61:
+000000d8 867f0b00        237 	ld.bu	10[r6],r15
+000000dc 23660800        238 	movea	8,sp,r12
+000000e0 0965            239 	sst.w	r12,16[ep]
+000000e2 8a04            240 	sst.h	zero,20[ep]
+000000e4 eff60900        241 	mulhi	9,r15,ep
+000000e8 a6770100        242 	ld.bu	1[r6],r14
+000000ec c5f1            243 	add	r5,ep
+000000ee be0705e00000*   244 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+4)[ep],r28
+000000f4 0e06efff        245 	addi	-17,r14,zero
+000000f8 b90d*           246 	bnl	.L1195
+000000fa d215*           247 	be	.L1179
+000000fc 0e06edff        248 	addi	-19,r14,zero
+00000100 f94d*           249 	bnl	.L1190
+00000102 ea05*           250 	bne	.L1195
+                         251 --line2582
+                         252 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.13::
+                         253 .LDWlin13:
+00000104 20963200        254 	movea	50,zero,r18
+00000108 43970800        255 	st.b	r18,8[sp]
+0000010c 9555*           256 	br	.L1197
+                         257 .L1195:
+                         258 --line2586
+                         259 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.14::
+                         260 .LDWlin14:
+0000010e 20362300        261 	movea	35,zero,r6
+00000112 003a            262 	mov	0,r7
+00000114 20463200        263 	movea	50,zero,r8
+00000118 204eb100        264 	movea	177,zero,r9
+                         265 	jarl	_Det_ReportError,lp
+                         265 <EXPANSION BEGIN>
+                         265 jarl22 _Det_ReportError , lp 
+0000011c 80ff0000*       265 <EXPANSION END>
+                         266 --line2588
+                         267 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.15::
+                         268 .LDWlin15:
+00000120 4c06ff00        269 	dispose	6,{r28,r29,r31},[lp]
+                         270 .L1179:
+                         271 --line2534
+                         272 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.16::
+                         273 .LDWlin16:
+00000124 e0e1            274 	cmp	zero,r28
+00000126 9235*           275 	be	.L1180
+                         276 --line2537
+                         277 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.17::
+                         278 .LDWlin17:
+00000128 04f0            279 	mov	gp,ep
+0000012a cff1            280 	add	r15,ep
+0000012c be0705400000*   281 	ld.bu	sdaoff23(_CanTp_CalcBS)[ep],r8
+00000132 e041            282 	cmp	zero,r8
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000134 e8e734e3        283 	cmovne	r8,r28,r28
+00000138 8a2d*           284 	bne	.L1180
+                         285 --	    .bs
+                         286 .LDW71:
+                         287 --line2547
+                         288 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.18::
+                         289 .LDWlin18:
+0000013a fc760700        290 	mulhi	7,r28,r14
+0000013e e6670900        291 	ld.hu	8[r6],r12
+00000142 ce00            292 	zxh	r14
+00000144 ee61            293 	cmp	r14,r12
+00000146 b91d*           294 	bnl	.L1185
+00000148 06f0            295 	mov	r6,ep
+0000014a 7258            296 	sld.hu	4[ep],r11
+0000014c 7368            297 	sld.hu	6[ep],r13
+0000014e ad59            298 	sub	r13,r11
+00000150 eb61            299 	cmp	r11,r12
+00000152 de15*           300 	bge	.L1185
+                         301 --line2550
+                         302 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.19::
+                         303 .LDWlin19:
+00000154 2a0693244992    304 	mov	-1840700269,r10
+0000015a 0c80            305 	mov	r12,r16
+0000015c ea87208a        306 	mul	r10,r16,r17
+00000160 cc89            307 	add	r12,r17
+00000162 828a            308 	shr	2,r17
+00000164 d1e6ff00        309 	andi	255,r17,r28
+00000168 aa0d*           310 	bne	.L1185
+                         311 --line2552
+                         312 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.20::
+                         313 .LDWlin20:
+0000016a 0838            314 	mov	r8,r7
+0000016c 20362300        315 	movea	35,zero,r6
+00000170 20463200        316 	movea	50,zero,r8
+00000174 204e6000        317 	movea	96,zero,r9
+                         318 	jarl	_Det_ReportError,lp
+                         318 <EXPANSION BEGIN>
+                         318 jarl22 _Det_ReportError , lp 
+00000178 80ff0000*       318 <EXPANSION END>
+                         319 .L1185:
+                         320 --line2557
+                         321 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.21::
+                         322 .LDWlin21:
+0000017c 9df70b00        323 	ld.bu	10[r29],ep
+00000180 c4f1            324 	add	gp,ep
+00000182 9e070de00000*   325 	st.b	r28,sdaoff23(_CanTp_CalcBS)[ep]
+                         326 --	    .es
+                         327 .LDW81:
+                         328 .L1180:
+00000188 e3f71500        329 	ld.hu	20[sp],ep
+0000018c 23471100        330 	ld.w	16[sp],r8
+00000190 203e3000        331 	movea	48,zero,r7
+00000194 c8f1            332 	add	r8,ep
+00000196 803b            333 	sst.b	r7,0[ep]
+00000198 5de70f00        334 	st.b	r28,15[r29]
+0000019c 950d*           335 	br	.L1197
+                         336 .L1190:
+                         337 --line2569
+                         338 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.22::
+                         339 .LDWlin22:
+0000019e e6370d00        340 	ld.hu	12[r6],r6
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000001a2 e031            341 	cmp	zero,r6
+000001a4 c23d*           342 	be	.L1191
+                         343 --line2571
+                         344 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.23::
+                         345 .LDWlin23:
+000001a6 209e3100        346 	movea	49,zero,r19
+000001aa 439f0800        347 	st.b	r19,8[sp]
+                         348 .L1197:
+                         349 --	    .bs
+                         350 .LDW91:
+000001ae e3f71500        351 	ld.hu	20[sp],ep
+000001b2 238f1100        352 	ld.w	16[sp],r17
+000001b6 037a            353 	mov	3,r15
+000001b8 0330            354 	mov	sp,r6
+000001ba 233e1000        355 	movea	16,sp,r7
+000001be d1f1            356 	add	r17,ep
+000001c0 81e3            357 	sst.b	r28,1[ep]
+000001c2 e3f71500        358 	ld.hu	20[sp],ep
+000001c6 23871100        359 	ld.w	16[sp],r16
+000001ca d0f1            360 	add	r16,ep
+000001cc 8203            361 	sst.b	zero,2[ep]
+000001ce 03f0            362 	mov	sp,ep
+000001d0 7a68            363 	sld.hu	20[ep],r13
+000001d2 807b            364 	sst.b	r15,0[ep]
+000001d4 9d7f0b00        365 	ld.bu	10[r29],r15
+000001d8 436a            366 	add	3,r13
+000001da 8a6c            367 	sst.h	r13,20[ep]
+000001dc 817b            368 	sst.b	r15,1[ep]
+000001de eff60900        369 	mulhi	9,r15,ep
+000001e2 8d00            370 	zxb	r13
+000001e4 c5f1            371 	add	r5,ep
+000001e6 be0705600000*   372 	ld.bu	rosdaoff23(_CanTp_RxSduCfg)[ep],r12
+000001ec be0705580000*   373 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+3)[ep],r11
+000001f2 686a            374 	cmp	8,r13
+000001f4 03f0            375 	mov	sp,ep
+000001f6 e807064b        376 	cmovnh	8,zero,r9
+000001fa 43670200        377 	st.b	r12,2[sp]
+000001fe 835b            378 	sst.b	r11,3[ep]
+00000200 844b            379 	sst.b	r9,4[ep]
+                         380 	jarl	_CanTp_CanIfTransmitFrame,lp
+                         380 <EXPANSION BEGIN>
+                         380 jarl22 _CanTp_CanIfTransmitFrame , lp 
+00000202 bfff8afe*       380 <EXPANSION END>
+                         381 --line2614
+                         382 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.24::
+                         383 .LDWlin24:
+00000206 e051            384 	cmp	zero,r10
+00000208 ba15*           385 	bne	.L1206
+                         386 --line2615
+                         387 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.25::
+                         388 .LDWlin25:
+0000020a 1df0            389 	mov	r29,ep
+0000020c 6158            390 	sld.bu	1[ep],r11
+0000020e cb66cf00        391 	andi	207,r11,r12
+00000212 8c562000        392 	ori	32,r12,r10
+00000216 8153            393 	sst.b	r10,1[ep]
+00000218 4c06ff00        394 	dispose	6,{r28,r29,r31},[lp]
+                         395 .L1191:
+                         396 --line2576
+                         397 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.26::
+                         398 .LDWlin26:
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+0000021c 013a            399 	mov	1,r7
+0000021e 1d30            400 	mov	r29,r6
+00000220 2046c500        401 	movea	197,zero,r8
+00000224 0748            402 	mov	r7,r9
+                         403 	jarl	_CanTp_RxInit,lp
+                         403 <EXPANSION BEGIN>
+                         403 jarl22 _CanTp_RxInit , lp 
+00000226 bfffdafd*       403 <EXPANSION END>
+0000022a 4c06ff00        404 	dispose	6,{r28,r29,r31},[lp]
+                         405 .L1206:
+                         406 --line2619
+                         407 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.27::
+                         408 .LDWlin27:
+0000022e 6152            409 	cmp	1,r10
+00000230 8a0d*           410 	bne	.L1175
+                         411 --line2621
+                         412 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.28::
+                         413 .LDWlin28:
+00000232 1d30            414 	mov	r29,r6
+00000234 0a38            415 	mov	r10,r7
+00000236 2046c700        416 	movea	199,zero,r8
+0000023a 0a48            417 	mov	r10,r9
+                         418 	jarl	_CanTp_RxInit,lp
+                         418 <EXPANSION BEGIN>
+                         418 jarl22 _CanTp_RxInit , lp 
+0000023c bfffc4fd*       418 <EXPANSION END>
+                         419 .L1175:
+                         420 --	    .es
+                         421 .LDW02:
+                         422 --	    .ef
+                         423 .LDW12:
+                         424 --line2630
+                         425 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.29::
+                         426 .LDWlin29:
+00000240 4c06ff00        427 	dispose	6,{r28,r29,r31},[lp]
+                         428 	.type	_CanTp_RxTransmitFrame,@function
+                         429 	.size	_CanTp_RxTransmitFrame,.-_CanTp_RxTransmitFrame
+                         430 	.type	_CanTp_RxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                         431 	.size	_CanTp_RxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_RxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         432 	.align	2
+                         433 .LDW22:
+                         434 --_lTxResult	r10	local
+                         435 --_lFCFrameData	16[sp]	local
+                         436 --_lFCBuffer	8[sp]	local
+                         437 --_lBlockSizeValue	r28	local
+                         438 --_lPduTxInfo	0[sp]	local
+                         439 --_lPaddedLength	r9	local
+                         440 
+                         441 --_pTpRxState	r29	param
+                         442 
+                         443 	.section ".bss","awb"
+                         444 .L1472:
+                         445 	.type	.L1472,@object
+                         446 	.size	.L1472,0
+                         447 	.data
+                         448 	.text
+                         449 	.align	2
+                         450 	.align	2
+                         451 ..gh.f.f.1.e.3:
+                         452 	.type	..gh.f.f.1.e.3,@object
+                         453 	.size	..gh.f.f.1.e.3,0
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                         454 	.global	_CanTp_RxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         455 _CanTp_RxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                         456 _CanTp_RxGetBuffer:
+00000244 9407e100        457 	prepare	{r28,r29,r31},10
+00000248 06e8            458 	mov	r6,r29
+                         459 --	    .bf
+                         460 .LDW32:
+0000024a 86570f00        461 	ld.bu	14[r6],r10
+0000024e 6252            462 	cmp	2,r10
+00000250 ca15*           463 	bne	.L1689
+                         464 --line2403
+                         465 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.30::
+                         466 .LDWlin30:
+00000252 86470b00        467 	ld.bu	10[r6],r8
+00000256 63072400        468 	st.h	zero,36[sp]
+0000025a 233e2000        469 	movea	32,sp,r7
+0000025e e8f60900        470 	mulhi	9,r8,ep
+00000262 1d460800        471 	addi	8,r29,r8
+00000266 c5f1            472 	add	r5,ep
+00000268 be0705300000*   473 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         474 	jarl	_PduR_CanTpCopyRxData,lp
+                         474 <EXPANSION BEGIN>
+                         474 jarl22 _PduR_CanTpCopyRxData , lp 
+0000026e 80ff0000*       474 <EXPANSION END>
+00000272 8a00            475 	zxb	r10
+00000274 5d570e00        476 	st.b	r10,14[r29]
+                         477 .L1689:
+                         478 --line2408
+                         479 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.31::
+                         480 .LDWlin31:
+00000278 bd970100        481 	ld.bu	1[r29],r18
+0000027c 6292            482 	cmp	2,r18
+0000027e e207a502*       483 	be	.L1761
+00000282 1206bfff        484 	addi	-65,r18,zero
+00000286 f905*           485 	bnl	.L1781
+00000288 9215*           486 	be	.L1696
+0000028a 1206bdff        487 	addi	-67,r18,zero
+0000028e b93d*           488 	bnl	.L1707
+00000290 e2074101*       489 	be	.L1728
+                         490 .L1781:
+                         491 --line2431
+                         492 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.32::
+                         493 .LDWlin32:
+00000294 20362300        494 	movea	35,zero,r6
+00000298 003a            495 	mov	0,r7
+0000029a 20463000        496 	movea	48,zero,r8
+0000029e 204eb100        497 	movea	177,zero,r9
+                         498 	jarl	_Det_ReportError,lp
+                         498 <EXPANSION BEGIN>
+                         498 jarl22 _Det_ReportError , lp 
+000002a2 80ff0000*       498 <EXPANSION END>
+                         499 --line2432
+                         500 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.33::
+                         501 .LDWlin33:
+000002a6 5406ff00        502 	dispose	10,{r28,r29,r31},[lp]
+                         503 .L1696:
+                         504 --line2411
+                         505 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.34::
+                         506 .LDWlin34:
+000002aa e051            507 	cmp	zero,r10
+000002ac 8a2d*           508 	bne	.L1701
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000002ae 3df60800        509 	movea	8,r29,ep
+000002b2 6f40            510 	sld.bu	15[ep],r8
+000002b4 7030            511 	sld.hu	0[ep],r6
+000002b6 e831            512 	cmp	r8,r6
+000002b8 c15d*           513 	bl	.L1779
+000002ba 9d970b00        514 	ld.bu	10[r29],r18
+000002be 03f0            515 	mov	sp,ep
+000002c0 1d9e1000        516 	addi	16,r29,r19
+000002c4 8e44            517 	sst.h	r8,28[ep]
+000002c6 0d9d            518 	sst.w	r19,24[ep]
+000002c8 f2f60900        519 	mulhi	9,r18,ep
+000002cc 1d460800        520 	addi	8,r29,r8
+000002d0 233e1800        521 	movea	24,sp,r7
+000002d4 c5f1            522 	add	r5,ep
+000002d6 be0705300000*   523 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         524 	jarl	_PduR_CanTpCopyRxData,lp
+                         524 <EXPANSION BEGIN>
+                         524 jarl22 _PduR_CanTpCopyRxData , lp 
+000002dc 80ff0000*       524 <EXPANSION END>
+000002e0 8a00            525 	zxb	r10
+000002e2 5d570e00        526 	st.b	r10,14[r29]
+000002e6 e051            527 	cmp	zero,r10
+000002e8 ca45*           528 	bne	.L1779
+                         529 .L1768:
+000002ea 1d30            530 	mov	r29,r6
+000002ec 0a38            531 	mov	r10,r7
+000002ee 2046ff00        532 	movea	255,zero,r8
+000002f2 014a            533 	mov	1,r9
+                         534 	jarl	_CanTp_RxInit,lp
+                         534 <EXPANSION BEGIN>
+                         534 jarl22 _CanTp_RxInit , lp 
+000002f4 bfff0cfd*       534 <EXPANSION END>
+000002f8 5406ff00        535 	dispose	10,{r28,r29,r31},[lp]
+                         536 .L1701:
+000002fc 6252            537 	cmp	2,r10
+000002fe 9a3d*           538 	bne	.L1779
+                         539 .L1687:
+                         540 --	    .ef
+                         541 .LDW42:
+                         542 --line2434
+                         543 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.35::
+                         544 .LDWlin35:
+00000300 5406ff00        545 	dispose	10,{r28,r29,r31},[lp]
+                         546 .L1707:
+                         547 --line2416
+                         548 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.36::
+                         549 .LDWlin36:
+00000304 3df60800        550 	movea	8,r29,ep
+00000308 6f40            551 	sld.bu	15[ep],r8
+0000030a 7080            552 	sld.hu	0[ep],r16
+0000030c 0152            553 	mov	1,r10
+0000030e e881            554 	cmp	r8,r16
+00000310 d115*           555 	bl	.L1710
+00000312 9d770b00        556 	ld.bu	10[r29],r14
+00000316 03f0            557 	mov	sp,ep
+00000318 1d7e1000        558 	addi	16,r29,r15
+0000031c 8a44            559 	sst.h	r8,20[ep]
+0000031e 097d            560 	sst.w	r15,16[ep]
+00000320 eef60900        561 	mulhi	9,r14,ep
+00000324 1d460800        562 	addi	8,r29,r8
+00000328 233e1000        563 	movea	16,sp,r7
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+0000032c c5f1            564 	add	r5,ep
+0000032e be0705300000*   565 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         566 	jarl	_PduR_CanTpCopyRxData,lp
+                         566 <EXPANSION BEGIN>
+                         566 jarl22 _PduR_CanTpCopyRxData , lp 
+00000334 80ff0000*       566 <EXPANSION END>
+00000338 8a00            567 	zxb	r10
+                         568 .L1710:
+0000033a 5d570e00        569 	st.b	r10,14[r29]
+0000033e e051            570 	cmp	zero,r10
+00000340 9225*           571 	be	.L1711
+00000342 6252            572 	cmp	2,r10
+00000344 e207bb01*       573 	be	.L1754
+00000348 6352            574 	cmp	3,r10
+0000034a ba15*           575 	bne	.L1779
+0000034c 9d470b00        576 	ld.bu	10[r29],r8
+00000350 209e1300        577 	movea	19,zero,r19
+00000354 e8f60900        578 	mulhi	9,r8,ep
+00000358 c5f1            579 	add	r5,ep
+0000035a be0705300000*   580 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r6
+00000360 1df0            581 	mov	r29,ep
+00000362 819b            582 	sst.b	r19,1[ep]
+00000364 8134            583 	sst.h	r6,2[ep]
+00000366 1d30            584 	mov	r29,r6
+                         585 	jarl	_CanTp_RxTransmitFrame,lp
+                         585 <EXPANSION BEGIN>
+                         585 jarl22 _CanTp_RxTransmitFrame , lp 
+00000368 bfff6afd*       585 <EXPANSION END>
+0000036c 5406ff00        586 	dispose	10,{r28,r29,r31},[lp]
+                         587 .L1779:
+00000370 013a            588 	mov	1,r7
+00000372 1d30            589 	mov	r29,r6
+00000374 20466000        590 	movea	96,zero,r8
+00000378 0748            591 	mov	r7,r9
+                         592 	jarl	_CanTp_RxInit,lp
+                         592 <EXPANSION BEGIN>
+                         592 jarl22 _CanTp_RxInit , lp 
+0000037a bfff86fc*       592 <EXPANSION END>
+0000037e 5406ff00        593 	dispose	10,{r28,r29,r31},[lp]
+                         594 .L1711:
+00000382 1df0            595 	mov	r29,ep
+00000384 7338            596 	sld.hu	6[ep],r7
+00000386 bd671700        597 	ld.bu	23[r29],r12
+0000038a 6058            598 	sld.bu	0[ep],r11
+0000038c 9703            599 	sst.b	zero,23[ep]
+0000038e 0742            600 	mov	7,r8
+00000390 cc39            601 	add	r12,r7
+00000392 833c            602 	sst.h	r7,6[ep]
+00000394 c700            603 	zxh	r7
+00000396 615a            604 	cmp	1,r11
+00000398 920d*           605 	be	.L1714
+0000039a 6af0            606 	sld.bu	10[ep],ep
+0000039c c4f1            607 	add	gp,ep
+0000039e be0705480000*   608 	ld.bu	sdaoff23(_CanTp_CalcBS)[ep],r9
+000003a4 e9460700        609 	mulhi	7,r9,r8
+000003a8 c800            610 	zxh	r8
+                         611 .L1714:
+000003aa fd4f0500        612 	ld.hu	4[r29],r9
+000003ae a749            613 	sub	r7,r9
+000003b0 e941            614 	cmp	r9,r8
+000003b2 b705*           615 	ble	.L1945
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000003b4 0940            616 	mov	r9,r8
+000003b6 c800            617 	zxh	r8
+                         618 .L1945:
+000003b8 1df0            619 	mov	r29,ep
+000003ba 7470            620 	sld.hu	8[ep],r14
+000003bc 20861100        621 	movea	17,zero,r16
+000003c0 207e1200        622 	movea	18,zero,r15
+000003c4 e871            623 	cmp	r8,r14
+000003c6 f07f324b        624 	cmovnl	r16,r15,r9
+000003ca 814b            625 	sst.b	r9,1[ep]
+000003cc 80070a01*       626 	br	.L1751
+                         627 .L1728:
+                         628 --line2421
+                         629 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.37::
+                         630 .LDWlin37:
+000003d0 e051            631 	cmp	zero,r10
+000003d2 ea1d*           632 	bne	.L1732
+000003d4 3df60800        633 	movea	8,r29,ep
+000003d8 6f40            634 	sld.bu	15[ep],r8
+000003da 7090            635 	sld.hu	0[ep],r18
+000003dc 0152            636 	mov	1,r10
+000003de e891            637 	cmp	r8,r18
+000003e0 d115*           638 	bl	.L1944
+000003e2 9d870b00        639 	ld.bu	10[r29],r16
+000003e6 03f0            640 	mov	sp,ep
+000003e8 1d8e1000        641 	addi	16,r29,r17
+000003ec 8644            642 	sst.h	r8,12[ep]
+000003ee 058d            643 	sst.w	r17,8[ep]
+000003f0 f0f60900        644 	mulhi	9,r16,ep
+000003f4 1d460800        645 	addi	8,r29,r8
+000003f8 233e0800        646 	movea	8,sp,r7
+000003fc c5f1            647 	add	r5,ep
+000003fe be0705300000*   648 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         649 	jarl	_PduR_CanTpCopyRxData,lp
+                         649 <EXPANSION BEGIN>
+                         649 jarl22 _PduR_CanTpCopyRxData , lp 
+00000404 80ff0000*       649 <EXPANSION END>
+00000408 8a00            650 	zxb	r10
+                         651 .L1944:
+0000040a 5d570e00        652 	st.b	r10,14[r29]
+                         653 .L1732:
+0000040e e051            654 	cmp	zero,r10
+00000410 c205*           655 	be	.L1733
+00000412 6252            656 	cmp	2,r10
+00000414 eaad*           657 	bne	.L1779
+00000416 f56d*           658 	br	.L1753
+                         659 .L1733:
+00000418 1df0            660 	mov	r29,ep
+0000041a 7338            661 	sld.hu	6[ep],r7
+0000041c bd771700        662 	ld.bu	23[r29],r14
+00000420 7248            663 	sld.hu	4[ep],r9
+00000422 9703            664 	sst.b	zero,23[ep]
+00000424 ce39            665 	add	r14,r7
+00000426 833c            666 	sst.h	r7,6[ep]
+00000428 c700            667 	zxh	r7
+0000042a e939            668 	cmp	r9,r7
+0000042c f907bffe*       669 	bnl	.L1768
+00000430 6f30            670 	sld.bu	15[ep],r6
+00000432 016a            671 	mov	1,r13
+00000434 816b            672 	sst.b	r13,1[ep]
+00000436 e031            673 	cmp	zero,r6
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000438 f207c9fe*       674 	be	.L1687
+0000043c 5f32            675 	add	-1,r6
+0000043e 8600            676 	zxb	r6
+00000440 5d370f00        677 	st.b	r6,15[r29]
+00000444 e031            678 	cmp	zero,r6
+00000446 fa07bbfe*       679 	bne	.L1687
+0000044a 9d670100        680 	ld.bu	0[r29],r12
+0000044e 0732            681 	mov	7,r6
+00000450 6162            682 	cmp	1,r12
+00000452 a20d*           683 	be	.L1740
+00000454 9df70b00        684 	ld.bu	10[r29],ep
+00000458 c4f1            685 	add	gp,ep
+0000045a be0705500000*   686 	ld.bu	sdaoff23(_CanTp_CalcBS)[ep],r10
+00000460 ea360700        687 	mulhi	7,r10,r6
+00000464 c600            688 	zxh	r6
+                         689 .L1740:
+00000466 a749            690 	sub	r7,r9
+00000468 e931            691 	cmp	r9,r6
+0000046a b705*           692 	ble	.L1743
+0000046c 0930            693 	mov	r9,r6
+0000046e c600            694 	zxh	r6
+                         695 .L1743:
+00000470 fd4f0900        696 	ld.hu	8[r29],r9
+00000474 06e0            697 	mov	r6,r28
+00000476 e649            698 	cmp	r6,r9
+00000478 c91d*           699 	bnl	.L1747
+0000047a 9d470b00        700 	ld.bu	10[r29],r8
+0000047e 63070c00        701 	st.h	zero,12[sp]
+00000482 233e0800        702 	movea	8,sp,r7
+00000486 e8f60900        703 	mulhi	9,r8,ep
+0000048a 1d460800        704 	addi	8,r29,r8
+0000048e c5f1            705 	add	r5,ep
+00000490 be0705300000*   706 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         707 	jarl	_PduR_CanTpCopyRxData,lp
+                         707 <EXPANSION BEGIN>
+                         707 jarl22 _PduR_CanTpCopyRxData , lp 
+00000496 80ff0000*       707 <EXPANSION END>
+0000049a 8a00            708 	zxb	r10
+0000049c 1df0            709 	mov	r29,ep
+0000049e 20361200        710 	movea	18,zero,r6
+000004a2 8e53            711 	sst.b	r10,14[ep]
+000004a4 8133            712 	sst.b	r6,1[ep]
+000004a6 e051            713 	cmp	zero,r10
+000004a8 9a0d*           714 	bne	.L1748
+000004aa 7498            715 	sld.hu	8[ep],r19
+000004ac fc99            716 	cmp	r28,r19
+000004ae f10d*           717 	bl	.L1750
+                         718 .L1747:
+000004b0 20961100        719 	movea	17,zero,r18
+000004b4 5d970100        720 	st.b	r18,1[r29]
+000004b8 a50d*           721 	br	.L1750
+                         722 .L1748:
+000004ba 6252            723 	cmp	2,r10
+000004bc 820d*           724 	be	.L1750
+000004be 013a            725 	mov	1,r7
+000004c0 1d30            726 	mov	r29,r6
+000004c2 20466000        727 	movea	96,zero,r8
+000004c6 0748            728 	mov	r7,r9
+                         729 	jarl	_CanTp_RxInit,lp
+                         729 <EXPANSION BEGIN>
+                         729 jarl22 _CanTp_RxInit , lp 
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000004c8 bfff38fb*       729 <EXPANSION END>
+                         730 .L1750:
+000004cc bd8f0100        731 	ld.bu	1[r29],r17
+000004d0 e089            732 	cmp	zero,r17
+000004d2 f2072ffe*       733 	be	.L1687
+                         734 .L1751:
+000004d6 9d6f0b00        735 	ld.bu	10[r29],r13
+000004da 1d30            736 	mov	r29,r6
+000004dc edf60900        737 	mulhi	9,r13,ep
+000004e0 c5f1            738 	add	r5,ep
+000004e2 be0705580000*   739 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r11
+000004e8 7d5f0200        740 	st.h	r11,2[r29]
+                         741 	jarl	_CanTp_RxTransmitFrame,lp
+                         741 <EXPANSION BEGIN>
+                         741 jarl22 _CanTp_RxTransmitFrame , lp 
+000004ec bfffe6fb*       741 <EXPANSION END>
+000004f0 5406ff00        742 	dispose	10,{r28,r29,r31},[lp]
+                         743 .L1753:
+000004f4 bd570f00        744 	ld.bu	15[r29],r10
+000004f8 6152            745 	cmp	1,r10
+000004fa fa0777fe*       746 	bne	.L1779
+                         747 .L1754:
+000004fe 9d4f0b00        748 	ld.bu	10[r29],r9
+00000502 20361200        749 	movea	18,zero,r6
+00000506 e9f60900        750 	mulhi	9,r9,ep
+0000050a c5f1            751 	add	r5,ep
+0000050c be0705380000*   752 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r7
+00000512 1df0            753 	mov	r29,ep
+00000514 8133            754 	sst.b	r6,1[ep]
+00000516 1d30            755 	mov	r29,r6
+00000518 813c            756 	sst.h	r7,2[ep]
+                         757 	jarl	_CanTp_RxTransmitFrame,lp
+                         757 <EXPANSION BEGIN>
+                         757 jarl22 _CanTp_RxTransmitFrame , lp 
+0000051a bfffb8fb*       757 <EXPANSION END>
+0000051e 5406ff00        758 	dispose	10,{r28,r29,r31},[lp]
+                         759 .L1761:
+                         760 --line2426
+                         761 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.38::
+                         762 .LDWlin38:
+00000522 e051            763 	cmp	zero,r10
+00000524 fa1d*           764 	bne	.L1766
+00000526 bd471700        765 	ld.bu	23[r29],r8
+0000052a e041            766 	cmp	zero,r8
+0000052c b21d*           767 	be	.L1766
+0000052e fd9f0900        768 	ld.hu	8[r29],r19
+00000532 1250            769 	mov	r18,r10
+00000534 e899            770 	cmp	r8,r19
+00000536 c115*           771 	bl	.L1946
+00000538 9d8f0b00        772 	ld.bu	10[r29],r17
+0000053c 03f0            773 	mov	sp,ep
+0000053e 1d961000        774 	addi	16,r29,r18
+00000542 8244            775 	sst.h	r8,4[ep]
+00000544 0195            776 	sst.w	r18,0[ep]
+00000546 f1f60900        777 	mulhi	9,r17,ep
+0000054a 1d460800        778 	addi	8,r29,r8
+0000054e 0338            779 	mov	sp,r7
+00000550 c5f1            780 	add	r5,ep
+00000552 be0705300000*   781 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                         782 	jarl	_PduR_CanTpCopyRxData,lp
+                         782 <EXPANSION BEGIN>
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                         782 jarl22 _PduR_CanTpCopyRxData , lp 
+00000558 80ff0000*       782 <EXPANSION END>
+0000055c 8a00            783 	zxb	r10
+                         784 .L1946:
+0000055e 5d570e00        785 	st.b	r10,14[r29]
+                         786 .L1766:
+00000562 e051            787 	cmp	zero,r10
+00000564 e205*           788 	be	.L1767
+00000566 6252            789 	cmp	2,r10
+00000568 f20799fd*       790 	be	.L1687
+0000056c bf0704fe*       791 	br	.L1779
+                         792 .L1767:
+00000570 1df0            793 	mov	r29,ep
+00000572 7338            794 	sld.hu	6[ep],r7
+00000574 bd7f1700        795 	ld.bu	23[r29],r15
+00000578 7248            796 	sld.hu	4[ep],r9
+0000057a 9703            797 	sst.b	zero,23[ep]
+0000057c cf39            798 	add	r15,r7
+0000057e 833c            799 	sst.h	r7,6[ep]
+00000580 c700            800 	zxh	r7
+00000582 e939            801 	cmp	r9,r7
+00000584 f90767fd*       802 	bnl	.L1768
+00000588 6070            803 	sld.bu	0[ep],r14
+0000058a 079a            804 	mov	7,r19
+0000058c 6172            805 	cmp	1,r14
+0000058e a20d*           806 	be	.L1772
+00000590 9df70b00        807 	ld.bu	10[r29],ep
+00000594 c4f1            808 	add	gp,ep
+00000596 be0705600000*   809 	ld.bu	sdaoff23(_CanTp_CalcBS)[ep],r12
+0000059c ec9e0700        810 	mulhi	7,r12,r19
+000005a0 d300            811 	zxh	r19
+                         812 .L1772:
+000005a2 a749            813 	sub	r7,r9
+000005a4 e999            814 	cmp	r9,r19
+000005a6 b705*           815 	ble	.L1775
+000005a8 0998            816 	mov	r9,r19
+000005aa d300            817 	zxh	r19
+                         818 .L1775:
+000005ac fd5f0900        819 	ld.hu	8[r29],r11
+000005b0 f359            820 	cmp	r19,r11
+000005b2 b115*           821 	bl	.L1777
+000005b4 9d570b00        822 	ld.bu	10[r29],r10
+000005b8 203e1100        823 	movea	17,zero,r7
+000005bc 1d30            824 	mov	r29,r6
+000005be eaf60900        825 	mulhi	9,r10,ep
+000005c2 c5f1            826 	add	r5,ep
+000005c4 be0705400000*   827 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r8
+000005ca 1df0            828 	mov	r29,ep
+000005cc 813b            829 	sst.b	r7,1[ep]
+000005ce 8144            830 	sst.h	r8,2[ep]
+                         831 	jarl	_CanTp_RxTransmitFrame,lp
+                         831 <EXPANSION BEGIN>
+                         831 jarl22 _CanTp_RxTransmitFrame , lp 
+000005d0 bfff02fb*       831 <EXPANSION END>
+000005d4 5406ff00        832 	dispose	10,{r28,r29,r31},[lp]
+                         833 .L1777:
+000005d8 0232            834 	mov	2,r6
+000005da 5d370e00        835 	st.b	r6,14[r29]
+000005de 5406ff00        836 	dispose	10,{r28,r29,r31},[lp]
+                         837 	.type	_CanTp_RxGetBuffer,@function
+                         838 	.size	_CanTp_RxGetBuffer,.-_CanTp_RxGetBuffer
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                         839 	.type	_CanTp_RxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                         840 	.size	_CanTp_RxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_RxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         841 	.align	2
+                         842 .LDW52:
+                         843 --_lPduInfo	32[sp]	local
+                         844 --_lPduInfo	24[sp]	local
+                         845 --_lPduInfo	16[sp]	local
+                         846 --_lBytesPerBlock	r8	local
+                         847 --_lPduInfo	8[sp]	local
+                         848 --_lBytesPerBlock	r28	local
+                         849 --_lBytesPerBlock	r6	local
+                         850 --_lPduInfo	0[sp]	local
+                         851 --_lBytesPerBlock	r19	local
+                         852 
+                         853 --_pTpRxState	r29	param
+                         854 
+                         855 	.section ".bss","awb"
+                         856 .L2448:
+                         857 	.type	.L2448,@object
+                         858 	.size	.L2448,0
+                         859 	.data
+                         860 	.text
+                         861 	.align	2
+                         862 	.align	2
+                         863 ..gh.f.f.1.e.4:
+                         864 	.type	..gh.f.f.1.e.4,@object
+                         865 	.size	..gh.f.f.1.e.4,0
+                         866 	.global	_CanTp_CanIfTxConfirmationFC..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         867 _CanTp_CanIfTxConfirmationFC..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                         868 _CanTp_CanIfTxConfirmationFC:
+000005e2 80076100        869 	prepare	{r29,r31},0
+000005e6 06e8            870 	mov	r6,r29
+                         871 --	    .bf
+                         872 .LDW62:
+000005e8 a6970100        873 	ld.bu	1[r6],r18
+000005ec 1206dfff        874 	addi	-33,r18,zero
+000005f0 e90d*           875 	bnl	.L3082
+000005f2 f215*           876 	be	.L3077
+000005f4 1206ddff        877 	addi	-35,r18,zero
+000005f8 c925*           878 	bnl	.L3078
+000005fa 9a0d*           879 	bne	.L3082
+                         880 --line2154
+                         881 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.39::
+                         882 .LDWlin39:
+000005fc 013a            883 	mov	1,r7
+000005fe 20466000        884 	movea	96,zero,r8
+00000602 0748            885 	mov	r7,r9
+                         886 	jarl	_CanTp_RxInit,lp
+                         886 <EXPANSION BEGIN>
+                         886 jarl22 _CanTp_RxInit , lp 
+00000604 bffffcf9*       886 <EXPANSION END>
+                         887 --line2155
+                         888 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.40::
+                         889 .LDWlin40:
+00000608 40067f00        890 	dispose	0,{r29,r31},[lp]
+                         891 .L3082:
+                         892 --line2158
+                         893 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.41::
+                         894 .LDWlin41:
+0000060c 20362300        895 	movea	35,zero,r6
+00000610 003a            896 	mov	0,r7
+
+                                                                      Page 17
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000612 0542            897 	mov	5,r8
+00000614 204eb100        898 	movea	177,zero,r9
+                         899 	jarl	_Det_ReportError,lp
+                         899 <EXPANSION BEGIN>
+                         899 jarl22 _Det_ReportError , lp 
+00000618 80ff0000*       899 <EXPANSION END>
+                         900 --line2159
+                         901 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.42::
+                         902 .LDWlin42:
+0000061c 40067f00        903 	dispose	0,{r29,r31},[lp]
+                         904 .L3077:
+                         905 --line2138
+                         906 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.43::
+                         907 .LDWlin43:
+00000620 06f0            908 	mov	r6,ep
+00000622 6a70            909 	sld.bu	10[ep],r14
+00000624 0f7a            910 	mov	15,r15
+00000626 867c            911 	sst.h	r15,12[ep]
+00000628 015a            912 	mov	1,r11
+0000062a eef60900        913 	mulhi	9,r14,ep
+0000062e c5f1            914 	add	r5,ep
+00000630 be0705600000*   915 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+6)[ep],r12
+00000636 06f0            916 	mov	r6,ep
+00000638 815b            917 	sst.b	r11,1[ep]
+0000063a 8164            918 	sst.h	r12,2[ep]
+0000063c 40067f00        919 	dispose	0,{r29,r31},[lp]
+                         920 .L3078:
+                         921 --line2145
+                         922 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.44::
+                         923 .LDWlin44:
+00000640 e6570d00        924 	ld.hu	12[r6],r10
+00000644 e051            925 	cmp	zero,r10
+00000646 8a0d*           926 	bne	.L3079
+                         927 --line2145
+                         928 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.45::
+                         929 .LDWlin45:
+00000648 20362300        930 	movea	35,zero,r6
+0000064c 0a38            931 	mov	r10,r7
+0000064e 0542            932 	mov	5,r8
+00000650 014a            933 	mov	1,r9
+                         934 	jarl	_Det_ReportError,lp
+                         934 <EXPANSION BEGIN>
+                         934 jarl22 _Det_ReportError , lp 
+00000652 80ff0000*       934 <EXPANSION END>
+                         935 .L3079:
+                         936 --line2146
+                         937 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.46::
+                         938 .LDWlin46:
+00000656 1df0            939 	mov	r29,ep
+00000658 7688            940 	sld.hu	12[ep],r17
+0000065a 0282            941 	mov	2,r16
+0000065c 204e1500        942 	movea	21,zero,r9
+00000660 8e83            943 	sst.b	r16,14[ep]
+00000662 5f8a            944 	add	-1,r17
+00000664 868c            945 	sst.h	r17,12[ep]
+00000666 814c            946 	sst.h	r9,2[ep]
+00000668 8183            947 	sst.b	r16,1[ep]
+                         948 --	    .ef
+                         949 .LDW72:
+0000066a 40067f00        950 	dispose	0,{r29,r31},[lp]
+                         951 	.type	_CanTp_CanIfTxConfirmationFC,@function
+
+                                                                      Page 18
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                         952 	.size	_CanTp_CanIfTxConfirmationFC,.-_CanTp_CanIfTxConfirmationFC
+                         953 	.type	_CanTp_CanIfTxConfirmationFC..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                         954 	.size	_CanTp_CanIfTxConfirmationFC..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_CanIfTxConfirmationFC..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         955 	.align	2
+                         956 .LDW82:
+                         957 
+                         958 --_pTpRxState	r29	param
+                         959 
+                         960 	.section ".bss","awb"
+                         961 .L3144:
+                         962 	.type	.L3144,@object
+                         963 	.size	.L3144,0
+                         964 	.data
+                         965 	.text
+                         966 	.align	2
+                         967 	.align	2
+                         968 ..gh.f.f.1.e.5:
+                         969 	.type	..gh.f.f.1.e.5,@object
+                         970 	.size	..gh.f.f.1.e.5,0
+                         971 	.global	_CanTp_TxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                         972 _CanTp_TxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                         973 _CanTp_TxInit:
+0000066e 80076100        974 	prepare	{r29,r31},0
+00000672 08e8            975 	mov	r8,r29
+00000674 06f0            976 	mov	r6,ep
+00000676 8700            977 	zxb	r7
+00000678 9d00            978 	zxb	r29
+                         979 --	    .bf
+                         980 .LDW92:
+0000067a deef0700        981 	tst1	5,7[ep]
+0000067e 920d*           982 	be	.L3247
+                         983 --line2306
+                         984 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.47::
+                         985 .LDWlin47:
+00000680 1f92            986 	mov	-1,r18
+00000682 018a            987 	mov	1,r17
+00000684 84070d900000*   988 	st.b	r18,sdaoff23(_CanTp_TxSemaphores)[gp]
+0000068a 84070d880000*   989 	st.b	r17,sdaoff23(_CanTp_TxSemaphores+1)[gp]
+                         990 .L3247:
+00000690 1f82            991 	mov	-1,r16
+00000692 8683            992 	sst.b	r16,6[ep]
+00000694 8703            993 	sst.b	zero,7[ep]
+00000696 8004            994 	sst.h	zero,0[ep]
+00000698 8104            995 	sst.h	zero,2[ep]
+0000069a 8204            996 	sst.h	zero,4[ep]
+0000069c 8803            997 	sst.b	zero,8[ep]
+0000069e 8b03            998 	sst.b	zero,11[ep]
+000006a0 8903            999 	sst.b	zero,9[ep]
+000006a2 8a03           1000 	sst.b	zero,10[ep]
+000006a4 9303           1001 	sst.b	zero,19[ep]
+000006a6 9403           1002 	sst.b	zero,20[ep]
+000006a8 9503           1003 	sst.b	zero,21[ep]
+000006aa 0032           1004 	mov	0,r6
+                        1005 	jarl	_PduR_CanTpTxConfirmation,lp
+                        1005 <EXPANSION BEGIN>
+                        1005 jarl22 _PduR_CanTpTxConfirmation , lp 
+000006ac 80ff0000*      1005 <EXPANSION END>
+                        1006 --line2320
+                        1007 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.48::
+                        1008 .LDWlin48:
+000006b0 1d0601ff       1009 	addi	-255,r29,zero
+
+                                                                      Page 19
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000006b4 920d*          1010 	be	.L3241
+                        1011 --line2321
+                        1012 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.49::
+                        1013 .LDWlin49:
+000006b6 1d48           1014 	mov	r29,r9
+000006b8 20362300       1015 	movea	35,zero,r6
+000006bc 003a           1016 	mov	0,r7
+000006be 20463500       1017 	movea	53,zero,r8
+                        1018 	jarl	_Det_ReportError,lp
+                        1018 <EXPANSION BEGIN>
+                        1018 jarl22 _Det_ReportError , lp 
+000006c2 80ff0000*      1018 <EXPANSION END>
+                        1019 .L3241:
+                        1020 --	    .ef
+                        1021 .LDW03:
+                        1022 --line2329
+                        1023 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.50::
+                        1024 .LDWlin50:
+000006c6 40067f00       1025 	dispose	0,{r29,r31},[lp]
+                        1026 	.type	_CanTp_TxInit,@function
+                        1027 	.size	_CanTp_TxInit,.-_CanTp_TxInit
+                        1028 	.type	_CanTp_TxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                        1029 	.size	_CanTp_TxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_TxInit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1030 	.align	2
+                        1031 .LDW13:
+                        1032 
+                        1033 --_pTpTxState	ep	param
+                        1034 --_NotifyCode	r7	param
+                        1035 --_DetError	r29	param
+                        1036 
+                        1037 	.section ".bss","awb"
+                        1038 .L3296:
+                        1039 	.type	.L3296,@object
+                        1040 	.size	.L3296,0
+                        1041 	.data
+                        1042 	.text
+                        1043 	.align	2
+                        1044 	.align	2
+                        1045 ..gh.f.f.1.e.6:
+                        1046 	.type	..gh.f.f.1.e.6,@object
+                        1047 	.size	..gh.f.f.1.e.6,0
+                        1048 	.global	_CanTp_TxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1049 _CanTp_TxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                        1050 _CanTp_TxTransmitFrame:
+000006ca 8c076300       1051 	prepare	{r29,r31},6,sp
+000006ce 06e8           1052 	mov	r6,r29
+                        1053 --	    .bf
+                        1054 .LDW23:
+000006d0 bd870700       1055 	ld.bu	7[r29],r16
+000006d4 23360800       1056 	movea	8,sp,r6
+000006d8 0935           1057 	sst.w	r6,16[ep]
+000006da 8a04           1058 	sst.h	zero,20[ep]
+000006dc 1006efff       1059 	addi	-17,r16,zero
+000006e0 c915*          1060 	bnl	.L3354
+000006e2 e21d*          1061 	be	.L3351
+000006e4 1006edff       1062 	addi	-19,r16,zero
+000006e8 9925*          1063 	bnl	.L3352
+000006ea fa0d*          1064 	bne	.L3354
+                        1065 --line2706
+                        1066 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.51::
+                        1067 .LDWlin51:
+
+                                                                      Page 20
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000006ec 9d5f1500       1068 	ld.bu	20[r29],r11
+000006f0 018a           1069 	mov	1,r17
+000006f2 8b9e2000       1070 	ori	32,r11,r19
+                        1071 .L3349:
+000006f6 0092           1072 	mov	0,r18
+000006f8 bd3f1300       1073 	ld.bu	19[r29],r7
+000006fc 638f1400       1074 	st.h	r17,20[sp]
+00000700 439f0800       1075 	st.b	r19,8[sp]
+00000704 c689           1076 	add	r6,r17
+00000706 a52d*          1077 	br	.L3360
+                        1078 .L3354:
+                        1079 --line2711
+                        1080 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.52::
+                        1081 .LDWlin52:
+00000708 20362300       1082 	movea	35,zero,r6
+0000070c 003a           1083 	mov	0,r7
+0000070e 20463300       1084 	movea	51,zero,r8
+00000712 204eb200       1085 	movea	178,zero,r9
+                        1086 	jarl	_Det_ReportError,lp
+                        1086 <EXPANSION BEGIN>
+                        1086 jarl22 _Det_ReportError , lp 
+00000716 80ff0000*      1086 <EXPANSION END>
+                        1087 --line2712
+                        1088 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.53::
+                        1089 .LDWlin53:
+0000071a 4c067f00       1090 	dispose	6,{r29,r31},[lp]
+                        1091 .L3351:
+                        1092 --line2664
+                        1093 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.54::
+                        1094 .LDWlin54:
+0000071e fd970300       1095 	ld.hu	2[r29],r18
+00000722 018a           1096 	mov	1,r17
+00000724 d29e0f00       1097 	andi	15,r18,r19
+00000728 f5e5*          1098 	br	.L3349
+                        1099 .L3352:
+                        1100 --line2694
+                        1101 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.55::
+                        1102 .LDWlin55:
+0000072a 1df0           1103 	mov	r29,ep
+0000072c 7140           1104 	sld.hu	2[ep],r8
+0000072e 016a           1105 	mov	1,r13
+00000730 028a           1106 	mov	2,r17
+00000732 946b           1107 	sst.b	r13,20[ep]
+00000734 0880           1108 	mov	r8,r16
+00000736 8882           1109 	shr	8,r16
+00000738 d07e0f00       1110 	andi	15,r16,r15
+0000073c 8f9e1000       1111 	ori	16,r15,r19
+00000740 43470900       1112 	st.b	r8,9[sp]
+00000744 8b03           1113 	sst.b	zero,11[ep]
+00000746 8204           1114 	sst.h	zero,4[ep]
+00000748 f5d5*          1115 	br	.L3349
+                        1116 .L3359:
+0000074a 1278           1117 	mov	r18,r15
+0000074c dd79           1118 	add	r29,r15
+0000074e 8f4f0d00       1119 	ld.bu	12[r15],r9
+00000752 12f0           1120 	mov	r18,ep
+00000754 d1f1           1121 	add	r17,ep
+00000756 4192           1122 	add	1,r18
+00000758 804b           1123 	sst.b	r9,0[ep]
+                        1124 .L3360:
+0000075a e791           1125 	cmp	r7,r18
+
+                                                                      Page 21
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+0000075c f1f5*          1126 	bl	.L3359
+                        1127 --line2718
+                        1128 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.56::
+                        1129 .LDWlin56:
+0000075e 03f0           1130 	mov	sp,ep
+00000760 7a78           1131 	sld.hu	20[ep],r15
+00000762 bd471300       1132 	ld.bu	19[r29],r8
+00000766 9d370700       1133 	ld.bu	6[r29],r6
+0000076a 023a           1134 	mov	2,r7
+0000076c 803b           1135 	sst.b	r7,0[ep]
+0000076e c879           1136 	add	r8,r15
+00000770 8a7c           1137 	sst.h	r15,20[ep]
+00000772 8f00           1138 	zxb	r15
+00000774 687a           1139 	cmp	8,r15
+00000776 8133           1140 	sst.b	r6,1[ep]
+00000778 e807064b       1141 	cmovnh	8,zero,r9
+0000077c 8203           1142 	sst.b	zero,2[ep]
+0000077e 8303           1143 	sst.b	zero,3[ep]
+00000780 844b           1144 	sst.b	r9,4[ep]
+00000782 0330           1145 	mov	sp,r6
+00000784 233e1000       1146 	movea	16,sp,r7
+                        1147 	jarl	_CanTp_CanIfTransmitFrame,lp
+                        1147 <EXPANSION BEGIN>
+                        1147 jarl22 _CanTp_CanIfTransmitFrame , lp 
+00000788 bfff04f9*      1147 <EXPANSION END>
+                        1148 --line2738
+                        1149 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.57::
+                        1150 .LDWlin57:
+0000078c e051           1151 	cmp	zero,r10
+0000078e fa0d*          1152 	bne	.L3370
+                        1153 --line2739
+                        1154 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.58::
+                        1155 .LDWlin58:
+00000790 1df0           1156 	mov	r29,ep
+00000792 6768           1157 	sld.bu	7[ep],r13
+00000794 cd76cf00       1158 	andi	207,r13,r14
+00000798 8e662000       1159 	ori	32,r14,r12
+0000079c 8763           1160 	sst.b	r12,7[ep]
+0000079e 7270           1161 	sld.hu	4[ep],r14
+000007a0 bd5f1300       1162 	ld.bu	19[r29],r11
+000007a4 cb71           1163 	add	r11,r14
+000007a6 8274           1164 	sst.h	r14,4[ep]
+000007a8 4c067f00       1165 	dispose	6,{r29,r31},[lp]
+                        1166 .L3370:
+                        1167 --line2744
+                        1168 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.59::
+                        1169 .LDWlin59:
+000007ac 6152           1170 	cmp	1,r10
+000007ae fa05*          1171 	bne	.L3347
+                        1172 --line2745
+                        1173 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.60::
+                        1174 .LDWlin60:
+000007b0 1d30           1175 	mov	r29,r6
+000007b2 0a38           1176 	mov	r10,r7
+000007b4 2046d700       1177 	movea	215,zero,r8
+                        1178 	jarl	_CanTp_TxInit,lp
+                        1178 <EXPANSION BEGIN>
+                        1178 jarl22 _CanTp_TxInit , lp 
+000007b8 bfffb6fe*      1178 <EXPANSION END>
+                        1179 .L3347:
+                        1180 --	    .ef
+
+                                                                      Page 22
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1181 .LDW33:
+                        1182 --line2749
+                        1183 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.61::
+                        1184 .LDWlin61:
+000007bc 4c067f00       1185 	dispose	6,{r29,r31},[lp]
+                        1186 	.type	_CanTp_TxTransmitFrame,@function
+                        1187 	.size	_CanTp_TxTransmitFrame,.-_CanTp_TxTransmitFrame
+                        1188 	.type	_CanTp_TxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                        1189 	.size	_CanTp_TxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_TxTransmitFrame..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1190 	.align	2
+                        1191 .LDW43:
+                        1192 --_lTxFrameData	16[sp]	local
+                        1193 --_lTxFrameDataBuffer	8[sp]	local
+                        1194 --_lPduTxInfo	0[sp]	local
+                        1195 --_lTxResult	r10	local
+                        1196 --_pDest	r17	local
+                        1197 --_Count	r7	local
+                        1198 --_i	r18	local
+                        1199 --_lPaddedLength	r9	local
+                        1200 
+                        1201 --_pTpTxState	r29	param
+                        1202 
+                        1203 	.section ".bss","awb"
+                        1204 .L3510:
+                        1205 	.type	.L3510,@object
+                        1206 	.size	.L3510,0
+                        1207 	.data
+                        1208 	.text
+                        1209 	.align	2
+                        1210 	.align	2
+                        1211 ..gh.f.f.1.e.7:
+                        1212 	.type	..gh.f.f.1.e.7,@object
+                        1213 	.size	..gh.f.f.1.e.7,0
+                        1214 	.global	_CanTp_TxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1215 _CanTp_TxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                        1216 _CanTp_TxGetBuffer:
+000007c0 8607e100       1217 	prepare	{r28,r29,r31},3
+000007c4 06e8           1218 	mov	r6,r29
+                        1219 --	    .bf
+                        1220 .LDW53:
+000007c6 a68f0700       1221 	ld.bu	7[r6],r17
+000007ca 1106bfff       1222 	addi	-65,r17,zero
+000007ce e905*          1223 	bnl	.L3672
+000007d0 8215*          1224 	be	.L3667
+000007d2 1106bdff       1225 	addi	-67,r17,zero
+000007d6 b915*          1226 	bnl	.L3668
+000007d8 821d*          1227 	be	.L3669
+                        1228 .L3672:
+                        1229 --line2478
+                        1230 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.62::
+                        1231 .LDWlin62:
+000007da 20362300       1232 	movea	35,zero,r6
+000007de 003a           1233 	mov	0,r7
+000007e0 20463100       1234 	movea	49,zero,r8
+000007e4 204eb200       1235 	movea	178,zero,r9
+                        1236 	jarl	_Det_ReportError,lp
+                        1236 <EXPANSION BEGIN>
+                        1236 jarl22 _Det_ReportError , lp 
+000007e8 80ff0000*      1236 <EXPANSION END>
+                        1237 --line2479
+                        1238 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.63::
+
+                                                                      Page 23
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1239 .LDWlin63:
+000007ec 4606ff00       1240 	dispose	3,{r28,r29,r31},[lp]
+                        1241 .L3667:
+                        1242 --line2446
+                        1243 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.64::
+                        1244 .LDWlin64:
+000007f0 06f0           1245 	mov	r6,ep
+000007f2 6290           1246 	sld.bu	2[ep],r18
+000007f4 20e61100       1247 	movea	17,zero,r28
+000007f8 9393           1248 	sst.b	r18,19[ep]
+000007fa e515*          1249 	br	.L3665
+                        1250 .L3668:
+                        1251 --line2460
+                        1252 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.65::
+                        1253 .LDWlin65:
+000007fc 0692           1254 	mov	6,r18
+000007fe 46971300       1255 	st.b	r18,19[r6]
+00000802 20e61200       1256 	movea	18,zero,r28
+00000806 8515*          1257 	br	.L3665
+                        1258 .L3669:
+                        1259 --line2467
+                        1260 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.66::
+                        1261 .LDWlin66:
+00000808 06f0           1262 	mov	r6,ep
+0000080a 7248           1263 	sld.hu	4[ep],r9
+0000080c 7188           1264 	sld.hu	2[ep],r17
+0000080e 0792           1265 	mov	7,r18
+00000810 9393           1266 	sst.b	r18,19[ep]
+00000812 09860700       1267 	addi	7,r9,r16
+00000816 20e61300       1268 	movea	19,zero,r28
+0000081a f181           1269 	cmp	r17,r16
+0000081c d705*          1270 	ble	.L3665
+                        1271 --line2472
+                        1272 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.67::
+                        1273 .LDWlin67:
+0000081e a989           1274 	sub	r9,r17
+00000820 1190           1275 	mov	r17,r18
+00000822 9200           1276 	zxb	r18
+00000824 9393           1277 	sst.b	r18,19[ep]
+                        1278 .L3665:
+00000826 067e0c00       1279 	addi	12,r6,r15
+0000082a 03f0           1280 	mov	sp,ep
+0000082c 0032           1281 	mov	0,r6
+0000082e 037d           1282 	sst.w	r15,4[ep]
+00000830 8494           1283 	sst.h	r18,8[ep]
+00000832 233e0400       1284 	movea	4,sp,r7
+00000836 0640           1285 	mov	r6,r8
+00000838 234e0200       1286 	movea	2,sp,r9
+                        1287 	jarl	_PduR_CanTpCopyTxData,lp
+                        1287 <EXPANSION BEGIN>
+                        1287 jarl22 _PduR_CanTpCopyTxData , lp 
+0000083c 80ff0000*      1287 <EXPANSION END>
+00000840 8a00           1288 	zxb	r10
+00000842 5d570800       1289 	st.b	r10,8[r29]
+                        1290 --line2489
+                        1291 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.68::
+                        1292 .LDWlin68:
+00000846 e051           1293 	cmp	zero,r10
+00000848 ba0d*          1294 	bne	.L3674
+                        1295 --line2490
+                        1296 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.69::
+
+                                                                      Page 24
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1297 .LDWlin69:
+0000084a 20761500       1298 	movea	21,zero,r14
+0000084e 1df0           1299 	mov	r29,ep
+00000850 8074           1300 	sst.h	r14,0[ep]
+00000852 87e3           1301 	sst.b	r28,7[ep]
+00000854 1d30           1302 	mov	r29,r6
+                        1303 	jarl	_CanTp_TxTransmitFrame,lp
+                        1303 <EXPANSION BEGIN>
+                        1303 jarl22 _CanTp_TxTransmitFrame , lp 
+00000856 bfff74fe*      1303 <EXPANSION END>
+0000085a 4606ff00       1304 	dispose	3,{r28,r29,r31},[lp]
+                        1305 .L3674:
+                        1306 --line2495
+                        1307 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.70::
+                        1308 .LDWlin70:
+0000085e 6252           1309 	cmp	2,r10
+00000860 f205*          1310 	be	.L3663
+                        1311 --line2496
+                        1312 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.71::
+                        1313 .LDWlin71:
+00000862 1d30           1314 	mov	r29,r6
+00000864 013a           1315 	mov	1,r7
+00000866 20465000       1316 	movea	80,zero,r8
+                        1317 	jarl	_CanTp_TxInit,lp
+                        1317 <EXPANSION BEGIN>
+                        1317 jarl22 _CanTp_TxInit , lp 
+0000086a bfff04fe*      1317 <EXPANSION END>
+                        1318 .L3663:
+                        1319 --	    .ef
+                        1320 .LDW63:
+                        1321 --line2504
+                        1322 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.72::
+                        1323 .LDWlin72:
+0000086e 4606ff00       1324 	dispose	3,{r28,r29,r31},[lp]
+                        1325 	.type	_CanTp_TxGetBuffer,@function
+                        1326 	.size	_CanTp_TxGetBuffer,.-_CanTp_TxGetBuffer
+                        1327 	.type	_CanTp_TxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                        1328 	.size	_CanTp_TxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_TxGetBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1329 	.align	2
+                        1330 .LDW73:
+                        1331 --_lPduInfo	4[sp]	local
+                        1332 --_lNewChannelState	r28	local
+                        1333 --_lRemainingBufferSize	2[sp]	local
+                        1334 
+                        1335 --_pTpTxState	r29	param
+                        1336 
+                        1337 	.section ".bss","awb"
+                        1338 .L3742:
+                        1339 	.type	.L3742,@object
+                        1340 	.size	.L3742,0
+                        1341 	.data
+                        1342 	.text
+                        1343 	.align	2
+                        1344 	.align	2
+                        1345 ..gh.f.f.1.e.8:
+                        1346 	.type	..gh.f.f.1.e.8,@object
+                        1347 	.size	..gh.f.f.1.e.8,0
+                        1348 	.global	_CanTp_CanIfRxIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1349 _CanTp_CanIfRxIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                        1350 _CanTp_CanIfRxIndication:
+00000872 8007e110       1351 	prepare	{r27,r28,r29,r31},0
+
+                                                                      Page 25
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000876 8600           1352 	zxb	r6
+00000878 8700           1353 	zxb	r7
+0000087a 08e0           1354 	mov	r8,r28
+                        1355 --	    .bf
+                        1356 .LDW83:
+0000087c e89f0500       1357 	ld.hu	4[r8],r19
+00000880 0706d0ff       1358 	addi	-48,r7,zero
+00000884 1390           1359 	mov	r19,r18
+00000886 9200           1360 	zxb	r18
+00000888 e2076903*      1361 	be	.L3974
+                        1362 --	    .bs
+                        1363 .LDW93:
+                        1364 --line1940
+                        1365 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.73::
+                        1366 .LDWlin73:
+0000088c 6892           1367 	cmp	8,r18
+0000088e e8070673       1368 	cmovnh	8,zero,r14
+00000892 ee99           1369 	cmp	r14,r19
+00000894 ea076703*      1370 	bne	.L3981
+                        1371 --	    .bs
+                        1372 .LDW04:
+                        1373 --line1955
+                        1374 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.74::
+                        1375 .LDWlin74:
+00000898 e6f61c00       1376 	mulhi	28,r6,ep
+0000089c 2c0600000000*  1377 	mov	sdaoff23(_CanTp_RxState),r12
+000008a2 ccf1           1378 	add	r12,ep
+000008a4 6158           1379 	sld.bu	1[ep],r11
+000008a6 e059           1380 	cmp	zero,r11
+000008a8 c205*          1381 	be	.L3888
+000008aa 1ee8           1382 	mov	ep,r29
+                        1383 --line1957
+                        1384 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.75::
+                        1385 .LDWlin75:
+000008ac e0f1           1386 	cmp	zero,ep
+000008ae da0d*          1387 	bne	.L3899
+                        1388 .L3888:
+                        1389 --line1959
+                        1390 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.76::
+                        1391 .LDWlin76:
+000008b0 e039           1392 	cmp	zero,r7
+000008b2 d205*          1393 	be	.L3894
+000008b4 0706f0ff       1394 	addi	-16,r7,zero
+000008b8 ea070d04*      1395 	bne	.L3866
+                        1396 .L3894:
+                        1397 --line1961
+                        1398 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.77::
+                        1399 .LDWlin77:
+000008bc 6150           1400 	sld.bu	1[ep],r10
+000008be e051           1401 	cmp	zero,r10
+000008c0 ea070504*      1402 	bne	.L3866
+000008c4 1ee8           1403 	mov	ep,r29
+000008c6 8a33           1404 	sst.b	r6,10[ep]
+                        1405 .L3899:
+                        1406 --line1972
+                        1407 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.78::
+                        1408 .LDWlin78:
+000008c8 e039           1409 	cmp	zero,r7
+000008ca a20d*          1410 	be	.L3905
+000008cc 0706f0ff       1411 	addi	-16,r7,zero
+000008d0 925d*          1412 	be	.L3924
+
+                                                                      Page 26
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000008d2 0706e0ff       1413 	addi	-32,r7,zero
+000008d6 e2072902*      1414 	be	.L3947
+000008da 4006ff10       1415 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1416 .L3905:
+                        1417 --line1980
+                        1418 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.79::
+                        1419 .LDWlin79:
+000008de 28f70100       1420 	ld.w	0[r8],ep
+000008e2 6048           1421 	sld.bu	0[ep],r9
+000008e4 c9de0f00       1422 	andi	15,r9,r27
+000008e8 e207e901*      1423 	be	.L4216
+000008ec 67da           1424 	cmp	7,r27
+000008ee eb07e301*      1425 	bh	.L4216
+000008f2 1b460100       1426 	addi	1,r27,r8
+000008f6 e899           1427 	cmp	r8,r19
+000008f8 e107d901*      1428 	bl	.L4216
+000008fc bd3f0100       1429 	ld.bu	1[r29],r7
+00000900 e039           1430 	cmp	zero,r7
+00000902 820d*          1431 	be	.L3910
+00000904 1d30           1432 	mov	r29,r6
+00000906 013a           1433 	mov	1,r7
+00000908 2046c600       1434 	movea	198,zero,r8
+0000090c 004a           1435 	mov	0,r9
+                        1436 	jarl	_CanTp_RxInit,lp
+                        1436 <EXPANSION BEGIN>
+                        1436 jarl22 _CanTp_RxInit , lp 
+0000090e bffff2f6*      1436 <EXPANSION END>
+                        1437 .L3910:
+00000912 3c9f0100       1438 	ld.w	0[r28],r19
+00000916 1df0           1439 	mov	r29,ep
+00000918 8003           1440 	sst.b	zero,0[ep]
+0000091a 1b40           1441 	mov	r27,r8
+0000091c 82dc           1442 	sst.h	r27,4[ep]
+0000091e 97db           1443 	sst.b	r27,23[ep]
+00000920 419a           1444 	add	1,r19
+00000922 0032           1445 	mov	0,r6
+00000924 950d*          1446 	br	.L3913
+                        1447 .L3912:
+00000926 0690           1448 	mov	r6,r18
+00000928 d391           1449 	add	r19,r18
+0000092a 92970100       1450 	ld.bu	0[r18],r18
+0000092e 06f0           1451 	mov	r6,ep
+00000930 ddf1           1452 	add	r29,ep
+00000932 4132           1453 	add	1,r6
+00000934 9093           1454 	sst.b	r18,16[ep]
+                        1455 .L3913:
+00000936 fb31           1456 	cmp	r27,r6
+00000938 f1f5*          1457 	bl	.L3912
+0000093a 1df0           1458 	mov	r29,ep
+0000093c 6a88           1459 	sld.bu	10[ep],r17
+0000093e 8404           1460 	sst.h	zero,8[ep]
+00000940 1d4e0800       1461 	addi	8,r29,r9
+00000944 003a           1462 	mov	0,r7
+00000946 f1f60900       1463 	mulhi	9,r17,ep
+0000094a c5f1           1464 	add	r5,ep
+0000094c be0705300000*  1465 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                        1466 	jarl	_PduR_CanTpStartOfReception,lp
+                        1466 <EXPANSION BEGIN>
+                        1466 jarl22 _PduR_CanTpStartOfReception , lp 
+00000952 80ff0000*      1466 <EXPANSION END>
+00000956 8a00           1467 	zxb	r10
+
+                                                                      Page 27
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000958 5d570e00       1468 	st.b	r10,14[r29]
+0000095c e051           1469 	cmp	zero,r10
+0000095e c205*          1470 	be	.L3916
+00000960 6252           1471 	cmp	2,r10
+00000962 ea070f01*      1472 	bne	.L3940
+                        1473 .L3916:
+00000966 207e1500       1474 	movea	21,zero,r15
+0000096a 1df0           1475 	mov	r29,ep
+0000096c 20764100       1476 	movea	65,zero,r14
+00000970 016a           1477 	mov	1,r13
+00000972 817c           1478 	sst.h	r15,2[ep]
+00000974 8173           1479 	sst.b	r14,1[ep]
+00000976 9a6b           1480 	sst.b	r13,26[ep]
+00000978 1e30           1481 	mov	ep,r6
+                        1482 	jarl	_CanTp_RxGetBuffer,lp
+                        1482 <EXPANSION BEGIN>
+                        1482 jarl22 _CanTp_RxGetBuffer , lp 
+0000097a bfffcaf8*      1482 <EXPANSION END>
+0000097e 4006ff10       1483 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1484 .L3924:
+                        1485 --line1989
+                        1486 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.80::
+                        1487 .LDWlin80:
+00000982 6a60           1488 	sld.bu	10[ep],r12
+00000984 ecf60900       1489 	mulhi	9,r12,ep
+00000988 c5f1           1490 	add	r5,ep
+0000098a be0705500000*  1491 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+7)[ep],r10
+00000990 6152           1492 	cmp	1,r10
+00000992 ba0d*          1493 	bne	.L3926
+00000994 1d30           1494 	mov	r29,r6
+00000996 203e8000       1495 	movea	128,zero,r7
+0000099a 20469000       1496 	movea	144,zero,r8
+0000099e 0a48           1497 	mov	r10,r9
+                        1498 	jarl	_CanTp_RxInit,lp
+                        1498 <EXPANSION BEGIN>
+                        1498 jarl22 _CanTp_RxInit , lp 
+000009a0 bfff60f6*      1498 <EXPANSION END>
+000009a4 4006ff10       1499 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1500 .L3926:
+000009a8 28f70100       1501 	ld.w	0[r8],ep
+000009ac 6080           1502 	sld.bu	0[ep],r16
+000009ae 61d8           1503 	sld.bu	1[ep],r27
+000009b0 d08e0f00       1504 	andi	15,r16,r17
+000009b4 c88a           1505 	shl	8,r17
+000009b6 11d9           1506 	or	r17,r27
+000009b8 67da           1507 	cmp	7,r27
+000009ba e3071701*      1508 	bnh	.L4216
+000009be 689a           1509 	cmp	8,r19
+000009c0 ef071101*      1510 	bgt	.L4216
+000009c4 689a           1511 	cmp	8,r19
+000009c6 e1070b01*      1512 	bl	.L4216
+000009ca bd870100       1513 	ld.bu	1[r29],r16
+000009ce e081           1514 	cmp	zero,r16
+000009d0 820d*          1515 	be	.L3931
+000009d2 1d30           1516 	mov	r29,r6
+000009d4 013a           1517 	mov	1,r7
+000009d6 2046c600       1518 	movea	198,zero,r8
+000009da 004a           1519 	mov	0,r9
+                        1520 	jarl	_CanTp_RxInit,lp
+                        1520 <EXPANSION BEGIN>
+                        1520 jarl22 _CanTp_RxInit , lp 
+
+                                                                      Page 28
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000009dc bfff24f6*      1520 <EXPANSION END>
+                        1521 .L3931:
+000009e0 1df0           1522 	mov	r29,ep
+000009e2 0f7a           1523 	mov	15,r15
+000009e4 82dc           1524 	sst.h	r27,4[ep]
+000009e6 8304           1525 	sst.h	zero,6[ep]
+000009e8 867c           1526 	sst.h	r15,12[ep]
+000009ea fc9f0500       1527 	ld.hu	4[r28],r19
+000009ee 3c8f0100       1528 	ld.w	0[r28],r17
+000009f2 014a           1529 	mov	1,r9
+000009f4 1b40           1530 	mov	r27,r8
+000009f6 1396feff       1531 	addi	-2,r19,r18
+000009fa 9200           1532 	zxb	r18
+000009fc 989b           1533 	sst.b	r19,24[ep]
+000009fe 804b           1534 	sst.b	r9,0[ep]
+00000a00 994b           1535 	sst.b	r9,25[ep]
+00000a02 9793           1536 	sst.b	r18,23[ep]
+00000a04 428a           1537 	add	2,r17
+00000a06 009a           1538 	mov	0,r19
+00000a08 950d*          1539 	br	.L3934
+                        1540 .L3933:
+00000a0a 1380           1541 	mov	r19,r16
+00000a0c d181           1542 	add	r17,r16
+00000a0e 90770100       1543 	ld.bu	0[r16],r14
+00000a12 13f0           1544 	mov	r19,ep
+00000a14 ddf1           1545 	add	r29,ep
+00000a16 419a           1546 	add	1,r19
+00000a18 9073           1547 	sst.b	r14,16[ep]
+                        1548 .L3934:
+00000a1a f299           1549 	cmp	r18,r19
+00000a1c f1f5*          1550 	bl	.L3933
+00000a1e 1df0           1551 	mov	r29,ep
+00000a20 6a68           1552 	sld.bu	10[ep],r13
+00000a22 8404           1553 	sst.h	zero,8[ep]
+00000a24 1d4e0800       1554 	addi	8,r29,r9
+00000a28 003a           1555 	mov	0,r7
+00000a2a edf60900       1556 	mulhi	9,r13,ep
+00000a2e c5f1           1557 	add	r5,ep
+00000a30 be0705300000*  1558 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+1)[ep],r6
+                        1559 	jarl	_PduR_CanTpStartOfReception,lp
+                        1559 <EXPANSION BEGIN>
+                        1559 jarl22 _PduR_CanTpStartOfReception , lp 
+00000a36 80ff0000*      1559 <EXPANSION END>
+00000a3a 8a00           1560 	zxb	r10
+00000a3c 5d570e00       1561 	st.b	r10,14[r29]
+00000a40 e051           1562 	cmp	zero,r10
+00000a42 8225*          1563 	be	.L3937
+00000a44 6252           1564 	cmp	2,r10
+00000a46 9235*          1565 	be	.L3938
+00000a48 6352           1566 	cmp	3,r10
+00000a4a ba15*          1567 	bne	.L3940
+00000a4c 9d870b00       1568 	ld.bu	10[r29],r16
+00000a50 206e1300       1569 	movea	19,zero,r13
+00000a54 f0f60900       1570 	mulhi	9,r16,ep
+00000a58 c5f1           1571 	add	r5,ep
+00000a5a be0705700000*  1572 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r14
+00000a60 1df0           1573 	mov	r29,ep
+00000a62 816b           1574 	sst.b	r13,1[ep]
+00000a64 1e30           1575 	mov	ep,r6
+00000a66 8174           1576 	sst.h	r14,2[ep]
+                        1577 	jarl	_CanTp_RxTransmitFrame,lp
+
+                                                                      Page 29
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1577 <EXPANSION BEGIN>
+                        1577 jarl22 _CanTp_RxTransmitFrame , lp 
+00000a68 bfff6af6*      1577 <EXPANSION END>
+00000a6c 4006ff10       1578 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1579 .L3940:
+00000a70 013a           1580 	mov	1,r7
+00000a72 1d30           1581 	mov	r29,r6
+00000a74 20466000       1582 	movea	96,zero,r8
+00000a78 0748           1583 	mov	r7,r9
+                        1584 	jarl	_CanTp_RxInit,lp
+                        1584 <EXPANSION BEGIN>
+                        1584 jarl22 _CanTp_RxInit , lp 
+00000a7a bfff86f5*      1584 <EXPANSION END>
+00000a7e 4006ff10       1585 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1586 .L3937:
+00000a82 205e1500       1587 	movea	21,zero,r11
+00000a86 1df0           1588 	mov	r29,ep
+00000a88 20564200       1589 	movea	66,zero,r10
+00000a8c 014a           1590 	mov	1,r9
+00000a8e 815c           1591 	sst.h	r11,2[ep]
+00000a90 8153           1592 	sst.b	r10,1[ep]
+00000a92 9a4b           1593 	sst.b	r9,26[ep]
+00000a94 6af0           1594 	sld.bu	10[ep],ep
+00000a96 1d30           1595 	mov	r29,r6
+00000a98 c4f1           1596 	add	gp,ep
+00000a9a 9e070d000000*  1597 	st.b	zero,sdaoff23(_CanTp_CalcBS)[ep]
+                        1598 	jarl	_CanTp_RxGetBuffer,lp
+                        1598 <EXPANSION BEGIN>
+                        1598 jarl22 _CanTp_RxGetBuffer , lp 
+00000aa0 bfffa4f7*      1598 <EXPANSION END>
+00000aa4 4006ff10       1599 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1600 .L3938:
+00000aa8 9d3f0b00       1601 	ld.bu	10[r29],r7
+00000aac 20961200       1602 	movea	18,zero,r18
+00000ab0 018a           1603 	mov	1,r17
+00000ab2 e7f60900       1604 	mulhi	9,r7,ep
+00000ab6 c5f1           1605 	add	r5,ep
+00000ab8 be0705980000*  1606 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r19
+00000abe 1df0           1607 	mov	r29,ep
+00000ac0 8193           1608 	sst.b	r18,1[ep]
+00000ac2 9a8b           1609 	sst.b	r17,26[ep]
+00000ac4 819c           1610 	sst.h	r19,2[ep]
+00000ac6 1e30           1611 	mov	ep,r6
+                        1612 	jarl	_CanTp_RxTransmitFrame,lp
+                        1612 <EXPANSION BEGIN>
+                        1612 jarl22 _CanTp_RxTransmitFrame , lp 
+00000ac8 bfff0af6*      1612 <EXPANSION END>
+00000acc 4006ff10       1613 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1614 .L4216:
+00000ad0 20362300       1615 	movea	35,zero,r6
+00000ad4 003a           1616 	mov	0,r7
+00000ad6 0442           1617 	mov	4,r8
+00000ad8 204e8000       1618 	movea	128,zero,r9
+                        1619 	jarl	_Det_ReportError,lp
+                        1619 <EXPANSION BEGIN>
+                        1619 jarl22 _Det_ReportError , lp 
+00000adc 80ff0000*      1619 <EXPANSION END>
+00000ae0 bd670100       1620 	ld.bu	1[r29],r12
+00000ae4 e061           1621 	cmp	zero,r12
+00000ae6 ea07df01*      1622 	bne	.L3866
+00000aea 1d30           1623 	mov	r29,r6
+
+                                                                      Page 30
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000aec 203e8000       1624 	movea	128,zero,r7
+00000af0 2046ff00       1625 	movea	255,zero,r8
+00000af4 014a           1626 	mov	1,r9
+                        1627 	jarl	_CanTp_RxInit,lp
+                        1627 <EXPANSION BEGIN>
+                        1627 jarl22 _CanTp_RxInit , lp 
+00000af6 bfff0af5*      1627 <EXPANSION END>
+00000afa 4006ff10       1628 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1629 .L3947:
+                        1630 --line1994
+                        1631 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.81::
+                        1632 .LDWlin81:
+00000afe 6140           1633 	sld.bu	1[ep],r8
+00000b00 0806dfff       1634 	addi	-33,r8,zero
+00000b04 ca0d*          1635 	bne	.L3949
+00000b06 1f5a           1636 	mov	-1,r11
+00000b08 0152           1637 	mov	1,r10
+00000b0a 84070d580000*  1638 	st.b	r11,sdaoff23(_CanTp_TxSemaphores)[gp]
+00000b10 84070d500000*  1639 	st.b	r10,sdaoff23(_CanTp_TxSemaphores+1)[gp]
+00000b16 1e30           1640 	mov	ep,r6
+                        1641 	jarl	_CanTp_CanIfTxConfirmationFC,lp
+                        1641 <EXPANSION BEGIN>
+                        1641 jarl22 _CanTp_CanIfTxConfirmationFC , lp 
+00000b18 bfffcafa*      1641 <EXPANSION END>
+                        1642 .L3949:
+00000b1c bd4f0100       1643 	ld.bu	1[r29],r9
+00000b20 614a           1644 	cmp	1,r9
+00000b22 ea07a301*      1645 	bne	.L3866
+00000b26 3cf70100       1646 	ld.w	0[r28],ep
+00000b2a 0242           1647 	mov	2,r8
+00000b2c 5d470000       1648 	st.b	r8,0[r29]
+00000b30 9d7f1900       1649 	ld.bu	24[r29],r15
+00000b34 6038           1650 	sld.bu	0[ep],r7
+00000b36 fd470500       1651 	ld.hu	4[r29],r8
+00000b3a fd370700       1652 	ld.hu	6[r29],r6
+00000b3e 0f96ffff       1653 	addi	-1,r15,r18
+00000b42 c7860f00       1654 	andi	15,r7,r16
+00000b46 9200           1655 	zxb	r18
+00000b48 8831           1656 	subr	r8,r6
+00000b4a 5d971700       1657 	st.b	r18,23[r29]
+00000b4e e691           1658 	cmp	r6,r18
+00000b50 ff0d*          1659 	bgt	.L3953
+00000b52 fc3f0500       1660 	ld.hu	4[r28],r7
+00000b56 ef39           1661 	cmp	r15,r7
+00000b58 d215*          1662 	be	.L3957
+                        1663 .L4008:
+00000b5a 20362300       1664 	movea	35,zero,r6
+00000b5e 003a           1665 	mov	0,r7
+00000b60 0442           1666 	mov	4,r8
+00000b62 204e8000       1667 	movea	128,zero,r9
+                        1668 	jarl	_Det_ReportError,lp
+                        1668 <EXPANSION BEGIN>
+                        1668 jarl22 _Det_ReportError , lp 
+00000b66 80ff0000*      1668 <EXPANSION END>
+00000b6a 4006ff10       1669 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1670 .L3953:
+00000b6e fc9f0500       1671 	ld.hu	4[r28],r19
+00000b72 0690           1672 	mov	r6,r18
+00000b74 9200           1673 	zxb	r18
+00000b76 12360100       1674 	addi	1,r18,r6
+00000b7a 5d971700       1675 	st.b	r18,23[r29]
+
+                                                                      Page 31
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000b7e e699           1676 	cmp	r6,r19
+00000b80 d6ed*          1677 	blt	.L4008
+                        1678 .L3957:
+00000b82 bd771900       1679 	ld.bu	25[r29],r14
+00000b86 ee81           1680 	cmp	r14,r16
+00000b88 920d*          1681 	be	.L3959
+00000b8a 1d30           1682 	mov	r29,r6
+00000b8c 0938           1683 	mov	r9,r7
+00000b8e 2046c400       1684 	movea	196,zero,r8
+                        1685 	jarl	_CanTp_RxInit,lp
+                        1685 <EXPANSION BEGIN>
+                        1685 jarl22 _CanTp_RxInit , lp 
+00000b92 bfff6ef4*      1685 <EXPANSION END>
+00000b96 4006ff10       1686 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1687 .L3959:
+00000b9a 0e8e0100       1688 	addi	1,r14,r17
+00000b9e d1860f00       1689 	andi	15,r17,r16
+00000ba2 5d871900       1690 	st.b	r16,25[r29]
+00000ba6 1e860100       1691 	addi	1,ep,r16
+00000baa 008a           1692 	mov	0,r17
+00000bac 950d*          1693 	br	.L3962
+                        1694 .L3961:
+00000bae 1148           1695 	mov	r17,r9
+00000bb0 d049           1696 	add	r16,r9
+00000bb2 89770100       1697 	ld.bu	0[r9],r14
+00000bb6 11f0           1698 	mov	r17,ep
+00000bb8 ddf1           1699 	add	r29,ep
+00000bba 418a           1700 	add	1,r17
+00000bbc 9073           1701 	sst.b	r14,16[ep]
+                        1702 .L3962:
+00000bbe f289           1703 	cmp	r18,r17
+00000bc0 f1f5*          1704 	bl	.L3961
+00000bc2 1df0           1705 	mov	r29,ep
+00000bc4 7468           1706 	sld.hu	8[ep],r13
+00000bc6 6a60           1707 	sld.bu	10[ep],r12
+00000bc8 204e4300       1708 	movea	67,zero,r9
+00000bcc f269           1709 	cmp	r18,r13
+00000bce e207023b       1710 	cmovl	2,zero,r7
+00000bd2 8e3b           1711 	sst.b	r7,14[ep]
+00000bd4 ecf60900       1712 	mulhi	9,r12,ep
+00000bd8 c5f1           1713 	add	r5,ep
+00000bda be0705500000*  1714 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+6)[ep],r10
+00000be0 1df0           1715 	mov	r29,ep
+00000be2 814b           1716 	sst.b	r9,1[ep]
+00000be4 1e30           1717 	mov	ep,r6
+00000be6 8154           1718 	sst.h	r10,2[ep]
+                        1719 	jarl	_CanTp_RxGetBuffer,lp
+                        1719 <EXPANSION BEGIN>
+                        1719 jarl22 _CanTp_RxGetBuffer , lp 
+00000be8 bfff5cf6*      1719 <EXPANSION END>
+00000bec 4006ff10       1720 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1721 .L3974:
+                        1722 --	    .es
+                        1723 .LDW14:
+                        1724 --	    .es
+                        1725 .LDW24:
+                        1726 --	    .bs
+                        1727 .LDW34:
+                        1728 --line2015
+                        1729 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.82::
+                        1730 .LDWlin82:
+
+                                                                      Page 32
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000bf0 6892           1731 	cmp	8,r18
+00000bf2 e8070673       1732 	cmovnh	8,zero,r14
+00000bf6 ee99           1733 	cmp	r14,r19
+00000bf8 a20d*          1734 	be	.L3985
+                        1735 .L3981:
+                        1736 --line2017
+                        1737 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.83::
+                        1738 .LDWlin83:
+00000bfa 20362300       1739 	movea	35,zero,r6
+00000bfe 003a           1740 	mov	0,r7
+00000c00 0442           1741 	mov	4,r8
+00000c02 014a           1742 	mov	1,r9
+                        1743 	jarl	_Det_ReportError,lp
+                        1743 <EXPANSION BEGIN>
+                        1743 jarl22 _Det_ReportError , lp 
+00000c04 80ff0000*      1743 <EXPANSION END>
+00000c08 4006ff10       1744 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1745 .L3985:
+                        1746 --	    .bs
+                        1747 .LDW44:
+                        1748 --line2026
+                        1749 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.84::
+                        1750 .LDWlin84:
+00000c0c 3e0600000000*  1751 	mov	sdaoff23(_CanTp_TxState),ep
+00000c12 6740           1752 	sld.bu	7[ep],r8
+00000c14 e041           1753 	cmp	zero,r8
+00000c16 f255*          1754 	be	.L3866
+00000c18 e6361a00       1755 	mulhi	26,r6,r6
+00000c1c de31           1756 	add	ep,r6
+                        1757 --line2027
+                        1758 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.85::
+                        1759 .LDWlin85:
+00000c1e b255*          1760 	be	.L3866
+                        1761 --line2033
+                        1762 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.86::
+                        1763 .LDWlin86:
+00000c20 a68f0700       1764 	ld.bu	7[r6],r17
+00000c24 1106deff       1765 	addi	-34,r17,zero
+00000c28 a20d*          1766 	be	.L3996
+00000c2a a6870700       1767 	ld.bu	7[r6],r16
+00000c2e 1006ddff       1768 	addi	-35,r16,zero
+00000c32 fa15*          1769 	bne	.L4001
+00000c34 a63f0b00       1770 	ld.bu	11[r6],r7
+00000c38 613a           1771 	cmp	1,r7
+00000c3a ba15*          1772 	bne	.L4001
+                        1773 .L3996:
+00000c3c 0082           1774 	mov	0,r16
+00000c3e 3c6f0100       1775 	ld.w	0[r28],r13
+00000c42 039a           1776 	mov	3,r19
+00000c44 469f1500       1777 	st.b	r19,21[r6]
+                        1778 .L3999:
+00000c48 1040           1779 	mov	r16,r8
+00000c4a cd41           1780 	add	r13,r8
+00000c4c 88970100       1781 	ld.bu	0[r8],r18
+00000c50 10f0           1782 	mov	r16,ep
+00000c52 c6f1           1783 	add	r6,ep
+00000c54 4182           1784 	add	1,r16
+00000c56 9693           1785 	sst.b	r18,22[ep]
+00000c58 6382           1786 	cmp	3,r16
+00000c5a f1f5*          1787 	bl	.L3999
+00000c5c 4006ff10       1788 	dispose	0,{r27,r28,r29,r31},[lp]
+
+                                                                      Page 33
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1789 .L4001:
+00000c60 a68f0700       1790 	ld.bu	7[r6],r17
+00000c64 618a           1791 	cmp	1,r17
+00000c66 fa2d*          1792 	bne	.L3866
+00000c68 639a           1793 	cmp	3,r19
+00000c6a f607f1fe*      1794 	blt	.L4008
+00000c6e 3cf70100       1795 	ld.w	0[r28],ep
+00000c72 6080           1796 	sld.bu	0[ep],r16
+00000c74 d07e0f00       1797 	andi	15,r16,r15
+00000c78 617a           1798 	cmp	1,r15
+00000c7a b10d*          1799 	bl	.L4004
+00000c7c a21d*          1800 	be	.L4005
+00000c7e 1138           1801 	mov	r17,r7
+00000c80 627a           1802 	cmp	2,r15
+00000c82 d21d*          1803 	be	.L4006
+00000c84 2046d500       1804 	movea	213,zero,r8
+                        1805 	jarl	_CanTp_TxInit,lp
+                        1805 <EXPANSION BEGIN>
+                        1805 jarl22 _CanTp_TxInit , lp 
+00000c88 bfffe6f9*      1805 <EXPANSION END>
+00000c8c 4006ff10       1806 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1807 .L4004:
+00000c90 6278           1808 	sld.bu	2[ep],r15
+00000c92 206e2900       1809 	movea	41,zero,r13
+00000c96 20664300       1810 	movea	67,zero,r12
+00000c9a 467f0900       1811 	st.b	r15,9[r6]
+00000c9e 6170           1812 	sld.bu	1[ep],r14
+00000ca0 06f0           1813 	mov	r6,ep
+00000ca2 806c           1814 	sst.h	r13,0[ep]
+00000ca4 8763           1815 	sst.b	r12,7[ep]
+00000ca6 8b73           1816 	sst.b	r14,11[ep]
+                        1817 	jarl	_CanTp_TxGetBuffer,lp
+                        1817 <EXPANSION BEGIN>
+                        1817 jarl22 _CanTp_TxGetBuffer , lp 
+00000ca8 bfff18fb*      1817 <EXPANSION END>
+00000cac 4006ff10       1818 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1819 .L4005:
+00000cb0 205e6500       1820 	movea	101,zero,r11
+00000cb4 665f0000       1821 	st.h	r11,0[r6]
+00000cb8 4006ff10       1822 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1823 .L4006:
+00000cbc 2046d400       1824 	movea	212,zero,r8
+                        1825 	jarl	_CanTp_TxInit,lp
+                        1825 <EXPANSION BEGIN>
+                        1825 jarl22 _CanTp_TxInit , lp 
+00000cc0 bfffaef9*      1825 <EXPANSION END>
+                        1826 .L3866:
+                        1827 --	    .es
+                        1828 .LDW54:
+                        1829 --	    .es
+                        1830 .LDW64:
+                        1831 --	    .ef
+                        1832 .LDW74:
+                        1833 --line2040
+                        1834 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.87::
+                        1835 .LDWlin87:
+00000cc4 4006ff10       1836 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1837 	.type	_CanTp_CanIfRxIndication,@function
+                        1838 	.size	_CanTp_CanIfRxIndication,.-_CanTp_CanIfRxIndication
+                        1839 	.type	_CanTp_CanIfRxIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                        1840 	.size	_CanTp_CanIfRxIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_CanIfRxIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+
+                                                                      Page 34
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1841 	.align	2
+                        1842 .LDW84:
+                        1843 --_lPaddedLength	r14	local
+                        1844 --_pTpRxState	r29	local
+                        1845 --_lReceivedDataLength	r27	local
+                        1846 --_pSrc	r19	local
+                        1847 --_Count	r13	local
+                        1848 --_i	r6	local
+                        1849 --_lReceivedDataLength	r27	local
+                        1850 --_pSrc	r17	local
+                        1851 --_Count	r18	local
+                        1852 --_i	r19	local
+                        1853 --_lSNinFrame	r16	local
+                        1854 --_pSrc	r16	local
+                        1855 --_Count	r15	local
+                        1856 --_i	r17	local
+                        1857 --_lPaddedLength	r14	local
+                        1858 --_pTpTxState	r6	local
+                        1859 --_pSrc	r13	local
+                        1860 --_i	r16	local
+                        1861 
+                        1862 --_SduHdl	r6	param
+                        1863 --_FrameType	r7	param
+                        1864 --_pPayloadInfo	r28	param
+                        1865 --_pMetadataInfo	none	param
+                        1866 
+                        1867 	.section ".bss","awb"
+                        1868 .L8776:
+                        1869 	.type	.L8776,@object
+                        1870 	.size	.L8776,0
+                        1871 	.data
+                        1872 	.text
+                        1873 	.align	2
+                        1874 	.align	2
+                        1875 ..gh.f.f.1.e.9:
+                        1876 	.type	..gh.f.f.1.e.9,@object
+                        1877 	.size	..gh.f.f.1.e.9,0
+                        1878 	.global	_CanTp_CanIfTxConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        1879 _CanTp_CanIfTxConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                        1880 _CanTp_CanIfTxConfirmation:
+00000cc8 80076100       1881 	prepare	{r29,r31},0
+00000ccc 06e8           1882 	mov	r6,r29
+                        1883 --	    .bf
+                        1884 .LDW94:
+00000cce a6770700       1885 	ld.bu	7[r6],r14
+00000cd2 0e06dfff       1886 	addi	-33,r14,zero
+00000cd6 e905*          1887 	bnl	.L9517
+00000cd8 b25d*          1888 	be	.L9494
+00000cda 0e06ddff       1889 	addi	-35,r14,zero
+00000cde b90d*          1890 	bnl	.L9492
+00000ce0 9215*          1891 	be	.L9493
+                        1892 .L9517:
+                        1893 --line2117
+                        1894 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.88::
+                        1895 .LDWlin88:
+00000ce2 20362300       1896 	movea	35,zero,r6
+00000ce6 003a           1897 	mov	0,r7
+00000ce8 0542           1898 	mov	5,r8
+00000cea 204eb200       1899 	movea	178,zero,r9
+                        1900 	jarl	_Det_ReportError,lp
+                        1900 <EXPANSION BEGIN>
+
+                                                                      Page 35
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        1900 jarl22 _Det_ReportError , lp 
+00000cee 80ff0000*      1900 <EXPANSION END>
+                        1901 --line2118
+                        1902 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.89::
+                        1903 .LDWlin89:
+00000cf2 b555*          1904 	br	.L9489
+                        1905 .L9492:
+                        1906 --line2056
+                        1907 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.90::
+                        1908 .LDWlin90:
+00000cf4 206e6500       1909 	movea	101,zero,r13
+00000cf8 06f0           1910 	mov	r6,ep
+00000cfa 0162           1911 	mov	1,r12
+00000cfc 806c           1912 	sst.h	r13,0[ep]
+00000cfe 8763           1913 	sst.b	r12,7[ep]
+00000d00 c54d*          1914 	br	.L9489
+                        1915 .L9493:
+                        1916 --line2061
+                        1917 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.91::
+                        1918 .LDWlin91:
+00000d02 06f0           1919 	mov	r6,ep
+00000d04 7158           1920 	sld.hu	2[ep],r11
+00000d06 7250           1921 	sld.hu	4[ep],r10
+00000d08 eb51           1922 	cmp	r11,r10
+00000d0a a945*          1923 	bnl	.L9494
+                        1924 --line2063
+                        1925 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.92::
+                        1926 .LDWlin92:
+00000d0c 866f1500       1927 	ld.bu	20[r6],r13
+00000d10 6b90           1928 	sld.bu	11[ep],r18
+00000d12 0d4e0100       1929 	addi	1,r13,r9
+00000d16 c9460f00       1930 	andi	15,r9,r8
+00000d1a 9443           1931 	sst.b	r8,20[ep]
+00000d1c e091           1932 	cmp	zero,r18
+00000d1e e20d*          1933 	be	.L9496
+                        1934 --line2067
+                        1935 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.93::
+                        1936 .LDWlin93:
+00000d20 5f92           1937 	add	-1,r18
+00000d22 9200           1938 	zxb	r18
+00000d24 46970b00       1939 	st.b	r18,11[r6]
+00000d28 e091           1940 	cmp	zero,r18
+00000d2a 8a0d*          1941 	bne	.L9496
+                        1942 --line2070
+                        1943 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.94::
+                        1944 .LDWlin94:
+00000d2c 203e6500       1945 	movea	101,zero,r7
+00000d30 663f0000       1946 	st.h	r7,0[r6]
+00000d34 0132           1947 	mov	1,r6
+00000d36 5d370700       1948 	st.b	r6,7[r29]
+                        1949 .L9496:
+00000d3a bd9f0700       1950 	ld.bu	7[r29],r19
+00000d3e 619a           1951 	cmp	1,r19
+00000d40 c22d*          1952 	be	.L9489
+                        1953 --line2092
+                        1954 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.95::
+                        1955 .LDWlin95:
+00000d42 6988           1956 	sld.bu	9[ep],r17
+00000d44 20962900       1957 	movea	41,zero,r18
+00000d48 8094           1958 	sst.h	r18,0[ep]
+00000d4a e089           1959 	cmp	zero,r17
+
+                                                                      Page 36
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000d4c 8a0d*          1960 	bne	.L9507
+                        1961 --line2094
+                        1962 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.96::
+                        1963 .LDWlin96:
+00000d4e 208e4300       1964 	movea	67,zero,r17
+00000d52 878b           1965 	sst.b	r17,7[ep]
+00000d54 1d30           1966 	mov	r29,r6
+                        1967 	jarl	_CanTp_TxGetBuffer,lp
+                        1967 <EXPANSION BEGIN>
+                        1967 jarl22 _CanTp_TxGetBuffer , lp 
+00000d56 bfff6afa*      1967 <EXPANSION END>
+00000d5a f51d*          1968 	br	.L9489
+                        1969 .L9507:
+                        1970 --line2099
+                        1971 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.97::
+                        1972 .LDWlin97:
+00000d5c 110680ff       1973 	addi	-128,r17,zero
+00000d60 890d*          1974 	bnl	.L9513
+00000d62 11860fff       1975 	addi	-241,r17,r16
+00000d66 6982           1976 	cmp	9,r16
+00000d68 017a           1977 	mov	1,r15
+00000d6a e10d*          1978 	bl	.L9505
+00000d6c 208e7f00       1979 	movea	127,zero,r17
+                        1980 .L9513:
+00000d70 2e06cdcccccc   1981 	mov	-858993459,r14
+00000d76 117e0400       1982 	addi	4,r17,r15
+00000d7a 0e60           1983 	mov	r14,r12
+00000d7c ef67226a       1984 	mulu	r15,r12,r13
+00000d80 826a           1985 	shr	2,r13
+00000d82 0d7e0100       1986 	addi	1,r13,r15
+                        1987 .L9505:
+                        1988 --line2100
+                        1989 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.98::
+                        1990 .LDWlin98:
+00000d86 026a           1991 	mov	2,r13
+00000d88 8a7b           1992 	sst.b	r15,10[ep]
+00000d8a 876b           1993 	sst.b	r13,7[ep]
+00000d8c e505*          1994 	br	.L9489
+                        1995 .L9494:
+                        1996 --line2112
+                        1997 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.99::
+                        1998 .LDWlin99:
+00000d8e 003a           1999 	mov	0,r7
+00000d90 2046ff00       2000 	movea	255,zero,r8
+                        2001 	jarl	_CanTp_TxInit,lp
+                        2001 <EXPANSION BEGIN>
+                        2001 jarl22 _CanTp_TxInit , lp 
+00000d94 bfffdaf8*      2001 <EXPANSION END>
+                        2002 .L9489:
+                        2003 --line2121
+                        2004 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.100::
+                        2005 .LDWlin100:
+00000d98 bd771500       2006 	ld.bu	21[r29],r14
+00000d9c e071           2007 	cmp	zero,r14
+00000d9e f25d*          2008 	be	.L9487
+                        2009 --	    .bs
+                        2010 .LDW05:
+                        2011 --line2127
+                        2012 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.101::
+                        2013 .LDWlin101:
+00000da0 bd670700       2014 	ld.bu	7[r29],r12
+
+                                                                      Page 37
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000da4 1df61600       2015 	addi	22,r29,ep
+00000da8 5d071500       2016 	st.b	zero,21[r29]
+00000dac 0c06deff       2017 	addi	-34,r12,zero
+00000db0 a20d*          2018 	be	.L9525
+00000db2 bd5f0700       2019 	ld.bu	7[r29],r11
+00000db6 0b06ddff       2020 	addi	-35,r11,zero
+00000dba ea15*          2021 	bne	.L9530
+00000dbc bd670b00       2022 	ld.bu	11[r29],r12
+00000dc0 6162           2023 	cmp	1,r12
+00000dc2 aa15*          2024 	bne	.L9530
+                        2025 .L9525:
+00000dc4 035a           2026 	mov	3,r11
+00000dc6 5d5f1500       2027 	st.b	r11,21[r29]
+00000dca 1e48           2028 	mov	ep,r9
+00000dcc 0082           2029 	mov	0,r16
+                        2030 .L9528:
+00000dce 1078           2031 	mov	r16,r15
+00000dd0 c979           2032 	add	r9,r15
+00000dd2 8f570100       2033 	ld.bu	0[r15],r10
+00000dd6 10f0           2034 	mov	r16,ep
+00000dd8 ddf1           2035 	add	r29,ep
+00000dda 4182           2036 	add	1,r16
+00000ddc 9653           2037 	sst.b	r10,22[ep]
+00000dde 6382           2038 	cmp	3,r16
+00000de0 f1f5*          2039 	bl	.L9528
+00000de2 40067f00       2040 	dispose	0,{r29,r31},[lp]
+                        2041 .L9530:
+00000de6 bd4f0700       2042 	ld.bu	7[r29],r9
+00000dea 614a           2043 	cmp	1,r9
+00000dec 8a3d*          2044 	bne	.L9487
+00000dee 6372           2045 	cmp	3,r14
+00000df0 e62d*          2046 	blt	.L9537
+00000df2 6040           2047 	sld.bu	0[ep],r8
+00000df4 c8560f00       2048 	andi	15,r8,r10
+00000df8 6152           2049 	cmp	1,r10
+00000dfa c10d*          2050 	bl	.L9533
+00000dfc c21d*          2051 	be	.L9534
+00000dfe 1d30           2052 	mov	r29,r6
+00000e00 0938           2053 	mov	r9,r7
+00000e02 6252           2054 	cmp	2,r10
+00000e04 e21d*          2055 	be	.L9535
+00000e06 2046d500       2056 	movea	213,zero,r8
+                        2057 	jarl	_CanTp_TxInit,lp
+                        2057 <EXPANSION BEGIN>
+                        2057 jarl22 _CanTp_TxInit , lp 
+00000e0a bfff64f8*      2057 <EXPANSION END>
+00000e0e 40067f00       2058 	dispose	0,{r29,r31},[lp]
+                        2059 .L9533:
+00000e12 6238           2060 	sld.bu	2[ep],r7
+00000e14 209e2900       2061 	movea	41,zero,r19
+00000e18 20964300       2062 	movea	67,zero,r18
+00000e1c 5d3f0900       2063 	st.b	r7,9[r29]
+00000e20 6130           2064 	sld.bu	1[ep],r6
+00000e22 1df0           2065 	mov	r29,ep
+00000e24 809c           2066 	sst.h	r19,0[ep]
+00000e26 8793           2067 	sst.b	r18,7[ep]
+00000e28 8b33           2068 	sst.b	r6,11[ep]
+00000e2a 1d30           2069 	mov	r29,r6
+                        2070 	jarl	_CanTp_TxGetBuffer,lp
+                        2070 <EXPANSION BEGIN>
+                        2070 jarl22 _CanTp_TxGetBuffer , lp 
+
+                                                                      Page 38
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000e2c bfff94f9*      2070 <EXPANSION END>
+00000e30 40067f00       2071 	dispose	0,{r29,r31},[lp]
+                        2072 .L9534:
+00000e34 208e6500       2073 	movea	101,zero,r17
+00000e38 7d8f0000       2074 	st.h	r17,0[r29]
+00000e3c 40067f00       2075 	dispose	0,{r29,r31},[lp]
+                        2076 .L9535:
+00000e40 2046d400       2077 	movea	212,zero,r8
+                        2078 	jarl	_CanTp_TxInit,lp
+                        2078 <EXPANSION BEGIN>
+                        2078 jarl22 _CanTp_TxInit , lp 
+00000e44 bfff2af8*      2078 <EXPANSION END>
+00000e48 40067f00       2079 	dispose	0,{r29,r31},[lp]
+                        2080 .L9537:
+00000e4c 20362300       2081 	movea	35,zero,r6
+00000e50 003a           2082 	mov	0,r7
+00000e52 0442           2083 	mov	4,r8
+00000e54 204e8000       2084 	movea	128,zero,r9
+                        2085 	jarl	_Det_ReportError,lp
+                        2085 <EXPANSION BEGIN>
+                        2085 jarl22 _Det_ReportError , lp 
+00000e58 80ff0000*      2085 <EXPANSION END>
+                        2086 .L9487:
+                        2087 --	    .es
+                        2088 .LDW15:
+                        2089 --	    .ef
+                        2090 .LDW25:
+                        2091 --line2129
+                        2092 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.102::
+                        2093 .LDWlin102:
+00000e5c 40067f00       2094 	dispose	0,{r29,r31},[lp]
+                        2095 	.type	_CanTp_CanIfTxConfirmation,@function
+                        2096 	.size	_CanTp_CanIfTxConfirmation,.-_CanTp_CanIfTxConfirmation
+                        2097 	.type	_CanTp_CanIfTxConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                        2098 	.size	_CanTp_CanIfTxConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_CanIfTxConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        2099 	.align	2
+                        2100 .LDW35:
+                        2101 --_lTaskCycles	r15	local
+                        2102 --_lSTminTemp	r17	local
+                        2103 --_pSrc	r9	local
+                        2104 --_i	r16	local
+                        2105 
+                        2106 --_pTpTxState	r29	param
+                        2107 
+                        2108 	.section ".bss","awb"
+                        2109 .L12115:
+                        2110 	.type	.L12115,@object
+                        2111 	.size	.L12115,0
+                        2112 	.data
+                        2113 	.text
+                        2114 	.align	2
+                        2115 	.align	2
+                        2116 ..gh.f.f.1.e.10:
+                        2117 	.type	..gh.f.f.1.e.10,@object
+                        2118 	.size	..gh.f.f.1.e.10,0
+                        2119 	.global	_CanTp_ResetChannels..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        2120 _CanTp_ResetChannels..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.:
+                        2121 _CanTp_ResetChannels:
+                        2122 --	    .bf
+                        2123 .LDW45:
+                        2124 --	    .bs
+
+                                                                      Page 39
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2125 .LDW55:
+00000e60 0292           2126 	mov	2,r18
+                        2127 .L12543:
+00000e62 f2060100*      2128 	loop	r18,.L12543
+                        2129 --	    .es
+                        2130 .LDW65:
+                        2131 --	    .bs
+                        2132 .LDW75:
+                        2133 .L12456:
+                        2134 --line2360
+                        2135 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.103::
+                        2136 .LDWlin103:
+00000e66 f2f61c00       2137 	mulhi	28,r18,ep
+00000e6a 310600000000*  2138 	mov	sdaoff23(_CanTp_RxState),r17
+00000e70 1f82           2139 	mov	-1,r16
+00000e72 047a           2140 	mov	4,r15
+00000e74 d1f1           2141 	add	r17,ep
+00000e76 4192           2142 	add	1,r18
+00000e78 8a83           2143 	sst.b	r16,10[ep]
+00000e7a 807b           2144 	sst.b	r15,0[ep]
+00000e7c 8103           2145 	sst.b	zero,1[ep]
+00000e7e 8104           2146 	sst.h	zero,2[ep]
+00000e80 8204           2147 	sst.h	zero,4[ep]
+00000e82 8304           2148 	sst.h	zero,6[ep]
+00000e84 8404           2149 	sst.h	zero,8[ep]
+00000e86 8604           2150 	sst.h	zero,12[ep]
+00000e88 8e03           2151 	sst.b	zero,14[ep]
+00000e8a 8f03           2152 	sst.b	zero,15[ep]
+00000e8c 9703           2153 	sst.b	zero,23[ep]
+00000e8e 9803           2154 	sst.b	zero,24[ep]
+00000e90 9903           2155 	sst.b	zero,25[ep]
+00000e92 9a03           2156 	sst.b	zero,26[ep]
+00000e94 6292           2157 	cmp	2,r18
+00000e96 81ed*          2158 	bl	.L12456
+                        2159 --line2364
+                        2160 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.104::
+                        2161 .LDWlin104:
+00000e98 3e0600000000*  2162 	mov	sdaoff23(_CanTp_TxState),ep
+00000e9e 8683           2163 	sst.b	r16,6[ep]
+00000ea0 8703           2164 	sst.b	zero,7[ep]
+00000ea2 8004           2165 	sst.h	zero,0[ep]
+00000ea4 8104           2166 	sst.h	zero,2[ep]
+00000ea6 8204           2167 	sst.h	zero,4[ep]
+00000ea8 8803           2168 	sst.b	zero,8[ep]
+00000eaa 8b03           2169 	sst.b	zero,11[ep]
+00000eac 8903           2170 	sst.b	zero,9[ep]
+00000eae 8a03           2171 	sst.b	zero,10[ep]
+00000eb0 9303           2172 	sst.b	zero,19[ep]
+00000eb2 9403           2173 	sst.b	zero,20[ep]
+00000eb4 9503           2174 	sst.b	zero,21[ep]
+                        2175 --	    .es
+                        2176 .LDW85:
+                        2177 --	    .bs
+                        2178 .LDW95:
+00000eb6 3e0600000000*  2179 	mov	sdaoff23(_CanTp_TxSemaphores),ep
+00000ebc 0162           2180 	mov	1,r12
+00000ebe 8083           2181 	sst.b	r16,0[ep]
+00000ec0 8163           2182 	sst.b	r12,1[ep]
+                        2183 --	    .es
+                        2184 .LDW06:
+                        2185 --	    .ef
+
+                                                                      Page 40
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2186 .LDW16:
+00000ec2 7f00           2187 	jmp	[lp]
+                        2188 	.type	_CanTp_ResetChannels,@function
+                        2189 	.size	_CanTp_ResetChannels,.-_CanTp_ResetChannels
+                        2190 	.type	_CanTp_ResetChannels..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,@function
+                        2191 	.size	_CanTp_ResetChannels..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.,.-_CanTp_ResetChannels..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.
+                        2192 	.align	2
+                        2193 .LDW26:
+                        2194 --_lChannelHdl	r18	local
+                        2195 
+                        2196 	.section ".bss","awb"
+                        2197 .L12675:
+                        2198 	.type	.L12675,@object
+                        2199 	.size	.L12675,0
+                        2200 	.data
+                        2201 	.text
+                        2202 	.align	2
+                        2203 	.align	2
+                        2204 ..gh.f.f.1.e.11:
+                        2205 	.type	..gh.f.f.1.e.11,@object
+                        2206 	.size	..gh.f.f.1.e.11,0
+                        2207 	.global	_SwcServiceCanTp_InitFunction
+                        2208 _SwcServiceCanTp_InitFunction:
+00000ec4 80076100       2209 	prepare	{r29,r31},0
+                        2210 --	    .bf
+                        2211 .LDW36:
+00000ec8 0192           2212 	mov	1,r18
+00000eca 00ea           2213 	mov	0,r29
+                        2214 .L12745:
+00000ecc 05f0           2215 	mov	r5,ep
+00000ece ddf1           2216 	add	r29,ep
+00000ed0 be0705880000*  2217 	ld.bu	rosdaoff23(_CanTp_RxSduSnv2Hdl)[ep],r17
+00000ed6 2f0600000000*  2218 	mov	rosdaoff23(_CanTp_RxSduCfg),r15
+00000edc f1f60900       2219 	mulhi	9,r17,ep
+00000ee0 cff1           2220 	add	r15,ep
+00000ee2 6770           2221 	sld.bu	7[ep],r14
+00000ee4 e071           2222 	cmp	zero,r14
+00000ee6 ca0d*          2223 	bne	.L12753
+00000ee8 6368           2224 	sld.bu	3[ep],r13
+00000eea e069           2225 	cmp	zero,r13
+00000eec 920d*          2226 	be	.L12753
+00000eee 0142           2227 	mov	1,r8
+00000ef0 20362300       2228 	movea	35,zero,r6
+00000ef4 0e38           2229 	mov	r14,r7
+00000ef6 0848           2230 	mov	r8,r9
+                        2231 	jarl	_Det_ReportError,lp
+                        2231 <EXPANSION BEGIN>
+                        2231 jarl22 _Det_ReportError , lp 
+00000ef8 80ff0000*      2231 <EXPANSION END>
+00000efc 0092           2232 	mov	0,r18
+                        2233 .L12753:
+00000efe 41ea           2234 	add	1,r29
+00000f00 62ea           2235 	cmp	2,r29
+00000f02 d1e5*          2236 	bl	.L12745
+00000f04 6192           2237 	cmp	1,r18
+00000f06 fa05*          2238 	bne	.L12731
+                        2239 --line2917
+                        2240 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.105::
+                        2241 .LDWlin105:
+                        2242 	jarl	_CanTp_ResetChannels,lp
+                        2242 <EXPANSION BEGIN>
+
+                                                                      Page 41
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2242 jarl22 _CanTp_ResetChannels , lp 
+00000f08 bfff58ff*      2242 <EXPANSION END>
+                        2243 --line2918
+                        2244 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.106::
+                        2245 .LDWlin106:
+00000f0c 0162           2246 	mov	1,r12
+00000f0e 84070d600000*  2247 	st.b	r12,sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp]
+                        2248 .L12731:
+                        2249 --	    .ef
+                        2250 .LDW46:
+00000f14 40067f00       2251 	dispose	0,{r29,r31},[lp]
+                        2252 	.type	_SwcServiceCanTp_InitFunction,@function
+                        2253 	.size	_SwcServiceCanTp_InitFunction,.-_SwcServiceCanTp_InitFunction
+                        2254 	.align	2
+                        2255 .LDW56:
+                        2256 --_lResult	r18	local
+                        2257 --_lSduId	r29	local
+                        2258 --_lSduHdl	r17	local
+                        2259 
+                        2260 --_CfgPtr	none	param
+                        2261 
+                        2262 	.section ".bss","awb"
+                        2263 .L13149:
+                        2264 	.type	.L13149,@object
+                        2265 	.size	.L13149,0
+                        2266 	.data
+                        2267 	.text
+                        2268 	.align	2
+                        2269 	.align	2
+                        2270 ..gh.f.f.1.e.12:
+                        2271 	.type	..gh.f.f.1.e.12,@object
+                        2272 	.size	..gh.f.f.1.e.12,0
+                        2273 	.global	_SwcServiceCanTp_InitFunctionMemory
+                        2274 _SwcServiceCanTp_InitFunctionMemory:
+                        2275 --	    .bf
+                        2276 .LDW66:
+00000f18 84070d000000*  2277 	st.b	zero,sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp]
+                        2278 --	    .ef
+                        2279 .LDW76:
+00000f1e 7f00           2280 	jmp	[lp]
+                        2281 	.type	_SwcServiceCanTp_InitFunctionMemory,@function
+                        2282 	.size	_SwcServiceCanTp_InitFunctionMemory,.-_SwcServiceCanTp_InitFunctionMemory
+                        2283 	.align	2
+                        2284 .LDW86:
+                        2285 
+                        2286 	.section ".bss","awb"
+                        2287 .L13249:
+                        2288 	.type	.L13249,@object
+                        2289 	.size	.L13249,0
+                        2290 	.data
+                        2291 	.text
+                        2292 	.align	2
+                        2293 	.align	2
+                        2294 ..gh.f.f.1.e.13:
+                        2295 	.type	..gh.f.f.1.e.13,@object
+                        2296 	.size	..gh.f.f.1.e.13,0
+                        2297 	.global	_SwcServiceCanTp_Shutdown
+                        2298 _SwcServiceCanTp_Shutdown:
+00000f20 80072100       2299 	prepare	{r31},0
+                        2300 --	    .bf
+                        2301 .LDW96:
+
+                                                                      Page 42
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00000f24 a40705900000*  2302 	ld.bu	sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp],r18
+00000f2a 6192           2303 	cmp	1,r18
+00000f2c 8a0d*          2304 	bne	.L13273
+                        2305 --line2948
+                        2306 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.107::
+                        2307 .LDWlin107:
+                        2308 	jarl	_CanTp_ResetChannels,lp
+                        2308 <EXPANSION BEGIN>
+                        2308 jarl22 _CanTp_ResetChannels , lp 
+00000f2e bfff32ff*      2308 <EXPANSION END>
+                        2309 --line2949
+                        2310 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.108::
+                        2311 .LDWlin108:
+00000f32 84070d000000*  2312 	st.b	zero,sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp]
+00000f38 40063f00       2313 	dispose	0,{r31},[lp]
+                        2314 .L13273:
+                        2315 --line2954
+                        2316 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.109::
+                        2317 .LDWlin109:
+00000f3c 20362300       2318 	movea	35,zero,r6
+00000f40 003a           2319 	mov	0,r7
+00000f42 0242           2320 	mov	2,r8
+00000f44 204e2000       2321 	movea	32,zero,r9
+                        2322 	jarl	_Det_ReportError,lp
+                        2322 <EXPANSION BEGIN>
+                        2322 jarl22 _Det_ReportError , lp 
+00000f48 80ff0000*      2322 <EXPANSION END>
+                        2323 --	    .ef
+                        2324 .LDW07:
+                        2325 --line2959
+                        2326 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.110::
+                        2327 .LDWlin110:
+00000f4c 40063f00       2328 	dispose	0,{r31},[lp]
+                        2329 	.type	_SwcServiceCanTp_Shutdown,@function
+                        2330 	.size	_SwcServiceCanTp_Shutdown,.-_SwcServiceCanTp_Shutdown
+                        2331 	.align	2
+                        2332 .LDW17:
+                        2333 
+                        2334 	.section ".bss","awb"
+                        2335 .L13322:
+                        2336 	.type	.L13322,@object
+                        2337 	.size	.L13322,0
+                        2338 	.data
+                        2339 	.text
+                        2340 	.align	2
+                        2341 	.align	2
+                        2342 ..gh.f.f.1.e.14:
+                        2343 	.type	..gh.f.f.1.e.14,@object
+                        2344 	.size	..gh.f.f.1.e.14,0
+                        2345 	.global	_SwcServiceCanTp_MainFunctionRx
+                        2346 _SwcServiceCanTp_MainFunctionRx:
+00000f50 8007e100       2347 	prepare	{r28,r29,r31},0
+                        2348 --	    .bf
+                        2349 .LDW27:
+00000f54 a40705680000*  2350 	ld.bu	sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp],r13
+00000f5a 616a           2351 	cmp	1,r13
+00000f5c 8a7d*          2352 	bne	.L13364
+00000f5e 00e2           2353 	mov	0,r28
+                        2354 .L13370:
+                        2355 --line3003
+                        2356 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.111::
+
+                                                                      Page 43
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2357 .LDWlin111:
+00000f60 fcee1c00       2358 	mulhi	28,r28,r29
+00000f64 2c0600000000*  2359 	mov	sdaoff23(_CanTp_RxState),r12
+00000f6a cce9           2360 	add	r12,r29
+00000f6c 9d8f0b00       2361 	ld.bu	10[r29],r17
+00000f70 110601ff       2362 	addi	-255,r17,zero
+00000f74 926d*          2363 	be	.L13371
+                        2364 --line3011
+                        2365 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.112::
+                        2366 .LDWlin112:
+00000f76 1df0           2367 	mov	r29,ep
+00000f78 7180           2368 	sld.hu	2[ep],r16
+00000f7a 6178           2369 	sld.bu	1[ep],r15
+00000f7c 1076ffff       2370 	addi	-1,r16,r14
+00000f80 8174           2371 	sst.h	r14,2[ep]
+00000f82 ce76ffff       2372 	andi	65535,r14,r14
+00000f86 9a55*          2373 	bne	.L13375
+                        2374 --line3015
+                        2375 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.113::
+                        2376 .LDWlin113:
+00000f88 0f06edff       2377 	addi	-19,r15,zero
+00000f8c b11d*          2378 	bl	.L14782
+00000f8e 617a           2379 	cmp	1,r15
+00000f90 e225*          2380 	be	.L13379
+00000f92 627a           2381 	cmp	2,r15
+00000f94 b23d*          2382 	be	.L13385
+00000f96 0f96efff       2383 	addi	-17,r15,r18
+00000f9a 6192           2384 	cmp	1,r18
+00000f9c 9b0d*          2385 	bh	.L13386
+                        2386 .L13380:
+                        2387 --line3025
+                        2388 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.114::
+                        2389 .LDWlin114:
+00000f9e 013a           2390 	mov	1,r7
+00000fa0 1d30           2391 	mov	r29,r6
+00000fa2 2046c100       2392 	movea	193,zero,r8
+00000fa6 0748           2393 	mov	r7,r9
+                        2394 	jarl	_CanTp_RxInit,lp
+                        2394 <EXPANSION BEGIN>
+                        2394 jarl22 _CanTp_RxInit , lp 
+00000fa8 bfff58f0*      2394 <EXPANSION END>
+                        2395 --line3026
+                        2396 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.115::
+                        2397 .LDWlin115:
+00000fac d54d*          2398 	br	.L13371
+                        2399 .L13386:
+                        2400 --line3054
+                        2401 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.116::
+                        2402 .LDWlin116:
+00000fae 20362300       2403 	movea	35,zero,r6
+00000fb2 0e38           2404 	mov	r14,r7
+00000fb4 20462000       2405 	movea	32,zero,r8
+00000fb8 204eb100       2406 	movea	177,zero,r9
+                        2407 	jarl	_Det_ReportError,lp
+                        2407 <EXPANSION BEGIN>
+                        2407 jarl22 _Det_ReportError , lp 
+00000fbc 80ff0000*      2407 <EXPANSION END>
+                        2408 --line3055
+                        2409 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.117::
+                        2410 .LDWlin117:
+00000fc0 b545*          2411 	br	.L13371
+
+                                                                      Page 44
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2412 .L14782:
+00000fc2 0f06edff       2413 	addi	-19,r15,zero
+00000fc6 a21d*          2414 	be	.L13384
+00000fc8 0f96dfff       2415 	addi	-33,r15,r18
+00000fcc 6292           2416 	cmp	2,r18
+00000fce 81ed*          2417 	bl	.L13380
+00000fd0 d215*          2418 	be	.L13384
+00000fd2 1296e0ff       2419 	addi	-32,r18,r18
+00000fd6 6292           2420 	cmp	2,r18
+00000fd8 bbed*          2421 	bh	.L13386
+00000fda 950d*          2422 	br	.L13382
+                        2423 .L13379:
+                        2424 --line3018
+                        2425 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.118::
+                        2426 .LDWlin118:
+00000fdc 1d30           2427 	mov	r29,r6
+00000fde 0f38           2428 	mov	r15,r7
+00000fe0 2046c300       2429 	movea	195,zero,r8
+00000fe4 0f48           2430 	mov	r15,r9
+                        2431 	jarl	_CanTp_RxInit,lp
+                        2431 <EXPANSION BEGIN>
+                        2431 jarl22 _CanTp_RxInit , lp 
+00000fe6 bfff1af0*      2431 <EXPANSION END>
+                        2432 --line3019
+                        2433 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.119::
+                        2434 .LDWlin119:
+00000fea e52d*          2435 	br	.L13371
+                        2436 .L13382:
+                        2437 --line3038
+                        2438 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.120::
+                        2439 .LDWlin120:
+00000fec 1d30           2440 	mov	r29,r6
+                        2441 	jarl	_CanTp_RxGetBuffer,lp
+                        2441 <EXPANSION BEGIN>
+                        2441 jarl22 _CanTp_RxGetBuffer , lp 
+00000fee bfff56f2*      2441 <EXPANSION END>
+                        2442 --line3040
+                        2443 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.121::
+                        2444 .LDWlin121:
+00000ff2 9d5f0f00       2445 	ld.bu	14[r29],r11
+00000ff6 625a           2446 	cmp	2,r11
+00000ff8 fa25*          2447 	bne	.L13371
+                        2448 .L13384:
+                        2449 --line3042
+                        2450 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.122::
+                        2451 .LDWlin122:
+00000ffa 013a           2452 	mov	1,r7
+00000ffc 1d30           2453 	mov	r29,r6
+00000ffe 20466000       2454 	movea	96,zero,r8
+00001002 0748           2455 	mov	r7,r9
+                        2456 	jarl	_CanTp_RxInit,lp
+                        2456 <EXPANSION BEGIN>
+                        2456 jarl22 _CanTp_RxInit , lp 
+00001004 bffffcef*      2456 <EXPANSION END>
+00001008 f51d*          2457 	br	.L13371
+                        2458 .L13385:
+                        2459 --line3048
+                        2460 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.123::
+                        2461 .LDWlin123:
+0000100a f1f60900       2462 	mulhi	9,r17,ep
+0000100e 20761200       2463 	movea	18,zero,r14
+
+                                                                      Page 45
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00001012 1d30           2464 	mov	r29,r6
+00001014 c5f1           2465 	add	r5,ep
+00001016 be0705780000*  2466 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+5)[ep],r15
+0000101c 1df0           2467 	mov	r29,ep
+0000101e 8173           2468 	sst.b	r14,1[ep]
+00001020 817c           2469 	sst.h	r15,2[ep]
+                        2470 	jarl	_CanTp_RxTransmitFrame,lp
+                        2470 <EXPANSION BEGIN>
+                        2470 jarl22 _CanTp_RxTransmitFrame , lp 
+00001022 bfffb0f0*      2470 <EXPANSION END>
+                        2471 --line3051
+                        2472 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.124::
+                        2473 .LDWlin124:
+00001026 8515*          2474 	br	.L13371
+                        2475 .L13375:
+                        2476 --line3070
+                        2477 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.125::
+                        2478 .LDWlin125:
+00001028 877a           2479 	shr	7,r15
+0000102a d105*          2480 	bl	.L13389
+0000102c bd670100       2481 	ld.bu	1[r29],r12
+00001030 6262           2482 	cmp	2,r12
+00001032 ca05*          2483 	bne	.L13388
+                        2484 .L13389:
+                        2485 --line3073
+                        2486 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.126::
+                        2487 .LDWlin126:
+00001034 1d30           2488 	mov	r29,r6
+                        2489 	jarl	_CanTp_RxGetBuffer,lp
+                        2489 <EXPANSION BEGIN>
+                        2489 jarl22 _CanTp_RxGetBuffer , lp 
+00001036 bfff0ef2*      2489 <EXPANSION END>
+                        2490 .L13388:
+                        2491 --line3076
+                        2492 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.127::
+                        2493 .LDWlin127:
+0000103a dde70100       2494 	tst1	4,1[r29]
+0000103e c205*          2495 	be	.L13371
+                        2496 --line3078
+                        2497 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.128::
+                        2498 .LDWlin128:
+00001040 1d30           2499 	mov	r29,r6
+                        2500 	jarl	_CanTp_RxTransmitFrame,lp
+                        2500 <EXPANSION BEGIN>
+                        2500 jarl22 _CanTp_RxTransmitFrame , lp 
+00001042 bfff90f0*      2500 <EXPANSION END>
+                        2501 .L13371:
+                        2502 --line3002
+                        2503 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.129::
+                        2504 .LDWlin129:
+00001046 41e2           2505 	add	1,r28
+00001048 62e2           2506 	cmp	2,r28
+0000104a b18d*          2507 	bl	.L13370
+                        2508 .L13364:
+                        2509 --	    .ef
+                        2510 .LDW37:
+                        2511 --line3090
+                        2512 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.130::
+                        2513 .LDWlin130:
+0000104c 4006ff00       2514 	dispose	0,{r28,r29,r31},[lp]
+                        2515 	.type	_SwcServiceCanTp_MainFunctionRx,@function
+
+                                                                      Page 46
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2516 	.size	_SwcServiceCanTp_MainFunctionRx,.-_SwcServiceCanTp_MainFunctionRx
+                        2517 	.align	2
+                        2518 .LDW47:
+                        2519 --_lRxChannelHdl	r28	local
+                        2520 --_pTpRxState	r29	local
+                        2521 
+                        2522 	.section ".bss","awb"
+                        2523 .L14780:
+                        2524 	.type	.L14780,@object
+                        2525 	.size	.L14780,0
+                        2526 	.data
+                        2527 	.text
+                        2528 	.align	2
+                        2529 	.align	2
+                        2530 ..gh.f.f.1.e.15:
+                        2531 	.type	..gh.f.f.1.e.15,@object
+                        2532 	.size	..gh.f.f.1.e.15,0
+                        2533 	.global	_SwcServiceCanTp_MainFunctionTx
+                        2534 _SwcServiceCanTp_MainFunctionTx:
+00001050 80072100       2535 	prepare	{r31},0
+                        2536 --	    .bf
+                        2537 .LDW57:
+00001054 a40705780000*  2538 	ld.bu	sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp],r15
+0000105a 617a           2539 	cmp	1,r15
+0000105c da75*          2540 	bne	.L15028
+                        2541 --line3100
+                        2542 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.131::
+                        2543 .LDWlin131:
+0000105e a40705780000*  2544 	ld.bu	sdaoff23(_CanTp_TxState+6)[gp],r15
+00001064 0f0601ff       2545 	addi	-255,r15,zero
+00001068 f26d*          2546 	be	.L15028
+                        2547 --line3106
+                        2548 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.132::
+                        2549 .LDWlin132:
+0000106a a40705880000*  2550 	ld.bu	sdaoff23(_CanTp_TxState+10)[gp],r17
+00001070 e089           2551 	cmp	zero,r17
+00001072 d20d*          2552 	be	.L15039
+                        2553 --line3108
+                        2554 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.133::
+                        2555 .LDWlin133:
+00001074 5f8a           2556 	add	-1,r17
+00001076 9100           2557 	zxb	r17
+00001078 84070d880000*  2558 	st.b	r17,sdaoff23(_CanTp_TxState+10)[gp]
+0000107e e089           2559 	cmp	zero,r17
+00001080 ea05*          2560 	bne	.L15039
+                        2561 --line3112
+                        2562 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.134::
+                        2563 .LDWlin134:
+00001082 20764300       2564 	movea	67,zero,r14
+00001086 84070d700000*  2565 	st.b	r14,sdaoff23(_CanTp_TxState+7)[gp]
+                        2566 .L15039:
+0000108c 3e0600000000*  2567 	mov	sdaoff23(_CanTp_TxState),ep
+00001092 7080           2568 	sld.hu	0[ep],r16
+00001094 6770           2569 	sld.bu	7[ep],r14
+00001096 5f82           2570 	add	-1,r16
+00001098 8084           2571 	sst.h	r16,0[ep]
+0000109a d086ffff       2572 	andi	65535,r16,r16
+0000109e da45*          2573 	bne	.L15043
+                        2574 --line3120
+                        2575 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.135::
+                        2576 .LDWlin135:
+
+                                                                      Page 47
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000010a0 0e06efff       2577 	addi	-17,r14,zero
+000010a4 8115*          2578 	bl	.L15811
+000010a6 6172           2579 	cmp	1,r14
+000010a8 a21d*          2580 	be	.L15047
+000010aa 6272           2581 	cmp	2,r14
+000010ac 8225*          2582 	be	.L15048
+                        2583 .L15055:
+                        2584 --line3156
+                        2585 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.136::
+                        2586 .LDWlin136:
+000010ae 20362300       2587 	movea	35,zero,r6
+000010b2 1038           2588 	mov	r16,r7
+000010b4 20462100       2589 	movea	33,zero,r8
+000010b8 204eb200       2590 	movea	178,zero,r9
+                        2591 	jarl	_Det_ReportError,lp
+                        2591 <EXPANSION BEGIN>
+                        2591 jarl22 _Det_ReportError , lp 
+000010bc 80ff0000*      2591 <EXPANSION END>
+                        2592 --line3157
+                        2593 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.137::
+                        2594 .LDWlin137:
+000010c0 40063f00       2595 	dispose	0,{r31},[lp]
+                        2596 .L15811:
+000010c4 0e06ecff       2597 	addi	-20,r14,zero
+000010c8 892d*          2598 	bnl	.L15054
+000010ca 0e96dfff       2599 	addi	-33,r14,r18
+000010ce 6292           2600 	cmp	2,r18
+000010d0 c325*          2601 	bnh	.L15054
+000010d2 1296e0ff       2602 	addi	-32,r18,r18
+000010d6 6292           2603 	cmp	2,r18
+000010d8 bbed*          2604 	bh	.L15055
+000010da d50d*          2605 	br	.L15049
+                        2606 .L15047:
+                        2607 --line3123
+                        2608 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.138::
+                        2609 .LDWlin138:
+000010dc 1e30           2610 	mov	ep,r6
+000010de 0e38           2611 	mov	r14,r7
+000010e0 2046d200       2612 	movea	210,zero,r8
+                        2613 	jarl	_CanTp_TxInit,lp
+                        2613 <EXPANSION BEGIN>
+                        2613 jarl22 _CanTp_TxInit , lp 
+000010e4 bfff8af5*      2613 <EXPANSION END>
+                        2614 --line3124
+                        2615 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.139::
+                        2616 .LDWlin139:
+000010e8 40063f00       2617 	dispose	0,{r31},[lp]
+                        2618 .L15048:
+                        2619 --line3132
+                        2620 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.140::
+                        2621 .LDWlin140:
+000010ec 206e4300       2622 	movea	67,zero,r13
+000010f0 8a03           2623 	sst.b	zero,10[ep]
+000010f2 876b           2624 	sst.b	r13,7[ep]
+                        2625 .L15049:
+000010f4 1e30           2626 	mov	ep,r6
+                        2627 	jarl	_CanTp_TxGetBuffer,lp
+                        2627 <EXPANSION BEGIN>
+                        2627 jarl22 _CanTp_TxGetBuffer , lp 
+000010f6 bfffcaf6*      2627 <EXPANSION END>
+                        2628 --line3140
+
+                                                                      Page 48
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2629 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.141::
+                        2630 .LDWlin141:
+000010fa a40705600000*  2631 	ld.bu	sdaoff23(_CanTp_TxState+8)[gp],r12
+00001100 6262           2632 	cmp	2,r12
+00001102 aa25*          2633 	bne	.L15028
+                        2634 --line3142
+                        2635 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.142::
+                        2636 .LDWlin142:
+00001104 260600000000*  2637 	mov	sdaoff23(_CanTp_TxState),r6
+0000110a 013a           2638 	mov	1,r7
+0000110c 2046d300       2639 	movea	211,zero,r8
+                        2640 	jarl	_CanTp_TxInit,lp
+                        2640 <EXPANSION BEGIN>
+                        2640 jarl22 _CanTp_TxInit , lp 
+00001110 bfff5ef5*      2640 <EXPANSION END>
+00001114 40063f00       2641 	dispose	0,{r31},[lp]
+                        2642 .L15054:
+                        2643 --line3152
+                        2644 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.143::
+                        2645 .LDWlin143:
+00001118 1e30           2646 	mov	ep,r6
+0000111a 013a           2647 	mov	1,r7
+0000111c 2046d100       2648 	movea	209,zero,r8
+                        2649 	jarl	_CanTp_TxInit,lp
+                        2649 <EXPANSION BEGIN>
+                        2649 jarl22 _CanTp_TxInit , lp 
+00001120 bfff4ef5*      2649 <EXPANSION END>
+                        2650 --line3153
+                        2651 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.144::
+                        2652 .LDWlin144:
+00001124 40063f00       2653 	dispose	0,{r31},[lp]
+                        2654 .L15043:
+                        2655 --line3171
+                        2656 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.145::
+                        2657 .LDWlin145:
+00001128 8772           2658 	shr	7,r14
+0000112a c905*          2659 	bnl	.L15057
+                        2660 --line3173
+                        2661 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.146::
+                        2662 .LDWlin146:
+0000112c 1e30           2663 	mov	ep,r6
+                        2664 	jarl	_CanTp_TxGetBuffer,lp
+                        2664 <EXPANSION BEGIN>
+                        2664 jarl22 _CanTp_TxGetBuffer , lp 
+0000112e bfff92f6*      2664 <EXPANSION END>
+                        2665 .L15057:
+                        2666 --line3176
+                        2667 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.147::
+                        2668 .LDWlin147:
+00001132 a40705480000*  2669 	ld.bu	sdaoff23(_CanTp_TxState+7)[gp],r9
+00001138 854a           2670 	shr	5,r9
+0000113a e905*          2671 	bnl	.L15028
+                        2672 --line3178
+                        2673 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.148::
+                        2674 .LDWlin148:
+0000113c 260600000000*  2675 	mov	sdaoff23(_CanTp_TxState),r6
+                        2676 	jarl	_CanTp_TxTransmitFrame,lp
+                        2676 <EXPANSION BEGIN>
+                        2676 jarl22 _CanTp_TxTransmitFrame , lp 
+00001142 bfff88f5*      2676 <EXPANSION END>
+                        2677 .L15028:
+
+                                                                      Page 49
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2678 --	    .ef
+                        2679 .LDW67:
+                        2680 --line3190
+                        2681 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.149::
+                        2682 .LDWlin149:
+00001146 40063f00       2683 	dispose	0,{r31},[lp]
+                        2684 	.type	_SwcServiceCanTp_MainFunctionTx,@function
+                        2685 	.size	_SwcServiceCanTp_MainFunctionTx,.-_SwcServiceCanTp_MainFunctionTx
+                        2686 	.align	2
+                        2687 .LDW77:
+                        2688 
+                        2689 	.section ".bss","awb"
+                        2690 .L15809:
+                        2691 	.type	.L15809,@object
+                        2692 	.size	.L15809,0
+                        2693 	.data
+                        2694 	.text
+                        2695 	.align	2
+                        2696 	.align	2
+                        2697 ..gh.f.f.1.e.16:
+                        2698 	.type	..gh.f.f.1.e.16,@object
+                        2699 	.size	..gh.f.f.1.e.16,0
+                        2700 	.global	_SwcServiceCanTp_MainFunction
+                        2701 _SwcServiceCanTp_MainFunction:
+0000114a 80072100       2702 	prepare	{r31},0
+                        2703 --	    .bf
+                        2704 .LDW87:
+                        2705 	jarl	_SwcServiceCanTp_MainFunctionRx,lp
+                        2705 <EXPANSION BEGIN>
+                        2705 jarl22 _SwcServiceCanTp_MainFunctionRx , lp 
+0000114e bfff02fe*      2705 <EXPANSION END>
+                        2706 --line2994
+                        2707 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.150::
+                        2708 .LDWlin150:
+                        2709 	jarl	_SwcServiceCanTp_MainFunctionTx,lp
+                        2709 <EXPANSION BEGIN>
+                        2709 jarl22 _SwcServiceCanTp_MainFunctionTx , lp 
+00001152 bffffefe*      2709 <EXPANSION END>
+                        2710 --	    .ef
+                        2711 .LDW97:
+                        2712 --line2995
+                        2713 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.151::
+                        2714 .LDWlin151:
+00001156 40063f00       2715 	dispose	0,{r31},[lp]
+                        2716 	.type	_SwcServiceCanTp_MainFunction,@function
+                        2717 	.size	_SwcServiceCanTp_MainFunction,.-_SwcServiceCanTp_MainFunction
+                        2718 	.align	2
+                        2719 .LDW08:
+                        2720 
+                        2721 	.section ".bss","awb"
+                        2722 .L16065:
+                        2723 	.type	.L16065,@object
+                        2724 	.size	.L16065,0
+                        2725 	.data
+                        2726 	.text
+                        2727 	.align	2
+                        2728 	.align	2
+                        2729 ..gh.f.f.1.e.17:
+                        2730 	.type	..gh.f.f.1.e.17,@object
+                        2731 	.size	..gh.f.f.1.e.17,0
+                        2732 	.global	_SwcServiceCanTp_Transmit
+
+                                                                      Page 50
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2733 _SwcServiceCanTp_Transmit:
+0000115a 80076100       2734 	prepare	{r29,r31},0
+                        2735 --	    .bf
+                        2736 .LDW18:
+0000115e a40705980000*  2737 	ld.bu	sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp],r19
+00001164 01ea           2738 	mov	1,r29
+00001166 619a           2739 	cmp	1,r19
+00001168 a20d*          2740 	be	.L16085
+                        2741 --line3199
+                        2742 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.152::
+                        2743 .LDWlin152:
+0000116a 204e2000       2744 	movea	32,zero,r9
+                        2745 .L16114:
+                        2746 --	    .es
+                        2747 .LDW28:
+0000116e 20362300       2748 	movea	35,zero,r6
+00001172 003a           2749 	mov	0,r7
+00001174 0342           2750 	mov	3,r8
+                        2751 	jarl	_Det_ReportError,lp
+                        2751 <EXPANSION BEGIN>
+                        2751 jarl22 _Det_ReportError , lp 
+00001176 80ff0000*      2751 <EXPANSION END>
+0000117a e52d*          2752 	br	.L16113
+                        2753 .L16085:
+0000117c 8600           2754 	zxb	r6
+0000117e 07f0           2755 	mov	r7,ep
+                        2756 --line3202
+                        2757 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.153::
+                        2758 .LDWlin153:
+00001180 e031           2759 	cmp	zero,r6
+00001182 c205*          2760 	be	.L16088
+                        2761 --line3203
+                        2762 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.154::
+                        2763 .LDWlin154:
+00001184 204e3000       2764 	movea	48,zero,r9
+00001188 b5f5*          2765 	br	.L16114
+                        2766 .L16088:
+                        2767 --line3205
+                        2768 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.155::
+                        2769 .LDWlin155:
+0000118a e039           2770 	cmp	zero,r7
+0000118c 034a           2771 	mov	3,r9
+0000118e 82f5*          2772 	be	.L16114
+                        2773 --line3210
+                        2774 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.156::
+                        2775 .LDWlin156:
+00001190 7240           2776 	sld.hu	4[ep],r8
+00001192 080600f0       2777 	addi	-4096,r8,zero
+00001196 c905*          2778 	bnl	.L16094
+                        2779 --line3211
+                        2780 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.157::
+                        2781 .LDWlin157:
+00001198 204e7000       2782 	movea	112,zero,r9
+0000119c 95ed*          2783 	br	.L16114
+                        2784 .L16094:
+                        2785 --	    .bs
+                        2786 .LDW38:
+                        2787 --line3224
+                        2788 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.158::
+                        2789 .LDWlin158:
+0000119e e041           2790 	cmp	zero,r8
+
+                                                                      Page 51
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000011a0 b21d*          2791 	be	.L16113
+                        2792 --line3231
+                        2793 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.159::
+                        2794 .LDWlin159:
+000011a2 a40705380000*  2795 	ld.bu	sdaoff23(_CanTp_TxState+7)[gp],r7
+000011a8 e039           2796 	cmp	zero,r7
+000011aa ea15*          2797 	bne	.L16113
+000011ac 06e8           2798 	mov	r6,r29
+000011ae 20964200       2799 	movea	66,zero,r18
+000011b2 208e4100       2800 	movea	65,zero,r17
+000011b6 6742           2801 	cmp	7,r8
+000011b8 3e0600000000*  2802 	mov	sdaoff23(_CanTp_TxState),ep
+000011be f28f3633       2803 	cmovh	r18,r17,r6
+000011c2 8733           2804 	sst.b	r6,7[ep]
+000011c4 20862900       2805 	movea	41,zero,r16
+000011c8 8603           2806 	sst.b	zero,6[ep]
+000011ca 8204           2807 	sst.h	zero,4[ep]
+000011cc 8144           2808 	sst.h	r8,2[ep]
+000011ce 8084           2809 	sst.h	r16,0[ep]
+000011d0 1e30           2810 	mov	ep,r6
+                        2811 	jarl	_CanTp_TxGetBuffer,lp
+                        2811 <EXPANSION BEGIN>
+                        2811 jarl22 _CanTp_TxGetBuffer , lp 
+000011d2 bfffeef5*      2811 <EXPANSION END>
+                        2812 .L16113:
+                        2813 --line3247
+                        2814 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.160::
+                        2815 .LDWlin160:
+000011d6 1d50           2816 	mov	r29,r10
+                        2817 --	    .ef
+                        2818 .LDW48:
+000011d8 40067f00       2819 	dispose	0,{r29,r31},[lp]
+                        2820 	.type	_SwcServiceCanTp_Transmit,@function
+                        2821 	.size	_SwcServiceCanTp_Transmit,.-_SwcServiceCanTp_Transmit
+                        2822 	.align	2
+                        2823 .LDW58:
+                        2824 --_lErrorId	r9	local
+                        2825 --_lReturnValue	r29	local
+                        2826 --_SduLength	r8	local
+                        2827 --_lReturnValue	r29	local
+                        2828 
+                        2829 --_CanTpTxSduId	r6	param
+                        2830 --_CanTpTxInfoPtr	ep	param
+                        2831 
+                        2832 	.section ".bss","awb"
+                        2833 .L16409:
+                        2834 	.type	.L16409,@object
+                        2835 	.size	.L16409,0
+                        2836 	.data
+                        2837 	.text
+                        2838 	.align	2
+                        2839 	.align	2
+                        2840 ..gh.f.f.1.e.18:
+                        2841 	.type	..gh.f.f.1.e.18,@object
+                        2842 	.size	..gh.f.f.1.e.18,0
+                        2843 	.global	_CanTp_RxIndication
+                        2844 _CanTp_RxIndication:
+000011dc 88072100       2845 	prepare	{r31},4
+                        2846 --	    .bf
+                        2847 .LDW68:
+000011e0 a40705880000*  2848 	ld.bu	sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp],r17
+
+                                                                      Page 52
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000011e6 618a           2849 	cmp	1,r17
+000011e8 b20d*          2850 	be	.L16538
+                        2851 --line3254
+                        2852 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.161::
+                        2853 .LDWlin161:
+000011ea 204e2000       2854 	movea	32,zero,r9
+                        2855 .L16562:
+                        2856 --	    .es
+                        2857 .LDW78:
+000011ee 20362300       2858 	movea	35,zero,r6
+000011f2 003a           2859 	mov	0,r7
+000011f4 0442           2860 	mov	4,r8
+                        2861 	jarl	_Det_ReportError,lp
+                        2861 <EXPANSION BEGIN>
+                        2861 jarl22 _Det_ReportError , lp 
+000011f6 80ff0000*      2861 <EXPANSION END>
+000011fa 48063f00       2862 	dispose	4,{r31},[lp]
+                        2863 .L16538:
+000011fe 06f0           2864 	mov	r6,ep
+00001200 9e00           2865 	zxb	ep
+00001202 0798           2866 	mov	r7,r19
+                        2867 --line3257
+                        2868 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.162::
+                        2869 .LDWlin162:
+00001204 62f2           2870 	cmp	2,ep
+00001206 c105*          2871 	bl	.L16541
+                        2872 --line3258
+                        2873 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.163::
+                        2874 .LDWlin163:
+00001208 204e4000       2875 	movea	64,zero,r9
+0000120c 95f5*          2876 	br	.L16562
+                        2877 .L16541:
+                        2878 --line3260
+                        2879 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.164::
+                        2880 .LDWlin164:
+0000120e 034a           2881 	mov	3,r9
+00001210 e039           2882 	cmp	zero,r7
+00001212 e2ed*          2883 	be	.L16562
+                        2884 --line3263
+                        2885 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.165::
+                        2886 .LDWlin165:
+00001214 27370100       2887 	ld.w	0[r7],r6
+00001218 e031           2888 	cmp	zero,r6
+0000121a a2ed*          2889 	be	.L16562
+                        2890 .L16547:
+                        2891 --	    .bs
+                        2892 .LDW88:
+                        2893 --line3307
+                        2894 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.166::
+                        2895 .LDWlin166:
+0000121c 86870100       2896 	ld.bu	0[r6],r16
+00001220 c2f2           2897 	shl	2,ep
+00001222 2f0600000000*  2898 	mov	rosdaoff23(_CanTp_RxPduMap),r15
+00001228 cff1           2899 	add	r15,ep
+0000122a d03ef000       2900 	andi	240,r16,r7
+0000122e 0706d0ff       2901 	addi	-48,r7,zero
+00001232 9a0d*          2902 	bne	.L16556
+00001234 6390           2903 	sld.bu	3[ep],r18
+00001236 2046ff00       2904 	movea	255,zero,r8
+0000123a 120601ff       2905 	addi	-255,r18,zero
+0000123e e0471443       2906 	cmovne	0,r8,r8
+
+                                                                      Page 53
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+00001242 e505*          2907 	br	.L16550
+                        2908 .L16556:
+00001244 61f0           2909 	sld.bu	1[ep],ep
+00001246 c5f1           2910 	add	r5,ep
+00001248 be0705400000*  2911 	ld.bu	rosdaoff23(_CanTp_RxSduCfgInd)[ep],r8
+                        2912 .L16550:
+                        2913 --line3335
+                        2914 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.167::
+                        2915 .LDWlin167:
+0000124e 080601ff       2916 	addi	-255,r8,zero
+00001252 e20d*          2917 	be	.L16536
+                        2918 --	    .bs
+                        2919 .LDW98:
+                        2920 --line3351
+                        2921 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.168::
+                        2922 .LDWlin168:
+00001254 f36f0500       2923 	ld.hu	4[r19],r13
+00001258 03f0           2924 	mov	sp,ep
+0000125a 0535           2925 	sst.w	r6,8[ep]
+0000125c 0135           2926 	sst.w	r6,0[ep]
+0000125e 0830           2927 	mov	r8,r6
+00001260 8204           2928 	sst.h	zero,4[ep]
+00001262 866c           2929 	sst.h	r13,12[ep]
+00001264 23460800       2930 	movea	8,sp,r8
+00001268 0348           2931 	mov	sp,r9
+                        2932 	jarl	_CanTp_CanIfRxIndication,lp
+                        2932 <EXPANSION BEGIN>
+                        2932 jarl22 _CanTp_CanIfRxIndication , lp 
+0000126a bfff08f6*      2932 <EXPANSION END>
+                        2933 --	    .es
+                        2934 .LDW09:
+                        2935 .L16536:
+                        2936 --	    .ef
+                        2937 .LDW19:
+                        2938 --line3374
+                        2939 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.169::
+                        2940 .LDWlin169:
+0000126e 48063f00       2941 	dispose	4,{r31},[lp]
+                        2942 	.type	_CanTp_RxIndication,@function
+                        2943 	.size	_CanTp_RxIndication,.-_CanTp_RxIndication
+                        2944 	.align	2
+                        2945 .LDW29:
+                        2946 --_lErrorId	r9	local
+                        2947 --_lSduHdl	r8	local
+                        2948 --_lReceivedFrameType	r7	local
+                        2949 --_lSduHdl	r8	local
+                        2950 --_lPayloadInfo	8[sp]	local
+                        2951 --_lMetadataInfo	0[sp]	local
+                        2952 
+                        2953 --_RxPduId	ep	param
+                        2954 --_PduInfoPtr	r19	param
+                        2955 
+                        2956 	.section ".bss","awb"
+                        2957 .L16742:
+                        2958 	.type	.L16742,@object
+                        2959 	.size	.L16742,0
+                        2960 	.data
+                        2961 	.text
+                        2962 	.align	2
+                        2963 	.align	2
+                        2964 ..gh.f.f.1.e.19:
+
+                                                                      Page 54
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        2965 	.type	..gh.f.f.1.e.19,@object
+                        2966 	.size	..gh.f.f.1.e.19,0
+                        2967 	.global	_CanTp_TxConfirmation
+                        2968 _CanTp_TxConfirmation:
+                        2969 --	    .bf
+                        2970 .LDW39:
+00001272 a40705980000*  2971 	ld.bu	sdaoff23(_SwcServiceCanTp_InitFunctionState)[gp],r19
+00001278 619a           2972 	cmp	1,r19
+0000127a 920d*          2973 	be	.L16885
+                        2974 --line3381
+                        2975 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.170::
+                        2976 .LDWlin170:
+0000127c 204e2000       2977 	movea	32,zero,r9
+                        2978 .L16917:
+                        2979 --	    .es
+                        2980 .LDW49:
+                        2981 --	    .es
+                        2982 .LDW59:
+00001280 20362300       2983 	movea	35,zero,r6
+00001284 003a           2984 	mov	0,r7
+00001286 0542           2985 	mov	5,r8
+00001288 80070000*      2986 	jr	_Det_ReportError
+                        2987 .L16885:
+0000128c 8600           2988 	zxb	r6
+                        2989 --line3383
+                        2990 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.171::
+                        2991 .LDWlin171:
+0000128e e031           2992 	cmp	zero,r6
+00001290 c205*          2993 	be	.L16888
+                        2994 --line3384
+                        2995 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.172::
+                        2996 .LDWlin172:
+00001292 204e3000       2997 	movea	48,zero,r9
+00001296 d5f5*          2998 	br	.L16917
+                        2999 .L16888:
+                        3000 --	    .bs
+                        3001 .LDW69:
+                        3002 --line3394
+                        3003 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.173::
+                        3004 .LDWlin173:
+00001298 3e0600000000*  3005 	mov	sdaoff23(_CanTp_TxSemaphores),ep
+0000129e 6090           3006 	sld.bu	0[ep],r18
+000012a0 6198           3007 	sld.bu	1[ep],r19
+000012a2 1f8a           3008 	mov	-1,r17
+000012a4 0182           3009 	mov	1,r16
+000012a6 808b           3010 	sst.b	r17,0[ep]
+000012a8 8183           3011 	sst.b	r16,1[ep]
+000012aa 120601ff       3012 	addi	-255,r18,zero
+000012ae d225*          3013 	be	.L16883
+                        3014 --line3410
+                        3015 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.174::
+                        3016 .LDWlin174:
+000012b0 629a           3017 	cmp	2,r19
+000012b2 da0d*          3018 	bne	.L16893
+                        3019 --	    .bs
+                        3020 .LDW79:
+                        3021 --line3419
+                        3022 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.175::
+                        3023 .LDWlin175:
+000012b4 3e0600000000*  3024 	mov	sdaoff23(_CanTp_TxState),ep
+000012ba 6778           3025 	sld.bu	7[ep],r15
+
+                                                                      Page 55
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+000012bc e079           3026 	cmp	zero,r15
+000012be d21d*          3027 	be	.L16883
+000012c0 f2361a00       3028 	mulhi	26,r18,r6
+000012c4 de31           3029 	add	ep,r6
+                        3030 --line3420
+                        3031 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.176::
+                        3032 .LDWlin176:
+000012c6 921d*          3033 	be	.L16883
+000012c8 bf0700fa*      3034 	jr	_CanTp_CanIfTxConfirmation
+                        3035 .L16893:
+                        3036 --	    .es
+                        3037 .LDW89:
+                        3038 --line3436
+                        3039 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.177::
+                        3040 .LDWlin177:
+000012cc f2f60900       3041 	mulhi	9,r18,ep
+000012d0 c5f1           3042 	add	r5,ep
+000012d2 be0705600000*  3043 	ld.bu	rosdaoff23(_CanTp_RxSduCfg+3)[ep],r12
+000012d8 e061           3044 	cmp	zero,r12
+000012da fa0d*          3045 	bne	.L16883
+                        3046 --	    .bs
+                        3047 .LDW99:
+                        3048 --line3442
+                        3049 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.178::
+                        3050 .LDWlin178:
+000012dc f2f61c00       3051 	mulhi	28,r18,ep
+000012e0 2b0600000000*  3052 	mov	sdaoff23(_CanTp_RxState),r11
+000012e6 cbf1           3053 	add	r11,ep
+000012e8 6150           3054 	sld.bu	1[ep],r10
+000012ea e051           3055 	cmp	zero,r10
+000012ec e205*          3056 	be	.L16883
+000012ee 1e30           3057 	mov	ep,r6
+                        3058 --line3443
+                        3059 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.179::
+                        3060 .LDWlin179:
+000012f0 e0f1           3061 	cmp	zero,ep
+000012f2 b205*          3062 	be	.L16883
+000012f4 bf07eef2*      3063 	jr	_CanTp_CanIfTxConfirmationFC
+                        3064 .L16883:
+                        3065 --	    .ef
+                        3066 .LDW001:
+                        3067 --line3465
+                        3068 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp.180::
+                        3069 .LDWlin180:
+000012f8 7f00           3070 	jmp	[lp]
+                        3071 	.type	_CanTp_TxConfirmation,@function
+                        3072 	.size	_CanTp_TxConfirmation,.-_CanTp_TxConfirmation
+                        3073 	.align	2
+                        3074 .LDW101:
+                        3075 --_lErrorId	r9	local
+                        3076 --_lSduHdl	r18	local
+                        3077 --_lSduDir	r19	local
+                        3078 --_pTpTxState	r6	local
+                        3079 --_pTpRxState	r6	local
+                        3080 
+                        3081 --_TxPduId	r6	param
+                        3082 
+                        3083 	.section ".bss","awb"
+                        3084 .L17354:
+                        3085 	.type	.L17354,@object
+                        3086 	.size	.L17354,0
+
+                                                                      Page 56
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000017k1.s
+                        3087 	.data
+                        3088 	.text
+                        3089 	.align	2
+                        3090 --_CanTp_RxPduMap	rosdaoff23(_CanTp_RxPduMap)	import
+                        3091 --_CanTp_RxSduCfg	rosdaoff23(_CanTp_RxSduCfg)	import
+                        3092 --_CanTp_RxSduSnv2Hdl	rosdaoff23(_CanTp_RxSduSnv2Hdl)	import
+                        3093 --_CanTp_RxSduCfgInd	rosdaoff23(_CanTp_RxSduCfgInd)	import
+                        3094 --_CanTp_CalcBS	sdaoff23(_CanTp_CalcBS)	import
+                        3095 --_CanTp_RxState	sdaoff23(_CanTp_RxState)	import
+                        3096 --_CanTp_TxSemaphores	sdaoff23(_CanTp_TxSemaphores)	import
+                        3097 --_CanTp_TxState	sdaoff23(_CanTp_TxState)	import
+                        3098 --_SwcServiceCanTp_InitFunctionState	sdaoff23(_SwcServiceCanTp_InitFunctionState)	static
+                        3099 
+                        3100 	.data
+                        3101 	.ghsnote version,17
+                        3102 	.ghsnote tools,3
+                        3103 	.ghsnote options,144
+                        3104 	.text
+                        3105 	.align	2
+                        3106 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CSwcServiceCanTp...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B79..0::
+                        3107 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

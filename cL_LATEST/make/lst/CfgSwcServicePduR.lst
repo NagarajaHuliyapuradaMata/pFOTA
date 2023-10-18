@@ -1,0 +1,505 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/CfgSwcServicePduR.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\CfgSwcServicePduR.dbo -source=CfgSwcServicePduR.c -o obj\gh_00003go1.o -list=lst/CfgSwcServicePduR.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+Source File: CfgSwcServicePduR.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/CfgSwcServicePduR.lst -object_dir=obj
+                           8 --		-stderr=err/CfgSwcServicePduR.err -c -cpu=rh850 -sda=all
+                           9 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                          10 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          11 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          12 --		-registermode=32 -I../source/_common -I../source/common
+                          13 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          14 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          15 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          16 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          17 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          18 --		-I../source/projectcfg -I../source/projectcompiler
+                          19 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          20 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          21 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          22 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          23 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          24 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          25 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          26 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          27 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          28 --		-Igendata ../source/ProjectCfg/CfgSwcServicePduR.c
+                          29 --Source File:   ../source/ProjectCfg/CfgSwcServicePduR.c
+                          30 --Directory:     
+                          31 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          32 --Compile Date:  Wed Sep 06 14:04:04 2023
+                          33 --Host OS:       Win32
+                          34 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          35 --Release:       Compiler v2015.1.7
+                          36 --Revision Date: Thu Oct 22 08:06:12 2015
+                          37 --Release Date:  Thu Oct 22 09:34:32 2015
+                          38 -- ecom  -g -w -OM
+                          39 	.text
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86AB4..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.
+                          46 _PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.:
+                          47 _PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0:
+                          48 --	    .bf
+                          49 .LDW01:
+                          50 --	    .ef
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+                          51 .LDW11:
+00000000 7f00             52 	jmp	[lp]
+                          53 	.type	_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0,@function
+                          54 	.size	_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0,.-_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0
+                          55 	.type	_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.,@function
+                          56 	.size	_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.,.-_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.
+                          57 	.align	2
+                          58 .LDW21:
+                          59 
+                          60 	.section ".bss","awb"
+                          61 .L32:
+                          62 	.type	.L32,@object
+                          63 	.size	.L32,0
+                          64 	.data
+                          65 	.text
+                          66 	.align	2
+                          67 	.align	2
+                          68 ..gh.f.f.1.e.1:
+                          69 	.type	..gh.f.f.1.e.1,@object
+                          70 	.size	..gh.f.f.1.e.1,0
+                          71 	.global	_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.
+                          72 _PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.:
+                          73 _PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0:
+                          74 --	    .bf
+                          75 .LDW31:
+                          76 --	    .ef
+                          77 .LDW41:
+00000002 7f00             78 	jmp	[lp]
+                          79 	.type	_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0,@function
+                          80 	.size	_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0,.-_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0
+                          81 	.type	_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.,@function
+                          82 	.size	_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.,.-_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR.
+                          83 	.align	2
+                          84 .LDW51:
+                          85 
+                          86 	.section ".bss","awb"
+                          87 .L64:
+                          88 	.type	.L64,@object
+                          89 	.size	.L64,0
+                          90 	.data
+                          91 	.text
+                          92 	.align	2
+                          93 	.align	2
+                          94 ..gh.f.f.1.e.2:
+                          95 	.type	..gh.f.f.1.e.2,@object
+                          96 	.size	..gh.f.f.1.e.2,0
+                          97 	.global	_PduR_DcmTransmit
+                          98 _PduR_DcmTransmit:
+00000004 8600             99 	zxb	r6
+                         100 --	    .bf
+                         101 .LDW61:
+00000006 80070000*       102 	jr	_PduR_UpTransmit
+                         103 --	    .ef
+                         104 .LDW71:
+                         105 	.type	_PduR_DcmTransmit,@function
+                         106 	.size	_PduR_DcmTransmit,.-_PduR_DcmTransmit
+                         107 	.align	2
+                         108 .LDW81:
+                         109 
+                         110 --_id	r6	param
+                         111 --_info	r7	param
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+                         112 
+                         113 	.section ".bss","awb"
+                         114 .L100:
+                         115 	.type	.L100,@object
+                         116 	.size	.L100,0
+                         117 	.data
+                         118 	.text
+                         119 	.align	2
+                         120 	.align	2
+                         121 ..gh.f.f.1.e.3:
+                         122 	.type	..gh.f.f.1.e.3,@object
+                         123 	.size	..gh.f.f.1.e.3,0
+                         124 	.global	_PduR_MyCom_Bl_Status_MsgTransmit
+                         125 _PduR_MyCom_Bl_Status_MsgTransmit:
+0000000a 8600            126 	zxb	r6
+                         127 --	    .bf
+                         128 .LDW91:
+0000000c 80070000*       129 	jr	_PduR_UpTransmit
+                         130 --	    .ef
+                         131 .LDW02:
+                         132 	.type	_PduR_MyCom_Bl_Status_MsgTransmit,@function
+                         133 	.size	_PduR_MyCom_Bl_Status_MsgTransmit,.-_PduR_MyCom_Bl_Status_MsgTransmit
+                         134 	.align	2
+                         135 .LDW12:
+                         136 
+                         137 --_id	r6	param
+                         138 --_info	r7	param
+                         139 
+                         140 	.section ".bss","awb"
+                         141 .L148:
+                         142 	.type	.L148,@object
+                         143 	.size	.L148,0
+                         144 	.data
+                         145 	.text
+                         146 	.align	2
+                         147 	.align	2
+                         148 ..gh.f.f.1.e.4:
+                         149 	.type	..gh.f.f.1.e.4,@object
+                         150 	.size	..gh.f.f.1.e.4,0
+                         151 	.global	_PduR_CanIfRxIndication
+                         152 _PduR_CanIfRxIndication:
+                         153 --	    .bf
+                         154 .LDW22:
+00000010 20363300        155 	movea	51,zero,r6
+00000014 003a            156 	mov	0,r7
+00000016 2046c900        157 	movea	201,zero,r8
+0000001a 024a            158 	mov	2,r9
+0000001c 80070000*       159 	jr	_Det_ReportError
+                         160 --	    .ef
+                         161 .LDW32:
+                         162 	.type	_PduR_CanIfRxIndication,@function
+                         163 	.size	_PduR_CanIfRxIndication,.-_PduR_CanIfRxIndication
+                         164 	.align	2
+                         165 .LDW42:
+                         166 
+                         167 --_RxPduId	none	param
+                         168 --_info	none	param
+                         169 
+                         170 	.section ".bss","awb"
+                         171 .L193:
+                         172 	.type	.L193,@object
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+                         173 	.size	.L193,0
+                         174 	.data
+                         175 	.text
+                         176 	.align	2
+                         177 	.align	2
+                         178 ..gh.f.f.1.e.5:
+                         179 	.type	..gh.f.f.1.e.5,@object
+                         180 	.size	..gh.f.f.1.e.5,0
+                         181 	.global	_PduR_CanIfTxConfirmation
+                         182 _PduR_CanIfTxConfirmation:
+00000020 8600            183 	zxb	r6
+                         184 --	    .bf
+                         185 .LDW52:
+00000022 80070000*       186 	jr	_PduR_LoIfTxConfirmation
+                         187 --	    .ef
+                         188 .LDW62:
+                         189 	.type	_PduR_CanIfTxConfirmation,@function
+                         190 	.size	_PduR_CanIfTxConfirmation,.-_PduR_CanIfTxConfirmation
+                         191 	.align	2
+                         192 .LDW72:
+                         193 
+                         194 --_TxPduId	r6	param
+                         195 
+                         196 	.section ".bss","awb"
+                         197 .L241:
+                         198 	.type	.L241,@object
+                         199 	.size	.L241,0
+                         200 	.data
+                         201 	.text
+                         202 	.align	2
+                         203 	.align	2
+                         204 ..gh.f.f.1.e.6:
+                         205 	.type	..gh.f.f.1.e.6,@object
+                         206 	.size	..gh.f.f.1.e.6,0
+                         207 	.global	_PduR_CanTpStartOfReception
+                         208 _PduR_CanTpStartOfReception:
+00000026 8600            209 	zxb	r6
+00000028 c800            210 	zxh	r8
+                         211 --	    .bf
+                         212 .LDW82:
+0000002a 80070000*       213 	jr	_PduR_LoTpStartOfReception
+                         214 --	    .ef
+                         215 .LDW92:
+                         216 	.type	_PduR_CanTpStartOfReception,@function
+                         217 	.size	_PduR_CanTpStartOfReception,.-_PduR_CanTpStartOfReception
+                         218 	.align	2
+                         219 .LDW03:
+                         220 
+                         221 --_id	r6	param
+                         222 --_info	r7	param
+                         223 --_TpSduLength	r8	param
+                         224 --_bufferSizePtr	r9	param
+                         225 
+                         226 	.section ".bss","awb"
+                         227 .L289:
+                         228 	.type	.L289,@object
+                         229 	.size	.L289,0
+                         230 	.data
+                         231 	.text
+                         232 	.align	2
+                         233 	.align	2
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+                         234 ..gh.f.f.1.e.7:
+                         235 	.type	..gh.f.f.1.e.7,@object
+                         236 	.size	..gh.f.f.1.e.7,0
+                         237 	.global	_PduR_CanTpCopyRxData
+                         238 _PduR_CanTpCopyRxData:
+0000002e 8600            239 	zxb	r6
+                         240 --	    .bf
+                         241 .LDW13:
+00000030 80070000*       242 	jr	_PduR_LoTpCopyRxData
+                         243 --	    .ef
+                         244 .LDW23:
+                         245 	.type	_PduR_CanTpCopyRxData,@function
+                         246 	.size	_PduR_CanTpCopyRxData,.-_PduR_CanTpCopyRxData
+                         247 	.align	2
+                         248 .LDW33:
+                         249 
+                         250 --_id	r6	param
+                         251 --_info	r7	param
+                         252 --_bufferSizePtr	r8	param
+                         253 
+                         254 	.section ".bss","awb"
+                         255 .L337:
+                         256 	.type	.L337,@object
+                         257 	.size	.L337,0
+                         258 	.data
+                         259 	.text
+                         260 	.align	2
+                         261 	.align	2
+                         262 ..gh.f.f.1.e.8:
+                         263 	.type	..gh.f.f.1.e.8,@object
+                         264 	.size	..gh.f.f.1.e.8,0
+                         265 	.global	_PduR_CanTpCopyTxData
+                         266 _PduR_CanTpCopyTxData:
+00000034 8600            267 	zxb	r6
+                         268 --	    .bf
+                         269 .LDW43:
+00000036 80070000*       270 	jr	_PduR_LoTpCopyTxData
+                         271 --	    .ef
+                         272 .LDW53:
+                         273 	.type	_PduR_CanTpCopyTxData,@function
+                         274 	.size	_PduR_CanTpCopyTxData,.-_PduR_CanTpCopyTxData
+                         275 	.align	2
+                         276 .LDW63:
+                         277 
+                         278 --_id	r6	param
+                         279 --_info	r7	param
+                         280 --_retry	r8	param
+                         281 --_availableDataPtr	r9	param
+                         282 
+                         283 	.section ".bss","awb"
+                         284 .L385:
+                         285 	.type	.L385,@object
+                         286 	.size	.L385,0
+                         287 	.data
+                         288 	.text
+                         289 	.align	2
+                         290 	.align	2
+                         291 ..gh.f.f.1.e.9:
+                         292 	.type	..gh.f.f.1.e.9,@object
+                         293 	.size	..gh.f.f.1.e.9,0
+                         294 	.global	_PduR_CanTpRxIndication
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+                         295 _PduR_CanTpRxIndication:
+0000003a 8600            296 	zxb	r6
+0000003c 8700            297 	zxb	r7
+                         298 --	    .bf
+                         299 .LDW73:
+0000003e 80070000*       300 	jr	_PduR_LoTpRxIndication
+                         301 --	    .ef
+                         302 .LDW83:
+                         303 	.type	_PduR_CanTpRxIndication,@function
+                         304 	.size	_PduR_CanTpRxIndication,.-_PduR_CanTpRxIndication
+                         305 	.align	2
+                         306 .LDW93:
+                         307 
+                         308 --_id	r6	param
+                         309 --_result	r7	param
+                         310 
+                         311 	.section ".bss","awb"
+                         312 .L433:
+                         313 	.type	.L433,@object
+                         314 	.size	.L433,0
+                         315 	.data
+                         316 	.text
+                         317 	.align	2
+                         318 	.align	2
+                         319 ..gh.f.f.1.e.10:
+                         320 	.type	..gh.f.f.1.e.10,@object
+                         321 	.size	..gh.f.f.1.e.10,0
+                         322 	.global	_PduR_CanTpTxConfirmation
+                         323 _PduR_CanTpTxConfirmation:
+00000042 8600            324 	zxb	r6
+00000044 8700            325 	zxb	r7
+                         326 --	    .bf
+                         327 .LDW04:
+00000046 80070000*       328 	jr	_PduR_LoTpTxConfirmation
+                         329 --	    .ef
+                         330 .LDW14:
+                         331 	.type	_PduR_CanTpTxConfirmation,@function
+                         332 	.size	_PduR_CanTpTxConfirmation,.-_PduR_CanTpTxConfirmation
+                         333 	.align	2
+                         334 .LDW24:
+                         335 
+                         336 --_id	r6	param
+                         337 --_result	r7	param
+                         338 
+                         339 	.section ".bss","awb"
+                         340 .L481:
+                         341 	.type	.L481,@object
+                         342 	.size	.L481,0
+                         343 	.data
+                         344 	.text
+                         345 	.align	2
+                         346 
+                         347 	.section ".rosdata","a"
+                         348 	.align	4
+                         349 	.global	_PduR_ExclusiveAreaRom
+00000000 00000000*       350 _PduR_ExclusiveAreaRom:	.word	_PduR_SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0
+00000004 00000000*       351 	.word	_PduR_SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0
+                         352 	.type	_PduR_ExclusiveAreaRom,@object
+                         353 	.size	_PduR_ExclusiveAreaRom,8
+                         354 	.global	_PduR_RmTransmitFctPtr
+00000008 00000000*       355 _PduR_RmTransmitFctPtr:	.word	_PduR_RmIf_RoutePdu
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+0000000c 00000000*       356 	.word	_PduR_RmTp_Transmit_MultiDest
+                         357 	.type	_PduR_RmTransmitFctPtr,@object
+                         358 	.size	_PduR_RmTransmitFctPtr,8
+                         359 	.global	_PduR_TxIf2Up
+00000010 01              360 _PduR_TxIf2Up:	.byte	1
+                         361 	.type	_PduR_TxIf2Up,@object
+                         362 	.size	_PduR_TxIf2Up,1
+                         363 	.section ".sdata","aw"
+                         364 	.global	_PduR_Initialized
+00000000 00              365 _PduR_Initialized:	.byte	0
+                         366 	.type	_PduR_Initialized,@object
+                         367 	.size	_PduR_Initialized,1
+                         368 	.section ".rosdata","a"
+00000011 000000          369 	.space	3
+                         370 	.global	_PduR_RmSrcRom
+00000014 010103ff        371 _PduR_RmSrcRom:	.byte	1,1,3,255
+00000018 0101            372 	.byte	1,1
+0000001a 00              373 	.space	1
+0000001b ff              374 	.byte	255
+0000001c 0301            375 	.byte	3,1
+0000001e 01              376 	.byte	1
+0000001f 00              377 	.space	1
+00000020 0201            378 	.byte	2,1
+00000022 02              379 	.byte	2
+00000023 00              380 	.space	1
+                         381 	.type	_PduR_RmSrcRom,@object
+                         382 	.size	_PduR_RmSrcRom,16
+                         383 	.global	_PduR_RmDestRom
+00000024 0301            384 _PduR_RmDestRom:	.byte	3,1
+00000026 04              385 	.byte	4
+00000027 00              386 	.space	1
+00000028 0201            387 	.byte	2,1
+0000002a 0103            388 	.byte	1,3
+0000002c 05              389 	.byte	5
+0000002d 02              390 	.byte	2
+0000002e 00              391 	.space	1
+0000002f 04              392 	.byte	4
+                         393 	.type	_PduR_RmDestRom,@object
+                         394 	.size	_PduR_RmDestRom,12
+                         395 	.global	_PduR_RmGDestRom
+00000030 0101            396 _PduR_RmGDestRom:	.byte	1,1
+00000032 00              397 	.space	1
+00000033 0101            398 	.byte	1,1
+00000035 00              399 	.space	1
+00000036 01010102        400 	.byte	1,1,1,2
+0000003a 00              401 	.space	1
+0000003b 00              402 	.space	1
+0000003c 0201            403 	.byte	2,1
+0000003e 03              404 	.byte	3
+0000003f 01              405 	.byte	1
+00000040 00              406 	.space	1
+00000041 0201            407 	.byte	2,1
+00000043 00              408 	.space	1
+                         409 	.type	_PduR_RmGDestRom,@object
+                         410 	.size	_PduR_RmGDestRom,20
+                         411 	.global	_PduR_MmRom
+00000044 00              412 _PduR_MmRom:	.space	1
+00000045 1401            413 	.byte	20,1
+00000047 00              414 	.space	1
+00000048 00000000        415 	.space	4
+0000004c 00000000        416 	.space	4
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00003go1.s
+00000050 00000000        417 	.space	4
+00000054 00000000        418 	.space	4
+00000058 00000000        419 	.space	4
+0000005c 00000000        420 	.space	4
+00000060 00000000        421 	.space	4
+00000064 00000000*       422 	.word	_EcuabCanIf_Transmit
+00000068 00000000        423 	.space	4
+0000006c 00              424 	.space	1
+0000006d 0c02            425 	.byte	12,2
+0000006f 01              426 	.byte	1
+00000070 00000000        427 	.space	4
+00000074 00000000        428 	.space	4
+00000078 00000000        429 	.space	4
+0000007c 00000000        430 	.space	4
+00000080 00000000        431 	.space	4
+00000084 00000000        432 	.space	4
+00000088 00000000        433 	.space	4
+0000008c 00000000        434 	.space	4
+00000090 00000000*       435 	.word	_SwcServiceCanTp_Transmit
+00000094 00              436 	.space	1
+00000095 0504            437 	.byte	5,4
+00000097 02              438 	.byte	2
+00000098 00000000*       439 	.word	_Dcm_CopyRxData
+0000009c 00000000*       440 	.word	_Dcm_CopyTxData
+000000a0 00000000        441 	.space	4
+000000a4 00000000        442 	.space	4
+000000a8 00000000*       443 	.word	_Dcm_StartOfReception
+000000ac 00000000*       444 	.word	_Dcm_TpRxIndication
+000000b0 00000000*       445 	.word	_Dcm_TpTxConfirmation
+000000b4 00000000        446 	.space	4
+000000b8 00000000        447 	.space	4
+000000bc 00              448 	.space	1
+000000bd 02ff            449 	.byte	2,255
+000000bf ff              450 	.byte	255
+000000c0 00000000        451 	.space	4
+000000c4 00000000        452 	.space	4
+000000c8 00000000*       453 	.word	_MyCom_Bl_Status_Msg_RxIndication
+000000cc 00000000*       454 	.word	_MyCom_Bl_Status_Msg_TxConfirmation
+000000d0 00000000        455 	.space	4
+000000d4 00000000        456 	.space	4
+000000d8 00000000        457 	.space	4
+000000dc 00000000        458 	.space	4
+000000e0 00000000        459 	.space	4
+                         460 	.type	_PduR_MmRom,@object
+                         461 	.size	_PduR_MmRom,160
+                         462 	.data
+                         463 	.ghsnote version,17
+                         464 	.ghsnote tools,3
+                         465 	.ghsnote options,144
+                         466 	.text
+                         467 	.align	2
+                         468 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CCfgSwcServicePduR...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86AB4..0::
+                         469 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

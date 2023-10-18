@@ -1,0 +1,350 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/ESLib_Helper.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\ESLib_Helper.dbo -source=ESLib_Helper.c -o obj\gh_0000dvo1.o -list=lst/ESLib_Helper.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+Source File: ESLib_Helper.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/ESLib_Helper.lst
+                           7 --		-object_dir=obj -stderr=err/ESLib_Helper.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/vSecPrim/ESLib_Helper.c
+                          28 --Source File:   ../source/wrappers/vSecPrim/ESLib_Helper.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:04:47 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86AE0..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_esl_ResetAndClearWorkspace
+                          46 _esl_ResetAndClearWorkspace:
+00000000 06f0             47 	mov	r6,ep
+                          48 --	    .bf
+                          49 .LDW01:
+00000002 20967f00         50 	movea	127,zero,r18
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+00000006 8294             51 	sst.h	r18,4[ep]
+                          52 --	    .ef
+                          53 .LDW11:
+00000008 7f00             54 	jmp	[lp]
+                          55 	.type	_esl_ResetAndClearWorkspace,@function
+                          56 	.size	_esl_ResetAndClearWorkspace,.-_esl_ResetAndClearWorkspace
+                          57 	.align	2
+                          58 .LDW21:
+                          59 
+                          60 --_workSpaceHeader	ep	param
+                          61 --_workSpaceBuffer	none	param
+                          62 
+                          63 	.section ".bss","awb"
+                          64 .L33:
+                          65 	.type	.L33,@object
+                          66 	.size	.L33,0
+                          67 	.data
+                          68 	.section ".MSR_CODE","ax"
+                          69 	.align	2
+                          70 	.align	2
+                          71 ..gh.f.f.1.e.1:
+                          72 	.type	..gh.f.f.1.e.1,@object
+                          73 	.size	..gh.f.f.1.e.1,0
+                          74 	.global	_esl_SetWorkspaceStatus
+                          75 _esl_SetWorkspaceStatus:
+0000000a 06f0             76 	mov	r6,ep
+                          77 --	    .bf
+                          78 .LDW31:
+0000000c 873600c0         79 	ori	49152,r7,r6
+00000010 8234             80 	sst.h	r6,4[ep]
+                          81 --	    .ef
+                          82 .LDW41:
+00000012 7f00             83 	jmp	[lp]
+                          84 	.type	_esl_SetWorkspaceStatus,@function
+                          85 	.size	_esl_SetWorkspaceStatus,.-_esl_SetWorkspaceStatus
+                          86 	.align	2
+                          87 .LDW51:
+                          88 
+                          89 --_workSpaceHeader	ep	param
+                          90 --_algo	r7	param
+                          91 
+                          92 	.section ".bss","awb"
+                          93 .L81:
+                          94 	.type	.L81,@object
+                          95 	.size	.L81,0
+                          96 	.data
+                          97 	.section ".MSR_CODE","ax"
+                          98 	.align	2
+                          99 	.align	2
+                         100 ..gh.f.f.1.e.2:
+                         101 	.type	..gh.f.f.1.e.2,@object
+                         102 	.size	..gh.f.f.1.e.2,0
+                         103 	.global	_esl_SetWorkspaceSize
+                         104 _esl_SetWorkspaceSize:
+00000014 06f0            105 	mov	r6,ep
+                         106 --	    .bf
+                         107 .LDW61:
+00000016 013d            108 	sst.w	r7,0[ep]
+                         109 --	    .ef
+                         110 .LDW71:
+00000018 7f00            111 	jmp	[lp]
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+                         112 	.type	_esl_SetWorkspaceSize,@function
+                         113 	.size	_esl_SetWorkspaceSize,.-_esl_SetWorkspaceSize
+                         114 	.align	2
+                         115 .LDW81:
+                         116 
+                         117 --_workSpaceHeader	ep	param
+                         118 --_workSpaceSize	r7	param
+                         119 
+                         120 	.section ".bss","awb"
+                         121 .L129:
+                         122 	.type	.L129,@object
+                         123 	.size	.L129,0
+                         124 	.data
+                         125 	.section ".MSR_CODE","ax"
+                         126 	.align	2
+                         127 	.align	2
+                         128 ..gh.f.f.1.e.3:
+                         129 	.type	..gh.f.f.1.e.3,@object
+                         130 	.size	..gh.f.f.1.e.3,0
+                         131 	.global	_esl_CheckWorkSpaceHeader
+                         132 _esl_CheckWorkSpaceHeader:
+0000001a 06f0            133 	mov	r6,ep
+                         134 --	    .bf
+                         135 .LDW91:
+0000001c 009d            136 	sld.w	0[ep],r19
+0000001e 20360220        137 	movea	8194,zero,r6
+00000022 e799            138 	cmp	r7,r19
+00000024 e0371253        139 	cmovnl	0,r6,r10
+                         140 --	    .ef
+                         141 .LDW02:
+00000028 7f00            142 	jmp	[lp]
+                         143 	.type	_esl_CheckWorkSpaceHeader,@function
+                         144 	.size	_esl_CheckWorkSpaceHeader,.-_esl_CheckWorkSpaceHeader
+                         145 	.align	2
+                         146 .LDW12:
+                         147 --_retVal	r10	local
+                         148 
+                         149 --_workSpaceHeader	ep	param
+                         150 --_minSize	r7	param
+                         151 
+                         152 	.section ".bss","awb"
+                         153 .L189:
+                         154 	.type	.L189,@object
+                         155 	.size	.L189,0
+                         156 	.data
+                         157 	.section ".MSR_CODE","ax"
+                         158 	.align	2
+                         159 	.align	2
+                         160 ..gh.f.f.1.e.4:
+                         161 	.type	..gh.f.f.1.e.4,@object
+                         162 	.size	..gh.f.f.1.e.4,0
+                         163 	.global	_esl_CheckWorkSpaceState
+                         164 _esl_CheckWorkSpaceState:
+0000002a 06f0            165 	mov	r6,ep
+0000002c c700            166 	zxh	r7
+                         167 --	    .bf
+                         168 .LDW22:
+0000002e 7248            169 	sld.hu	4[ep],r9
+00000030 0052            170 	mov	0,r10
+00000032 c936801f        171 	andi	8064,r9,r6
+00000036 e731            172 	cmp	r7,r6
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+00000038 ba05*           173 	bne	.L213
+0000003a 8f4a            174 	shr	15,r9
+0000003c c105*           175 	bl	.L210
+                         176 .L213:
+                         177 --line44
+                         178 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.1::
+                         179 .LDWlin1:
+0000003e 20560120        180 	movea	8193,zero,r10
+00000042 7f00            181 	jmp	[lp]
+                         182 .L210:
+                         183 --	    .ef
+                         184 .LDW32:
+                         185 --line47
+                         186 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.2::
+                         187 .LDWlin2:
+00000044 7f00            188 	jmp	[lp]
+                         189 	.type	_esl_CheckWorkSpaceState,@function
+                         190 	.size	_esl_CheckWorkSpaceState,.-_esl_CheckWorkSpaceState
+                         191 	.align	2
+                         192 .LDW42:
+                         193 --_retVal	r10	local
+                         194 
+                         195 --_workSpaceHeader	ep	param
+                         196 --_algo	r7	param
+                         197 
+                         198 	.section ".bss","awb"
+                         199 .L262:
+                         200 	.type	.L262,@object
+                         201 	.size	.L262,0
+                         202 	.data
+                         203 	.section ".MSR_CODE","ax"
+                         204 	.align	2
+                         205 	.align	2
+                         206 ..gh.f.f.1.e.5:
+                         207 	.type	..gh.f.f.1.e.5,@object
+                         208 	.size	..gh.f.f.1.e.5,0
+                         209 	.global	_esl_CheckWorkSpaceHeaderAndState
+                         210 _esl_CheckWorkSpaceHeaderAndState:
+00000046 8007e100        211 	prepare	{r28,r29,r31},0
+0000004a 06e8            212 	mov	r6,r29
+                         213 --	    .bf
+                         214 .LDW52:
+                         215 	jarl	_esl_CheckWorkSpaceHeader,lp
+                         215 <EXPANSION BEGIN>
+                         215 jarl22 _esl_CheckWorkSpaceHeader , lp 
+0000004c bfffceff*       215 <EXPANSION END>
+                         216 --line55
+                         217 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.3::
+                         218 .LDWlin3:
+00000050 e051            219 	cmp	zero,r10
+00000052 9a0d*           220 	bne	.L312
+00000054 08e0            221 	mov	r8,r28
+00000056 dc00            222 	zxh	r28
+                         223 --line58
+                         224 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.4::
+                         225 .LDWlin4:
+00000058 1d30            226 	mov	r29,r6
+0000005a 1c38            227 	mov	r28,r7
+                         228 	jarl	_esl_CheckWorkSpaceState,lp
+                         228 <EXPANSION BEGIN>
+                         228 jarl22 _esl_CheckWorkSpaceState , lp 
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+0000005c bfffceff*       228 <EXPANSION END>
+00000060 4006ff00        229 	dispose	0,{r28,r29,r31},[lp]
+                         230 .L312:
+                         231 --	    .ef
+                         232 .LDW62:
+                         233 --line61
+                         234 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.5::
+                         235 .LDWlin5:
+00000064 4006ff00        236 	dispose	0,{r28,r29,r31},[lp]
+                         237 	.type	_esl_CheckWorkSpaceHeaderAndState,@function
+                         238 	.size	_esl_CheckWorkSpaceHeaderAndState,.-_esl_CheckWorkSpaceHeaderAndState
+                         239 	.align	2
+                         240 .LDW72:
+                         241 --_retVal	r10	local
+                         242 
+                         243 --_workSpaceHeader	r29	param
+                         244 --_minSize	r7	param
+                         245 --_algo	r28	param
+                         246 
+                         247 	.section ".bss","awb"
+                         248 .L352:
+                         249 	.type	.L352,@object
+                         250 	.size	.L352,0
+                         251 	.data
+                         252 	.section ".MSR_CODE","ax"
+                         253 	.align	2
+                         254 	.align	2
+                         255 ..gh.f.f.1.e.6:
+                         256 	.type	..gh.f.f.1.e.6,@object
+                         257 	.size	..gh.f.f.1.e.6,0
+                         258 	.global	_esl_checkLengthRef
+                         259 _esl_checkLengthRef:
+                         260 --	    .bf
+                         261 .LDW82:
+00000068 e031            262 	cmp	zero,r6
+0000006a ca05*           263 	bne	.L395
+                         264 --line68
+                         265 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.6::
+                         266 .LDWlin6:
+0000006c 20560320        267 	movea	8195,zero,r10
+00000070 7f00            268 	jmp	[lp]
+                         269 .L395:
+00000072 06f0            270 	mov	r6,ep
+                         271 --line70
+                         272 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.7::
+                         273 .LDWlin7:
+00000074 0035            274 	sld.w	0[ep],r6
+00000076 0052            275 	mov	0,r10
+00000078 e731            276 	cmp	r7,r6
+0000007a c905*           277 	bnl	.L393
+                         278 --line71
+                         279 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.8::
+                         280 .LDWlin8:
+0000007c 20560720        281 	movea	8199,zero,r10
+00000080 7f00            282 	jmp	[lp]
+                         283 .L393:
+                         284 --	    .ef
+                         285 .LDW92:
+                         286 --line76
+                         287 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper.9::
+                         288 .LDWlin9:
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000dvo1.s
+00000082 7f00            289 	jmp	[lp]
+                         290 	.type	_esl_checkLengthRef,@function
+                         291 	.size	_esl_checkLengthRef,.-_esl_checkLengthRef
+                         292 	.align	2
+                         293 .LDW03:
+                         294 --_retVal	r10	local
+                         295 
+                         296 --_lenRef	ep	param
+                         297 --_lengthValue	r7	param
+                         298 
+                         299 	.section ".bss","awb"
+                         300 .L444:
+                         301 	.type	.L444,@object
+                         302 	.size	.L444,0
+                         303 	.data
+                         304 	.section ".MSR_CODE","ax"
+                         305 	.align	2
+                         306 
+                         307 	.data
+                         308 	.ghsnote version,17
+                         309 	.ghsnote tools,3
+                         310 	.ghsnote options,144
+                         311 	.section ".MSR_CODE","ax"
+                         312 	.align	2
+                         313 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CESLib_Helper...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86AE0..0::
+                         314 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

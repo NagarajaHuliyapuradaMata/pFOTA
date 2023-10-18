@@ -1,0 +1,178 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uo1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/fbl_apwd.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\fbl_apwd.dbo -source=fbl_apwd.c -o obj\gh_00005uo1.o -list=lst/fbl_apwd.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uo1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uo1.s
+Source File: fbl_apwd.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/fbl_apwd.lst
+                           7 --		-object_dir=obj -stderr=err/fbl_apwd.err -c -cpu=rh850 -sda=all
+                           8 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/SwcServiceStartUp/fbl_apwd.c
+                          28 --Source File:   ../source/SwcServiceStartUp/fbl_apwd.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:37:20 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_apwd...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86471..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_ApplFblWDInit
+                          45 _ApplFblWDInit:
+                          46 --	    .bf
+                          47 .LDW01:
+00000000 208e4700         48 	movea	71,zero,r17
+00000004 40f6edff         49 	movhi	65517,zero,ep
+00000008 0192             50 	mov	1,r18
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uo1.s
+0000000a 8c8b             51 	sst.b	r17,12[ep]
+0000000c 2086acff         52 	movea	-84,zero,r16
+00000010 84070d900000*    53 	st.b	r18,sdaoff23(_WDTimer)[gp]
+00000016 8083             54 	sst.b	r16,0[ep]
+                          55 --	    .ef
+                          56 .LDW11:
+00000018 7f00             57 	jmp	[lp]
+                          58 	.type	_ApplFblWDInit,@function
+                          59 	.size	_ApplFblWDInit,.-_ApplFblWDInit
+                          60 	.align	2
+                          61 .LDW21:
+                          62 
+                          63 	.section ".bss","awb"
+                          64 .L33:
+                          65 	.type	.L33,@object
+                          66 	.size	.L33,0
+                          67 	.data
+                          68 	.text
+                          69 	.align	2
+                          70 	.align	2
+                          71 ..gh.f.f.1.e.1:
+                          72 	.type	..gh.f.f.1.e.1,@object
+                          73 	.size	..gh.f.f.1.e.1,0
+                          74 	.global	_ApplFblWDLong
+                          75 _ApplFblWDLong:
+                          76 --	    .bf
+                          77 .LDW31:
+                          78 --	    .ef
+                          79 .LDW41:
+0000001a 7f00             80 	jmp	[lp]
+                          81 	.type	_ApplFblWDLong,@function
+                          82 	.size	_ApplFblWDLong,.-_ApplFblWDLong
+                          83 	.align	2
+                          84 .LDW51:
+                          85 
+                          86 	.section ".bss","awb"
+                          87 .L80:
+                          88 	.type	.L80,@object
+                          89 	.size	.L80,0
+                          90 	.data
+                          91 	.text
+                          92 	.align	2
+                          93 	.align	2
+                          94 ..gh.f.f.1.e.2:
+                          95 	.type	..gh.f.f.1.e.2,@object
+                          96 	.size	..gh.f.f.1.e.2,0
+                          97 	.global	_ApplFblWDShort
+                          98 _ApplFblWDShort:
+                          99 --	    .bf
+                         100 .LDW61:
+                         101 --	    .ef
+                         102 .LDW71:
+0000001c 7f00            103 	jmp	[lp]
+                         104 	.type	_ApplFblWDShort,@function
+                         105 	.size	_ApplFblWDShort,.-_ApplFblWDShort
+                         106 	.align	2
+                         107 .LDW81:
+                         108 
+                         109 	.section ".bss","awb"
+                         110 .L112:
+                         111 	.type	.L112,@object
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uo1.s
+                         112 	.size	.L112,0
+                         113 	.data
+                         114 	.text
+                         115 	.section ".RAMCODE","ax"
+                         116 	.align	2
+                         117 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_apwd...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86471..1::
+                         118 	.align	2
+                         119 ..gh.f.f.1.e.3:
+                         120 	.type	..gh.f.f.1.e.3,@object
+                         121 	.size	..gh.f.f.1.e.3,0
+                         122 	.global	_ApplFblWDTrigger
+                         123 _ApplFblWDTrigger:
+                         124 --	    .bf
+                         125 .LDW91:
+00000000 2096acff        126 	movea	-84,zero,r18
+00000004 80070d9000da    127 	st.b	r18,4293722112[zero]
+                         128 --	    .ef
+                         129 .LDW02:
+0000000a 7f00            130 	jmp	[lp]
+                         131 	.type	_ApplFblWDTrigger,@function
+                         132 	.size	_ApplFblWDTrigger,.-_ApplFblWDTrigger
+                         133 	.align	2
+                         134 .LDW12:
+                         135 
+                         136 	.section ".bss","awb"
+                         137 .L145:
+                         138 	.type	.L145,@object
+                         139 	.size	.L145,0
+                         140 	.data
+                         141 	.section ".RAMCODE","ax"
+                         142 	.align	2
+                         143 --_WDTimer	sdaoff23(_WDTimer)	import
+                         144 
+                         145 	.data
+                         146 	.ghsnote version,17
+                         147 	.ghsnote tools,3
+                         148 	.ghsnote options,144
+                         149 	.text
+                         150 	.align	2
+                         151 	.section ".RAMCODE","ax"
+                         152 	.align	2
+                         153 	.text
+                         154 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_apwd...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86471..0::
+                         155 	.section ".RAMCODE","ax"
+                         156 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_apwd...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86471..1::
+                         157 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

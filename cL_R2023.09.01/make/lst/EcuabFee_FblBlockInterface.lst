@@ -1,0 +1,644 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/EcuabFee_FblBlockInterface.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\EcuabFee_FblBlockInterface.dbo -source=EcuabFee_FblBlockInterface.c -o obj\gh_00001ok1.o -list=lst/EcuabFee_FblBlockInterface.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+Source File: EcuabFee_FblBlockInterface.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/EcuabFee_FblBlockInterface.lst -object_dir=obj
+                           8 --		-stderr=err/EcuabFee_FblBlockInterface.err -c -cpu=rh850 -sda=all
+                           9 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                          10 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          11 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          12 --		-registermode=32 -I../source/_common -I../source/common
+                          13 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          14 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          15 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          16 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          17 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          18 --		-I../source/projectcfg -I../source/projectcompiler
+                          19 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          20 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          21 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          22 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          23 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          24 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          25 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          26 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          27 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          28 --		-Igendata ../source/EcuabFee/EcuabFee_FblBlockInterface.c
+                          29 --Source File:   ../source/EcuabFee/EcuabFee_FblBlockInterface.c
+                          30 --Directory:     
+                          31 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          32 --Compile Date:  Wed Sep 06 13:34:10 2023
+                          33 --Host OS:       Win32
+                          34 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          35 --Release:       Compiler v2015.1.7
+                          36 --Revision Date: Thu Oct 22 08:06:12 2015
+                          37 --Release Date:  Thu Oct 22 09:34:32 2015
+                          38 -- ecom  -g -w -OM
+                          39 	.text
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863B3..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_FEEFBL_GetProgAttemptsCounter
+                          46 _FEEFBL_GetProgAttemptsCounter:
+00000000 80072100         47 	prepare	{r31},0
+00000004 06f0             48 	mov	r6,ep
+                          49 --	    .bf
+                          50 .LDW01:
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+00000006 0638             51 	mov	r6,r7
+00000008 8003             52 	sst.b	zero,0[ep]
+0000000a 0932             53 	mov	9,r6
+0000000c 0142             54 	mov	1,r8
+                          55 	jarl	_ApplFblNvReadProcessData,lp
+                          55 <EXPANSION BEGIN>
+                          55 jarl22 _ApplFblNvReadProcessData , lp 
+0000000e 80ff0000*        55 <EXPANSION END>
+                          56 --line21
+                          57 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.1::
+                          58 .LDWlin1:
+00000012 0152             59 	mov	1,r10
+                          60 --	    .ef
+                          61 .LDW11:
+00000014 40063f00         62 	dispose	0,{r31},[lp]
+                          63 	.type	_FEEFBL_GetProgAttemptsCounter,@function
+                          64 	.size	_FEEFBL_GetProgAttemptsCounter,.-_FEEFBL_GetProgAttemptsCounter
+                          65 	.align	2
+                          66 .LDW21:
+                          67 
+                          68 --_ucData	ep	param
+                          69 
+                          70 	.section ".bss","awb"
+                          71 .L54:
+                          72 	.type	.L54,@object
+                          73 	.size	.L54,0
+                          74 	.data
+                          75 	.text
+                          76 	.align	2
+                          77 	.align	2
+                          78 ..gh.f.f.1.e.1:
+                          79 	.type	..gh.f.f.1.e.1,@object
+                          80 	.size	..gh.f.f.1.e.1,0
+                          81 	.global	_FEEFBL_GetMaxProgAttemptsCounter
+                          82 _FEEFBL_GetMaxProgAttemptsCounter:
+00000018 80072100         83 	prepare	{r31},0
+0000001c 06f0             84 	mov	r6,ep
+                          85 --	    .bf
+                          86 .LDW31:
+0000001e 0638             87 	mov	r6,r7
+00000020 8003             88 	sst.b	zero,0[ep]
+00000022 0832             89 	mov	8,r6
+00000024 0142             90 	mov	1,r8
+                          91 	jarl	_ApplFblNvReadProcessData,lp
+                          91 <EXPANSION BEGIN>
+                          91 jarl22 _ApplFblNvReadProcessData , lp 
+00000026 80ff0000*        91 <EXPANSION END>
+                          92 --line33
+                          93 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.2::
+                          94 .LDWlin2:
+0000002a 0152             95 	mov	1,r10
+                          96 --	    .ef
+                          97 .LDW41:
+0000002c 40063f00         98 	dispose	0,{r31},[lp]
+                          99 	.type	_FEEFBL_GetMaxProgAttemptsCounter,@function
+                         100 	.size	_FEEFBL_GetMaxProgAttemptsCounter,.-_FEEFBL_GetMaxProgAttemptsCounter
+                         101 	.align	2
+                         102 .LDW51:
+                         103 
+                         104 --_ucData	ep	param
+                         105 
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+                         106 	.section ".bss","awb"
+                         107 .L118:
+                         108 	.type	.L118,@object
+                         109 	.size	.L118,0
+                         110 	.data
+                         111 	.text
+                         112 	.align	2
+                         113 	.align	2
+                         114 ..gh.f.f.1.e.2:
+                         115 	.type	..gh.f.f.1.e.2,@object
+                         116 	.size	..gh.f.f.1.e.2,0
+                         117 	.global	_FEEFBL_GetApplicationSignature
+                         118 _FEEFBL_GetApplicationSignature:
+00000030 80072100        119 	prepare	{r31},0
+                         120 --	    .bf
+                         121 .LDW61:
+00000034 0092            122 	mov	0,r18
+                         123 .L143:
+00000036 12f0            124 	mov	r18,ep
+00000038 c6f1            125 	add	r6,ep
+0000003a 4192            126 	add	1,r18
+0000003c 8003            127 	sst.b	zero,0[ep]
+0000003e 1206f0ff        128 	addi	-16,r18,zero
+00000042 a9fd*           129 	bnl	.L143
+                         130 --line43
+                         131 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.3::
+                         132 .LDWlin3:
+00000044 0640            133 	mov	r6,r8
+00000046 0032            134 	mov	0,r6
+00000048 0a3a            135 	mov	10,r7
+0000004a 204e1000        136 	movea	16,zero,r9
+                         137 	jarl	_ApplFblNvReadMetaData,lp
+                         137 <EXPANSION BEGIN>
+                         137 jarl22 _ApplFblNvReadMetaData , lp 
+0000004e 80ff0000*       137 <EXPANSION END>
+                         138 --line45
+                         139 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.4::
+                         140 .LDWlin4:
+00000052 20561000        141 	movea	16,zero,r10
+                         142 --	    .ef
+                         143 .LDW71:
+00000056 40063f00        144 	dispose	0,{r31},[lp]
+                         145 	.type	_FEEFBL_GetApplicationSignature,@function
+                         146 	.size	_FEEFBL_GetApplicationSignature,.-_FEEFBL_GetApplicationSignature
+                         147 	.align	2
+                         148 .LDW81:
+                         149 --_U8_Counter	r18	local
+                         150 
+                         151 --_ucData	r6	param
+                         152 
+                         153 	.section ".bss","awb"
+                         154 .L171:
+                         155 	.type	.L171,@object
+                         156 	.size	.L171,0
+                         157 	.data
+                         158 	.text
+                         159 	.align	2
+                         160 	.align	2
+                         161 ..gh.f.f.1.e.3:
+                         162 	.type	..gh.f.f.1.e.3,@object
+                         163 	.size	..gh.f.f.1.e.3,0
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+                         164 	.global	_FEEFBL_GetProgrammingDate
+                         165 _FEEFBL_GetProgrammingDate:
+0000005a 80072100        166 	prepare	{r31},0
+                         167 --	    .bf
+                         168 .LDW91:
+0000005e 0092            169 	mov	0,r18
+                         170 .L211:
+00000060 12f0            171 	mov	r18,ep
+00000062 c6f1            172 	add	r6,ep
+00000064 4192            173 	add	1,r18
+00000066 8003            174 	sst.b	zero,0[ep]
+00000068 6692            175 	cmp	6,r18
+0000006a b1fd*           176 	bl	.L211
+                         177 --line55
+                         178 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.5::
+                         179 .LDWlin5:
+0000006c 0638            180 	mov	r6,r7
+0000006e 20366f00        181 	movea	111,zero,r6
+00000072 0642            182 	mov	6,r8
+                         183 	jarl	_ApplFblNvReadProcessData,lp
+                         183 <EXPANSION BEGIN>
+                         183 jarl22 _ApplFblNvReadProcessData , lp 
+00000074 80ff0000*       183 <EXPANSION END>
+                         184 --line57
+                         185 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.6::
+                         186 .LDWlin6:
+00000078 0652            187 	mov	6,r10
+                         188 --	    .ef
+                         189 .LDW02:
+0000007a 40063f00        190 	dispose	0,{r31},[lp]
+                         191 	.type	_FEEFBL_GetProgrammingDate,@function
+                         192 	.size	_FEEFBL_GetProgrammingDate,.-_FEEFBL_GetProgrammingDate
+                         193 	.align	2
+                         194 .LDW12:
+                         195 --_U8_Counter	r18	local
+                         196 
+                         197 --_ucData	r6	param
+                         198 --_ucAppFbl	none	param
+                         199 
+                         200 	.section ".bss","awb"
+                         201 .L251:
+                         202 	.type	.L251,@object
+                         203 	.size	.L251,0
+                         204 	.data
+                         205 	.text
+                         206 	.align	2
+                         207 	.align	2
+                         208 ..gh.f.f.1.e.4:
+                         209 	.type	..gh.f.f.1.e.4,@object
+                         210 	.size	..gh.f.f.1.e.4,0
+                         211 	.global	_FEEFBL_GetTesterSerialNumber
+                         212 _FEEFBL_GetTesterSerialNumber:
+0000007e 80072100        213 	prepare	{r31},0
+                         214 --	    .bf
+                         215 .LDW22:
+00000082 0092            216 	mov	0,r18
+                         217 .L291:
+00000084 12f0            218 	mov	r18,ep
+00000086 c6f1            219 	add	r6,ep
+00000088 4192            220 	add	1,r18
+0000008a 8003            221 	sst.b	zero,0[ep]
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+0000008c 1206ecff        222 	addi	-20,r18,zero
+00000090 a9fd*           223 	bnl	.L291
+                         224 --line67
+                         225 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.7::
+                         226 .LDWlin7:
+00000092 0638            227 	mov	r6,r7
+00000094 20367500        228 	movea	117,zero,r6
+00000098 20461400        229 	movea	20,zero,r8
+                         230 	jarl	_ApplFblNvReadProcessData,lp
+                         230 <EXPANSION BEGIN>
+                         230 jarl22 _ApplFblNvReadProcessData , lp 
+0000009c 80ff0000*       230 <EXPANSION END>
+                         231 --line69
+                         232 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.8::
+                         233 .LDWlin8:
+000000a0 20561400        234 	movea	20,zero,r10
+                         235 --	    .ef
+                         236 .LDW32:
+000000a4 40063f00        237 	dispose	0,{r31},[lp]
+                         238 	.type	_FEEFBL_GetTesterSerialNumber,@function
+                         239 	.size	_FEEFBL_GetTesterSerialNumber,.-_FEEFBL_GetTesterSerialNumber
+                         240 	.align	2
+                         241 .LDW42:
+                         242 --_U8_Counter	r18	local
+                         243 
+                         244 --_ucData	r6	param
+                         245 --_ucAppFbl	none	param
+                         246 
+                         247 	.section ".bss","awb"
+                         248 .L331:
+                         249 	.type	.L331,@object
+                         250 	.size	.L331,0
+                         251 	.data
+                         252 	.text
+                         253 	.align	2
+                         254 	.align	2
+                         255 	.align	2
+                         256 ..gh.f.f.1.e.5:
+                         257 	.type	..gh.f.f.1.e.5,@object
+                         258 	.size	..gh.f.f.1.e.5,0
+                         259 	.global	_FEEFBL_GetSymmetricKey
+                         260 _FEEFBL_GetSymmetricKey:
+000000a8 8007e100        261 	prepare	{r28,r29,r31},0
+000000ac 06e0            262 	mov	r6,r28
+                         263 --	    .bf
+                         264 .LDW52:
+000000ae 0638            265 	mov	r6,r7
+000000b0 00ea            266 	mov	0,r29
+000000b2 20361b00        267 	movea	27,zero,r6
+000000b6 20462000        268 	movea	32,zero,r8
+                         269 	jarl	_ApplFblNvReadProcessData,lp
+                         269 <EXPANSION BEGIN>
+                         269 jarl22 _ApplFblNvReadProcessData , lp 
+000000ba 80ff0000*       269 <EXPANSION END>
+                         270 --line163
+                         271 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.9::
+                         272 .LDWlin9:
+000000be 1d90            273 	mov	r29,r18
+                         274 .L371:
+000000c0 12f0            275 	mov	r18,ep
+000000c2 dcf1            276 	add	r28,ep
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+000000c4 6088            277 	sld.bu	0[ep],r17
+000000c6 110601ff        278 	addi	-255,r17,zero
+000000ca e1ef14eb        279 	cmovne	1,r29,r29
+000000ce 4192            280 	add	1,r18
+000000d0 1206e0ff        281 	addi	-32,r18,zero
+000000d4 e9f5*           282 	bnl	.L371
+                         283 --line172
+                         284 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.10::
+                         285 .LDWlin10:
+000000d6 e0e9            286 	cmp	zero,r29
+000000d8 9a0d*           287 	bne	.L374
+                         288 --line174
+                         289 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.11::
+                         290 .LDWlin11:
+000000da 1c30            291 	mov	r28,r6
+000000dc 270600000000*   292 	mov	rosdaoff23(_aucSymmetricKey),r7
+000000e2 20462000        293 	movea	32,zero,r8
+                         294 	jarl	_ownmemcpy,lp
+                         294 <EXPANSION BEGIN>
+                         294 jarl22 _ownmemcpy , lp 
+000000e6 80ff0000*       294 <EXPANSION END>
+                         295 .L374:
+                         296 --line177
+                         297 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.12::
+                         298 .LDWlin12:
+000000ea 20562000        299 	movea	32,zero,r10
+                         300 --	    .ef
+                         301 .LDW62:
+000000ee 4006ff00        302 	dispose	0,{r28,r29,r31},[lp]
+                         303 	.type	_FEEFBL_GetSymmetricKey,@function
+                         304 	.size	_FEEFBL_GetSymmetricKey,.-_FEEFBL_GetSymmetricKey
+                         305 	.align	2
+                         306 .LDW72:
+                         307 --_ucCounter	r18	local
+                         308 --_bKeyInitialized	r29	local
+                         309 
+                         310 --_ucData	r28	param
+                         311 
+                         312 	.section ".bss","awb"
+                         313 .L428:
+                         314 	.type	.L428,@object
+                         315 	.size	.L428,0
+                         316 	.section ".rosdata","a"
+                         317 	.align	4
+                         318 	.global	_aucSymmetricKey..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.
+                         319 _aucSymmetricKey..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.:
+00000000 f6810ce9        320 _aucSymmetricKey:	.byte	246,129,12,233
+00000004 9fc67d89        321 	.byte	159,198,125,137
+00000008 0d97adcb        322 	.byte	13,151,173,203
+0000000c 8b187e81        323 	.byte	139,24,126,129
+00000010 df59060d        324 	.byte	223,89,6,13
+00000014 f4ce4bd2        325 	.byte	244,206,75,210
+00000018 f5619558        326 	.byte	245,97,149,88
+0000001c 7d498775        327 	.byte	125,73,135,117
+                         328 	.type	_aucSymmetricKey..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.,@object
+                         329 	.size	_aucSymmetricKey..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.,32
+                         330 	.type	_aucSymmetricKey,@object
+                         331 	.size	_aucSymmetricKey,32
+                         332 	.global	_aucInitialVector..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.
+                         333 _aucInitialVector..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.:
+00000020 48753357        334 _aucInitialVector:	.byte	72,117,51,87
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+00000024 862247b1        335 	.byte	134,34,71,177
+00000028 20ede37e        336 	.byte	32,237,227,126
+0000002c 0e74726a        337 	.byte	14,116,114,106
+                         338 	.type	_aucInitialVector..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.,@object
+                         339 	.size	_aucInitialVector..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.,16
+                         340 	.type	_aucInitialVector,@object
+                         341 	.size	_aucInitialVector,16
+                         342 	.data
+                         343 	.text
+                         344 	.align	2
+                         345 	.align	2
+                         346 ..gh.f.f.1.e.6:
+                         347 	.type	..gh.f.f.1.e.6,@object
+                         348 	.size	..gh.f.f.1.e.6,0
+                         349 	.global	_FEEFBL_GetInitialVector
+                         350 _FEEFBL_GetInitialVector:
+000000f2 8007e100        351 	prepare	{r28,r29,r31},0
+000000f6 06e0            352 	mov	r6,r28
+                         353 --	    .bf
+                         354 .LDW82:
+000000f8 0638            355 	mov	r6,r7
+000000fa 00ea            356 	mov	0,r29
+000000fc 20363b00        357 	movea	59,zero,r6
+00000100 20461000        358 	movea	16,zero,r8
+                         359 	jarl	_ApplFblNvReadProcessData,lp
+                         359 <EXPANSION BEGIN>
+                         359 jarl22 _ApplFblNvReadProcessData , lp 
+00000104 80ff0000*       359 <EXPANSION END>
+                         360 --line188
+                         361 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.13::
+                         362 .LDWlin13:
+00000108 1d90            363 	mov	r29,r18
+                         364 .L489:
+0000010a 12f0            365 	mov	r18,ep
+0000010c dcf1            366 	add	r28,ep
+0000010e 6088            367 	sld.bu	0[ep],r17
+00000110 110601ff        368 	addi	-255,r17,zero
+00000114 e1ef14eb        369 	cmovne	1,r29,r29
+00000118 4192            370 	add	1,r18
+0000011a 1206f0ff        371 	addi	-16,r18,zero
+0000011e e9f5*           372 	bnl	.L489
+                         373 --line197
+                         374 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.14::
+                         375 .LDWlin14:
+00000120 e0e9            376 	cmp	zero,r29
+00000122 9a0d*           377 	bne	.L492
+                         378 --line199
+                         379 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.15::
+                         380 .LDWlin15:
+00000124 1c30            381 	mov	r28,r6
+00000126 270600000000*   382 	mov	rosdaoff23(_aucInitialVector),r7
+0000012c 20461000        383 	movea	16,zero,r8
+                         384 	jarl	_ownmemcpy,lp
+                         384 <EXPANSION BEGIN>
+                         384 jarl22 _ownmemcpy , lp 
+00000130 80ff0000*       384 <EXPANSION END>
+                         385 .L492:
+                         386 --line202
+                         387 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.16::
+                         388 .LDWlin16:
+00000134 20561000        389 	movea	16,zero,r10
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+                         390 --	    .ef
+                         391 .LDW92:
+00000138 4006ff00        392 	dispose	0,{r28,r29,r31},[lp]
+                         393 	.type	_FEEFBL_GetInitialVector,@function
+                         394 	.size	_FEEFBL_GetInitialVector,.-_FEEFBL_GetInitialVector
+                         395 	.align	2
+                         396 .LDW03:
+                         397 --_ucCounter	r18	local
+                         398 --_bKeyInitialized	r29	local
+                         399 
+                         400 --_ucData	r28	param
+                         401 
+                         402 	.section ".bss","awb"
+                         403 .L540:
+                         404 	.type	.L540,@object
+                         405 	.size	.L540,0
+                         406 	.data
+                         407 	.text
+                         408 	.align	2
+                         409 	.align	2
+                         410 ..gh.f.f.1.e.7:
+                         411 	.type	..gh.f.f.1.e.7,@object
+                         412 	.size	..gh.f.f.1.e.7,0
+                         413 	.global	_FEEFBL_PutAesSymmetricKey
+                         414 _FEEFBL_PutAesSymmetricKey:
+0000013c 80072100        415 	prepare	{r31},0
+                         416 --	    .bf
+                         417 .LDW13:
+00000140 0638            418 	mov	r6,r7
+00000142 20361b00        419 	movea	27,zero,r6
+00000146 20462000        420 	movea	32,zero,r8
+                         421 	jarl	_ApplFblNvWriteProcessData,lp
+                         421 <EXPANSION BEGIN>
+                         421 jarl22 _ApplFblNvWriteProcessData , lp 
+0000014a 80ff0000*       421 <EXPANSION END>
+0000014e e051            422 	cmp	zero,r10
+00000150 ea570000        423 	setfne	r10
+                         424 --	    .ef
+                         425 .LDW23:
+                         426 --line234
+                         427 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.17::
+                         428 .LDWlin17:
+00000154 40063f00        429 	dispose	0,{r31},[lp]
+                         430 	.type	_FEEFBL_PutAesSymmetricKey,@function
+                         431 	.size	_FEEFBL_PutAesSymmetricKey,.-_FEEFBL_PutAesSymmetricKey
+                         432 	.align	2
+                         433 .LDW33:
+                         434 
+                         435 --_ucData	r6	param
+                         436 
+                         437 	.section ".bss","awb"
+                         438 .L628:
+                         439 	.type	.L628,@object
+                         440 	.size	.L628,0
+                         441 	.data
+                         442 	.text
+                         443 	.align	2
+                         444 	.align	2
+                         445 ..gh.f.f.1.e.8:
+                         446 	.type	..gh.f.f.1.e.8,@object
+                         447 	.size	..gh.f.f.1.e.8,0
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+                         448 	.global	_FEEFBL_PutAesInitialVector
+                         449 _FEEFBL_PutAesInitialVector:
+00000158 80072100        450 	prepare	{r31},0
+                         451 --	    .bf
+                         452 .LDW43:
+0000015c 0638            453 	mov	r6,r7
+0000015e 20363b00        454 	movea	59,zero,r6
+00000162 20461000        455 	movea	16,zero,r8
+                         456 	jarl	_ApplFblNvWriteProcessData,lp
+                         456 <EXPANSION BEGIN>
+                         456 jarl22 _ApplFblNvWriteProcessData , lp 
+00000166 80ff0000*       456 <EXPANSION END>
+0000016a e051            457 	cmp	zero,r10
+0000016c ea570000        458 	setfne	r10
+                         459 --	    .ef
+                         460 .LDW53:
+                         461 --line241
+                         462 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.18::
+                         463 .LDWlin18:
+00000170 40063f00        464 	dispose	0,{r31},[lp]
+                         465 	.type	_FEEFBL_PutAesInitialVector,@function
+                         466 	.size	_FEEFBL_PutAesInitialVector,.-_FEEFBL_PutAesInitialVector
+                         467 	.align	2
+                         468 .LDW63:
+                         469 
+                         470 --_ucData	r6	param
+                         471 
+                         472 	.section ".bss","awb"
+                         473 .L676:
+                         474 	.type	.L676,@object
+                         475 	.size	.L676,0
+                         476 	.data
+                         477 	.text
+                         478 	.align	2
+                         479 	.align	2
+                         480 ..gh.f.f.1.e.9:
+                         481 	.type	..gh.f.f.1.e.9,@object
+                         482 	.size	..gh.f.f.1.e.9,0
+                         483 	.global	_FEEFBL_PutApplicationSignature
+                         484 _FEEFBL_PutApplicationSignature:
+00000174 80072100        485 	prepare	{r31},0
+                         486 --	    .bf
+                         487 .LDW73:
+00000178 0640            488 	mov	r6,r8
+0000017a 0032            489 	mov	0,r6
+0000017c 0a3a            490 	mov	10,r7
+0000017e 204e1000        491 	movea	16,zero,r9
+                         492 	jarl	_ApplFblNvWriteMetaData,lp
+                         492 <EXPANSION BEGIN>
+                         492 jarl22 _ApplFblNvWriteMetaData , lp 
+00000182 80ff0000*       492 <EXPANSION END>
+00000186 e051            493 	cmp	zero,r10
+00000188 ea570000        494 	setfne	r10
+                         495 --	    .ef
+                         496 .LDW83:
+                         497 --line248
+                         498 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.19::
+                         499 .LDWlin19:
+0000018c 40063f00        500 	dispose	0,{r31},[lp]
+                         501 	.type	_FEEFBL_PutApplicationSignature,@function
+                         502 	.size	_FEEFBL_PutApplicationSignature,.-_FEEFBL_PutApplicationSignature
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s
+                         503 	.align	2
+                         504 .LDW93:
+                         505 
+                         506 --_ucData	r6	param
+                         507 
+                         508 	.section ".bss","awb"
+                         509 .L724:
+                         510 	.type	.L724,@object
+                         511 	.size	.L724,0
+                         512 	.data
+                         513 	.text
+                         514 	.align	2
+                         515 	.align	2
+                         516 ..gh.f.f.1.e.10:
+                         517 	.type	..gh.f.f.1.e.10,@object
+                         518 	.size	..gh.f.f.1.e.10,0
+                         519 	.global	_FEEFBL_PutFaultFlag
+                         520 _FEEFBL_PutFaultFlag:
+00000190 80072100        521 	prepare	{r31},0
+                         522 --	    .bf
+                         523 .LDW04:
+00000194 0638            524 	mov	r6,r7
+00000196 20361a00        525 	movea	26,zero,r6
+0000019a 0142            526 	mov	1,r8
+                         527 	jarl	_ApplFblNvWriteProcessData,lp
+                         527 <EXPANSION BEGIN>
+                         527 jarl22 _ApplFblNvWriteProcessData , lp 
+0000019c 80ff0000*       527 <EXPANSION END>
+000001a0 e051            528 	cmp	zero,r10
+000001a2 ea570000        529 	setfne	r10
+                         530 --	    .ef
+                         531 .LDW14:
+                         532 --line255
+                         533 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface.20::
+                         534 .LDWlin20:
+000001a6 40063f00        535 	dispose	0,{r31},[lp]
+                         536 	.type	_FEEFBL_PutFaultFlag,@function
+                         537 	.size	_FEEFBL_PutFaultFlag,.-_FEEFBL_PutFaultFlag
+                         538 	.align	2
+                         539 .LDW24:
+                         540 
+                         541 --_ucData	r6	param
+                         542 
+                         543 	.section ".bss","awb"
+                         544 .L772:
+                         545 	.type	.L772,@object
+                         546 	.size	.L772,0
+                         547 	.data
+                         548 	.text
+                         549 	.align	2
+                         550 --_aucSymmetricKey	rosdaoff23(_aucSymmetricKey)	static
+                         551 --_aucInitialVector	rosdaoff23(_aucInitialVector)	static
+                         552 
+                         553 	.data
+                         554 	.ghsnote version,17
+                         555 	.ghsnote tools,3
+                         556 	.ghsnote options,144
+                         557 	.text
+                         558 	.align	2
+                         559 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_FblBlockInterface...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863B3..0::
+                         560 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00001ok1.s

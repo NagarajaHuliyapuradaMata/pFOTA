@@ -1,0 +1,1911 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/SUPPLIER1_CustomFunctions.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\SUPPLIER1_CustomFunctions.dbo -source=SUPPLIER1_CustomFunctions.cpp -o obj\gh_0000alk1.o -list=lst/SUPPLIER1_CustomFunctions.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+Source File: SUPPLIER1_CustomFunctions.cpp
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/SUPPLIER1_CustomFunctions.lst -object_dir=obj
+                           8 --		-stderr=err/SUPPLIER1_CustomFunctions.err -c -cpu=rh850 -sda=all
+                           9 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                          10 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          11 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          12 --		-registermode=32 -I../source/_common -I../source/common
+                          13 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          14 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          15 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          16 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          17 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          18 --		-I../source/projectcfg -I../source/projectcompiler
+                          19 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          20 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          21 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          22 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          23 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          24 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          25 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          26 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          27 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          28 --		-Igendata
+                          29 --		../source/SwcServiceStartUp/SUPPLIER1_CustomFunctions.cpp
+                          30 --Source File:   ../source/SwcServiceStartUp/SUPPLIER1_CustomFunctions.cpp
+                          31 --Directory:     
+                          32 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          33 --Compile Date:  Wed Sep 06 13:35:16 2023
+                          34 --Host OS:       Win32
+                          35 --Version:       C++RH850 2015.1.7 RELEASE VERSION
+                          36 --Release:       Compiler v2015.1.7
+                          37 --Revision Date: Thu Oct 22 08:06:12 2015
+                          38 --Release Date:  Thu Oct 22 09:34:32 2015
+                          39 -- ecom  -g -w -OM
+                          40 	.text
+                          41 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863F4..0::
+                          42 	.align	2
+                          43 ..gh.f.f.1.e.0:
+                          44 	.type	..gh.f.f.1.e.0,@object
+                          45 	.size	..gh.f.f.1.e.0,0
+                          46 	.global	_MyCom_Bl_Status_Msg_RxIndication
+                          47 _MyCom_Bl_Status_Msg_RxIndication:
+                          48 --	    .bf
+                          49 .LDW01:
+                          50 --	    .ef
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                          51 .LDW11:
+00000000 7f00             52 	jmp	[lp]
+                          53 	.type	_MyCom_Bl_Status_Msg_RxIndication,@function
+                          54 	.size	_MyCom_Bl_Status_Msg_RxIndication,.-_MyCom_Bl_Status_Msg_RxIndication
+                          55 	.align	2
+                          56 .LDW21:
+                          57 
+                          58 --_RxPduId	none	param
+                          59 --_PduInfoPtr	none	param
+                          60 
+                          61 	.section ".bss","awb"
+                          62 .L32:
+                          63 	.type	.L32,@object
+                          64 	.size	.L32,0
+                          65 	.data
+                          66 	.text
+                          67 	.align	2
+                          68 	.align	2
+                          69 ..gh.f.f.1.e.1:
+                          70 	.type	..gh.f.f.1.e.1,@object
+                          71 	.size	..gh.f.f.1.e.1,0
+                          72 	.global	_MyCom_Bl_Status_Msg_TxConfirmation
+                          73 _MyCom_Bl_Status_Msg_TxConfirmation:
+                          74 --	    .bf
+                          75 .LDW31:
+                          76 --	    .ef
+                          77 .LDW41:
+00000002 7f00             78 	jmp	[lp]
+                          79 	.type	_MyCom_Bl_Status_Msg_TxConfirmation,@function
+                          80 	.size	_MyCom_Bl_Status_Msg_TxConfirmation,.-_MyCom_Bl_Status_Msg_TxConfirmation
+                          81 	.align	2
+                          82 .LDW51:
+                          83 
+                          84 --_TxPduId	none	param
+                          85 
+                          86 	.section ".bss","awb"
+                          87 .L64:
+                          88 	.type	.L64,@object
+                          89 	.size	.L64,0
+                          90 	.data
+                          91 	.text
+                          92 	.align	2
+                          93 	.align	2
+                          94 	.align	2
+                          95 ..gh.f.f.1.e.2:
+                          96 	.type	..gh.f.f.1.e.2,@object
+                          97 	.size	..gh.f.f.1.e.2,0
+                          98 	.global	_SUPPLIER1_GetWakeupFactorRramCopy
+                          99 _SUPPLIER1_GetWakeupFactorRramCopy:
+                         100 --	    .bf
+                         101 .LDW61:
+00000004 840709500000*   102 	ld.w	sdaoff23(_ulWakeupFactorRegisterContent)[gp],r10
+                         103 --	    .ef
+                         104 .LDW71:
+0000000a 7f00            105 	jmp	[lp]
+                         106 	.type	_SUPPLIER1_GetWakeupFactorRramCopy,@function
+                         107 	.size	_SUPPLIER1_GetWakeupFactorRramCopy,.-_SUPPLIER1_GetWakeupFactorRramCopy
+                         108 	.align	2
+                         109 .LDW81:
+                         110 
+                         111 	.section ".bss","awb"
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         112 .L97:
+                         113 	.type	.L97,@object
+                         114 	.size	.L97,0
+                         115 	.section ".rwufcopy","awb"
+                         116 	.align	4
+                         117 	.global	_ulWakeupFactorRegisterContent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         118 _ulWakeupFactorRegisterContent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000000 00000000        119 _ulWakeupFactorRegisterContent:	.space	4
+                         120 	.type	_ulWakeupFactorRegisterContent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         121 	.size	_ulWakeupFactorRegisterContent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         122 	.type	_ulWakeupFactorRegisterContent,@object
+                         123 	.size	_ulWakeupFactorRegisterContent,4
+                         124 	.global	_ulControl..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         125 _ulControl..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000004 00000000        126 _ulControl:	.space	4
+                         127 	.type	_ulControl..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         128 	.size	_ulControl..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         129 	.type	_ulControl,@object
+                         130 	.size	_ulControl,4
+                         131 	.section ".sbss","awb"
+                         132 	.align	4
+                         133 	.global	_pStartOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         134 _pStartOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000000 00000000        135 _pStartOfApplication:	.space	4
+                         136 	.type	_pStartOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         137 	.size	_pStartOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         138 	.type	_pStartOfApplication,@object
+                         139 	.size	_pStartOfApplication,4
+                         140 	.global	_pEndOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         141 _pEndOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000004 00000000        142 _pEndOfApplication:	.space	4
+                         143 	.type	_pEndOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         144 	.size	_pEndOfApplication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         145 	.type	_pEndOfApplication,@object
+                         146 	.size	_pEndOfApplication,4
+                         147 	.global	_ulLength..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         148 _ulLength..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000008 00000000        149 _ulLength:	.space	4
+                         150 	.type	_ulLength..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         151 	.size	_ulLength..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         152 	.type	_ulLength,@object
+                         153 	.size	_ulLength,4
+                         154 	.global	_ulCrc32..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         155 _ulCrc32..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+0000000c 00000000        156 _ulCrc32:	.space	4
+                         157 	.type	_ulCrc32..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         158 	.size	_ulCrc32..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         159 	.type	_ulCrc32,@object
+                         160 	.size	_ulCrc32,4
+                         161 	.global	_pDescriptorBlock..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         162 _pDescriptorBlock..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000010 00000000        163 _pDescriptorBlock:	.space	4
+                         164 	.type	_pDescriptorBlock..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         165 	.size	_pDescriptorBlock..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+                         166 	.type	_pDescriptorBlock,@object
+                         167 	.size	_pDescriptorBlock,4
+                         168 	.global	_ulCrcRom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                         169 _ulCrcRom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+00000014 00000000        170 _ulCrcRom:	.space	4
+                         171 	.type	_ulCrcRom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@object
+                         172 	.size	_ulCrcRom..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,4
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         173 	.type	_ulCrcRom,@object
+                         174 	.size	_ulCrcRom,4
+                         175 	.data
+                         176 	.text
+                         177 	.align	2
+                         178 	.align	2
+                         179 ..gh.f.f.1.e.3:
+                         180 	.type	..gh.f.f.1.e.3,@object
+                         181 	.size	..gh.f.f.1.e.3,0
+                         182 	.global	_SUPPLIER1_SetWakeupFactorRramCopy
+                         183 _SUPPLIER1_SetWakeupFactorRramCopy:
+                         184 --	    .bf
+                         185 .LDW91:
+0000000c 3e0600000000*   186 	mov	sdaoff23(_ulWakeupFactorRegisterContent),ep
+00000012 0135            187 	sst.w	r6,0[ep]
+00000014 0095            188 	sld.w	0[ep],r18
+00000016 e091            189 	cmp	zero,r18
+00000018 e29f0000        190 	setfe	r19
+0000001c 84070f980000*   191 	st.w	r19,sdaoff23(_ulControl)[gp]
+                         192 --	    .ef
+                         193 .LDW02:
+00000022 7f00            194 	jmp	[lp]
+                         195 	.type	_SUPPLIER1_SetWakeupFactorRramCopy,@function
+                         196 	.size	_SUPPLIER1_SetWakeupFactorRramCopy,.-_SUPPLIER1_SetWakeupFactorRramCopy
+                         197 	.align	2
+                         198 .LDW12:
+                         199 
+                         200 --_ulWuf	r6	param
+                         201 
+                         202 	.section ".bss","awb"
+                         203 .L145:
+                         204 	.type	.L145,@object
+                         205 	.size	.L145,0
+                         206 	.data
+                         207 	.text
+                         208 	.align	2
+                         209 	.align	2
+                         210 ..gh.f.f.1.e.4:
+                         211 	.type	..gh.f.f.1.e.4,@object
+                         212 	.size	..gh.f.f.1.e.4,0
+                         213 	.global	_SUPPLIER1_ClearWakeupFactorRramCopy
+                         214 _SUPPLIER1_ClearWakeupFactorRramCopy:
+                         215 --	    .bf
+                         216 .LDW22:
+00000024 84070f000000*   217 	st.w	zero,sdaoff23(_ulWakeupFactorRegisterContent)[gp]
+0000002a 84070f000000*   218 	st.w	zero,sdaoff23(_ulControl)[gp]
+                         219 --	    .ef
+                         220 .LDW32:
+00000030 7f00            221 	jmp	[lp]
+                         222 	.type	_SUPPLIER1_ClearWakeupFactorRramCopy,@function
+                         223 	.size	_SUPPLIER1_ClearWakeupFactorRramCopy,.-_SUPPLIER1_ClearWakeupFactorRramCopy
+                         224 	.align	2
+                         225 .LDW42:
+                         226 
+                         227 	.section ".bss","awb"
+                         228 .L193:
+                         229 	.type	.L193,@object
+                         230 	.size	.L193,0
+                         231 	.data
+                         232 	.text
+                         233 	.align	2
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         234 	.align	2
+                         235 ..gh.f.f.1.e.5:
+                         236 	.type	..gh.f.f.1.e.5,@object
+                         237 	.size	..gh.f.f.1.e.5,0
+                         238 	.global	_SUPPLIER1_CustomDid_WriteFingerprint
+                         239 _SUPPLIER1_CustomDid_WriteFingerprint:
+00000032 80072100        240 	prepare	{r31},0
+00000036 07f0            241 	mov	r7,ep
+                         242 --	    .bf
+                         243 .LDW52:
+00000038 7098            244 	sld.hu	0[ep],r19
+0000003a 1306e6ff        245 	addi	-26,r19,zero
+0000003e 820d*           246 	be	.L213
+                         247 --line64
+                         248 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.1::
+                         249 .LDWlin1:
+00000040 20361300        250 	movea	19,zero,r6
+                         251 	jarl	_FblDiagSetError,lp
+                         251 <EXPANSION BEGIN>
+                         251 jarl22 _FblDiagSetError , lp 
+00000044 80ff0000*       251 <EXPANSION END>
+                         252 --line65
+                         253 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.2::
+                         254 .LDWlin2:
+00000048 0152            255 	mov	1,r10
+0000004a 40063f00        256 	dispose	0,{r31},[lp]
+                         257 .L213:
+                         258 --line67
+                         259 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.3::
+                         260 .LDWlin3:
+0000004e 2b0600000000*   261 	mov	sdaoff23(_fblDiagStates),r11
+00000054 cbd70000        262 	tst1	2,0[r11]
+00000058 8a0d*           263 	bne	.L216
+                         264 --line68
+                         265 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.4::
+                         266 .LDWlin4:
+0000005a 20363100        267 	movea	49,zero,r6
+                         268 	jarl	_FblDiagSetError,lp
+                         268 <EXPANSION BEGIN>
+                         268 jarl22 _FblDiagSetError , lp 
+0000005e 80ff0000*       268 <EXPANSION END>
+                         269 --line69
+                         270 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.5::
+                         271 .LDWlin5:
+00000062 0152            272 	mov	1,r10
+00000064 40063f00        273 	dispose	0,{r31},[lp]
+                         274 .L216:
+                         275 --line71
+                         276 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.6::
+                         277 .LDWlin6:
+00000068 2b0600000000*   278 	mov	sdaoff23(_fblDiagStates+2),r11
+0000006e cbdf0000        279 	tst1	3,0[r11]
+00000072 8a0d*           280 	bne	.L219
+                         281 --line72
+                         282 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.7::
+                         283 .LDWlin7:
+00000074 20363300        284 	movea	51,zero,r6
+                         285 	jarl	_FblDiagSetError,lp
+                         285 <EXPANSION BEGIN>
+                         285 jarl22 _FblDiagSetError , lp 
+00000078 80ff0000*       285 <EXPANSION END>
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         286 --line73
+                         287 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.8::
+                         288 .LDWlin8:
+0000007c 0152            289 	mov	1,r10
+0000007e 40063f00        290 	dispose	0,{r31},[lp]
+                         291 .L219:
+                         292 --line76
+                         293 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.9::
+                         294 .LDWlin9:
+00000082 4332            295 	add	3,r6
+                         296 	jarl	_ApplFblStoreFingerprint,lp
+                         296 <EXPANSION BEGIN>
+                         296 jarl22 _ApplFblStoreFingerprint , lp 
+00000084 80ff0000*       296 <EXPANSION END>
+00000088 e051            297 	cmp	zero,r10
+0000008a 820d*           298 	be	.L211
+                         299 --line80
+                         300 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.10::
+                         301 .LDWlin10:
+0000008c 20362200        302 	movea	34,zero,r6
+                         303 	jarl	_FblDiagSetError,lp
+                         303 <EXPANSION BEGIN>
+                         303 jarl22 _FblDiagSetError , lp 
+00000090 80ff0000*       303 <EXPANSION END>
+                         304 --line81
+                         305 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.11::
+                         306 .LDWlin11:
+00000094 0152            307 	mov	1,r10
+00000096 40063f00        308 	dispose	0,{r31},[lp]
+                         309 .L211:
+                         310 --	    .ef
+                         311 .LDW62:
+                         312 --line85
+                         313 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.12::
+                         314 .LDWlin12:
+0000009a 40063f00        315 	dispose	0,{r31},[lp]
+                         316 	.type	_SUPPLIER1_CustomDid_WriteFingerprint,@function
+                         317 	.size	_SUPPLIER1_CustomDid_WriteFingerprint,.-_SUPPLIER1_CustomDid_WriteFingerprint
+                         318 	.align	2
+                         319 .LDW72:
+                         320 --_result	r10	local
+                         321 
+                         322 --_pbDiagData	r6	param
+                         323 --_DiagDataLength	ep	param
+                         324 
+                         325 	.section ".bss","awb"
+                         326 .L322:
+                         327 	.type	.L322,@object
+                         328 	.size	.L322,0
+                         329 	.data
+                         330 	.text
+                         331 	.align	2
+                         332 	.align	2
+                         333 ..gh.f.f.1.e.6:
+                         334 	.type	..gh.f.f.1.e.6,@object
+                         335 	.size	..gh.f.f.1.e.6,0
+                         336 	.global	_SUPPLIER1_CustomDid_WriteBoardPartnumber
+                         337 _SUPPLIER1_CustomDid_WriteBoardPartnumber:
+0000009e 80072100        338 	prepare	{r31},0
+000000a2 07f0            339 	mov	r7,ep
+                         340 --	    .bf
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         341 .LDW82:
+000000a4 7098            342 	sld.hu	0[ep],r19
+000000a6 1306dbff        343 	addi	-37,r19,zero
+000000aa 820d*           344 	be	.L422
+                         345 --line92
+                         346 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.13::
+                         347 .LDWlin13:
+000000ac 20361300        348 	movea	19,zero,r6
+                         349 	jarl	_FblDiagSetError,lp
+                         349 <EXPANSION BEGIN>
+                         349 jarl22 _FblDiagSetError , lp 
+000000b0 80ff0000*       349 <EXPANSION END>
+                         350 --line93
+                         351 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.14::
+                         352 .LDWlin14:
+000000b4 0152            353 	mov	1,r10
+000000b6 40063f00        354 	dispose	0,{r31},[lp]
+                         355 .L422:
+                         356 --line95
+                         357 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.15::
+                         358 .LDWlin15:
+000000ba 2b0600000000*   359 	mov	sdaoff23(_fblDiagStates),r11
+000000c0 cbd70000        360 	tst1	2,0[r11]
+000000c4 8a0d*           361 	bne	.L425
+                         362 --line96
+                         363 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.16::
+                         364 .LDWlin16:
+000000c6 20363100        365 	movea	49,zero,r6
+                         366 	jarl	_FblDiagSetError,lp
+                         366 <EXPANSION BEGIN>
+                         366 jarl22 _FblDiagSetError , lp 
+000000ca 80ff0000*       366 <EXPANSION END>
+                         367 --line97
+                         368 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.17::
+                         369 .LDWlin17:
+000000ce 0152            370 	mov	1,r10
+000000d0 40063f00        371 	dispose	0,{r31},[lp]
+                         372 .L425:
+                         373 --line100
+                         374 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.18::
+                         375 .LDWlin18:
+000000d4 2b0600000000*   376 	mov	sdaoff23(_fblDiagStates+2),r11
+000000da cbdf0000        377 	tst1	3,0[r11]
+000000de 8a0d*           378 	bne	.L428
+                         379 --line101
+                         380 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.19::
+                         381 .LDWlin19:
+000000e0 20363300        382 	movea	51,zero,r6
+                         383 	jarl	_FblDiagSetError,lp
+                         383 <EXPANSION BEGIN>
+                         383 jarl22 _FblDiagSetError , lp 
+000000e4 80ff0000*       383 <EXPANSION END>
+                         384 --line102
+                         385 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.20::
+                         386 .LDWlin20:
+000000e8 0152            387 	mov	1,r10
+000000ea 40063f00        388 	dispose	0,{r31},[lp]
+                         389 .L428:
+                         390 --line106
+                         391 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.21::
+                         392 .LDWlin21:
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+000000ee 4232            393 	add	2,r6
+                         394 	jarl	_PRODFLASH_PutRivianBoardPartnumber,lp
+                         394 <EXPANSION BEGIN>
+                         394 jarl22 _PRODFLASH_PutRivianBoardPartnumber , lp 
+000000f0 80ff0000*       394 <EXPANSION END>
+                         395 --line107
+                         396 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.22::
+                         397 .LDWlin22:
+000000f4 0052            398 	mov	0,r10
+                         399 --	    .ef
+                         400 .LDW92:
+000000f6 40063f00        401 	dispose	0,{r31},[lp]
+                         402 	.type	_SUPPLIER1_CustomDid_WriteBoardPartnumber,@function
+                         403 	.size	_SUPPLIER1_CustomDid_WriteBoardPartnumber,.-_SUPPLIER1_CustomDid_WriteBoardPartnumber
+                         404 	.align	2
+                         405 .LDW03:
+                         406 --_result	r10	local
+                         407 
+                         408 --_pbDiagData	r6	param
+                         409 --_DiagDataLength	ep	param
+                         410 
+                         411 	.section ".bss","awb"
+                         412 .L494:
+                         413 	.type	.L494,@object
+                         414 	.size	.L494,0
+                         415 	.data
+                         416 	.text
+                         417 	.align	2
+                         418 	.align	2
+                         419 ..gh.f.f.1.e.7:
+                         420 	.type	..gh.f.f.1.e.7,@object
+                         421 	.size	..gh.f.f.1.e.7,0
+                         422 	.global	_SUPPLIER1_CustomDid_WriteBoardSerialnumber
+                         423 _SUPPLIER1_CustomDid_WriteBoardSerialnumber:
+000000fa 80072100        424 	prepare	{r31},0
+000000fe 07f0            425 	mov	r7,ep
+                         426 --	    .bf
+                         427 .LDW13:
+00000100 7098            428 	sld.hu	0[ep],r19
+00000102 1306ecff        429 	addi	-20,r19,zero
+00000106 820d*           430 	be	.L577
+                         431 --line117
+                         432 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.23::
+                         433 .LDWlin23:
+00000108 20361300        434 	movea	19,zero,r6
+                         435 	jarl	_FblDiagSetError,lp
+                         435 <EXPANSION BEGIN>
+                         435 jarl22 _FblDiagSetError , lp 
+0000010c 80ff0000*       435 <EXPANSION END>
+                         436 --line118
+                         437 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.24::
+                         438 .LDWlin24:
+00000110 0152            439 	mov	1,r10
+00000112 40063f00        440 	dispose	0,{r31},[lp]
+                         441 .L577:
+                         442 --line120
+                         443 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.25::
+                         444 .LDWlin25:
+00000116 2b0600000000*   445 	mov	sdaoff23(_fblDiagStates),r11
+0000011c cbd70000        446 	tst1	2,0[r11]
+00000120 8a0d*           447 	bne	.L580
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         448 --line121
+                         449 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.26::
+                         450 .LDWlin26:
+00000122 20363100        451 	movea	49,zero,r6
+                         452 	jarl	_FblDiagSetError,lp
+                         452 <EXPANSION BEGIN>
+                         452 jarl22 _FblDiagSetError , lp 
+00000126 80ff0000*       452 <EXPANSION END>
+                         453 --line122
+                         454 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.27::
+                         455 .LDWlin27:
+0000012a 0152            456 	mov	1,r10
+0000012c 40063f00        457 	dispose	0,{r31},[lp]
+                         458 .L580:
+                         459 --line125
+                         460 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.28::
+                         461 .LDWlin28:
+00000130 2b0600000000*   462 	mov	sdaoff23(_fblDiagStates+2),r11
+00000136 cbdf0000        463 	tst1	3,0[r11]
+0000013a 8a0d*           464 	bne	.L583
+                         465 --line126
+                         466 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.29::
+                         467 .LDWlin29:
+0000013c 20363300        468 	movea	51,zero,r6
+                         469 	jarl	_FblDiagSetError,lp
+                         469 <EXPANSION BEGIN>
+                         469 jarl22 _FblDiagSetError , lp 
+00000140 80ff0000*       469 <EXPANSION END>
+                         470 --line127
+                         471 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.30::
+                         472 .LDWlin30:
+00000144 0152            473 	mov	1,r10
+00000146 40063f00        474 	dispose	0,{r31},[lp]
+                         475 .L583:
+                         476 --line131
+                         477 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.31::
+                         478 .LDWlin31:
+0000014a 4232            479 	add	2,r6
+                         480 	jarl	_PRODFLASH_PutRivianBoardSerialnumber,lp
+                         480 <EXPANSION BEGIN>
+                         480 jarl22 _PRODFLASH_PutRivianBoardSerialnumber , lp 
+0000014c 80ff0000*       480 <EXPANSION END>
+                         481 --line132
+                         482 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.32::
+                         483 .LDWlin32:
+00000150 0052            484 	mov	0,r10
+                         485 --	    .ef
+                         486 .LDW23:
+00000152 40063f00        487 	dispose	0,{r31},[lp]
+                         488 	.type	_SUPPLIER1_CustomDid_WriteBoardSerialnumber,@function
+                         489 	.size	_SUPPLIER1_CustomDid_WriteBoardSerialnumber,.-_SUPPLIER1_CustomDid_WriteBoardSerialnumber
+                         490 	.align	2
+                         491 .LDW33:
+                         492 --_result	r10	local
+                         493 
+                         494 --_pbDiagData	r6	param
+                         495 --_DiagDataLength	ep	param
+                         496 
+                         497 	.section ".bss","awb"
+                         498 .L654:
+                         499 	.type	.L654,@object
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         500 	.size	.L654,0
+                         501 	.data
+                         502 	.text
+                         503 	.align	2
+                         504 	.align	2
+                         505 ..gh.f.f.1.e.8:
+                         506 	.type	..gh.f.f.1.e.8,@object
+                         507 	.size	..gh.f.f.1.e.8,0
+                         508 	.global	_SUPPLIER1_CustomDid_WriteEcuPartnumber
+                         509 _SUPPLIER1_CustomDid_WriteEcuPartnumber:
+00000156 80072100        510 	prepare	{r31},0
+0000015a 07f0            511 	mov	r7,ep
+                         512 --	    .bf
+                         513 .LDW43:
+0000015c 7098            514 	sld.hu	0[ep],r19
+0000015e 1306dbff        515 	addi	-37,r19,zero
+00000162 820d*           516 	be	.L737
+                         517 --line142
+                         518 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.33::
+                         519 .LDWlin33:
+00000164 20361300        520 	movea	19,zero,r6
+                         521 	jarl	_FblDiagSetError,lp
+                         521 <EXPANSION BEGIN>
+                         521 jarl22 _FblDiagSetError , lp 
+00000168 80ff0000*       521 <EXPANSION END>
+                         522 --line143
+                         523 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.34::
+                         524 .LDWlin34:
+0000016c 0152            525 	mov	1,r10
+0000016e 40063f00        526 	dispose	0,{r31},[lp]
+                         527 .L737:
+                         528 --line145
+                         529 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.35::
+                         530 .LDWlin35:
+00000172 2b0600000000*   531 	mov	sdaoff23(_fblDiagStates),r11
+00000178 cbd70000        532 	tst1	2,0[r11]
+0000017c 8a0d*           533 	bne	.L740
+                         534 --line146
+                         535 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.36::
+                         536 .LDWlin36:
+0000017e 20363100        537 	movea	49,zero,r6
+                         538 	jarl	_FblDiagSetError,lp
+                         538 <EXPANSION BEGIN>
+                         538 jarl22 _FblDiagSetError , lp 
+00000182 80ff0000*       538 <EXPANSION END>
+                         539 --line147
+                         540 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.37::
+                         541 .LDWlin37:
+00000186 0152            542 	mov	1,r10
+00000188 40063f00        543 	dispose	0,{r31},[lp]
+                         544 .L740:
+                         545 --line150
+                         546 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.38::
+                         547 .LDWlin38:
+0000018c 2b0600000000*   548 	mov	sdaoff23(_fblDiagStates+2),r11
+00000192 cbdf0000        549 	tst1	3,0[r11]
+00000196 8a0d*           550 	bne	.L743
+                         551 --line151
+                         552 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.39::
+                         553 .LDWlin39:
+00000198 20363300        554 	movea	51,zero,r6
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         555 	jarl	_FblDiagSetError,lp
+                         555 <EXPANSION BEGIN>
+                         555 jarl22 _FblDiagSetError , lp 
+0000019c 80ff0000*       555 <EXPANSION END>
+                         556 --line152
+                         557 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.40::
+                         558 .LDWlin40:
+000001a0 0152            559 	mov	1,r10
+000001a2 40063f00        560 	dispose	0,{r31},[lp]
+                         561 .L743:
+                         562 --line156
+                         563 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.41::
+                         564 .LDWlin41:
+000001a6 4232            565 	add	2,r6
+                         566 	jarl	_PRODFLASH_PutRivianEcuPartnumber,lp
+                         566 <EXPANSION BEGIN>
+                         566 jarl22 _PRODFLASH_PutRivianEcuPartnumber , lp 
+000001a8 80ff0000*       566 <EXPANSION END>
+                         567 --line157
+                         568 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.42::
+                         569 .LDWlin42:
+000001ac 0052            570 	mov	0,r10
+                         571 --	    .ef
+                         572 .LDW53:
+000001ae 40063f00        573 	dispose	0,{r31},[lp]
+                         574 	.type	_SUPPLIER1_CustomDid_WriteEcuPartnumber,@function
+                         575 	.size	_SUPPLIER1_CustomDid_WriteEcuPartnumber,.-_SUPPLIER1_CustomDid_WriteEcuPartnumber
+                         576 	.align	2
+                         577 .LDW63:
+                         578 --_result	r10	local
+                         579 
+                         580 --_pbDiagData	r6	param
+                         581 --_DiagDataLength	ep	param
+                         582 
+                         583 	.section ".bss","awb"
+                         584 .L814:
+                         585 	.type	.L814,@object
+                         586 	.size	.L814,0
+                         587 	.data
+                         588 	.text
+                         589 	.align	2
+                         590 	.align	2
+                         591 ..gh.f.f.1.e.9:
+                         592 	.type	..gh.f.f.1.e.9,@object
+                         593 	.size	..gh.f.f.1.e.9,0
+                         594 	.global	_SUPPLIER1_CustomDid_WriteEcuSerialnumber
+                         595 _SUPPLIER1_CustomDid_WriteEcuSerialnumber:
+000001b2 80072100        596 	prepare	{r31},0
+000001b6 07f0            597 	mov	r7,ep
+                         598 --	    .bf
+                         599 .LDW73:
+000001b8 7098            600 	sld.hu	0[ep],r19
+000001ba 1306ecff        601 	addi	-20,r19,zero
+000001be 820d*           602 	be	.L897
+                         603 --line167
+                         604 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.43::
+                         605 .LDWlin43:
+000001c0 20361300        606 	movea	19,zero,r6
+                         607 	jarl	_FblDiagSetError,lp
+                         607 <EXPANSION BEGIN>
+                         607 jarl22 _FblDiagSetError , lp 
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+000001c4 80ff0000*       607 <EXPANSION END>
+                         608 --line168
+                         609 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.44::
+                         610 .LDWlin44:
+000001c8 0152            611 	mov	1,r10
+000001ca 40063f00        612 	dispose	0,{r31},[lp]
+                         613 .L897:
+                         614 --line170
+                         615 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.45::
+                         616 .LDWlin45:
+000001ce 2b0600000000*   617 	mov	sdaoff23(_fblDiagStates),r11
+000001d4 cbd70000        618 	tst1	2,0[r11]
+000001d8 8a0d*           619 	bne	.L900
+                         620 --line171
+                         621 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.46::
+                         622 .LDWlin46:
+000001da 20363100        623 	movea	49,zero,r6
+                         624 	jarl	_FblDiagSetError,lp
+                         624 <EXPANSION BEGIN>
+                         624 jarl22 _FblDiagSetError , lp 
+000001de 80ff0000*       624 <EXPANSION END>
+                         625 --line172
+                         626 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.47::
+                         627 .LDWlin47:
+000001e2 0152            628 	mov	1,r10
+000001e4 40063f00        629 	dispose	0,{r31},[lp]
+                         630 .L900:
+                         631 --line175
+                         632 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.48::
+                         633 .LDWlin48:
+000001e8 2b0600000000*   634 	mov	sdaoff23(_fblDiagStates+2),r11
+000001ee cbdf0000        635 	tst1	3,0[r11]
+000001f2 8a0d*           636 	bne	.L903
+                         637 --line176
+                         638 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.49::
+                         639 .LDWlin49:
+000001f4 20363300        640 	movea	51,zero,r6
+                         641 	jarl	_FblDiagSetError,lp
+                         641 <EXPANSION BEGIN>
+                         641 jarl22 _FblDiagSetError , lp 
+000001f8 80ff0000*       641 <EXPANSION END>
+                         642 --line177
+                         643 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.50::
+                         644 .LDWlin50:
+000001fc 0152            645 	mov	1,r10
+000001fe 40063f00        646 	dispose	0,{r31},[lp]
+                         647 .L903:
+                         648 --line181
+                         649 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.51::
+                         650 .LDWlin51:
+00000202 4232            651 	add	2,r6
+                         652 	jarl	_PRODFLASH_PutRivianEcuSerialnumber,lp
+                         652 <EXPANSION BEGIN>
+                         652 jarl22 _PRODFLASH_PutRivianEcuSerialnumber , lp 
+00000204 80ff0000*       652 <EXPANSION END>
+                         653 --line182
+                         654 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.52::
+                         655 .LDWlin52:
+00000208 0052            656 	mov	0,r10
+                         657 --	    .ef
+                         658 .LDW83:
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+0000020a 40063f00        659 	dispose	0,{r31},[lp]
+                         660 	.type	_SUPPLIER1_CustomDid_WriteEcuSerialnumber,@function
+                         661 	.size	_SUPPLIER1_CustomDid_WriteEcuSerialnumber,.-_SUPPLIER1_CustomDid_WriteEcuSerialnumber
+                         662 	.align	2
+                         663 .LDW93:
+                         664 --_result	r10	local
+                         665 
+                         666 --_pbDiagData	r6	param
+                         667 --_DiagDataLength	ep	param
+                         668 
+                         669 	.section ".bss","awb"
+                         670 .L974:
+                         671 	.type	.L974,@object
+                         672 	.size	.L974,0
+                         673 	.data
+                         674 	.text
+                         675 	.align	2
+                         676 	.align	2
+                         677 ..gh.f.f.1.e.10:
+                         678 	.type	..gh.f.f.1.e.10,@object
+                         679 	.size	..gh.f.f.1.e.10,0
+                         680 	.global	_SUPPLIER1_CustomDid_WriteManufSupport
+                         681 _SUPPLIER1_CustomDid_WriteManufSupport:
+0000020e 80072100        682 	prepare	{r31},0
+00000212 07f0            683 	mov	r7,ep
+                         684 --	    .bf
+                         685 .LDW04:
+00000214 7098            686 	sld.hu	0[ep],r19
+00000216 639a            687 	cmp	3,r19
+00000218 820d*           688 	be	.L1057
+                         689 --line192
+                         690 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.53::
+                         691 .LDWlin53:
+0000021a 20361300        692 	movea	19,zero,r6
+                         693 	jarl	_FblDiagSetError,lp
+                         693 <EXPANSION BEGIN>
+                         693 jarl22 _FblDiagSetError , lp 
+0000021e 80ff0000*       693 <EXPANSION END>
+                         694 --line193
+                         695 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.54::
+                         696 .LDWlin54:
+00000222 0152            697 	mov	1,r10
+00000224 40063f00        698 	dispose	0,{r31},[lp]
+                         699 .L1057:
+                         700 --line195
+                         701 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.55::
+                         702 .LDWlin55:
+00000228 2b0600000000*   703 	mov	sdaoff23(_fblDiagStates),r11
+0000022e cbd70000        704 	tst1	2,0[r11]
+00000232 8a0d*           705 	bne	.L1060
+                         706 --line196
+                         707 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.56::
+                         708 .LDWlin56:
+00000234 20363100        709 	movea	49,zero,r6
+                         710 	jarl	_FblDiagSetError,lp
+                         710 <EXPANSION BEGIN>
+                         710 jarl22 _FblDiagSetError , lp 
+00000238 80ff0000*       710 <EXPANSION END>
+                         711 --line197
+                         712 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.57::
+                         713 .LDWlin57:
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+0000023c 0152            714 	mov	1,r10
+0000023e 40063f00        715 	dispose	0,{r31},[lp]
+                         716 .L1060:
+                         717 --line200
+                         718 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.58::
+                         719 .LDWlin58:
+00000242 2b0600000000*   720 	mov	sdaoff23(_fblDiagStates+2),r11
+00000248 cbdf0000        721 	tst1	3,0[r11]
+0000024c 8a0d*           722 	bne	.L1063
+                         723 --line201
+                         724 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.59::
+                         725 .LDWlin59:
+0000024e 20363300        726 	movea	51,zero,r6
+                         727 	jarl	_FblDiagSetError,lp
+                         727 <EXPANSION BEGIN>
+                         727 jarl22 _FblDiagSetError , lp 
+00000252 80ff0000*       727 <EXPANSION END>
+                         728 --line202
+                         729 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.60::
+                         730 .LDWlin60:
+00000256 0152            731 	mov	1,r10
+00000258 40063f00        732 	dispose	0,{r31},[lp]
+                         733 .L1063:
+                         734 --line206
+                         735 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.61::
+                         736 .LDWlin61:
+0000025c 4232            737 	add	2,r6
+                         738 	jarl	_PRODFLASH_PutManufacturingSupportMode,lp
+                         738 <EXPANSION BEGIN>
+                         738 jarl22 _PRODFLASH_PutManufacturingSupportMode , lp 
+0000025e 80ff0000*       738 <EXPANSION END>
+                         739 --line207
+                         740 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.62::
+                         741 .LDWlin62:
+00000262 0052            742 	mov	0,r10
+                         743 --	    .ef
+                         744 .LDW14:
+00000264 40063f00        745 	dispose	0,{r31},[lp]
+                         746 	.type	_SUPPLIER1_CustomDid_WriteManufSupport,@function
+                         747 	.size	_SUPPLIER1_CustomDid_WriteManufSupport,.-_SUPPLIER1_CustomDid_WriteManufSupport
+                         748 	.align	2
+                         749 .LDW24:
+                         750 --_result	r10	local
+                         751 
+                         752 --_pbDiagData	r6	param
+                         753 --_DiagDataLength	ep	param
+                         754 
+                         755 	.section ".bss","awb"
+                         756 .L1134:
+                         757 	.type	.L1134,@object
+                         758 	.size	.L1134,0
+                         759 	.data
+                         760 	.text
+                         761 	.align	2
+                         762 	.align	2
+                         763 ..gh.f.f.1.e.11:
+                         764 	.type	..gh.f.f.1.e.11,@object
+                         765 	.size	..gh.f.f.1.e.11,0
+                         766 	.global	_SUPPLIER1_CustomDid_WriteVin
+                         767 _SUPPLIER1_CustomDid_WriteVin:
+00000268 80072100        768 	prepare	{r31},0
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+0000026c 07f0            769 	mov	r7,ep
+                         770 --	    .bf
+                         771 .LDW34:
+0000026e 7098            772 	sld.hu	0[ep],r19
+00000270 1306edff        773 	addi	-19,r19,zero
+00000274 820d*           774 	be	.L1217
+                         775 --line217
+                         776 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.63::
+                         777 .LDWlin63:
+00000276 20361300        778 	movea	19,zero,r6
+                         779 	jarl	_FblDiagSetError,lp
+                         779 <EXPANSION BEGIN>
+                         779 jarl22 _FblDiagSetError , lp 
+0000027a 80ff0000*       779 <EXPANSION END>
+                         780 --line218
+                         781 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.64::
+                         782 .LDWlin64:
+0000027e 0152            783 	mov	1,r10
+00000280 40063f00        784 	dispose	0,{r31},[lp]
+                         785 .L1217:
+                         786 --line220
+                         787 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.65::
+                         788 .LDWlin65:
+00000284 2b0600000000*   789 	mov	sdaoff23(_fblDiagStates),r11
+0000028a cbd70000        790 	tst1	2,0[r11]
+0000028e 8a0d*           791 	bne	.L1220
+                         792 --line221
+                         793 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.66::
+                         794 .LDWlin66:
+00000290 20363100        795 	movea	49,zero,r6
+                         796 	jarl	_FblDiagSetError,lp
+                         796 <EXPANSION BEGIN>
+                         796 jarl22 _FblDiagSetError , lp 
+00000294 80ff0000*       796 <EXPANSION END>
+                         797 --line222
+                         798 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.67::
+                         799 .LDWlin67:
+00000298 0152            800 	mov	1,r10
+0000029a 40063f00        801 	dispose	0,{r31},[lp]
+                         802 .L1220:
+                         803 --line225
+                         804 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.68::
+                         805 .LDWlin68:
+0000029e 2b0600000000*   806 	mov	sdaoff23(_fblDiagStates+2),r11
+000002a4 cbdf0000        807 	tst1	3,0[r11]
+000002a8 8a0d*           808 	bne	.L1223
+                         809 --line226
+                         810 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.69::
+                         811 .LDWlin69:
+000002aa 20363300        812 	movea	51,zero,r6
+                         813 	jarl	_FblDiagSetError,lp
+                         813 <EXPANSION BEGIN>
+                         813 jarl22 _FblDiagSetError , lp 
+000002ae 80ff0000*       813 <EXPANSION END>
+                         814 --line227
+                         815 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.70::
+                         816 .LDWlin70:
+000002b2 0152            817 	mov	1,r10
+000002b4 40063f00        818 	dispose	0,{r31},[lp]
+                         819 .L1223:
+                         820 --line231
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         821 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.71::
+                         822 .LDWlin71:
+000002b8 4232            823 	add	2,r6
+                         824 	jarl	_PRODFLASH_PutVin,lp
+                         824 <EXPANSION BEGIN>
+                         824 jarl22 _PRODFLASH_PutVin , lp 
+000002ba 80ff0000*       824 <EXPANSION END>
+                         825 --line232
+                         826 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.72::
+                         827 .LDWlin72:
+000002be 0052            828 	mov	0,r10
+                         829 --	    .ef
+                         830 .LDW44:
+000002c0 40063f00        831 	dispose	0,{r31},[lp]
+                         832 	.type	_SUPPLIER1_CustomDid_WriteVin,@function
+                         833 	.size	_SUPPLIER1_CustomDid_WriteVin,.-_SUPPLIER1_CustomDid_WriteVin
+                         834 	.align	2
+                         835 .LDW54:
+                         836 --_result	r10	local
+                         837 
+                         838 --_pbDiagData	r6	param
+                         839 --_DiagDataLength	ep	param
+                         840 
+                         841 	.section ".bss","awb"
+                         842 .L1294:
+                         843 	.type	.L1294,@object
+                         844 	.size	.L1294,0
+                         845 	.data
+                         846 	.text
+                         847 	.align	2
+                         848 	.align	2
+                         849 ..gh.f.f.1.e.12:
+                         850 	.type	..gh.f.f.1.e.12,@object
+                         851 	.size	..gh.f.f.1.e.12,0
+                         852 	.global	_SUPPLIER1_CustomDid_WriteAuxId
+                         853 _SUPPLIER1_CustomDid_WriteAuxId:
+000002c4 80072100        854 	prepare	{r31},0
+000002c8 07f0            855 	mov	r7,ep
+                         856 --	    .bf
+                         857 .LDW64:
+000002ca 7098            858 	sld.hu	0[ep],r19
+000002cc 639a            859 	cmp	3,r19
+000002ce 820d*           860 	be	.L1377
+                         861 --line242
+                         862 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.73::
+                         863 .LDWlin73:
+000002d0 20361300        864 	movea	19,zero,r6
+                         865 	jarl	_FblDiagSetError,lp
+                         865 <EXPANSION BEGIN>
+                         865 jarl22 _FblDiagSetError , lp 
+000002d4 80ff0000*       865 <EXPANSION END>
+                         866 --line243
+                         867 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.74::
+                         868 .LDWlin74:
+000002d8 0152            869 	mov	1,r10
+000002da 40063f00        870 	dispose	0,{r31},[lp]
+                         871 .L1377:
+                         872 --line245
+                         873 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.75::
+                         874 .LDWlin75:
+000002de 2b0600000000*   875 	mov	sdaoff23(_fblDiagStates),r11
+
+                                                                      Page 17
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+000002e4 cbd70000        876 	tst1	2,0[r11]
+000002e8 8a0d*           877 	bne	.L1380
+                         878 --line246
+                         879 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.76::
+                         880 .LDWlin76:
+000002ea 20363100        881 	movea	49,zero,r6
+                         882 	jarl	_FblDiagSetError,lp
+                         882 <EXPANSION BEGIN>
+                         882 jarl22 _FblDiagSetError , lp 
+000002ee 80ff0000*       882 <EXPANSION END>
+                         883 --line247
+                         884 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.77::
+                         885 .LDWlin77:
+000002f2 0152            886 	mov	1,r10
+000002f4 40063f00        887 	dispose	0,{r31},[lp]
+                         888 .L1380:
+                         889 --line250
+                         890 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.78::
+                         891 .LDWlin78:
+000002f8 2b0600000000*   892 	mov	sdaoff23(_fblDiagStates+2),r11
+000002fe cbdf0000        893 	tst1	3,0[r11]
+00000302 8a0d*           894 	bne	.L1383
+                         895 --line251
+                         896 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.79::
+                         897 .LDWlin79:
+00000304 20363300        898 	movea	51,zero,r6
+                         899 	jarl	_FblDiagSetError,lp
+                         899 <EXPANSION BEGIN>
+                         899 jarl22 _FblDiagSetError , lp 
+00000308 80ff0000*       899 <EXPANSION END>
+                         900 --line252
+                         901 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.80::
+                         902 .LDWlin80:
+0000030c 0152            903 	mov	1,r10
+0000030e 40063f00        904 	dispose	0,{r31},[lp]
+                         905 .L1383:
+                         906 --line256
+                         907 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.81::
+                         908 .LDWlin81:
+00000312 4232            909 	add	2,r6
+                         910 	jarl	_PRODFLASH_PutAuxId,lp
+                         910 <EXPANSION BEGIN>
+                         910 jarl22 _PRODFLASH_PutAuxId , lp 
+00000314 80ff0000*       910 <EXPANSION END>
+                         911 --line257
+                         912 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.82::
+                         913 .LDWlin82:
+00000318 0052            914 	mov	0,r10
+                         915 --	    .ef
+                         916 .LDW74:
+0000031a 40063f00        917 	dispose	0,{r31},[lp]
+                         918 	.type	_SUPPLIER1_CustomDid_WriteAuxId,@function
+                         919 	.size	_SUPPLIER1_CustomDid_WriteAuxId,.-_SUPPLIER1_CustomDid_WriteAuxId
+                         920 	.align	2
+                         921 .LDW84:
+                         922 --_result	r10	local
+                         923 
+                         924 --_pbDiagData	r6	param
+                         925 --_DiagDataLength	ep	param
+                         926 
+                         927 	.section ".bss","awb"
+
+                                                                      Page 18
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         928 .L1454:
+                         929 	.type	.L1454,@object
+                         930 	.size	.L1454,0
+                         931 	.data
+                         932 	.text
+                         933 	.align	2
+                         934 	.align	2
+                         935 ..gh.f.f.1.e.13:
+                         936 	.type	..gh.f.f.1.e.13,@object
+                         937 	.size	..gh.f.f.1.e.13,0
+                         938 	.global	_SUPPLIER1_CustomDid_WriteModeId
+                         939 _SUPPLIER1_CustomDid_WriteModeId:
+0000031e 80072100        940 	prepare	{r31},0
+00000322 07f0            941 	mov	r7,ep
+                         942 --	    .bf
+                         943 .LDW94:
+00000324 7098            944 	sld.hu	0[ep],r19
+00000326 649a            945 	cmp	4,r19
+00000328 820d*           946 	be	.L1537
+                         947 --line267
+                         948 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.83::
+                         949 .LDWlin83:
+0000032a 20361300        950 	movea	19,zero,r6
+                         951 	jarl	_FblDiagSetError,lp
+                         951 <EXPANSION BEGIN>
+                         951 jarl22 _FblDiagSetError , lp 
+0000032e 80ff0000*       951 <EXPANSION END>
+                         952 --line268
+                         953 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.84::
+                         954 .LDWlin84:
+00000332 0152            955 	mov	1,r10
+00000334 40063f00        956 	dispose	0,{r31},[lp]
+                         957 .L1537:
+                         958 --line270
+                         959 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.85::
+                         960 .LDWlin85:
+00000338 2b0600000000*   961 	mov	sdaoff23(_fblDiagStates),r11
+0000033e cbd70000        962 	tst1	2,0[r11]
+00000342 8a0d*           963 	bne	.L1540
+                         964 --line271
+                         965 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.86::
+                         966 .LDWlin86:
+00000344 20363100        967 	movea	49,zero,r6
+                         968 	jarl	_FblDiagSetError,lp
+                         968 <EXPANSION BEGIN>
+                         968 jarl22 _FblDiagSetError , lp 
+00000348 80ff0000*       968 <EXPANSION END>
+                         969 --line272
+                         970 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.87::
+                         971 .LDWlin87:
+0000034c 0152            972 	mov	1,r10
+0000034e 40063f00        973 	dispose	0,{r31},[lp]
+                         974 .L1540:
+                         975 --line275
+                         976 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.88::
+                         977 .LDWlin88:
+00000352 2b0600000000*   978 	mov	sdaoff23(_fblDiagStates+2),r11
+00000358 cbdf0000        979 	tst1	3,0[r11]
+0000035c 8a0d*           980 	bne	.L1543
+                         981 --line276
+                         982 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.89::
+
+                                                                      Page 19
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                         983 .LDWlin89:
+0000035e 20363300        984 	movea	51,zero,r6
+                         985 	jarl	_FblDiagSetError,lp
+                         985 <EXPANSION BEGIN>
+                         985 jarl22 _FblDiagSetError , lp 
+00000362 80ff0000*       985 <EXPANSION END>
+                         986 --line277
+                         987 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.90::
+                         988 .LDWlin90:
+00000366 0152            989 	mov	1,r10
+00000368 40063f00        990 	dispose	0,{r31},[lp]
+                         991 .L1543:
+                         992 --line281
+                         993 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.91::
+                         994 .LDWlin91:
+0000036c 4232            995 	add	2,r6
+                         996 	jarl	_PRODFLASH_PutModeId,lp
+                         996 <EXPANSION BEGIN>
+                         996 jarl22 _PRODFLASH_PutModeId , lp 
+0000036e 80ff0000*       996 <EXPANSION END>
+                         997 --line282
+                         998 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.92::
+                         999 .LDWlin92:
+00000372 0052           1000 	mov	0,r10
+                        1001 --	    .ef
+                        1002 .LDW05:
+00000374 40063f00       1003 	dispose	0,{r31},[lp]
+                        1004 	.type	_SUPPLIER1_CustomDid_WriteModeId,@function
+                        1005 	.size	_SUPPLIER1_CustomDid_WriteModeId,.-_SUPPLIER1_CustomDid_WriteModeId
+                        1006 	.align	2
+                        1007 .LDW15:
+                        1008 --_result	r10	local
+                        1009 
+                        1010 --_pbDiagData	r6	param
+                        1011 --_DiagDataLength	ep	param
+                        1012 
+                        1013 	.section ".bss","awb"
+                        1014 .L1614:
+                        1015 	.type	.L1614,@object
+                        1016 	.size	.L1614,0
+                        1017 	.data
+                        1018 	.text
+                        1019 	.align	2
+                        1020 	.align	2
+                        1021 ..gh.f.f.1.e.14:
+                        1022 	.type	..gh.f.f.1.e.14,@object
+                        1023 	.size	..gh.f.f.1.e.14,0
+                        1024 	.global	_SUPPLIER1_IsMemoryInitialized
+                        1025 _SUPPLIER1_IsMemoryInitialized:
+00000378 8700           1026 	zxb	r7
+                        1027 --	    .bf
+                        1028 .LDW25:
+0000037a 0152           1029 	mov	1,r10
+0000037c 0092           1030 	mov	0,r18
+0000037e a50d*          1031 	br	.L1700
+                        1032 .L1699:
+                        1033 --line293
+                        1034 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.93::
+                        1035 .LDWlin93:
+00000380 12f0           1036 	mov	r18,ep
+00000382 c6f1           1037 	add	r6,ep
+
+                                                                      Page 20
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+00000384 6048           1038 	sld.bu	0[ep],r9
+00000386 090601ff       1039 	addi	-255,r9,zero
+0000038a e0571453       1040 	cmovne	0,r10,r10
+0000038e 4192           1041 	add	1,r18
+00000390 9200           1042 	zxb	r18
+                        1043 .L1700:
+00000392 e791           1044 	cmp	r7,r18
+00000394 e1f5*          1045 	bl	.L1699
+                        1046 --	    .ef
+                        1047 .LDW35:
+                        1048 --line297
+                        1049 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.94::
+                        1050 .LDWlin94:
+00000396 7f00           1051 	jmp	[lp]
+                        1052 	.type	_SUPPLIER1_IsMemoryInitialized,@function
+                        1053 	.size	_SUPPLIER1_IsMemoryInitialized,.-_SUPPLIER1_IsMemoryInitialized
+                        1054 	.align	2
+                        1055 .LDW45:
+                        1056 --_bResult	r10	local
+                        1057 --_i	r18	local
+                        1058 
+                        1059 --_ucBuffer	r6	param
+                        1060 --_ucLength	r7	param
+                        1061 
+                        1062 	.section ".bss","awb"
+                        1063 .L1759:
+                        1064 	.type	.L1759,@object
+                        1065 	.size	.L1759,0
+                        1066 	.data
+                        1067 	.text
+                        1068 	.align	2
+                        1069 	.align	2
+                        1070 ..gh.f.f.1.e.15:
+                        1071 	.type	..gh.f.f.1.e.15,@object
+                        1072 	.size	..gh.f.f.1.e.15,0
+                        1073 	.global	_SUPPLIER1_HwidCheck
+                        1074 _SUPPLIER1_HwidCheck:
+00000398 82076100       1075 	prepare	{r29,r31},1
+                        1076 --	    .bf
+                        1077 .LDW55:
+0000039c 01ea           1078 	mov	1,r29
+0000039e 0330           1079 	mov	sp,r6
+                        1080 	jarl	_PRODFLASH_GetAuxId,lp
+                        1080 <EXPANSION BEGIN>
+                        1080 jarl22 _PRODFLASH_GetAuxId , lp 
+000003a0 80ff0000*      1080 <EXPANSION END>
+                        1081 --line306
+                        1082 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.95::
+                        1083 .LDWlin95:
+000003a4 23360200       1084 	movea	2,sp,r6
+000003a8 1d38           1085 	mov	r29,r7
+000003aa 0042           1086 	mov	0,r8
+                        1087 	jarl	_VERSION_GetAuxId,lp
+                        1087 <EXPANSION BEGIN>
+                        1087 jarl22 _VERSION_GetAuxId , lp 
+000003ac 80ff0000*      1087 <EXPANSION END>
+                        1088 --line308
+                        1089 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.96::
+                        1090 .LDWlin96:
+000003b0 03f0           1091 	mov	sp,ep
+000003b2 6090           1092 	sld.bu	0[ep],r18
+
+                                                                      Page 21
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+000003b4 6288           1093 	sld.bu	2[ep],r17
+000003b6 f289           1094 	cmp	r18,r17
+000003b8 ba35*          1095 	bne	.L1824
+                        1096 --line313
+                        1097 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.97::
+                        1098 .LDWlin97:
+000003ba 0330           1099 	mov	sp,r6
+                        1100 	jarl	_PRODFLASH_GetModeId,lp
+                        1100 <EXPANSION BEGIN>
+                        1100 jarl22 _PRODFLASH_GetModeId , lp 
+000003bc 80ff0000*      1100 <EXPANSION END>
+                        1101 --line314
+                        1102 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.98::
+                        1103 .LDWlin98:
+000003c0 23360200       1104 	movea	2,sp,r6
+000003c4 023a           1105 	mov	2,r7
+000003c6 0042           1106 	mov	0,r8
+                        1107 	jarl	_VERSION_GetModeId,lp
+                        1107 <EXPANSION BEGIN>
+                        1107 jarl22 _VERSION_GetModeId , lp 
+000003c8 80ff0000*      1107 <EXPANSION END>
+                        1108 --line315
+                        1109 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.99::
+                        1110 .LDWlin99:
+000003cc 03f0           1111 	mov	sp,ep
+000003ce 6080           1112 	sld.bu	0[ep],r16
+000003d0 6278           1113 	sld.bu	2[ep],r15
+000003d2 f079           1114 	cmp	r16,r15
+000003d4 da25*          1115 	bne	.L1824
+000003d6 6170           1116 	sld.bu	1[ep],r14
+000003d8 6368           1117 	sld.bu	3[ep],r13
+000003da ee69           1118 	cmp	r14,r13
+000003dc 9a25*          1119 	bne	.L1824
+                        1120 --line321
+                        1121 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.100::
+                        1122 .LDWlin100:
+000003de 0330           1123 	mov	sp,r6
+                        1124 	jarl	_PRODFLASH_GetComponentId,lp
+                        1124 <EXPANSION BEGIN>
+                        1124 jarl22 _PRODFLASH_GetComponentId , lp 
+000003e0 80ff0000*      1124 <EXPANSION END>
+                        1125 --line322
+                        1126 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.101::
+                        1127 .LDWlin101:
+000003e4 23360200       1128 	movea	2,sp,r6
+000003e8 023a           1129 	mov	2,r7
+000003ea 0042           1130 	mov	0,r8
+                        1131 	jarl	_VERSION_GetComponentId,lp
+                        1131 <EXPANSION BEGIN>
+                        1131 jarl22 _VERSION_GetComponentId , lp 
+000003ec 80ff0000*      1131 <EXPANSION END>
+                        1132 --line323
+                        1133 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.102::
+                        1134 .LDWlin102:
+000003f0 03f0           1135 	mov	sp,ep
+000003f2 6060           1136 	sld.bu	0[ep],r12
+000003f4 6258           1137 	sld.bu	2[ep],r11
+000003f6 ec59           1138 	cmp	r12,r11
+000003f8 ba15*          1139 	bne	.L1824
+000003fa 6150           1140 	sld.bu	1[ep],r10
+000003fc 6348           1141 	sld.bu	3[ep],r9
+
+                                                                      Page 22
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+000003fe ea49           1142 	cmp	r10,r9
+00000400 fa0d*          1143 	bne	.L1824
+                        1144 --line329
+                        1145 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.103::
+                        1146 .LDWlin103:
+00000402 0330           1147 	mov	sp,r6
+                        1148 	jarl	_PRODFLASH_GetPcbaId,lp
+                        1148 <EXPANSION BEGIN>
+                        1148 jarl22 _PRODFLASH_GetPcbaId , lp 
+00000404 80ff0000*      1148 <EXPANSION END>
+                        1149 --line330
+                        1150 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.104::
+                        1151 .LDWlin104:
+00000408 23360200       1152 	movea	2,sp,r6
+0000040c 1d38           1153 	mov	r29,r7
+0000040e 0042           1154 	mov	0,r8
+                        1155 	jarl	_VERSION_GetPcbaId,lp
+                        1155 <EXPANSION BEGIN>
+                        1155 jarl22 _VERSION_GetPcbaId , lp 
+00000410 80ff0000*      1155 <EXPANSION END>
+                        1156 --line331
+                        1157 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.105::
+                        1158 .LDWlin105:
+00000414 03f0           1159 	mov	sp,ep
+00000416 6040           1160 	sld.bu	0[ep],r8
+00000418 6238           1161 	sld.bu	2[ep],r7
+0000041a e839           1162 	cmp	r8,r7
+0000041c f205*          1163 	be	.L1825
+                        1164 .L1824:
+                        1165 --line337
+                        1166 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.106::
+                        1167 .LDWlin106:
+0000041e 2b0600000000*  1168 	mov	sdaoff23(_ucBootFault),r11
+00000424 00ea           1169 	mov	0,r29
+00000426 cb1f0000       1170 	set1	3,0[r11]
+                        1171 .L1825:
+0000042a 1d50           1172 	mov	r29,r10
+                        1173 --	    .ef
+                        1174 .LDW65:
+0000042c 42067f00       1175 	dispose	1,{r29,r31},[lp]
+                        1176 	.type	_SUPPLIER1_HwidCheck,@function
+                        1177 	.size	_SUPPLIER1_HwidCheck,.-_SUPPLIER1_HwidCheck
+                        1178 	.align	2
+                        1179 .LDW75:
+                        1180 --_ucID_BL	0[sp]	local
+                        1181 --_ucID_APP	2[sp]	local
+                        1182 --_bResult	r29	local
+                        1183 
+                        1184 	.section ".bss","awb"
+                        1185 .L1960:
+                        1186 	.type	.L1960,@object
+                        1187 	.size	.L1960,0
+                        1188 	.data
+                        1189 	.text
+                        1190 	.align	2
+                        1191 	.align	2
+                        1192 ..gh.f.f.1.e.16:
+                        1193 	.type	..gh.f.f.1.e.16,@object
+                        1194 	.size	..gh.f.f.1.e.16,0
+                        1195 	.global	_SUPPLIER1_ApplicationSignatureCheck
+                        1196 _SUPPLIER1_ApplicationSignatureCheck:
+
+                                                                      Page 23
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+00000430 8007e110       1197 	prepare	{r27,r28,r29,r31},0
+00000434 07d8           1198 	mov	r7,r27
+00000436 06e0           1199 	mov	r6,r28
+00000438 db00           1200 	zxh	r27
+                        1201 --	    .bf
+                        1202 .LDW85:
+                        1203 	jarl	_FblRealTimeSupport,lp
+                        1203 <EXPANSION BEGIN>
+                        1203 jarl22 _FblRealTimeSupport , lp 
+0000043a 80ff0000*      1203 <EXPANSION END>
+                        1204 --line356
+                        1205 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.107::
+                        1206 .LDWlin107:
+0000043e 2b0600000000*  1207 	mov	sdaoff23(_fblDiagStates+2),r11
+00000444 01ea           1208 	mov	1,r29
+00000446 cbe70000       1209 	tst1	4,0[r11]
+0000044a a20d*          1210 	be	.L2047
+0000044c cbff0000       1211 	tst1	7,0[r11]
+00000450 f205*          1212 	be	.L2047
+00000452 2b0600000000*  1213 	mov	sdaoff23(_fblDiagStates+3),r11
+00000458 cbc70000       1214 	tst1	0,0[r11]
+0000045c ea05*          1215 	bne	.L2051
+                        1216 .L2047:
+                        1217 --line361
+                        1218 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.108::
+                        1219 .LDWlin108:
+0000045e 20362200       1220 	movea	34,zero,r6
+                        1221 .L2052:
+                        1222 	jarl	_FblDiagSetError,lp
+                        1222 <EXPANSION BEGIN>
+                        1222 jarl22 _FblDiagSetError , lp 
+00000462 80ff0000*      1222 <EXPANSION END>
+00000466 b515*          1223 	br	.L2054
+                        1224 .L2051:
+                        1225 --line367
+                        1226 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.109::
+                        1227 .LDWlin109:
+                        1228 	jarl	_FblMemBlockEndIndication,lp
+                        1228 <EXPANSION BEGIN>
+                        1228 jarl22 _FblMemBlockEndIndication , lp 
+00000468 80ff0000*      1228 <EXPANSION END>
+                        1229 --line370
+                        1230 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.110::
+                        1231 .LDWlin110:
+0000046c ca36ff00       1232 	andi	255,r10,r6
+00000470 9afd*          1233 	bne	.L2052
+                        1234 --line373
+                        1235 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.111::
+                        1236 .LDWlin111:
+                        1237 	jarl	_FblRealTimeSupport,lp
+                        1237 <EXPANSION BEGIN>
+                        1237 jarl22 _FblRealTimeSupport , lp 
+00000472 80ff0000*      1237 <EXPANSION END>
+                        1238 --line377
+                        1239 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.112::
+                        1240 .LDWlin112:
+00000476 0032           1241 	mov	0,r6
+                        1242 	jarl	_SecM_InitVerification,lp
+                        1242 <EXPANSION BEGIN>
+                        1242 jarl22 _SecM_InitVerification , lp 
+00000478 80ff0000*      1242 <EXPANSION END>
+
+                                                                      Page 24
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                        1243 --line379
+                        1244 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.113::
+                        1245 .LDWlin113:
+0000047c 1c30           1246 	mov	r28,r6
+0000047e 1b38           1247 	mov	r27,r7
+                        1248 	jarl	_FblDiagDownloadCheck,lp
+                        1248 <EXPANSION BEGIN>
+                        1248 jarl22 _FblDiagDownloadCheck , lp 
+00000480 80ff0000*      1248 <EXPANSION END>
+00000484 0ae8           1249 	mov	r10,r29
+                        1250 --line381
+                        1251 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.114::
+                        1252 .LDWlin114:
+00000486 0032           1253 	mov	0,r6
+                        1254 	jarl	_SecM_DeinitVerification,lp
+                        1254 <EXPANSION BEGIN>
+                        1254 jarl22 _SecM_DeinitVerification , lp 
+00000488 80ff0000*      1254 <EXPANSION END>
+                        1255 .L2054:
+                        1256 --line390
+                        1257 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.115::
+                        1258 .LDWlin115:
+0000048c a40705480000*  1259 	ld.bu	sdaoff23(_diagErrorCode)[gp],r9
+00000492 0152           1260 	mov	1,r10
+00000494 e049           1261 	cmp	zero,r9
+00000496 fa05*          1262 	bne	.L2044
+                        1263 --line398
+                        1264 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.116::
+                        1265 .LDWlin116:
+00000498 5cef0300       1266 	st.b	r29,3[r28]
+0000049c 0432           1267 	mov	4,r6
+                        1268 	jarl	_DiagProcessingDone,lp
+                        1268 <EXPANSION BEGIN>
+                        1268 jarl22 _DiagProcessingDone , lp 
+0000049e 80ff0000*      1268 <EXPANSION END>
+                        1269 --line400
+                        1270 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.117::
+                        1271 .LDWlin117:
+000004a2 0052           1272 	mov	0,r10
+                        1273 .L2044:
+                        1274 --	    .ef
+                        1275 .LDW95:
+000004a4 4006ff10       1276 	dispose	0,{r27,r28,r29,r31},[lp]
+                        1277 	.type	_SUPPLIER1_ApplicationSignatureCheck,@function
+                        1278 	.size	_SUPPLIER1_ApplicationSignatureCheck,.-_SUPPLIER1_ApplicationSignatureCheck
+                        1279 	.align	2
+                        1280 .LDW06:
+                        1281 --_serviceNrc	r6	local
+                        1282 --_checkResult	r29	local
+                        1283 --_result	r10	local
+                        1284 
+                        1285 --_pbDiagData	r28	param
+                        1286 --_diagReqDataLen	r27	param
+                        1287 
+                        1288 	.section ".bss","awb"
+                        1289 .L2166:
+                        1290 	.type	.L2166,@object
+                        1291 	.size	.L2166,0
+                        1292 	.data
+                        1293 	.text
+                        1294 	.align	2
+
+                                                                      Page 25
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                        1295 	.align	2
+                        1296 ..gh.f.f.1.e.17:
+                        1297 	.type	..gh.f.f.1.e.17,@object
+                        1298 	.size	..gh.f.f.1.e.17,0
+                        1299 	.global	_SUPPLIER1_ApplicationCrc32Check__Fv..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                        1300 _SUPPLIER1_ApplicationCrc32Check__Fv..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.:
+                        1301 _SUPPLIER1_ApplicationCrc32Check__Fv:
+000004a8 80076100       1302 	prepare	{r29,r31},0
+                        1303 --	    .bf
+                        1304 .LDW16:
+000004ac 403e0200       1305 	movhi	hi(131072),zero,r7
+000004b0 01ea           1306 	mov	1,r29
+000004b2 84070f380000*  1307 	st.w	r7,sdaoff23(_pStartOfApplication)[gp]
+000004b8 0032           1308 	mov	0,r6
+                        1309 	jarl	_VERSION_GetPointerToSHA256Hash,lp
+                        1309 <EXPANSION BEGIN>
+                        1309 jarl22 _VERSION_GetPointerToSHA256Hash , lp 
+000004ba 80ff0000*      1309 <EXPANSION END>
+000004be 0a36fcff       1310 	addi	-4,r10,r6
+000004c2 3e0600000000*  1311 	mov	sdaoff23(_pEndOfApplication),ep
+000004c8 0135           1312 	sst.w	r6,0[ep]
+                        1313 --line418
+                        1314 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.118::
+                        1315 .LDWlin118:
+000004ca 004d           1316 	sld.w	0[ep],r9
+000004cc 3e0600000000*  1317 	mov	sdaoff23(_pStartOfApplication),ep
+000004d2 009d           1318 	sld.w	0[ep],r19
+000004d4 1f42           1319 	mov	-1,r8
+000004d6 b349           1320 	sub	r19,r9
+000004d8 84070f480000*  1321 	st.w	r9,sdaoff23(_ulLength)[gp]
+000004de 0035           1322 	sld.w	0[ep],r6
+000004e0 840709380000*  1323 	ld.w	sdaoff23(_ulLength)[gp],r7
+                        1324 	jarl	_LibAutosarCrc_CalculateCRC32,lp
+                        1324 <EXPANSION BEGIN>
+                        1324 jarl22 _LibAutosarCrc_CalculateCRC32 , lp 
+000004e6 80ff0000*      1324 <EXPANSION END>
+000004ea 84070f500000*  1325 	st.w	r10,sdaoff23(_ulCrc32)[gp]
+                        1326 --line421
+                        1327 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.119::
+                        1328 .LDWlin119:
+000004f0 0032           1329 	mov	0,r6
+                        1330 	jarl	_VERSION_GetPointerToDescriptorBlock,lp
+                        1330 <EXPANSION BEGIN>
+                        1330 jarl22 _VERSION_GetPointerToDescriptorBlock , lp 
+000004f2 80ff0000*      1330 <EXPANSION END>
+                        1331 --line422
+                        1332 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.120::
+                        1333 .LDWlin120:
+000004f6 2a97dd00       1334 	ld.w	220[r10],r18
+000004fa 84070f500000*  1335 	st.w	r10,sdaoff23(_pDescriptorBlock)[gp]
+00000500 84070f900000*  1336 	st.w	r18,sdaoff23(_ulCrcRom)[gp]
+00000506 0092           1337 	mov	0,r18
+                        1338 .L2277:
+00000508 04f0           1339 	mov	gp,ep
+0000050a 0a46dc00       1340 	addi	220,r10,r8
+0000050e d2f1           1341 	add	r18,ep
+00000510 b241           1342 	sub	r18,r8
+00000512 a8870300       1343 	ld.bu	3[r8],r16
+00000516 be0705780000*  1344 	ld.bu	sdaoff23(_ulCrc32)[ep],r15
+0000051c f079           1345 	cmp	r16,r15
+0000051e e0ef14eb       1346 	cmovne	0,r29,r29
+
+                                                                      Page 26
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+00000522 4192           1347 	add	1,r18
+00000524 6492           1348 	cmp	4,r18
+00000526 91f5*          1349 	bl	.L2277
+                        1350 --line430
+                        1351 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.121::
+                        1352 .LDWlin121:
+00000528 e0e9           1353 	cmp	zero,r29
+0000052a ea05*          1354 	bne	.L2280
+                        1355 --line431
+                        1356 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.122::
+                        1357 .LDWlin122:
+0000052c 2b0600000000*  1358 	mov	sdaoff23(_ucBootFault),r11
+00000532 cb0f0000       1359 	set1	1,0[r11]
+                        1360 .L2280:
+00000536 1d50           1361 	mov	r29,r10
+                        1362 --	    .ef
+                        1363 .LDW26:
+00000538 40067f00       1364 	dispose	0,{r29,r31},[lp]
+                        1365 	.type	_SUPPLIER1_ApplicationCrc32Check__Fv,@function
+                        1366 	.size	_SUPPLIER1_ApplicationCrc32Check__Fv,.-_SUPPLIER1_ApplicationCrc32Check__Fv
+                        1367 	.type	_SUPPLIER1_ApplicationCrc32Check__Fv..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,@function
+                        1368 	.size	_SUPPLIER1_ApplicationCrc32Check__Fv..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.,.-_SUPPLIER1_ApplicationCrc32Check__Fv..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.
+                        1369 	.align	2
+                        1370 .LDW36:
+                        1371 --_bResult	r29	local
+                        1372 --_i	r18	local
+                        1373 
+                        1374 	.section ".bss","awb"
+                        1375 .L2341:
+                        1376 	.type	.L2341,@object
+                        1377 	.size	.L2341,0
+                        1378 	.data
+                        1379 	.text
+                        1380 	.align	2
+                        1381 	.align	2
+                        1382 ..gh.f.f.1.e.18:
+                        1383 	.type	..gh.f.f.1.e.18,@object
+                        1384 	.size	..gh.f.f.1.e.18,0
+                        1385 	.global	_SUPPLIER1_CalcGenealogyBlockCrc32
+                        1386 _SUPPLIER1_CalcGenealogyBlockCrc32:
+0000053c 80072100       1387 	prepare	{r31},0
+                        1388 --	    .bf
+                        1389 .LDW46:
+                        1390 	jarl	_PRODFLASH_GetGenealogyBlockStartAddress,lp
+                        1390 <EXPANSION BEGIN>
+                        1390 jarl22 _PRODFLASH_GetGenealogyBlockStartAddress , lp 
+00000540 80ff0000*      1390 <EXPANSION END>
+                        1391 --line442
+                        1392 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.123::
+                        1393 .LDWlin123:
+00000544 0a30           1394 	mov	r10,r6
+00000546 203e8100       1395 	movea	129,zero,r7
+0000054a 0042           1396 	mov	0,r8
+                        1397 	jarl	_LibAutosarCrc_CalculateCRC32,lp
+                        1397 <EXPANSION BEGIN>
+                        1397 jarl22 _LibAutosarCrc_CalculateCRC32 , lp 
+0000054c 80ff0000*      1397 <EXPANSION END>
+                        1398 --	    .ef
+                        1399 .LDW56:
+                        1400 --line444
+                        1401 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.124::
+
+                                                                      Page 27
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                        1402 .LDWlin124:
+00000550 40063f00       1403 	dispose	0,{r31},[lp]
+                        1404 	.type	_SUPPLIER1_CalcGenealogyBlockCrc32,@function
+                        1405 	.size	_SUPPLIER1_CalcGenealogyBlockCrc32,.-_SUPPLIER1_CalcGenealogyBlockCrc32
+                        1406 	.align	2
+                        1407 .LDW66:
+                        1408 
+                        1409 	.section ".bss","awb"
+                        1410 .L2417:
+                        1411 	.type	.L2417,@object
+                        1412 	.size	.L2417,0
+                        1413 	.data
+                        1414 	.text
+                        1415 	.align	2
+                        1416 	.align	2
+                        1417 ..gh.f.f.1.e.19:
+                        1418 	.type	..gh.f.f.1.e.19,@object
+                        1419 	.size	..gh.f.f.1.e.19,0
+                        1420 	.global	_SUPPLIER1_CustomerSpecificValidityChecks
+                        1421 _SUPPLIER1_CustomerSpecificValidityChecks:
+00000554 8c07e100       1422 	prepare	{r28,r29,r31},6
+                        1423 --	    .bf
+                        1424 .LDW76:
+00000558 1e7a           1425 	mov	-2,r15
+0000055a 00ea           1426 	mov	0,r29
+0000055c 437f0300       1427 	st.b	r15,3[sp]
+00000560 23360200       1428 	movea	2,sp,r6
+                        1429 	jarl	_PRODFLASH_GetEolCheckerByte,lp
+                        1429 <EXPANSION BEGIN>
+                        1429 jarl22 _PRODFLASH_GetEolCheckerByte , lp 
+00000564 80ff0000*      1429 <EXPANSION END>
+                        1430 --line459
+                        1431 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.125::
+                        1432 .LDWlin125:
+00000568 83970300       1433 	ld.bu	2[sp],r18
+0000056c 120656ff       1434 	addi	-170,r18,zero
+00000570 9a0d*          1435 	bne	.L2437
+                        1436 --line460
+                        1437 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.126::
+                        1438 .LDWlin126:
+                        1439 	jarl	_SUPPLIER1_CalcGenealogyBlockCrc32,lp
+                        1439 <EXPANSION BEGIN>
+                        1439 jarl22 _SUPPLIER1_CalcGenealogyBlockCrc32 , lp 
+00000572 bfffcaff*      1439 <EXPANSION END>
+00000576 63570500       1440 	st.w	r10,4[sp]
+                        1441 --line461
+                        1442 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.127::
+                        1443 .LDWlin127:
+0000057a 23360400       1444 	movea	4,sp,r6
+                        1445 	jarl	_PRODFLASH_PutGenealogyCrc32,lp
+                        1445 <EXPANSION BEGIN>
+                        1445 jarl22 _PRODFLASH_PutGenealogyCrc32 , lp 
+0000057e 80ff0000*      1445 <EXPANSION END>
+                        1446 .L2437:
+                        1447 --line464
+                        1448 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.128::
+                        1449 .LDWlin128:
+00000582 23360200       1450 	movea	2,sp,r6
+                        1451 	jarl	_PRODFLASH_GetEolCheckerByte,lp
+                        1451 <EXPANSION BEGIN>
+                        1451 jarl22 _PRODFLASH_GetEolCheckerByte , lp 
+
+                                                                      Page 28
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+00000586 80ff0000*      1451 <EXPANSION END>
+                        1452 --line465
+                        1453 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.129::
+                        1454 .LDWlin129:
+0000058a 838f0300       1455 	ld.bu	2[sp],r17
+0000058e 11069aff       1456 	addi	-102,r17,zero
+00000592 920d*          1457 	be	.L2439
+                        1458 --line466
+                        1459 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.130::
+                        1460 .LDWlin130:
+00000594 20765500       1461 	movea	85,zero,r14
+00000598 43770200       1462 	st.b	r14,2[sp]
+0000059c 23360200       1463 	movea	2,sp,r6
+                        1464 	jarl	_PRODFLASH_PutEolCheckerByte,lp
+                        1464 <EXPANSION BEGIN>
+                        1464 jarl22 _PRODFLASH_PutEolCheckerByte , lp 
+000005a0 80ff0000*      1464 <EXPANSION END>
+                        1465 .L2439:
+                        1466 --line470
+                        1467 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.131::
+                        1468 .LDWlin131:
+000005a4 0330           1469 	mov	sp,r6
+                        1470 	jarl	_PRODFLASH_GetManufacturingSupportMode,lp
+                        1470 <EXPANSION BEGIN>
+                        1470 jarl22 _PRODFLASH_GetManufacturingSupportMode , lp 
+000005a6 80ff0000*      1470 <EXPANSION END>
+                        1471 --line471
+                        1472 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.132::
+                        1473 .LDWlin132:
+000005aa 0232           1474 	mov	2,r6
+000005ac 233e0100       1475 	movea	1,sp,r7
+000005b0 0142           1476 	mov	1,r8
+                        1477 	jarl	_ApplFblNvReadProcessData,lp
+                        1477 <EXPANSION BEGIN>
+                        1477 jarl22 _ApplFblNvReadProcessData , lp 
+000005b2 80ff0000*      1477 <EXPANSION END>
+                        1478 --line472
+                        1479 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.133::
+                        1480 .LDWlin133:
+                        1481 	jarl	_SUPPLIER1_HwidCheck,lp
+                        1481 <EXPANSION BEGIN>
+                        1481 jarl22 _SUPPLIER1_HwidCheck , lp 
+000005b6 bfffe2fd*      1481 <EXPANSION END>
+000005ba 0ae0           1482 	mov	r10,r28
+                        1483 --line473
+                        1484 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.134::
+                        1485 .LDWlin134:
+000005bc 23360800       1486 	movea	8,sp,r6
+                        1487 	jarl	_PRODFLASH_GetApplicationSignature,lp
+                        1487 <EXPANSION BEGIN>
+                        1487 jarl22 _PRODFLASH_GetApplicationSignature , lp 
+000005c0 80ff0000*      1487 <EXPANSION END>
+                        1488 --line475
+                        1489 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.135::
+                        1490 .LDWlin135:
+000005c4 61e2           1491 	cmp	1,r28
+000005c6 ba1d*          1492 	bne	.L2441
+                        1493 --line476
+                        1494 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.136::
+                        1495 .LDWlin136:
+000005c8 836f0100       1496 	ld.bu	0[sp],r13
+
+                                                                      Page 29
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+000005cc 616a           1497 	cmp	1,r13
+000005ce ca0d*          1498 	bne	.L2443
+                        1499 --line477
+                        1500 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.137::
+                        1501 .LDWlin137:
+000005d0 a3870100       1502 	ld.bu	1[sp],r16
+000005d4 10062fff       1503 	addi	-209,r16,zero
+000005d8 f205*          1504 	be	.L2443
+                        1505 --line487
+                        1506 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.138::
+                        1507 .LDWlin138:
+000005da 2b0600000000*  1508 	mov	sdaoff23(_ucBootFault),r11
+000005e0 cb070000       1509 	set1	0,0[r11]
+000005e4 b50d*          1510 	br	.L2496
+                        1511 .L2443:
+                        1512 --line492
+                        1513 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.139::
+                        1514 .LDWlin139:
+                        1515 	jarl	_SUPPLIER1_ApplicationCrc32Check__Fv,lp
+                        1515 <EXPANSION BEGIN>
+                        1515 jarl22 _SUPPLIER1_ApplicationCrc32Check__Fv , lp 
+000005e6 bfffc2fe*      1515 <EXPANSION END>
+000005ea 6152           1516 	cmp	1,r10
+000005ec 8a0d*          1517 	bne	.L2441
+                        1518 --line494
+                        1519 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.140::
+                        1520 .LDWlin140:
+000005ee 0332           1521 	mov	3,r6
+000005f0 233e0300       1522 	movea	3,sp,r7
+000005f4 0a40           1523 	mov	r10,r8
+                        1524 	jarl	_ApplFblNvWriteProcessData,lp
+                        1524 <EXPANSION BEGIN>
+                        1524 jarl22 _ApplFblNvWriteProcessData , lp 
+000005f6 80ff0000*      1524 <EXPANSION END>
+                        1525 .L2496:
+                        1526 --line494
+                        1527 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions.141::
+                        1528 .LDWlin141:
+000005fa 1ce8           1529 	mov	r28,r29
+                        1530 .L2441:
+000005fc 1d50           1531 	mov	r29,r10
+                        1532 --	    .ef
+                        1533 .LDW86:
+000005fe 4c06ff00       1534 	dispose	6,{r28,r29,r31},[lp]
+                        1535 	.type	_SUPPLIER1_CustomerSpecificValidityChecks,@function
+                        1536 	.size	_SUPPLIER1_CustomerSpecificValidityChecks,.-_SUPPLIER1_CustomerSpecificValidityChecks
+                        1537 	.align	2
+                        1538 .LDW96:
+                        1539 --_ucResult	r29	local
+                        1540 --_ucManufMode	0[sp]	local
+                        1541 --_ucAppValid	1[sp]	local
+                        1542 --_ucHwidValid	r28	local
+                        1543 --_ucEolCheckerByte	2[sp]	local
+                        1544 --_ulGenealogyCrc32	4[sp]	local
+                        1545 --_aucHashFromGenealogyBlock	8[sp]	local
+                        1546 --_ucBlockValid	3[sp]	local
+                        1547 
+                        1548 	.section ".bss","awb"
+                        1549 .L2567:
+                        1550 	.type	.L2567,@object
+                        1551 	.size	.L2567,0
+
+                                                                      Page 30
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000alk1.s
+                        1552 	.data
+                        1553 	.text
+                        1554 	.align	2
+                        1555 	.align	2
+                        1556 ..gh.f.f.1.e.20:
+                        1557 	.type	..gh.f.f.1.e.20,@object
+                        1558 	.size	..gh.f.f.1.e.20,0
+                        1559 	.global	_SUPPLIER1_GetFaultFlag
+                        1560 _SUPPLIER1_GetFaultFlag:
+                        1561 --	    .bf
+                        1562 .LDW07:
+00000602 a40705500000*  1563 	ld.bu	sdaoff23(_ucBootFault)[gp],r10
+                        1564 --	    .ef
+                        1565 .LDW17:
+00000608 7f00           1566 	jmp	[lp]
+                        1567 	.type	_SUPPLIER1_GetFaultFlag,@function
+                        1568 	.size	_SUPPLIER1_GetFaultFlag,.-_SUPPLIER1_GetFaultFlag
+                        1569 	.align	2
+                        1570 .LDW27:
+                        1571 
+                        1572 	.section ".bss","awb"
+                        1573 .L2708:
+                        1574 	.type	.L2708,@object
+                        1575 	.size	.L2708,0
+                        1576 	.data
+                        1577 	.text
+                        1578 	.align	2
+                        1579 --_fblDiagStates	sdaoff23(_fblDiagStates)	import
+                        1580 --_diagErrorCode	sdaoff23(_diagErrorCode)	import
+                        1581 --_ulWakeupFactorRegisterContent	sdaoff23(_ulWakeupFactorRegisterContent)	static
+                        1582 --_ulControl	sdaoff23(_ulControl)	static
+                        1583 --_pStartOfApplication	sdaoff23(_pStartOfApplication)	static
+                        1584 --_pEndOfApplication	sdaoff23(_pEndOfApplication)	static
+                        1585 --_ulLength	sdaoff23(_ulLength)	static
+                        1586 --_ulCrc32	sdaoff23(_ulCrc32)	static
+                        1587 --_pDescriptorBlock	sdaoff23(_pDescriptorBlock)	static
+                        1588 --_ulCrcRom	sdaoff23(_ulCrcRom)	static
+                        1589 
+                        1590 	.section ".sdata","aw"
+                        1591 	.global	_ucBootFault
+00000000 00             1592 _ucBootFault:	.byte	0
+                        1593 	.type	_ucBootFault,@object
+                        1594 	.size	_ucBootFault,1
+                        1595 	.data
+                        1596 	.ghsnote version,17
+                        1597 	.ghsnote tools,7
+                        1598 	.ghsnote options,80
+                        1599 	.text
+                        1600 	.align	2
+                        1601 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CSUPPLIER1_CustomFunctions...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863F4..0::
+                        1602 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

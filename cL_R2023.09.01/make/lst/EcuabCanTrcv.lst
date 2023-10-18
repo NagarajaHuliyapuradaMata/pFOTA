@@ -1,0 +1,241 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005ds1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/EcuabCanTrcv.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\EcuabCanTrcv.dbo -source=EcuabCanTrcv.c -o obj\gh_00005ds1.o -list=lst/EcuabCanTrcv.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00005ds1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00005ds1.s
+Source File: EcuabCanTrcv.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/EcuabCanTrcv.lst
+                           7 --		-object_dir=obj -stderr=err/EcuabCanTrcv.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/EcuabCanTrcv/EcuabCanTrcv.c
+                          28 --Source File:   ../source/EcuabCanTrcv/EcuabCanTrcv.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:34:05 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863AD..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_WaitHard..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.
+                          45 _WaitHard..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.:
+                          46 _WaitHard:
+                          47 --	    .bf
+                          48 .LDW01:
+00000000 ec374202         49 	mulu	12,r6,zero
+                          50 .L4:
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005ds1.s
+00000004 0698             51 	mov	r6,r19
+00000006 5f32             52 	add	-1,r6
+00000008 e099             53 	cmp	zero,r19
+0000000a dafd*            54 	bne	.L4
+                          55 --	    .ef
+                          56 .LDW11:
+                          57 --line37
+                          58 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.1::
+                          59 .LDWlin1:
+0000000c 7f00             60 	jmp	[lp]
+                          61 	.type	_WaitHard,@function
+                          62 	.size	_WaitHard,.-_WaitHard
+                          63 	.type	_WaitHard..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.,@function
+                          64 	.size	_WaitHard..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.,.-_WaitHard..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.
+                          65 	.align	2
+                          66 .LDW21:
+                          67 --_ulTicks	r6	local
+                          68 
+                          69 --_ulMicroSeconds	r6	param
+                          70 
+                          71 	.section ".bss","awb"
+                          72 .L38:
+                          73 	.type	.L38,@object
+                          74 	.size	.L38,0
+                          75 	.data
+                          76 	.text
+                          77 	.align	2
+                          78 	.align	2
+                          79 ..gh.f.f.1.e.1:
+                          80 	.type	..gh.f.f.1.e.1,@object
+                          81 	.size	..gh.f.f.1.e.1,0
+                          82 	.global	_EcuabTrcv_Standby
+                          83 _EcuabTrcv_Standby:
+0000000e 80072100         84 	prepare	{r31},0
+                          85 --	    .bf
+                          86 .LDW31:
+00000012 0a32             87 	mov	10,r6
+                          88 	jarl	_McalDio_output_off,lp
+                          88 <EXPANSION BEGIN>
+                          88 jarl22 _McalDio_output_off , lp 
+00000014 80ff0000*        88 <EXPANSION END>
+                          89 --line13
+                          90 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.2::
+                          91 .LDWlin2:
+00000018 20361400         92 	movea	20,zero,r6
+                          93 	jarl	_WaitHard,lp
+                          93 <EXPANSION BEGIN>
+                          93 jarl22 _WaitHard , lp 
+0000001c bfffe4ff*        93 <EXPANSION END>
+                          94 --line14
+                          95 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.3::
+                          96 .LDWlin3:
+00000020 0c32             97 	mov	12,r6
+                          98 	jarl	_McalDio_output_off,lp
+                          98 <EXPANSION BEGIN>
+                          98 jarl22 _McalDio_output_off , lp 
+00000022 80ff0000*        98 <EXPANSION END>
+                          99 --line15
+                         100 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.4::
+                         101 .LDWlin4:
+00000026 20361400        102 	movea	20,zero,r6
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005ds1.s
+                         103 	jarl	_WaitHard,lp
+                         103 <EXPANSION BEGIN>
+                         103 jarl22 _WaitHard , lp 
+0000002a bfffd6ff*       103 <EXPANSION END>
+                         104 --	    .ef
+                         105 .LDW41:
+                         106 --line16
+                         107 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.5::
+                         108 .LDWlin5:
+0000002e 40063f00        109 	dispose	0,{r31},[lp]
+                         110 	.type	_EcuabTrcv_Standby,@function
+                         111 	.size	_EcuabTrcv_Standby,.-_EcuabTrcv_Standby
+                         112 	.align	2
+                         113 .LDW51:
+                         114 
+                         115 	.section ".bss","awb"
+                         116 .L97:
+                         117 	.type	.L97,@object
+                         118 	.size	.L97,0
+                         119 	.data
+                         120 	.text
+                         121 	.align	2
+                         122 	.align	2
+                         123 ..gh.f.f.1.e.2:
+                         124 	.type	..gh.f.f.1.e.2,@object
+                         125 	.size	..gh.f.f.1.e.2,0
+                         126 	.global	_EcuabTrcv_Normal
+                         127 _EcuabTrcv_Normal:
+00000032 80072100        128 	prepare	{r31},0
+                         129 --	    .bf
+                         130 .LDW61:
+00000036 0c32            131 	mov	12,r6
+                         132 	jarl	_McalDio_output_on,lp
+                         132 <EXPANSION BEGIN>
+                         132 jarl22 _McalDio_output_on , lp 
+00000038 80ff0000*       132 <EXPANSION END>
+                         133 --line20
+                         134 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.6::
+                         135 .LDWlin6:
+0000003c 0a32            136 	mov	10,r6
+                         137 	jarl	_McalDio_output_on,lp
+                         137 <EXPANSION BEGIN>
+                         137 jarl22 _McalDio_output_on , lp 
+0000003e 80ff0000*       137 <EXPANSION END>
+                         138 --	    .ef
+                         139 .LDW71:
+                         140 --line21
+                         141 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.7::
+                         142 .LDWlin7:
+00000042 40063f00        143 	dispose	0,{r31},[lp]
+                         144 	.type	_EcuabTrcv_Normal,@function
+                         145 	.size	_EcuabTrcv_Normal,.-_EcuabTrcv_Normal
+                         146 	.align	2
+                         147 .LDW81:
+                         148 
+                         149 	.section ".bss","awb"
+                         150 .L145:
+                         151 	.type	.L145,@object
+                         152 	.size	.L145,0
+                         153 	.data
+                         154 	.text
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005ds1.s
+                         155 	.align	2
+                         156 	.align	2
+                         157 ..gh.f.f.1.e.3:
+                         158 	.type	..gh.f.f.1.e.3,@object
+                         159 	.size	..gh.f.f.1.e.3,0
+                         160 	.global	_EcuabTrcv_GetWakeupFlag
+                         161 _EcuabTrcv_GetWakeupFlag:
+00000046 80072100        162 	prepare	{r31},0
+                         163 --	    .bf
+                         164 .LDW91:
+0000004a 0b32            165 	mov	11,r6
+                         166 	jarl	_McalDio_input_read,lp
+                         166 <EXPANSION BEGIN>
+                         166 jarl22 _McalDio_input_read , lp 
+0000004c 80ff0000*       166 <EXPANSION END>
+00000050 e051            167 	cmp	zero,r10
+00000052 e2570000        168 	setfe	r10
+                         169 --	    .ef
+                         170 .LDW02:
+                         171 --line31
+                         172 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv.8::
+                         173 .LDWlin8:
+00000056 40063f00        174 	dispose	0,{r31},[lp]
+                         175 	.type	_EcuabTrcv_GetWakeupFlag,@function
+                         176 	.size	_EcuabTrcv_GetWakeupFlag,.-_EcuabTrcv_GetWakeupFlag
+                         177 	.align	2
+                         178 .LDW12:
+                         179 --_bRetVal	r10	local
+                         180 
+                         181 	.section ".bss","awb"
+                         182 .L210:
+                         183 	.type	.L210,@object
+                         184 	.size	.L210,0
+                         185 	.data
+                         186 	.text
+                         187 	.align	2
+                         188 
+                         189 	.data
+                         190 	.ghsnote version,17
+                         191 	.ghsnote tools,3
+                         192 	.ghsnote options,144
+                         193 	.text
+                         194 	.align	2
+                         195 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabCanTrcv...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863AD..0::
+                         196 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

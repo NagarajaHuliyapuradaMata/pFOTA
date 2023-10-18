@@ -1,0 +1,738 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/actIRSAExp.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\actIRSAExp.dbo -source=actIRSAExp.c -o obj\gh_0000cj41.o -list=lst/actIRSAExp.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+Source File: actIRSAExp.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/actIRSAExp.lst
+                           7 --		-object_dir=obj -stderr=err/actIRSAExp.err -c -cpu=rh850 -sda=all
+                           8 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/vSecPrim/actIRSAExp.c
+                          28 --Source File:   ../source/wrappers/vSecPrim/actIRSAExp.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:36:36 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86444..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_actRSAInitExpCheckInputParameters..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.
+                          46 _actRSAInitExpCheckInputParameters..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.:
+                          47 _actRSAInitExpCheckInputParameters:
+00000000 0798             48 	mov	r7,r19
+00000002 c900             49 	zxh	r9
+                          50 --	    .bf
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+                          51 .LDW01:
+00000004 203efb00         52 	movea	251,zero,r7
+00000008 2096f900         53 	movea	249,zero,r18
+0000000c 624a             54 	cmp	2,r9
+0000000e e797343b         55 	cmovne	r7,r18,r7
+00000012 e699             56 	cmp	r6,r19
+00000014 e03f0653         57 	cmovnh	0,r7,r10
+00000018 fb05*            58 	bh	.L2
+                          59 --line48
+                          60 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.1::
+                          61 .LDWlin1:
+0000001a 0806bfff         62 	addi	-65,r8,zero
+0000001e c905*            63 	bnl	.L2
+                          64 --line49
+                          65 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.2::
+                          66 .LDWlin2:
+00000020 2056f400         67 	movea	244,zero,r10
+00000024 7f00             68 	jmp	[lp]
+                          69 .L2:
+                          70 --	    .ef
+                          71 .LDW11:
+                          72 --line53
+                          73 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.3::
+                          74 .LDWlin3:
+00000026 7f00             75 	jmp	[lp]
+                          76 	.type	_actRSAInitExpCheckInputParameters,@function
+                          77 	.size	_actRSAInitExpCheckInputParameters,.-_actRSAInitExpCheckInputParameters
+                          78 	.type	_actRSAInitExpCheckInputParameters..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.,@function
+                          79 	.size	_actRSAInitExpCheckInputParameters..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.,.-_actRSAInitExpCheckInputParameters..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.
+                          80 	.align	2
+                          81 .LDW21:
+                          82 --_returnValue	r10	local
+                          83 --_key_out_of_range	r7	local
+                          84 
+                          85 --_modulus_len	r6	param
+                          86 --_exponent_len	r19	param
+                          87 --_n_length	r8	param
+                          88 --_key_flag	r9	param
+                          89 
+                          90 	.section ".bss","awb"
+                          91 .L85:
+                          92 	.type	.L85,@object
+                          93 	.size	.L85,0
+                          94 	.data
+                          95 	.section ".MSR_CODE","ax"
+                          96 	.align	2
+                          97 	.align	2
+                          98 ..gh.f.f.1.e.1:
+                          99 	.type	..gh.f.f.1.e.1,@object
+                         100 	.size	..gh.f.f.1.e.1,0
+                         101 	.global	_actRSAInitExpCheckExponent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.
+                         102 _actRSAInitExpCheckExponent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.:
+                         103 _actRSAInitExpCheckExponent:
+00000028 8007e1f0        104 	prepare	{r24,r25,r26,r27,r28,r29,r31},0
+0000002c c600            105 	zxh	r6
+0000002e 07e8            106 	mov	r7,r29
+00000030 08c8            107 	mov	r8,r25
+00000032 09d8            108 	mov	r9,r27
+00000034 23c71d00        109 	ld.w	28[sp],r24
+                         110 --	    .bf
+                         111 .LDW31:
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+00000038 00e2            112 	mov	0,r28
+0000003a 6232            113 	cmp	2,r6
+0000003c 8a15*           114 	bne	.L147
+0000003e 20d6f900        115 	movea	249,zero,r26
+                         116 .L150:
+                         117 --line73
+                         118 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.4::
+                         119 .LDWlin4:
+00000042 274f0100        120 	ld.w	0[r7],r9
+00000046 614a            121 	cmp	1,r9
+00000048 8b1d*           122 	bh	.L155
+                         123 --line75
+                         124 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.5::
+                         125 .LDWlin5:
+0000004a 07360400        126 	addi	4,r7,r6
+0000004e 1b3effff        127 	addi	-1,r27,r7
+                         128 	jarl	_actBNIsZero,lp
+                         128 <EXPANSION BEGIN>
+                         128 jarl22 _actBNIsZero , lp 
+00000052 80ff0000*       128 <EXPANSION END>
+00000056 6152            129 	cmp	1,r10
+00000058 ca15*           130 	bne	.L154
+0000005a d50d*           131 	br	.L161
+                         132 .L147:
+0000005c 20d6fb00        133 	movea	251,zero,r26
+                         134 --line65
+                         135 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.6::
+                         136 .LDWlin6:
+00000060 6132            137 	cmp	1,r6
+00000062 d21d*           138 	be	.L148
+                         139 --line66
+                         140 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.7::
+                         141 .LDWlin7:
+00000064 e031            142 	cmp	zero,r6
+00000066 eaed*           143 	bne	.L150
+                         144 --line67
+                         145 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.8::
+                         146 .LDWlin8:
+00000068 0730            147 	mov	r7,r6
+0000006a 0938            148 	mov	r9,r7
+                         149 	jarl	_actBNIsZero,lp
+                         149 <EXPANSION BEGIN>
+                         149 jarl22 _actBNIsZero , lp 
+0000006c 80ff0000*       149 <EXPANSION END>
+00000070 6152            150 	cmp	1,r10
+00000072 fa05*           151 	bne	.L154
+                         152 .L161:
+                         153 --line82
+                         154 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.9::
+                         155 .LDWlin9:
+00000074 1ae0            156 	mov	r26,r28
+00000076 d505*           157 	br	.L154
+                         158 .L155:
+                         159 --line80
+                         160 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.10::
+                         161 .LDWlin10:
+00000078 ddc70000        162 	tst1	0,0[r29]
+0000007c e0d714e3        163 	cmovne	0,r26,r28
+                         164 .L154:
+00000080 1830            165 	mov	r24,r6
+                         166 	jarl	_actWatchdogTriggerFunction,lp
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+                         166 <EXPANSION BEGIN>
+                         166 jarl22 _actWatchdogTriggerFunction , lp 
+00000082 80ff0000*       166 <EXPANSION END>
+                         167 --line91
+                         168 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.11::
+                         169 .LDWlin11:
+00000086 e0e1            170 	cmp	zero,r28
+00000088 aa0d*           171 	bne	.L148
+                         172 --line92
+                         173 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.12::
+                         174 .LDWlin12:
+0000008a 1d30            175 	mov	r29,r6
+0000008c 1938            176 	mov	r25,r7
+0000008e 1b40            177 	mov	r27,r8
+                         178 	jarl	_actBNCompare,lp
+                         178 <EXPANSION BEGIN>
+                         178 jarl22 _actBNCompare , lp 
+00000090 80ff0000*       178 <EXPANSION END>
+00000094 0a06efff        179 	addi	-17,r10,zero
+                         180 --line94
+                         181 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.13::
+                         182 .LDWlin13:
+00000098 e0d712e3        183 	cmovnl	0,r26,r28
+                         184 .L148:
+0000009c 1c50            185 	mov	r28,r10
+                         186 --	    .ef
+                         187 .LDW41:
+0000009e 4006fff0        188 	dispose	0,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                         189 	.type	_actRSAInitExpCheckExponent,@function
+                         190 	.size	_actRSAInitExpCheckExponent,.-_actRSAInitExpCheckExponent
+                         191 	.type	_actRSAInitExpCheckExponent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.,@function
+                         192 	.size	_actRSAInitExpCheckExponent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.,.-_actRSAInitExpCheckExponent..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.
+                         193 	.align	2
+                         194 .LDW51:
+                         195 --_returnValue	r28	local
+                         196 --_key_out_of_range	r26	local
+                         197 
+                         198 --_key_flag	r6	param
+                         199 --_e	r29	param
+                         200 --_modulus	r25	param
+                         201 --_n_length	r27	param
+                         202 --_watchdog	r24	param
+                         203 
+                         204 	.section ".bss","awb"
+                         205 .L309:
+                         206 	.type	.L309,@object
+                         207 	.size	.L309,0
+                         208 	.data
+                         209 	.section ".MSR_CODE","ax"
+                         210 	.align	2
+                         211 	.align	2
+                         212 ..gh.f.f.1.e.2:
+                         213 	.type	..gh.f.f.1.e.2,@object
+                         214 	.size	..gh.f.f.1.e.2,0
+                         215 	.global	_actRSAExpInputCheck..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.
+                         216 _actRSAExpInputCheck..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.:
+                         217 _actRSAExpInputCheck:
+000000a2 07f0            218 	mov	r7,ep
+                         219 --	    .bf
+                         220 .LDW61:
+000000a4 0052            221 	mov	0,r10
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+000000a6 e031            222 	cmp	zero,r6
+000000a8 e205*           223 	be	.L434
+000000aa 003d            224 	sld.w	0[ep],r7
+000000ac e939            225 	cmp	r9,r7
+000000ae b905*           226 	bnl	.L434
+                         227 --line110
+                         228 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.14::
+                         229 .LDWlin14:
+000000b0 2056f400        230 	movea	244,zero,r10
+                         231 .L434:
+000000b4 20369000        232 	movea	144,zero,r6
+000000b8 e941            233 	cmp	r9,r8
+000000ba ea372653        234 	cmovnh	r10,r6,r10
+                         235 --	    .ef
+                         236 .LDW71:
+000000be 7f00            237 	jmp	[lp]
+                         238 	.type	_actRSAExpInputCheck,@function
+                         239 	.size	_actRSAExpInputCheck,.-_actRSAExpInputCheck
+                         240 	.type	_actRSAExpInputCheck..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.,@function
+                         241 	.size	_actRSAExpInputCheck..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.,.-_actRSAExpInputCheck..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.
+                         242 	.align	2
+                         243 .LDW81:
+                         244 --_returnValue	r10	local
+                         245 
+                         246 --_message	r6	param
+                         247 --_message_len	ep	param
+                         248 --_cipher_len	r8	param
+                         249 --_modulusLengthBytes	r9	param
+                         250 
+                         251 	.section ".bss","awb"
+                         252 .L487:
+                         253 	.type	.L487,@object
+                         254 	.size	.L487,0
+                         255 	.data
+                         256 	.section ".MSR_CODE","ax"
+                         257 	.align	2
+                         258 	.align	2
+                         259 ..gh.f.f.1.e.3:
+                         260 	.type	..gh.f.f.1.e.3,@object
+                         261 	.size	..gh.f.f.1.e.3,0
+                         262 	.global	_actRSAInitExponentiation
+                         263 _actRSAInitExponentiation:
+000000c0 8407e3ff        264 	prepare	{r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r31},2,sp
+000000c4 06a8            265 	mov	r6,r21
+000000c6 08a0            266 	mov	r8,r20
+000000c8 09c0            267 	mov	r9,r24
+000000ca 1aed            268 	sld.w	52[ep],r29
+000000cc e3bf3900        269 	ld.hu	56[sp],r23
+000000d0 1edd            270 	sld.w	60[ep],r27
+                         271 --	    .bf
+                         272 .LDW91:
+000000d2 07c8            273 	mov	r7,r25
+000000d4 07e60300        274 	addi	3,r7,r28
+000000d8 0730            275 	mov	r7,r6
+000000da 82e2            276 	shr	2,r28
+000000dc 0938            277 	mov	r9,r7
+000000de 1c40            278 	mov	r28,r8
+000000e0 1748            279 	mov	r23,r9
+                         280 	jarl	_actRSAInitExpCheckInputParameters,lp
+                         280 <EXPANSION BEGIN>
+                         280 jarl22 _actRSAInitExpCheckInputParameters , lp 
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+000000e2 bfff1eff*       280 <EXPANSION END>
+000000e6 0ad0            281 	mov	r10,r26
+                         282 --line139
+                         283 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.15::
+                         284 .LDWlin15:
+000000e8 e051            285 	cmp	zero,r10
+000000ea ca5d*           286 	bne	.L537
+                         287 --line140
+                         288 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.16::
+                         289 .LDWlin16:
+000000ec 1b30            290 	mov	r27,r6
+                         291 	jarl	_actWatchdogTriggerFunction,lp
+                         291 <EXPANSION BEGIN>
+                         291 jarl22 _actWatchdogTriggerFunction , lp 
+000000ee 80ff0000*       291 <EXPANSION END>
+                         292 --line142
+                         293 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.17::
+                         294 .LDWlin17:
+000000f2 1d362004        295 	addi	1056,r29,r6
+000000f6 1df0            296 	mov	r29,ep
+000000f8 1db61c02        297 	addi	540,r29,r22
+000000fc 0135            298 	sst.w	r6,0[ep]
+000000fe 07b5            299 	sst.w	r22,12[ep]
+00000100 03e5            300 	sst.w	r28,4[ep]
+00000102 05cd            301 	sst.w	r25,8[ep]
+00000104 1c38            302 	mov	r28,r7
+00000106 1540            303 	mov	r21,r8
+00000108 1948            304 	mov	r25,r9
+                         305 	jarl	_actBNSetOctetStringROM,lp
+                         305 <EXPANSION BEGIN>
+                         305 jarl22 _actBNSetOctetStringROM , lp 
+0000010a 80ff0000*       305 <EXPANSION END>
+                         306 --line156
+                         307 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.18::
+                         308 .LDWlin18:
+0000010e 1b30            309 	mov	r27,r6
+                         310 	jarl	_actWatchdogTriggerFunction,lp
+                         310 <EXPANSION BEGIN>
+                         310 jarl22 _actWatchdogTriggerFunction , lp 
+00000110 80ff0000*       310 <EXPANSION END>
+                         311 --line160
+                         312 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.19::
+                         313 .LDWlin19:
+00000114 1c88            314 	mov	r28,r17
+00000116 c18a            315 	shl	1,r17
+00000118 1dce1400        316 	addi	20,r29,r25
+0000011c 11d60100        317 	addi	1,r17,r26
+00000120 1930            318 	mov	r25,r6
+00000122 1a38            319 	mov	r26,r7
+00000124 0042            320 	mov	0,r8
+                         321 	jarl	_actBNSet,lp
+                         321 <EXPANSION BEGIN>
+                         321 jarl22 _actBNSet , lp 
+00000126 80ff0000*       321 <EXPANSION END>
+                         322 --line162
+                         323 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.20::
+                         324 .LDWlin20:
+0000012a 1a90            325 	mov	r26,r18
+0000012c c292            326 	shl	2,r18
+0000012e d991            327 	add	r25,r18
+00000130 0132            328 	mov	1,r6
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+00000132 7237fdff        329 	st.w	r6,-4[r18]
+00000136 1b30            330 	mov	r27,r6
+                         331 	jarl	_actWatchdogTriggerFunction,lp
+                         331 <EXPANSION BEGIN>
+                         331 jarl22 _actWatchdogTriggerFunction , lp 
+00000138 80ff0000*       331 <EXPANSION END>
+                         332 --line166
+                         333 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.21::
+                         334 .LDWlin21:
+0000013c 3d470100        335 	ld.w	0[r29],r8
+00000140 03f0            336 	mov	sp,ep
+00000142 1930            337 	mov	r25,r6
+00000144 1a38            338 	mov	r26,r7
+00000146 1c48            339 	mov	r28,r9
+00000148 01b5            340 	sst.w	r22,0[ep]
+0000014a 03dd            341 	sst.w	r27,4[ep]
+                         342 	jarl	_actBNReduce,lp
+                         342 <EXPANSION BEGIN>
+                         342 jarl22 _actBNReduce , lp 
+0000014c 80ff0000*       342 <EXPANSION END>
+                         343 --line168
+                         344 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.22::
+                         345 .LDWlin22:
+00000150 e051            346 	cmp	zero,r10
+00000152 c205*           347 	be	.L539
+                         348 --line169
+                         349 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.23::
+                         350 .LDWlin23:
+00000154 20d69000        351 	movea	144,zero,r26
+00000158 d525*           352 	br	.L537
+                         353 .L539:
+                         354 --line172
+                         355 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.24::
+                         356 .LDWlin24:
+0000015a 1b30            357 	mov	r27,r6
+                         358 	jarl	_actWatchdogTriggerFunction,lp
+                         358 <EXPANSION BEGIN>
+                         358 jarl22 _actWatchdogTriggerFunction , lp 
+0000015c 80ff0000*       358 <EXPANSION END>
+                         359 --line174
+                         360 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.25::
+                         361 .LDWlin25:
+00000160 3d3f0100        362 	ld.w	0[r29],r7
+00000164 1d361000        363 	addi	16,r29,r6
+                         364 	jarl	_actBNOddInvModBase,lp
+                         364 <EXPANSION BEGIN>
+                         364 jarl22 _actBNOddInvModBase , lp 
+00000168 80ff0000*       364 <EXPANSION END>
+                         365 --line176
+                         366 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.26::
+                         367 .LDWlin26:
+0000016c 1dd62003        368 	addi	800,r29,r26
+00000170 1b30            369 	mov	r27,r6
+                         370 	jarl	_actWatchdogTriggerFunction,lp
+                         370 <EXPANSION BEGIN>
+                         370 jarl22 _actWatchdogTriggerFunction , lp 
+00000172 80ff0000*       370 <EXPANSION END>
+                         371 --line179
+                         372 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.27::
+                         373 .LDWlin27:
+00000176 1a30            374 	mov	r26,r6
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+00000178 1c38            375 	mov	r28,r7
+0000017a 1440            376 	mov	r20,r8
+0000017c 1848            377 	mov	r24,r9
+                         378 	jarl	_actBNSetOctetStringROM,lp
+                         378 <EXPANSION BEGIN>
+                         378 jarl22 _actBNSetOctetStringROM , lp 
+0000017e 80ff0000*       378 <EXPANSION END>
+                         379 --line180
+                         380 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.28::
+                         381 .LDWlin28:
+00000182 1b30            382 	mov	r27,r6
+                         383 	jarl	_actWatchdogTriggerFunction,lp
+                         383 <EXPANSION BEGIN>
+                         383 jarl22 _actWatchdogTriggerFunction , lp 
+00000184 80ff0000*       383 <EXPANSION END>
+                         384 --line182
+                         385 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.29::
+                         386 .LDWlin29:
+00000188 1730            387 	mov	r23,r6
+0000018a 1a38            388 	mov	r26,r7
+0000018c 1d462004        389 	addi	1056,r29,r8
+00000190 1c48            390 	mov	r28,r9
+00000192 63df0100        391 	st.w	r27,0[sp]
+                         392 	jarl	_actRSAInitExpCheckExponent,lp
+                         392 <EXPANSION BEGIN>
+                         392 jarl22 _actRSAInitExpCheckExponent , lp 
+00000196 bfff92fe*       392 <EXPANSION END>
+0000019a 0ad0            393 	mov	r10,r26
+                         394 --line183
+                         395 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.30::
+                         396 .LDWlin30:
+0000019c 1b30            397 	mov	r27,r6
+                         398 	jarl	_actWatchdogTriggerFunction,lp
+                         398 <EXPANSION BEGIN>
+                         398 jarl22 _actWatchdogTriggerFunction , lp 
+0000019e 80ff0000*       398 <EXPANSION END>
+                         399 .L537:
+                         400 --line186
+                         401 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.31::
+                         402 .LDWlin31:
+000001a2 1a50            403 	mov	r26,r10
+                         404 --	    .ef
+                         405 .LDW02:
+000001a4 4406ffff        406 	dispose	2,{r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r31},[lp]
+                         407 	.type	_actRSAInitExponentiation,@function
+                         408 	.size	_actRSAInitExponentiation,.-_actRSAInitExponentiation
+                         409 	.align	2
+                         410 .LDW12:
+                         411 --_returnValue	r26	local
+                         412 --_n_ring	r29	local
+                         413 --_n_bytes	r25	local
+                         414 --_n_length	r28	local
+                         415 --_tmp_len	r26	local
+                         416 --_tmp	r25	local
+                         417 --_e	r26	local
+                         418 
+                         419 --_modulus	r21	param
+                         420 --_modulus_len	r7	param
+                         421 --_exponent	r20	param
+                         422 --_exponent_len	r24	param
+                         423 --_wksp	r29	param
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+                         424 --_key_flag	r23	param
+                         425 --_watchdog	r27	param
+                         426 
+                         427 	.section ".bss","awb"
+                         428 .L581:
+                         429 	.type	.L581,@object
+                         430 	.size	.L581,0
+                         431 	.data
+                         432 	.section ".MSR_CODE","ax"
+                         433 	.align	2
+                         434 	.align	2
+                         435 ..gh.f.f.1.e.4:
+                         436 	.type	..gh.f.f.1.e.4,@object
+                         437 	.size	..gh.f.f.1.e.4,0
+                         438 	.global	_actRSAExponentiation
+                         439 _actRSAExponentiation:
+000001a8 8a07e3ff        440 	prepare	{r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r31},5,sp
+000001ac 0935            441 	sst.w	r6,16[ep]
+000001ae 07a0            442 	mov	r7,r20
+000001b0 08a8            443 	mov	r8,r21
+000001b2 074d            444 	sst.w	r9,12[ep]
+000001b4 20ed            445 	sld.w	64[ep],r29
+000001b6 22e5            446 	sld.w	68[ep],r28
+                         447 --	    .bf
+                         448 .LDW22:
+000001b8 1df0            449 	mov	r29,ep
+000001ba 02dd            450 	sld.w	4[ep],r27
+000001bc 04bd            451 	sld.w	8[ep],r23
+000001be 1c30            452 	mov	r28,r6
+                         453 	jarl	_actWatchdogTriggerFunction,lp
+                         453 <EXPANSION BEGIN>
+                         453 jarl22 _actWatchdogTriggerFunction , lp 
+000001c0 80ff0000*       453 <EXPANSION END>
+                         454 --line209
+                         455 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.32::
+                         456 .LDWlin32:
+000001c4 233f0d00        457 	ld.w	12[sp],r7
+000001c8 1530            458 	mov	r21,r6
+000001ca 1440            459 	mov	r20,r8
+000001cc 1748            460 	mov	r23,r9
+                         461 	jarl	_actRSAExpInputCheck,lp
+                         461 <EXPANSION BEGIN>
+                         461 jarl22 _actRSAExpInputCheck , lp 
+000001ce bfffd4fe*       461 <EXPANSION END>
+000001d2 0ac0            462 	mov	r10,r24
+                         463 --line211
+                         464 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.33::
+                         465 .LDWlin33:
+000001d4 e051            466 	cmp	zero,r10
+000001d6 8a55*           467 	bne	.L637
+                         468 --line217
+                         469 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.34::
+                         470 .LDWlin34:
+000001d8 03f0            471 	mov	sp,ep
+000001da 0845            472 	sld.w	16[ep],r8
+000001dc 1dce1400        473 	addi	20,r29,r25
+000001e0 1d962005        474 	addi	1312,r29,r18
+000001e4 0595            475 	sst.w	r18,8[ep]
+000001e6 1930            476 	mov	r25,r6
+000001e8 1b38            477 	mov	r27,r7
+000001ea 1448            478 	mov	r20,r9
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+                         479 	jarl	_actBNSetOctetString,lp
+                         479 <EXPANSION BEGIN>
+                         479 jarl22 _actBNSetOctetString , lp 
+000001ec 80ff0000*       479 <EXPANSION END>
+                         480 --line225
+                         481 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.35::
+                         482 .LDWlin35:
+000001f0 3d3f0100        483 	ld.w	0[r29],r7
+000001f4 1930            484 	mov	r25,r6
+000001f6 1b40            485 	mov	r27,r8
+                         486 	jarl	_actBNCompare,lp
+                         486 <EXPANSION BEGIN>
+                         486 jarl22 _actBNCompare , lp 
+000001f8 80ff0000*       486 <EXPANSION END>
+000001fc 0a06efff        487 	addi	-17,r10,zero
+00000200 c905*           488 	bnl	.L645
+                         489 --line226
+                         490 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.36::
+                         491 .LDWlin36:
+00000202 20c69000        492 	movea	144,zero,r24
+00000206 853d*           493 	br	.L637
+                         494 .L645:
+                         495 --line232
+                         496 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.37::
+                         497 .LDWlin37:
+00000208 3d3f0d00        498 	ld.w	12[r29],r7
+0000020c 03f0            499 	mov	sp,ep
+0000020e 0445            500 	sld.w	8[ep],r8
+00000210 1dd62003        501 	addi	800,r29,r26
+00000214 1db61401        502 	addi	276,r29,r22
+00000218 1930            503 	mov	r25,r6
+0000021a 1d48            504 	mov	r29,r9
+0000021c 01e5            505 	sst.w	r28,0[ep]
+                         506 	jarl	_actBNMontMulCopy,lp
+                         506 <EXPANSION BEGIN>
+                         506 jarl22 _actBNMontMulCopy , lp 
+0000021e 80ff0000*       506 <EXPANSION END>
+                         507 --line235
+                         508 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.38::
+                         509 .LDWlin38:
+00000222 238e0800        510 	movea	8,sp,r17
+00000226 03f0            511 	mov	sp,ep
+00000228 1930            512 	mov	r25,r6
+0000022a 1a38            513 	mov	r26,r7
+0000022c 1640            514 	mov	r22,r8
+0000022e 1d48            515 	mov	r29,r9
+00000230 018d            516 	sst.w	r17,0[ep]
+00000232 03e5            517 	sst.w	r28,4[ep]
+                         518 	jarl	_actBNModExp,lp
+                         518 <EXPANSION BEGIN>
+                         518 jarl22 _actBNModExp , lp 
+00000234 80ff0000*       518 <EXPANSION END>
+                         519 --	    .bs
+                         520 .LDW32:
+                         521 --line240
+                         522 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.39::
+                         523 .LDWlin39:
+00000238 1a30            524 	mov	r26,r6
+0000023a 1b38            525 	mov	r27,r7
+0000023c 0042            526 	mov	0,r8
+                         527 	jarl	_actBNSet,lp
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+                         527 <EXPANSION BEGIN>
+                         527 jarl22 _actBNSet , lp 
+0000023e 80ff0000*       527 <EXPANSION END>
+                         528 --line242
+                         529 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.40::
+                         530 .LDWlin40:
+00000242 03f0            531 	mov	sp,ep
+00000244 0445            532 	sld.w	8[ep],r8
+00000246 0182            533 	mov	1,r16
+00000248 7d872103        534 	st.w	r16,800[r29]
+0000024c 1630            535 	mov	r22,r6
+0000024e 1a38            536 	mov	r26,r7
+00000250 1d48            537 	mov	r29,r9
+00000252 01e5            538 	sst.w	r28,0[ep]
+                         539 	jarl	_actBNMontMulCopy,lp
+                         539 <EXPANSION BEGIN>
+                         539 jarl22 _actBNMontMulCopy , lp 
+00000254 80ff0000*       539 <EXPANSION END>
+                         540 --	    .es
+                         541 .LDW42:
+                         542 --line246
+                         543 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.41::
+                         544 .LDWlin41:
+00000258 e0a9            545 	cmp	zero,r21
+0000025a b20d*           546 	be	.L646
+                         547 --line248
+                         548 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.42::
+                         549 .LDWlin42:
+0000025c 1530            550 	mov	r21,r6
+0000025e 1738            551 	mov	r23,r7
+00000260 1640            552 	mov	r22,r8
+00000262 1b48            553 	mov	r27,r9
+                         554 	jarl	_actBNOctetString,lp
+                         554 <EXPANSION BEGIN>
+                         554 jarl22 _actBNOctetString , lp 
+00000264 80ff0000*       554 <EXPANSION END>
+                         555 --line249
+                         556 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.43::
+                         557 .LDWlin43:
+00000268 235f0d00        558 	ld.w	12[sp],r11
+0000026c 6bbf0100        559 	st.w	r23,0[r11]
+                         560 .L646:
+00000270 1c30            561 	mov	r28,r6
+                         562 	jarl	_actWatchdogTriggerFunction,lp
+                         562 <EXPANSION BEGIN>
+                         562 jarl22 _actWatchdogTriggerFunction , lp 
+00000272 80ff0000*       562 <EXPANSION END>
+                         563 .L637:
+                         564 --line255
+                         565 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp.44::
+                         566 .LDWlin44:
+00000276 1850            567 	mov	r24,r10
+                         568 --	    .ef
+                         569 .LDW52:
+00000278 4a06ffff        570 	dispose	5,{r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r31},[lp]
+                         571 	.type	_actRSAExponentiation,@function
+                         572 	.size	_actRSAExponentiation,.-_actRSAExponentiation
+                         573 	.align	2
+                         574 .LDW62:
+                         575 --_returnValue	r24	local
+                         576 --_n_ring	r29	local
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000cj41.s
+                         577 --_n_length	r27	local
+                         578 --_n_bytes	r23	local
+                         579 --_e	r26	local
+                         580 --_c	r25	local
+                         581 --_m	r22	local
+                         582 --_t	8[sp]	local
+                         583 
+                         584 --_cipher	16[sp]	param
+                         585 --_cipher_len	r20	param
+                         586 --_message	r21	param
+                         587 --_message_len	12[sp]	param
+                         588 --_wksp	r29	param
+                         589 --_watchdog	r28	param
+                         590 
+                         591 	.section ".bss","awb"
+                         592 .L750:
+                         593 	.type	.L750,@object
+                         594 	.size	.L750,0
+                         595 	.data
+                         596 	.section ".MSR_CODE","ax"
+                         597 	.align	2
+                         598 
+                         599 	.data
+                         600 	.ghsnote version,17
+                         601 	.ghsnote tools,3
+                         602 	.ghsnote options,144
+                         603 	.section ".MSR_CODE","ax"
+                         604 	.align	2
+                         605 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIRSAExp...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86444..0::
+                         606 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

@@ -1,0 +1,331 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/bm_hdr.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\bm_hdr.dbo -source=bm_hdr.c -o obj\gh_00005uc1.o -list=lst/bm_hdr.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+Source File: bm_hdr.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/bm_hdr.lst
+                           7 --		-object_dir=obj -stderr=err/bm_hdr.err -c -cpu=rh850 -sda=all
+                           8 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/SwcServiceStartUp/bm_hdr.c
+                          28 --Source File:   ../source/SwcServiceStartUp/bm_hdr.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:37:09 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86466..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_FblBmHdrCheckConsistency
+                          45 _FblBmHdrCheckConsistency:
+                          46 --	    .bf
+                          47 .LDW01:
+00000000 267f0100         48 	ld.w	0[r6],r15
+00000004 30064a9b4eb1     49 	mov	-1320248502,r16
+0000000a f079             50 	cmp	r16,r15
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+0000000c ea570000         51 	setfne	r10
+00000010 ca1d*            52 	bne	.L2
+                          53 --line94
+                          54 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.1::
+                          55 .LDWlin1:
+00000012 269f0500         56 	ld.w	4[r6],r19
+00000016 004a             57 	mov	0,r9
+00000018 7f9a             58 	cmp	-1,r19
+0000001a f215*            59 	be	.L2
+0000001c 0152             60 	mov	1,r10
+0000001e 8515*            61 	br	.L12
+                          62 .L11:
+                          63 --line100
+                          64 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.2::
+                          65 .LDWlin2:
+00000020 09f0             66 	mov	r9,ep
+00000022 c3f2             67 	shl	3,ep
+00000024 c6f1             68 	add	r6,ep
+00000026 0c8d             69 	sld.w	24[ep],r17
+00000028 1ef61800         70 	addi	24,ep,ep
+0000002c f199             71 	cmp	r17,r19
+0000002e f105*            72 	bl	.L10
+00000030 0295             73 	sld.w	4[ep],r18
+00000032 d191             74 	add	r17,r18
+00000034 f299             75 	cmp	r18,r19
+                          76 --line105
+                          77 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.3::
+                          78 .LDWlin3:
+00000036 b905*            79 	bnl	.L10
+00000038 0052             80 	mov	0,r10
+0000003a 7f00             81 	jmp	[lp]
+                          82 .L10:
+                          83 --line99
+                          84 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.4::
+                          85 .LDWlin4:
+0000003c 414a             86 	add	1,r9
+                          87 .L12:
+0000003e 86771500         88 	ld.bu	20[r6],r14
+00000042 ee49             89 	cmp	r14,r9
+00000044 e1ed*            90 	bl	.L11
+00000046 7f00             91 	jmp	[lp]
+                          92 .L2:
+                          93 --	    .ef
+                          94 .LDW11:
+                          95 --line109
+                          96 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.5::
+                          97 .LDWlin5:
+00000048 7f00             98 	jmp	[lp]
+                          99 	.type	_FblBmHdrCheckConsistency,@function
+                         100 	.size	_FblBmHdrCheckConsistency,.-_FblBmHdrCheckConsistency
+                         101 	.align	2
+                         102 .LDW21:
+                         103 --_result	r10	local
+                         104 --_i	r9	local
+                         105 
+                         106 --_pBmHeader	r6	param
+                         107 
+                         108 	.section ".bss","awb"
+                         109 .L120:
+                         110 	.type	.L120,@object
+                         111 	.size	.L120,0
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+                         112 	.data
+                         113 	.text
+                         114 	.align	2
+                         115 	.align	2
+                         116 ..gh.f.f.1.e.1:
+                         117 	.type	..gh.f.f.1.e.1,@object
+                         118 	.size	..gh.f.f.1.e.1,0
+                         119 	.global	_FblBmHdrGetBmHeader
+                         120 _FblBmHdrGetBmHeader:
+0000004a 8007e110        121 	prepare	{r27,r28,r29,r31},0
+0000004e 06d8            122 	mov	r6,r27
+00000050 bb00            123 	sxb	r27
+00000052 08e0            124 	mov	r8,r28
+                         125 --	    .bf
+                         126 .LDW31:
+00000054 0730            127 	mov	r7,r6
+00000056 0838            128 	mov	r8,r7
+00000058 20462000        129 	movea	32,zero,r8
+                         130 	jarl	_FblReadProm,lp
+                         130 <EXPANSION BEGIN>
+                         130 jarl22 _FblReadProm , lp 
+0000005c 80ff0000*       130 <EXPANSION END>
+00000060 0a06e0ff        131 	addi	-32,r10,zero
+                         132 --line23
+                         133 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.6::
+                         134 .LDWlin6:
+00000064 e20714eb        135 	cmovne	2,zero,r29
+00000068 ea05*           136 	bne	.L221
+                         137 --line26
+                         138 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.7::
+                         139 .LDWlin7:
+0000006a 1c370800        140 	ld.b	8[r28],r6
+0000006e fb31            141 	cmp	r27,r6
+00000070 d205*           142 	be	.L222
+00000072 04ea            143 	mov	4,r29
+                         144 .L221:
+                         145 --line35
+                         146 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.8::
+                         147 .LDWlin8:
+00000074 1d50            148 	mov	r29,r10
+                         149 --	    .ef
+                         150 .LDW41:
+00000076 4006ff10        151 	dispose	0,{r27,r28,r29,r31},[lp]
+                         152 .L222:
+                         153 --line31
+                         154 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.9::
+                         155 .LDWlin9:
+0000007a 1c30            156 	mov	r28,r6
+                         157 	jarl	_FblBmHdrCheckConsistency,lp
+                         157 <EXPANSION BEGIN>
+                         157 jarl22 _FblBmHdrCheckConsistency , lp 
+0000007c bfff84ff*       157 <EXPANSION END>
+00000080 e051            158 	cmp	zero,r10
+                         159 --line32
+                         160 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.10::
+                         161 .LDWlin10:
+00000082 e3ef14eb        162 	cmovne	3,r29,r29
+00000086 f5f5*           163 	br	.L221
+                         164 	.type	_FblBmHdrGetBmHeader,@function
+                         165 	.size	_FblBmHdrGetBmHeader,.-_FblBmHdrGetBmHeader
+                         166 	.align	2
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+                         167 .LDW51:
+                         168 --_result	r29	local
+                         169 
+                         170 --_targetHandle	r27	param
+                         171 --_bmHeaderAddress	r7	param
+                         172 --_bmHeader	r28	param
+                         173 
+                         174 	.section ".bss","awb"
+                         175 .L284:
+                         176 	.type	.L284,@object
+                         177 	.size	.L284,0
+                         178 	.data
+                         179 	.text
+                         180 	.align	2
+                         181 	.align	2
+                         182 ..gh.f.f.1.e.2:
+                         183 	.type	..gh.f.f.1.e.2,@object
+                         184 	.size	..gh.f.f.1.e.2,0
+                         185 	.global	_FblBmHdrFindValidHeader
+                         186 _FblBmHdrFindValidHeader:
+00000088 8207e110        187 	prepare	{r27,r28,r29,r31},1
+0000008c 06d8            188 	mov	r6,r27
+0000008e bb00            189 	sxb	r27
+00000090 07e8            190 	mov	r7,r29
+                         191 --	    .bf
+                         192 .LDW61:
+00000092 07e2            193 	mov	7,r28
+00000094 23360200        194 	movea	2,sp,r6
+                         195 	jarl	_FblLbtBlockFilterInit,lp
+                         195 <EXPANSION BEGIN>
+                         195 jarl22 _FblLbtBlockFilterInit , lp 
+00000098 80ff0000*       195 <EXPANSION END>
+                         196 --line118
+                         197 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.11::
+                         198 .LDWlin11:
+0000009c 1d30            199 	mov	r29,r6
+0000009e 233e0200        200 	movea	2,sp,r7
+                         201 	jarl	_FblLbtBlockFirst,lp
+                         201 <EXPANSION BEGIN>
+                         201 jarl22 _FblLbtBlockFirst , lp 
+000000a2 80ff0000*       201 <EXPANSION END>
+                         202 --line119
+                         203 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.12::
+                         204 .LDWlin12:
+000000a6 e515*           205 	br	.L346
+                         206 .L348:
+                         207 --line120
+                         208 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.13::
+                         209 .LDWlin13:
+000000a8 1b30            210 	mov	r27,r6
+000000aa 1d38            211 	mov	r29,r7
+                         212 	jarl	_ApplFblBmIsValidBlock,lp
+                         212 <EXPANSION BEGIN>
+                         212 jarl22 _ApplFblBmIsValidBlock , lp 
+000000ac 80ff0000*       212 <EXPANSION END>
+000000b0 e051            213 	cmp	zero,r10
+000000b2 ca0d*           214 	bne	.L349
+                         215 --line121
+                         216 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.14::
+                         217 .LDWlin14:
+000000b4 3d3f0d00        218 	ld.w	12[r29],r7
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+000000b8 1b30            219 	mov	r27,r6
+000000ba 1d462400        220 	addi	36,r29,r8
+                         221 	jarl	_FblBmHdrGetBmHeader,lp
+                         221 <EXPANSION BEGIN>
+                         221 jarl22 _FblBmHdrGetBmHeader , lp 
+000000be bfff8cff*       221 <EXPANSION END>
+000000c2 0ae0            222 	mov	r10,r28
+                         223 --line133
+                         224 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.15::
+                         225 .LDWlin15:
+000000c4 e051            226 	cmp	zero,r10
+000000c6 ba05*           227 	bne	.L352
+000000c8 950d*           228 	br	.L354
+                         229 .L349:
+                         230 --line124
+                         231 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.16::
+                         232 .LDWlin16:
+000000ca 01e2            233 	mov	1,r28
+                         234 .L352:
+000000cc 1d30            235 	mov	r29,r6
+                         236 	jarl	_FblLbtBlockNext,lp
+                         236 <EXPANSION BEGIN>
+                         236 jarl22 _FblLbtBlockNext , lp 
+000000ce 80ff0000*       236 <EXPANSION END>
+                         237 .L346:
+                         238 --line119
+                         239 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.17::
+                         240 .LDWlin17:
+                         241 	jarl	_FblLbtBlockDone,lp
+                         241 <EXPANSION BEGIN>
+                         241 jarl22 _FblLbtBlockDone , lp 
+000000d2 80ff0000*       241 <EXPANSION END>
+000000d6 e051            242 	cmp	zero,r10
+000000d8 82ed*           243 	be	.L348
+                         244 .L354:
+                         245 --line138
+                         246 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr.18::
+                         247 .LDWlin18:
+000000da 1c50            248 	mov	r28,r10
+                         249 --	    .ef
+                         250 .LDW71:
+000000dc 4206ff10        251 	dispose	1,{r27,r28,r29,r31},[lp]
+                         252 	.type	_FblBmHdrFindValidHeader,@function
+                         253 	.size	_FblBmHdrFindValidHeader,.-_FblBmHdrFindValidHeader
+                         254 	.align	2
+                         255 .LDW81:
+                         256 --_result	r28	local
+                         257 --_blockFilter	2[sp]	local
+                         258 
+                         259 --_targetHandle	r27	param
+                         260 --_pBlockInfo	r29	param
+                         261 
+                         262 	.section ".bss","awb"
+                         263 .L430:
+                         264 	.type	.L430,@object
+                         265 	.size	.L430,0
+                         266 	.data
+                         267 	.text
+                         268 	.align	2
+                         269 
+                         270 	.data
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00005uc1.s
+                         271 	.ghsnote version,17
+                         272 	.ghsnote tools,3
+                         273 	.ghsnote options,144
+                         274 	.text
+                         275 	.align	2
+                         276 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cbm_hdr...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86466..0::
+                         277 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

@@ -1,0 +1,1022 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/EcuabFee_DatasetHandler.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\EcuabFee_DatasetHandler.dbo -source=EcuabFee_DatasetHandler.c -o obj\gh_0000ank1.o -list=lst/EcuabFee_DatasetHandler.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+Source File: EcuabFee_DatasetHandler.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/EcuabFee_DatasetHandler.lst -object_dir=obj
+                           8 --		-stderr=err/EcuabFee_DatasetHandler.err -c -cpu=rh850 -sda=all
+                           9 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                          10 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          11 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          12 --		-registermode=32 -I../source/_common -I../source/common
+                          13 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          14 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          15 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          16 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          17 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          18 --		-I../source/projectcfg -I../source/projectcompiler
+                          19 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          20 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          21 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          22 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          23 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          24 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          25 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          26 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          27 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          28 --		-Igendata ../source/EcuabFee/EcuabFee_DatasetHandler.c
+                          29 --Source File:   ../source/EcuabFee/EcuabFee_DatasetHandler.c
+                          30 --Directory:     
+                          31 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          32 --Compile Date:  Wed Sep 06 13:34:09 2023
+                          33 --Host OS:       Win32
+                          34 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          35 --Release:       Compiler v2015.1.7
+                          36 --Revision Date: Thu Oct 22 08:06:12 2015
+                          37 --Release Date:  Thu Oct 22 09:34:32 2015
+                          38 -- ecom  -g -w -OM
+                          39 	.text
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863B1..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_EcuabFee_Dh_GetDatasetIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                          46 _EcuabFee_Dh_GetDatasetIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.:
+                          47 _EcuabFee_Dh_GetDatasetIndex:
+                          48 --	    .bf
+                          49 .LDW01:
+00000000 a50705900000*    50 	ld.bu	rosdaoff23(_EcuabFee_DatasetSelectionBits)[r5],r18
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+00000006 019a             51 	mov	1,r19
+00000008 f29fc248         52 	shl	r18,r19,r9
+0000000c 0956ffff         53 	addi	-1,r9,r10
+00000010 4651             54 	and	r6,r10
+00000012 8a00             55 	zxb	r10
+                          56 --	    .ef
+                          57 .LDW11:
+00000014 7f00             58 	jmp	[lp]
+                          59 	.type	_EcuabFee_Dh_GetDatasetIndex,@function
+                          60 	.size	_EcuabFee_Dh_GetDatasetIndex,.-_EcuabFee_Dh_GetDatasetIndex
+                          61 	.type	_EcuabFee_Dh_GetDatasetIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,@function
+                          62 	.size	_EcuabFee_Dh_GetDatasetIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,.-_EcuabFee_Dh_GetDatasetIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                          63 	.align	2
+                          64 .LDW21:
+                          65 
+                          66 --_BlockNumber	r6	param
+                          67 
+                          68 	.section ".bss","awb"
+                          69 .L36:
+                          70 	.type	.L36,@object
+                          71 	.size	.L36,0
+                          72 	.section ".sbss","awb"
+                          73 	.align	4
+                          74 	.global	_EcuabFee_Dh_TempBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                          75 _EcuabFee_Dh_TempBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.:
+00000000 000000000000     76 _EcuabFee_Dh_TempBuffer:	.space	8
+00000006 0000 
+                          77 	.type	_EcuabFee_Dh_TempBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,@object
+                          78 	.size	_EcuabFee_Dh_TempBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,8
+                          79 	.type	_EcuabFee_Dh_TempBuffer,@object
+                          80 	.size	_EcuabFee_Dh_TempBuffer,8
+                          81 	.global	_EcuabFee_Dh_DatasetInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                          82 _EcuabFee_Dh_DatasetInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.:
+00000008 000000000000     83 _EcuabFee_Dh_DatasetInfo:	.space	20
+0000000e 000000000000 
+00000014 000000000000 
+0000001a 0000 
+                          84 	.type	_EcuabFee_Dh_DatasetInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,@object
+                          85 	.size	_EcuabFee_Dh_DatasetInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,20
+                          86 	.type	_EcuabFee_Dh_DatasetInfo,@object
+                          87 	.size	_EcuabFee_Dh_DatasetInfo,20
+                          88 	.data
+                          89 	.text
+                          90 	.align	2
+                          91 	.align	2
+                          92 ..gh.f.f.1.e.1:
+                          93 	.type	..gh.f.f.1.e.1,@object
+                          94 	.size	..gh.f.f.1.e.1,0
+                          95 	.global	_EcuabFee_Dh_GetAlignedSizeOfInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                          96 _EcuabFee_Dh_GetAlignedSizeOfInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.:
+                          97 _EcuabFee_Dh_GetAlignedSizeOfInstance:
+                          98 --	    .bf
+                          99 .LDW31:
+00000016 a40707500000*   100 	ld.hu	sdaoff23(_EcuabFee_Dh_DatasetInfo+14)[gp],r10
+                         101 --	    .ef
+                         102 .LDW41:
+0000001c 7f00            103 	jmp	[lp]
+                         104 	.type	_EcuabFee_Dh_GetAlignedSizeOfInstance,@function
+                         105 	.size	_EcuabFee_Dh_GetAlignedSizeOfInstance,.-_EcuabFee_Dh_GetAlignedSizeOfInstance
+                         106 	.type	_EcuabFee_Dh_GetAlignedSizeOfInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,@function
+                         107 	.size	_EcuabFee_Dh_GetAlignedSizeOfInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,.-_EcuabFee_Dh_GetAlignedSizeOfInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         108 	.align	2
+                         109 .LDW51:
+                         110 
+                         111 	.section ".bss","awb"
+                         112 .L84:
+                         113 	.type	.L84,@object
+                         114 	.size	.L84,0
+                         115 	.data
+                         116 	.text
+                         117 	.align	2
+                         118 	.align	2
+                         119 ..gh.f.f.1.e.2:
+                         120 	.type	..gh.f.f.1.e.2,@object
+                         121 	.size	..gh.f.f.1.e.2,0
+                         122 	.global	_EcuabFee_Dh_CalcIndexOfCurrentInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                         123 _EcuabFee_Dh_CalcIndexOfCurrentInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.:
+                         124 _EcuabFee_Dh_CalcIndexOfCurrentInstance:
+0000001e 80076100        125 	prepare	{r29,r31},0
+                         126 --	    .bf
+                         127 .LDW61:
+00000022 840709e80000*   128 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo)[gp],r29
+00000028 86e9            129 	subr	r6,r29
+                         130 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         130 <EXPANSION BEGIN>
+                         130 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+0000002a 80ff0000*       130 <EXPANSION END>
+0000002e aae9            131 	sub	r10,r29
+                         132 	jarl	_EcuabFee_Dh_GetAlignedSizeOfInstance,lp
+                         132 <EXPANSION BEGIN>
+                         132 jarl22 _EcuabFee_Dh_GetAlignedSizeOfInstance , lp 
+00000030 bfffe6ff*       132 <EXPANSION END>
+00000034 eaeffe02        133 	divqu	r10,r29,zero
+00000038 1d50            134 	mov	r29,r10
+0000003a 8a00            135 	zxb	r10
+                         136 --	    .ef
+                         137 .LDW71:
+                         138 --line49
+                         139 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.1::
+                         140 .LDWlin1:
+0000003c 40067f00        141 	dispose	0,{r29,r31},[lp]
+                         142 	.type	_EcuabFee_Dh_CalcIndexOfCurrentInstance,@function
+                         143 	.size	_EcuabFee_Dh_CalcIndexOfCurrentInstance,.-_EcuabFee_Dh_CalcIndexOfCurrentInstance
+                         144 	.type	_EcuabFee_Dh_CalcIndexOfCurrentInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,@function
+                         145 	.size	_EcuabFee_Dh_CalcIndexOfCurrentInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,.-_EcuabFee_Dh_CalcIndexOfCurrentInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                         146 	.align	2
+                         147 .LDW81:
+                         148 
+                         149 --_InstanceStartAddress	r6	param
+                         150 
+                         151 	.section ".bss","awb"
+                         152 .L132:
+                         153 	.type	.L132,@object
+                         154 	.size	.L132,0
+                         155 	.data
+                         156 	.text
+                         157 	.align	2
+                         158 	.align	2
+                         159 ..gh.f.f.1.e.3:
+                         160 	.type	..gh.f.f.1.e.3,@object
+                         161 	.size	..gh.f.f.1.e.3,0
+                         162 	.global	_EcuabFee_Dh_GetAddressFromInstanceIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         163 _EcuabFee_Dh_GetAddressFromInstanceIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.:
+                         164 _EcuabFee_Dh_GetAddressFromInstanceIndex:
+00000040 8007e100        165 	prepare	{r28,r29,r31},0
+00000044 06e8            166 	mov	r6,r29
+00000046 9d00            167 	zxb	r29
+                         168 --	    .bf
+                         169 .LDW91:
+                         170 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         170 <EXPANSION BEGIN>
+                         170 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+00000048 80ff0000*       170 <EXPANSION END>
+0000004c 0ae0            171 	mov	r10,r28
+                         172 	jarl	_EcuabFee_Dh_GetAlignedSizeOfInstance,lp
+                         172 <EXPANSION BEGIN>
+                         172 jarl22 _EcuabFee_Dh_GetAlignedSizeOfInstance , lp 
+0000004e bfffc8ff*       172 <EXPANSION END>
+00000052 eaefcae3        173 	mac	r10,r29,r28,r10
+00000056 840709880000*   174 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo)[gp],r17
+0000005c d151            175 	add	r17,r10
+                         176 --	    .ef
+                         177 .LDW02:
+                         178 --line53
+                         179 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.2::
+                         180 .LDWlin2:
+0000005e 4006ff00        181 	dispose	0,{r28,r29,r31},[lp]
+                         182 	.type	_EcuabFee_Dh_GetAddressFromInstanceIndex,@function
+                         183 	.size	_EcuabFee_Dh_GetAddressFromInstanceIndex,.-_EcuabFee_Dh_GetAddressFromInstanceIndex
+                         184 	.type	_EcuabFee_Dh_GetAddressFromInstanceIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,@function
+                         185 	.size	_EcuabFee_Dh_GetAddressFromInstanceIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.,.-_EcuabFee_Dh_GetAddressFromInstanceIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.
+                         186 	.align	2
+                         187 .LDW12:
+                         188 
+                         189 --_IndexOfActiveInstance	r29	param
+                         190 
+                         191 	.section ".bss","awb"
+                         192 .L177:
+                         193 	.type	.L177,@object
+                         194 	.size	.L177,0
+                         195 	.data
+                         196 	.text
+                         197 	.align	2
+                         198 	.align	2
+                         199 ..gh.f.f.1.e.4:
+                         200 	.type	..gh.f.f.1.e.4,@object
+                         201 	.size	..gh.f.f.1.e.4,0
+                         202 	.global	_EcuabFee_Dh_Init
+                         203 _EcuabFee_Dh_Init:
+00000062 8007e1f1        204 	prepare	{r23,r24,r25,r26,r27,r28,r29,r31},0
+00000066 06c8            205 	mov	r6,r25
+00000068 08d0            206 	mov	r8,r26
+0000006a d900            207 	zxh	r25
+0000006c c7deffff        208 	andi	65535,r7,r27
+00000070 9a00            209 	zxb	r26
+00000072 09c0            210 	mov	r9,r24
+00000074 e3bf2100        211 	ld.hu	32[sp],r23
+                         212 --	    .bf
+                         213 .LDW22:
+                         214 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         214 <EXPANSION BEGIN>
+                         214 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+00000078 80ff0000*       214 <EXPANSION END>
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         215 --line65
+                         216 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.3::
+                         217 .LDWlin3:
+0000007c 0ae0            218 	mov	r10,r28
+0000007e c1e2            219 	shl	1,r28
+00000080 1b80            220 	mov	r27,r16
+00000082 dc81            221 	add	r28,r16
+00000084 0ae8            222 	mov	r10,r29
+00000086 10360100        223 	addi	1,r16,r6
+0000008a 0a38            224 	mov	r10,r7
+                         225 	jarl	_EcuabFee_AlignValue,lp
+                         225 <EXPANSION BEGIN>
+                         225 jarl22 _EcuabFee_AlignValue , lp 
+0000008c 80ff0000*       225 <EXPANSION END>
+00000090 ca36ffff        226 	andi	65535,r10,r6
+00000094 a4070d300000*   227 	st.h	r6,sdaoff23(_EcuabFee_Dh_DatasetInfo+14)[gp]
+                         228 --line67
+                         229 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.4::
+                         230 .LDWlin4:
+0000009a e6d7e6e3        231 	macu	r6,r26,r28,r6
+0000009e 1738            232 	mov	r23,r7
+                         233 	jarl	_EcuabFee_AlignValue,lp
+                         233 <EXPANSION BEGIN>
+                         233 jarl22 _EcuabFee_AlignValue , lp 
+000000a0 80ff0000*       233 <EXPANSION END>
+000000a4 cae6ffff        234 	andi	65535,r10,r28
+000000a8 a4070de00000*   235 	st.h	r28,sdaoff23(_EcuabFee_Dh_DatasetInfo+12)[gp]
+                         236 --line69
+                         237 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.5::
+                         238 .LDWlin5:
+000000ae 1930            239 	mov	r25,r6
+                         240 	jarl	_EcuabFee_Dh_GetDatasetIndex,lp
+                         240 <EXPANSION BEGIN>
+                         240 jarl22 _EcuabFee_Dh_GetDatasetIndex , lp 
+000000b0 bfff50ff*       240 <EXPANSION END>
+                         241 --line71
+                         242 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.6::
+                         243 .LDWlin6:
+000000b4 1c90            244 	mov	r28,r18
+000000b6 f257f2c3        245 	macu	r18,r10,r24,r18
+000000ba 1d78            246 	mov	r29,r15
+000000bc 3e0600000000*   247 	mov	sdaoff23(_EcuabFee_Dh_DatasetInfo),ep
+000000c2 9353            248 	sst.b	r10,19[ep]
+000000c4 d2e1            249 	add	r18,r28
+000000c6 d279            250 	add	r18,r15
+000000c8 bde1            251 	sub	r29,r28
+000000ca 0195            252 	sst.w	r18,0[ep]
+000000cc 037d            253 	sst.w	r15,4[ep]
+000000ce 05e5            254 	sst.w	r28,8[ep]
+000000d0 88dc            255 	sst.h	r27,16[ep]
+000000d2 92d3            256 	sst.b	r26,18[ep]
+                         257 --	    .ef
+                         258 .LDW32:
+000000d4 4006fff1        259 	dispose	0,{r23,r24,r25,r26,r27,r28,r29,r31},[lp]
+                         260 	.type	_EcuabFee_Dh_Init,@function
+                         261 	.size	_EcuabFee_Dh_Init,.-_EcuabFee_Dh_Init
+                         262 	.align	2
+                         263 .LDW42:
+                         264 --_WriteAlignment	r29	local
+                         265 
+                         266 --_BlockNumber	r25	param
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         267 --_DataLength	r27	param
+                         268 --_NumberOfInstances	r26	param
+                         269 --_BlockStartAddress	r24	param
+                         270 --_AddressAlignment	r23	param
+                         271 
+                         272 	.section ".bss","awb"
+                         273 .L225:
+                         274 	.type	.L225,@object
+                         275 	.size	.L225,0
+                         276 	.data
+                         277 	.text
+                         278 	.align	2
+                         279 	.align	2
+                         280 ..gh.f.f.1.e.5:
+                         281 	.type	..gh.f.f.1.e.5,@object
+                         282 	.size	..gh.f.f.1.e.5,0
+                         283 	.global	_EcuabFee_Dh_GetDataLength
+                         284 _EcuabFee_Dh_GetDataLength:
+                         285 --	    .bf
+                         286 .LDW52:
+000000d8 a40707500000*   287 	ld.hu	sdaoff23(_EcuabFee_Dh_DatasetInfo+16)[gp],r10
+                         288 --	    .ef
+                         289 .LDW62:
+000000de 7f00            290 	jmp	[lp]
+                         291 	.type	_EcuabFee_Dh_GetDataLength,@function
+                         292 	.size	_EcuabFee_Dh_GetDataLength,.-_EcuabFee_Dh_GetDataLength
+                         293 	.align	2
+                         294 .LDW72:
+                         295 
+                         296 	.section ".bss","awb"
+                         297 .L276:
+                         298 	.type	.L276,@object
+                         299 	.size	.L276,0
+                         300 	.data
+                         301 	.text
+                         302 	.align	2
+                         303 	.align	2
+                         304 ..gh.f.f.1.e.6:
+                         305 	.type	..gh.f.f.1.e.6,@object
+                         306 	.size	..gh.f.f.1.e.6,0
+                         307 	.global	_EcuabFee_Dh_GetFirstInstanceAddress
+                         308 _EcuabFee_Dh_GetFirstInstanceAddress:
+                         309 --	    .bf
+                         310 .LDW82:
+000000e0 840709500000*   311 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo+4)[gp],r10
+                         312 --	    .ef
+                         313 .LDW92:
+000000e6 7f00            314 	jmp	[lp]
+                         315 	.type	_EcuabFee_Dh_GetFirstInstanceAddress,@function
+                         316 	.size	_EcuabFee_Dh_GetFirstInstanceAddress,.-_EcuabFee_Dh_GetFirstInstanceAddress
+                         317 	.align	2
+                         318 .LDW03:
+                         319 
+                         320 	.section ".bss","awb"
+                         321 .L321:
+                         322 	.type	.L321,@object
+                         323 	.size	.L321,0
+                         324 	.data
+                         325 	.text
+                         326 	.align	2
+                         327 	.align	2
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         328 ..gh.f.f.1.e.7:
+                         329 	.type	..gh.f.f.1.e.7,@object
+                         330 	.size	..gh.f.f.1.e.7,0
+                         331 	.global	_EcuabFee_Dh_GetLastSectorIndex
+                         332 _EcuabFee_Dh_GetLastSectorIndex:
+000000e8 80072100        333 	prepare	{r31},0
+                         334 --	    .bf
+                         335 .LDW13:
+                         336 	jarl	_EcuabFee_Ph_GetPartitionAddressAlignment,lp
+                         336 <EXPANSION BEGIN>
+                         336 jarl22 _EcuabFee_Ph_GetPartitionAddressAlignment , lp 
+000000ec 80ff0000*       336 <EXPANSION END>
+000000f0 a40707900000*   337 	ld.hu	sdaoff23(_EcuabFee_Dh_DatasetInfo+12)[gp],r18
+000000f6 ea97fc02        338 	divq	r10,r18,zero
+000000fa 1256ffff        339 	addi	-1,r18,r10
+000000fe ea00            340 	sxh	r10
+                         341 --	    .ef
+                         342 .LDW23:
+                         343 --line88
+                         344 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.7::
+                         345 .LDWlin7:
+00000100 40063f00        346 	dispose	0,{r31},[lp]
+                         347 	.type	_EcuabFee_Dh_GetLastSectorIndex,@function
+                         348 	.size	_EcuabFee_Dh_GetLastSectorIndex,.-_EcuabFee_Dh_GetLastSectorIndex
+                         349 	.align	2
+                         350 .LDW33:
+                         351 
+                         352 	.section ".bss","awb"
+                         353 .L372:
+                         354 	.type	.L372,@object
+                         355 	.size	.L372,0
+                         356 	.data
+                         357 	.text
+                         358 	.align	2
+                         359 	.align	2
+                         360 ..gh.f.f.1.e.8:
+                         361 	.type	..gh.f.f.1.e.8,@object
+                         362 	.size	..gh.f.f.1.e.8,0
+                         363 	.global	_EcuabFee_Dh_PrepareNextInstance
+                         364 _EcuabFee_Dh_PrepareNextInstance:
+00000104 80076100        365 	prepare	{r29,r31},0
+00000108 06e8            366 	mov	r6,r29
+                         367 --	    .bf
+                         368 .LDW43:
+                         369 	jarl	_EcuabFee_Ih_GetInstanceStartAddress,lp
+                         369 <EXPANSION BEGIN>
+                         369 jarl22 _EcuabFee_Ih_GetInstanceStartAddress , lp 
+0000010a 80ff0000*       369 <EXPANSION END>
+0000010e 0a30            370 	mov	r10,r6
+                         371 	jarl	_EcuabFee_Dh_CalcIndexOfCurrentInstance,lp
+                         371 <EXPANSION BEGIN>
+                         371 jarl22 _EcuabFee_Dh_CalcIndexOfCurrentInstance , lp 
+00000110 bfff0eff*       371 <EXPANSION END>
+00000114 0a360100        372 	addi	1,r10,r6
+00000118 8600            373 	zxb	r6
+                         374 --line98
+                         375 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.8::
+                         376 .LDWlin8:
+                         377 	jarl	_EcuabFee_Dh_GetAddressFromInstanceIndex,lp
+                         377 <EXPANSION BEGIN>
+                         377 jarl22 _EcuabFee_Dh_GetAddressFromInstanceIndex , lp 
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+0000011a bfff26ff*       377 <EXPANSION END>
+                         378 --line100
+                         379 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.9::
+                         380 .LDWlin9:
+0000011e 1d30            381 	mov	r29,r6
+00000120 0a38            382 	mov	r10,r7
+                         383 	jarl	_EcuabFee_Ih_PrepareNextInstanceProperties,lp
+                         383 <EXPANSION BEGIN>
+                         383 jarl22 _EcuabFee_Ih_PrepareNextInstanceProperties , lp 
+00000122 80ff0000*       383 <EXPANSION END>
+                         384 --	    .ef
+                         385 .LDW53:
+                         386 --line101
+                         387 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.10::
+                         388 .LDWlin10:
+00000126 40067f00        389 	dispose	0,{r29,r31},[lp]
+                         390 	.type	_EcuabFee_Dh_PrepareNextInstance,@function
+                         391 	.size	_EcuabFee_Dh_PrepareNextInstance,.-_EcuabFee_Dh_PrepareNextInstance
+                         392 	.align	2
+                         393 .LDW63:
+                         394 --_nextInstanceIndex	r6	local
+                         395 
+                         396 --_Instance	r29	param
+                         397 
+                         398 	.section ".bss","awb"
+                         399 .L417:
+                         400 	.type	.L417,@object
+                         401 	.size	.L417,0
+                         402 	.data
+                         403 	.text
+                         404 	.align	2
+                         405 	.align	2
+                         406 ..gh.f.f.1.e.9:
+                         407 	.type	..gh.f.f.1.e.9,@object
+                         408 	.size	..gh.f.f.1.e.9,0
+                         409 	.global	_EcuabFee_Dh_EraseSector
+                         410 _EcuabFee_Dh_EraseSector:
+0000012a 8007e100        411 	prepare	{r28,r29,r31},0
+0000012e 06e0            412 	mov	r6,r28
+00000130 dc00            413 	zxh	r28
+                         414 --	    .bf
+                         415 .LDW73:
+                         416 	jarl	_EcuabFee_Ph_GetPartitionAddressAlignment,lp
+                         416 <EXPANSION BEGIN>
+                         416 jarl22 _EcuabFee_Ph_GetPartitionAddressAlignment , lp 
+00000132 80ff0000*       416 <EXPANSION END>
+00000136 0ae8            417 	mov	r10,r29
+00000138 fcef2202        418 	mulu	r28,r29,zero
+0000013c 840709900000*   419 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo)[gp],r18
+00000142 d2e9            420 	add	r18,r29
+                         421 --line106
+                         422 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.11::
+                         423 .LDWlin11:
+                         424 	jarl	_EcuabFee_Ph_GetPartitionAddressAlignment,lp
+                         424 <EXPANSION BEGIN>
+                         424 jarl22 _EcuabFee_Ph_GetPartitionAddressAlignment , lp 
+00000144 80ff0000*       424 <EXPANSION END>
+00000148 0a38            425 	mov	r10,r7
+0000014a 1d30            426 	mov	r29,r6
+                         427 	jarl	_EcuabFee_Fls_Erase,lp
+                         427 <EXPANSION BEGIN>
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         427 jarl22 _EcuabFee_Fls_Erase , lp 
+0000014c 80ff0000*       427 <EXPANSION END>
+                         428 --	    .ef
+                         429 .LDW83:
+                         430 --line106
+                         431 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.12::
+                         432 .LDWlin12:
+00000150 4006ff00        433 	dispose	0,{r28,r29,r31},[lp]
+                         434 	.type	_EcuabFee_Dh_EraseSector,@function
+                         435 	.size	_EcuabFee_Dh_EraseSector,.-_EcuabFee_Dh_EraseSector
+                         436 	.align	2
+                         437 .LDW93:
+                         438 
+                         439 --_sectorIndex	r28	param
+                         440 
+                         441 	.section ".bss","awb"
+                         442 .L468:
+                         443 	.type	.L468,@object
+                         444 	.size	.L468,0
+                         445 	.data
+                         446 	.text
+                         447 	.align	2
+                         448 	.align	2
+                         449 ..gh.f.f.1.e.10:
+                         450 	.type	..gh.f.f.1.e.10,@object
+                         451 	.size	..gh.f.f.1.e.10,0
+                         452 	.global	_EcuabFee_Dh_WriteErasePattern
+                         453 _EcuabFee_Dh_WriteErasePattern:
+00000154 8007e100        454 	prepare	{r28,r29,r31},0
+00000158 a600            455 	sxb	r6
+                         456 --	    .bf
+                         457 .LDW04:
+0000015a e031            458 	cmp	zero,r6
+0000015c da05*           459 	bne	.L488
+0000015e 840709e80000*   460 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo)[gp],r29
+00000164 c505*           461 	br	.L490
+                         462 .L488:
+00000166 840709e80000*   463 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo+8)[gp],r29
+                         464 .L490:
+                         465 --line114
+                         466 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.13::
+                         467 .LDWlin13:
+0000016c 0092            468 	mov	0,r18
+                         469 .L493:
+0000016e 3c0600000000*   470 	mov	sdaoff23(_EcuabFee_Dh_TempBuffer),r28
+00000174 12f0            471 	mov	r18,ep
+00000176 dcf1            472 	add	r28,ep
+00000178 209eaaff        473 	movea	-86,zero,r19
+0000017c 4192            474 	add	1,r18
+0000017e 809b            475 	sst.b	r19,0[ep]
+00000180 6892            476 	cmp	8,r18
+00000182 e1f5*           477 	bl	.L493
+                         478 --line118
+                         479 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.14::
+                         480 .LDWlin14:
+                         481 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         481 <EXPANSION BEGIN>
+                         481 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+00000184 80ff0000*       481 <EXPANSION END>
+00000188 1d30            482 	mov	r29,r6
+0000018a 1c38            483 	mov	r28,r7
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+0000018c 0a40            484 	mov	r10,r8
+                         485 	jarl	_EcuabFee_Fls_Write,lp
+                         485 <EXPANSION BEGIN>
+                         485 jarl22 _EcuabFee_Fls_Write , lp 
+0000018e 80ff0000*       485 <EXPANSION END>
+                         486 --	    .ef
+                         487 .LDW14:
+                         488 --line118
+                         489 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.15::
+                         490 .LDWlin15:
+00000192 4006ff00        491 	dispose	0,{r28,r29,r31},[lp]
+                         492 	.type	_EcuabFee_Dh_WriteErasePattern,@function
+                         493 	.size	_EcuabFee_Dh_WriteErasePattern,.-_EcuabFee_Dh_WriteErasePattern
+                         494 	.align	2
+                         495 .LDW24:
+                         496 --_LoopCounter	r18	local
+                         497 --_address	r29	local
+                         498 
+                         499 --_pattern	r6	param
+                         500 
+                         501 	.section ".bss","awb"
+                         502 .L546:
+                         503 	.type	.L546,@object
+                         504 	.size	.L546,0
+                         505 	.data
+                         506 	.text
+                         507 	.align	2
+                         508 	.align	2
+                         509 ..gh.f.f.1.e.11:
+                         510 	.type	..gh.f.f.1.e.11,@object
+                         511 	.size	..gh.f.f.1.e.11,0
+                         512 	.global	_EcuabFee_Dh_ReadErasePattern
+                         513 _EcuabFee_Dh_ReadErasePattern:
+00000196 80076100        514 	prepare	{r29,r31},0
+0000019a a600            515 	sxb	r6
+                         516 --	    .bf
+                         517 .LDW34:
+0000019c e031            518 	cmp	zero,r6
+0000019e da05*           519 	bne	.L611
+000001a0 840709e80000*   520 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo)[gp],r29
+000001a6 c505*           521 	br	.L613
+                         522 .L611:
+000001a8 840709e80000*   523 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo+8)[gp],r29
+                         524 .L613:
+                         525 --line124
+                         526 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.16::
+                         527 .LDWlin16:
+                         528 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         528 <EXPANSION BEGIN>
+                         528 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+000001ae 80ff0000*       528 <EXPANSION END>
+000001b2 1d30            529 	mov	r29,r6
+000001b4 0a40            530 	mov	r10,r8
+000001b6 270600000000*   531 	mov	sdaoff23(_EcuabFee_Dh_TempBuffer),r7
+                         532 	jarl	_EcuabFee_Fls_Read,lp
+                         532 <EXPANSION BEGIN>
+                         532 jarl22 _EcuabFee_Fls_Read , lp 
+000001bc 80ff0000*       532 <EXPANSION END>
+                         533 --	    .ef
+                         534 .LDW44:
+                         535 --line124
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         536 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.17::
+                         537 .LDWlin17:
+000001c0 40067f00        538 	dispose	0,{r29,r31},[lp]
+                         539 	.type	_EcuabFee_Dh_ReadErasePattern,@function
+                         540 	.size	_EcuabFee_Dh_ReadErasePattern,.-_EcuabFee_Dh_ReadErasePattern
+                         541 	.align	2
+                         542 .LDW54:
+                         543 --_address	r29	local
+                         544 
+                         545 --_pattern	r6	param
+                         546 
+                         547 	.section ".bss","awb"
+                         548 .L662:
+                         549 	.type	.L662,@object
+                         550 	.size	.L662,0
+                         551 	.data
+                         552 	.text
+                         553 	.align	2
+                         554 	.align	2
+                         555 ..gh.f.f.1.e.12:
+                         556 	.type	..gh.f.f.1.e.12,@object
+                         557 	.size	..gh.f.f.1.e.12,0
+                         558 	.global	_EcuabFee_Dh_BlankCheckErasePattern
+                         559 _EcuabFee_Dh_BlankCheckErasePattern:
+000001c4 80076100        560 	prepare	{r29,r31},0
+000001c8 a600            561 	sxb	r6
+                         562 --	    .bf
+                         563 .LDW64:
+000001ca e031            564 	cmp	zero,r6
+000001cc da05*           565 	bne	.L709
+000001ce 840709e80000*   566 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo)[gp],r29
+000001d4 c505*           567 	br	.L711
+                         568 .L709:
+000001d6 840709e80000*   569 	ld.w	sdaoff23(_EcuabFee_Dh_DatasetInfo+8)[gp],r29
+                         570 .L711:
+                         571 --line130
+                         572 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.18::
+                         573 .LDWlin18:
+                         574 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         574 <EXPANSION BEGIN>
+                         574 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+000001dc 80ff0000*       574 <EXPANSION END>
+000001e0 1d30            575 	mov	r29,r6
+000001e2 0a38            576 	mov	r10,r7
+                         577 	jarl	_EcuabFee_Fls_BlankCheck,lp
+                         577 <EXPANSION BEGIN>
+                         577 jarl22 _EcuabFee_Fls_BlankCheck , lp 
+000001e4 80ff0000*       577 <EXPANSION END>
+                         578 --	    .ef
+                         579 .LDW74:
+                         580 --line130
+                         581 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.19::
+                         582 .LDWlin19:
+000001e8 40067f00        583 	dispose	0,{r29,r31},[lp]
+                         584 	.type	_EcuabFee_Dh_BlankCheckErasePattern,@function
+                         585 	.size	_EcuabFee_Dh_BlankCheckErasePattern,.-_EcuabFee_Dh_BlankCheckErasePattern
+                         586 	.align	2
+                         587 .LDW84:
+                         588 --_address	r29	local
+                         589 
+                         590 --_pattern	r6	param
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         591 
+                         592 	.section ".bss","awb"
+                         593 .L758:
+                         594 	.type	.L758,@object
+                         595 	.size	.L758,0
+                         596 	.data
+                         597 	.text
+                         598 	.align	2
+                         599 	.align	2
+                         600 ..gh.f.f.1.e.13:
+                         601 	.type	..gh.f.f.1.e.13,@object
+                         602 	.size	..gh.f.f.1.e.13,0
+                         603 	.global	_EcuabFee_Dh_CheckErasePattern
+                         604 _EcuabFee_Dh_CheckErasePattern:
+000001ec 80072100        605 	prepare	{r31},0
+                         606 --	    .bf
+                         607 .LDW94:
+                         608 	jarl	_EcuabFee_Ph_GetBlankCheckApi,lp
+                         608 <EXPANSION BEGIN>
+                         608 jarl22 _EcuabFee_Ph_GetBlankCheckApi , lp 
+000001f0 80ff0000*       608 <EXPANSION END>
+000001f4 0032            609 	mov	0,r6
+000001f6 6152            610 	cmp	1,r10
+000001f8 da05*           611 	bne	.L805
+                         612 --line137
+                         613 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.20::
+                         614 .LDWlin20:
+                         615 	jarl	_EcuabFee_Dh_BlankCheckErasePattern,lp
+                         615 <EXPANSION BEGIN>
+                         615 jarl22 _EcuabFee_Dh_BlankCheckErasePattern , lp 
+000001fa bfffcaff*       615 <EXPANSION END>
+000001fe 40063f00        616 	dispose	0,{r31},[lp]
+                         617 .L805:
+                         618 --line140
+                         619 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.21::
+                         620 .LDWlin21:
+                         621 	jarl	_EcuabFee_Dh_ReadErasePattern,lp
+                         621 <EXPANSION BEGIN>
+                         621 jarl22 _EcuabFee_Dh_ReadErasePattern , lp 
+00000202 bfff94ff*       621 <EXPANSION END>
+                         622 --	    .ef
+                         623 .LDW05:
+                         624 --line142
+                         625 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.22::
+                         626 .LDWlin22:
+00000206 40063f00        627 	dispose	0,{r31},[lp]
+                         628 	.type	_EcuabFee_Dh_CheckErasePattern,@function
+                         629 	.size	_EcuabFee_Dh_CheckErasePattern,.-_EcuabFee_Dh_CheckErasePattern
+                         630 	.align	2
+                         631 .LDW15:
+                         632 --_retVal	r10	local
+                         633 
+                         634 	.section ".bss","awb"
+                         635 .L854:
+                         636 	.type	.L854,@object
+                         637 	.size	.L854,0
+                         638 	.data
+                         639 	.text
+                         640 	.align	2
+                         641 	.align	2
+                         642 ..gh.f.f.1.e.14:
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         643 	.type	..gh.f.f.1.e.14,@object
+                         644 	.size	..gh.f.f.1.e.14,0
+                         645 	.global	_EcuabFee_Dh_IsLastInstance
+                         646 _EcuabFee_Dh_IsLastInstance:
+0000020a 80072100        647 	prepare	{r31},0
+                         648 --	    .bf
+                         649 .LDW25:
+                         650 	jarl	_EcuabFee_Ih_GetInstanceStartAddress,lp
+                         650 <EXPANSION BEGIN>
+                         650 jarl22 _EcuabFee_Ih_GetInstanceStartAddress , lp 
+0000020e 80ff0000*       650 <EXPANSION END>
+00000212 0a30            651 	mov	r10,r6
+                         652 	jarl	_EcuabFee_Dh_CalcIndexOfCurrentInstance,lp
+                         652 <EXPANSION BEGIN>
+                         652 jarl22 _EcuabFee_Dh_CalcIndexOfCurrentInstance , lp 
+00000214 bfff0afe*       652 <EXPANSION END>
+                         653 --line148
+                         654 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.23::
+                         655 .LDWlin23:
+00000218 a40705900000*   656 	ld.bu	sdaoff23(_EcuabFee_Dh_DatasetInfo+18)[gp],r18
+0000021e 129effff        657 	addi	-1,r18,r19
+00000222 f351            658 	cmp	r19,r10
+00000224 e2570000        659 	setfe	r10
+                         660 --	    .ef
+                         661 .LDW35:
+00000228 40063f00        662 	dispose	0,{r31},[lp]
+                         663 	.type	_EcuabFee_Dh_IsLastInstance,@function
+                         664 	.size	_EcuabFee_Dh_IsLastInstance,.-_EcuabFee_Dh_IsLastInstance
+                         665 	.align	2
+                         666 .LDW45:
+                         667 
+                         668 --_Instance	r6	param
+                         669 
+                         670 	.section ".bss","awb"
+                         671 .L929:
+                         672 	.type	.L929,@object
+                         673 	.size	.L929,0
+                         674 	.data
+                         675 	.text
+                         676 	.align	2
+                         677 	.align	2
+                         678 ..gh.f.f.1.e.15:
+                         679 	.type	..gh.f.f.1.e.15,@object
+                         680 	.size	..gh.f.f.1.e.15,0
+                         681 	.global	_EcuabFee_Dh_IsFirstInstanceAndBlank
+                         682 _EcuabFee_Dh_IsFirstInstanceAndBlank:
+0000022c 8007e100        683 	prepare	{r28,r29,r31},0
+00000230 06e8            684 	mov	r6,r29
+                         685 --	    .bf
+                         686 .LDW55:
+                         687 	jarl	_EcuabFee_Ih_GetInstanceStartAddress,lp
+                         687 <EXPANSION BEGIN>
+                         687 jarl22 _EcuabFee_Ih_GetInstanceStartAddress , lp 
+00000232 80ff0000*       687 <EXPANSION END>
+00000236 0a30            688 	mov	r10,r6
+                         689 	jarl	_EcuabFee_Dh_CalcIndexOfCurrentInstance,lp
+                         689 <EXPANSION BEGIN>
+                         689 jarl22 _EcuabFee_Dh_CalcIndexOfCurrentInstance , lp 
+00000238 bfffe6fd*       689 <EXPANSION END>
+0000023c 0ae0            690 	mov	r10,r28
+                         691 --line154
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         692 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.24::
+                         693 .LDWlin24:
+0000023e 1d30            694 	mov	r29,r6
+                         695 	jarl	_EcuabFee_Ih_GetInstanceStatus,lp
+                         695 <EXPANSION BEGIN>
+                         695 jarl22 _EcuabFee_Ih_GetInstanceStatus , lp 
+00000240 80ff0000*       695 <EXPANSION END>
+00000244 e051            696 	cmp	zero,r10
+00000246 e24f0000        697 	setfe	r9
+                         698 --line156
+                         699 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.25::
+                         700 .LDWlin25:
+0000024a 0052            701 	mov	0,r10
+0000024c e0e1            702 	cmp	zero,r28
+0000024e ca05*           703 	bne	.L950
+00000250 e049            704 	cmp	zero,r9
+00000252 ea570000        705 	setfne	r10
+                         706 .L950:
+                         707 --	    .ef
+                         708 .LDW65:
+                         709 --line156
+                         710 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.26::
+                         711 .LDWlin26:
+00000256 4006ff00        712 	dispose	0,{r28,r29,r31},[lp]
+                         713 	.type	_EcuabFee_Dh_IsFirstInstanceAndBlank,@function
+                         714 	.size	_EcuabFee_Dh_IsFirstInstanceAndBlank,.-_EcuabFee_Dh_IsFirstInstanceAndBlank
+                         715 	.align	2
+                         716 .LDW75:
+                         717 --_IndexOfInstance	r28	local
+                         718 --_IsBlank	r9	local
+                         719 
+                         720 --_Instance	r29	param
+                         721 
+                         722 	.section ".bss","awb"
+                         723 .L1034:
+                         724 	.type	.L1034,@object
+                         725 	.size	.L1034,0
+                         726 	.data
+                         727 	.text
+                         728 	.align	2
+                         729 	.align	2
+                         730 ..gh.f.f.1.e.16:
+                         731 	.type	..gh.f.f.1.e.16,@object
+                         732 	.size	..gh.f.f.1.e.16,0
+                         733 	.global	_EcuabFee_Dh_IsErasePatternBlank
+                         734 _EcuabFee_Dh_IsErasePatternBlank:
+0000025a 8007e110        735 	prepare	{r27,r28,r29,r31},0
+                         736 --	    .bf
+                         737 .LDW85:
+0000025e 01da            738 	mov	1,r27
+                         739 	jarl	_EcuabFee_Ph_GetBlankCheckApi,lp
+                         739 <EXPANSION BEGIN>
+                         739 jarl22 _EcuabFee_Ph_GetBlankCheckApi , lp 
+00000260 80ff0000*       739 <EXPANSION END>
+00000264 0ae8            740 	mov	r10,r29
+00000266 e051            741 	cmp	zero,r10
+00000268 ba15*           742 	bne	.L1077
+                         743 --line164
+                         744 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.27::
+                         745 .LDWlin27:
+0000026a e50d*           746 	br	.L1082
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+                         747 .L1081:
+                         748 --line165
+                         749 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.28::
+                         750 .LDWlin28:
+0000026c 04e0            751 	mov	gp,r28
+0000026e dde1            752 	add	r29,r28
+                         753 	jarl	_EcuabFee_Ph_GetFlsEraseValue,lp
+                         753 <EXPANSION BEGIN>
+                         753 jarl22 _EcuabFee_Ph_GetFlsEraseValue , lp 
+00000270 80ff0000*       753 <EXPANSION END>
+00000274 bc0705480000*   754 	ld.bu	sdaoff23(_EcuabFee_Dh_TempBuffer)[r28],r9
+0000027a ea49            755 	cmp	r10,r9
+                         756 --line168
+                         757 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.29::
+                         758 .LDWlin29:
+0000027c e0df14db        759 	cmovne	0,r27,r27
+00000280 fa05*           760 	bne	.L1077
+                         761 --line164
+                         762 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.30::
+                         763 .LDWlin30:
+00000282 41ea            764 	add	1,r29
+00000284 dd00            765 	zxh	r29
+                         766 .L1082:
+                         767 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         767 <EXPANSION BEGIN>
+                         767 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+00000286 80ff0000*       767 <EXPANSION END>
+0000028a eae9            768 	cmp	r10,r29
+0000028c 81f5*           769 	bl	.L1081
+                         770 .L1077:
+                         771 --line173
+                         772 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.31::
+                         773 .LDWlin31:
+0000028e 1b50            774 	mov	r27,r10
+                         775 --	    .ef
+                         776 .LDW95:
+00000290 4006ff10        777 	dispose	0,{r27,r28,r29,r31},[lp]
+                         778 	.type	_EcuabFee_Dh_IsErasePatternBlank,@function
+                         779 	.size	_EcuabFee_Dh_IsErasePatternBlank,.-_EcuabFee_Dh_IsErasePatternBlank
+                         780 	.align	2
+                         781 .LDW06:
+                         782 --_retVal	r27	local
+                         783 --_LoopCounter	r29	local
+                         784 
+                         785 	.section ".bss","awb"
+                         786 .L1414:
+                         787 	.type	.L1414,@object
+                         788 	.size	.L1414,0
+                         789 	.data
+                         790 	.text
+                         791 	.align	2
+                         792 	.align	2
+                         793 ..gh.f.f.1.e.17:
+                         794 	.type	..gh.f.f.1.e.17,@object
+                         795 	.size	..gh.f.f.1.e.17,0
+                         796 	.global	_EcuabFee_Dh_IsErasePatternValid
+                         797 _EcuabFee_Dh_IsErasePatternValid:
+00000294 8007e100        798 	prepare	{r28,r29,r31},0
+                         799 --	    .bf
+                         800 .LDW16:
+00000298 01e2            801 	mov	1,r28
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ank1.s
+0000029a 00ea            802 	mov	0,r29
+0000029c d50d*           803 	br	.L1487
+                         804 .L1486:
+                         805 --line181
+                         806 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.32::
+                         807 .LDWlin32:
+0000029e 04f0            808 	mov	gp,ep
+000002a0 ddf1            809 	add	r29,ep
+000002a2 be0705900000*   810 	ld.bu	sdaoff23(_EcuabFee_Dh_TempBuffer)[ep],r18
+000002a8 120656ff        811 	addi	-170,r18,zero
+000002ac e0e714e3        812 	cmovne	0,r28,r28
+000002b0 fa05*           813 	bne	.L1490
+                         814 --line180
+                         815 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.33::
+                         816 .LDWlin33:
+000002b2 41ea            817 	add	1,r29
+000002b4 dd00            818 	zxh	r29
+                         819 .L1487:
+                         820 	jarl	_EcuabFee_Ph_GetPartitionWriteAlignment,lp
+                         820 <EXPANSION BEGIN>
+                         820 jarl22 _EcuabFee_Ph_GetPartitionWriteAlignment , lp 
+000002b6 80ff0000*       820 <EXPANSION END>
+000002ba eae9            821 	cmp	r10,r29
+000002bc 91f5*           822 	bl	.L1486
+                         823 .L1490:
+                         824 --line187
+                         825 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler.34::
+                         826 .LDWlin34:
+000002be 1c50            827 	mov	r28,r10
+                         828 --	    .ef
+                         829 .LDW26:
+000002c0 4006ff00        830 	dispose	0,{r28,r29,r31},[lp]
+                         831 	.type	_EcuabFee_Dh_IsErasePatternValid,@function
+                         832 	.size	_EcuabFee_Dh_IsErasePatternValid,.-_EcuabFee_Dh_IsErasePatternValid
+                         833 	.align	2
+                         834 .LDW36:
+                         835 --_retVal	r28	local
+                         836 --_LoopCounter	r29	local
+                         837 
+                         838 	.section ".bss","awb"
+                         839 .L1554:
+                         840 	.type	.L1554,@object
+                         841 	.size	.L1554,0
+                         842 	.data
+                         843 	.text
+                         844 	.align	2
+                         845 --_EcuabFee_DatasetSelectionBits	rosdaoff23(_EcuabFee_DatasetSelectionBits)	import
+                         846 --_EcuabFee_Dh_DatasetInfo	sdaoff23(_EcuabFee_Dh_DatasetInfo)	static
+                         847 --_EcuabFee_Dh_TempBuffer	sdaoff23(_EcuabFee_Dh_TempBuffer)	static
+                         848 
+                         849 	.data
+                         850 	.ghsnote version,17
+                         851 	.ghsnote tools,3
+                         852 	.ghsnote options,144
+                         853 	.text
+                         854 	.align	2
+                         855 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_DatasetHandler...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863B1..0::
+                         856 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

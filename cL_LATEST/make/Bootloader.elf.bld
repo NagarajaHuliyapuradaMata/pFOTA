@@ -1,0 +1,15 @@
+#!build                        
+default:                       
+        program                
+        :compilation=assembly  
+        :sourcedirs=..\source\McalEep  
+        :sourcedirs=..\source\SwcServiceDem  
+        :sourcedirs=..\source\SwcServiceEcuM  
+        :sourcedirs=..\source\SwcServiceStartUp  
+        :sourcedirs=..\source\wrappers\SwcServiceSecM  
+        :sourcedirs=..\source\wrappers\VStdLib  
+        :sourcedirs=..\source\wrappers\vSecPrim  
+Bootloader.ld  
+        linker_file            
+Bootloader.rc             
+        custom                 

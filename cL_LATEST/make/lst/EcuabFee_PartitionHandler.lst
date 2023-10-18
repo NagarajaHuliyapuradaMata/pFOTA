@@ -1,0 +1,413 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/EcuabFee_PartitionHandler.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\EcuabFee_PartitionHandler.dbo -source=EcuabFee_PartitionHandler.c -o obj\gh_00009181.o -list=lst/EcuabFee_PartitionHandler.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+Source File: EcuabFee_PartitionHandler.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/EcuabFee_PartitionHandler.lst -object_dir=obj
+                           8 --		-stderr=err/EcuabFee_PartitionHandler.err -c -cpu=rh850 -sda=all
+                           9 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                          10 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          11 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          12 --		-registermode=32 -I../source/_common -I../source/common
+                          13 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          14 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          15 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          16 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          17 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          18 --		-I../source/projectcfg -I../source/projectcompiler
+                          19 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          20 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          21 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          22 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          23 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          24 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          25 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          26 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          27 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          28 --		-Igendata ../source/EcuabFee/EcuabFee_PartitionHandler.c
+                          29 --Source File:   ../source/EcuabFee/EcuabFee_PartitionHandler.c
+                          30 --Directory:     
+                          31 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          32 --Compile Date:  Wed Sep 06 14:06:15 2023
+                          33 --Host OS:       Win32
+                          34 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          35 --Release:       Compiler v2015.1.7
+                          36 --Revision Date: Thu Oct 22 08:06:12 2015
+                          37 --Release Date:  Thu Oct 22 09:34:32 2015
+                          38 -- ecom  -g -w -OM
+                          39 	.text
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B37..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_EcuabFee_Ph_FindBlockNumberInList..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.
+                          46 _EcuabFee_Ph_FindBlockNumberInList..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.:
+                          47 _EcuabFee_Ph_FindBlockNumberInList:
+00000000 c700             48 	zxh	r7
+                          49 --	    .bf
+                          50 .LDW01:
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+00000002 e6f61400         51 	mulhi	20,r6,ep
+00000006 c5f1             52 	add	r5,ep
+00000008 be0707900000*    53 	ld.hu	rosdaoff23(_EcuabFee_PartitionConfigList+18)[ep],r18
+0000000e e791             54 	cmp	r7,r18
+00000010 ea570000         55 	setfne	r10
+                          56 --	    .ef
+                          57 .LDW11:
+00000014 7f00             58 	jmp	[lp]
+                          59 	.type	_EcuabFee_Ph_FindBlockNumberInList,@function
+                          60 	.size	_EcuabFee_Ph_FindBlockNumberInList,.-_EcuabFee_Ph_FindBlockNumberInList
+                          61 	.type	_EcuabFee_Ph_FindBlockNumberInList..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.,@function
+                          62 	.size	_EcuabFee_Ph_FindBlockNumberInList..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.,.-_EcuabFee_Ph_FindBlockNumberInList..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.
+                          63 	.align	2
+                          64 .LDW21:
+                          65 --_retVal	r10	local
+                          66 
+                          67 --_PartitionIndex	r6	param
+                          68 --_BlockNumber	r7	param
+                          69 
+                          70 	.section ".bss","awb"
+                          71 .L73:
+                          72 	.type	.L73,@object
+                          73 	.size	.L73,0
+                          74 	.section ".sbss","awb"
+                          75 	.align	2
+                          76 	.global	_EcuabFee_Ph_PartitionIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.
+                          77 _EcuabFee_Ph_PartitionIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.:
+00000000 0000             78 _EcuabFee_Ph_PartitionIndex:	.space	2
+                          79 	.type	_EcuabFee_Ph_PartitionIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.,@object
+                          80 	.size	_EcuabFee_Ph_PartitionIndex..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.,2
+                          81 	.type	_EcuabFee_Ph_PartitionIndex,@object
+                          82 	.size	_EcuabFee_Ph_PartitionIndex,2
+                          83 	.data
+                          84 	.text
+                          85 	.align	2
+                          86 	.align	2
+                          87 ..gh.f.f.1.e.1:
+                          88 	.type	..gh.f.f.1.e.1,@object
+                          89 	.size	..gh.f.f.1.e.1,0
+                          90 	.global	_EcuabFee_Ph_CleanBlockNumber..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.
+                          91 _EcuabFee_Ph_CleanBlockNumber..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.:
+                          92 _EcuabFee_Ph_CleanBlockNumber:
+                          93 --	    .bf
+                          94 .LDW31:
+00000016 a50705880000*    95 	ld.bu	rosdaoff23(_EcuabFee_DatasetSelectionBits)[r5],r17
+0000001c 0192             96 	mov	1,r18
+0000001e 409e0100         97 	movhi	1,zero,r19
+00000022 f197c250         98 	shl	r17,r18,r10
+00000026 9351             99 	subr	r19,r10
+00000028 ca00            100 	zxh	r10
+0000002a 4651            101 	and	r6,r10
+                         102 --	    .ef
+                         103 .LDW41:
+0000002c 7f00            104 	jmp	[lp]
+                         105 	.type	_EcuabFee_Ph_CleanBlockNumber,@function
+                         106 	.size	_EcuabFee_Ph_CleanBlockNumber,.-_EcuabFee_Ph_CleanBlockNumber
+                         107 	.type	_EcuabFee_Ph_CleanBlockNumber..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.,@function
+                         108 	.size	_EcuabFee_Ph_CleanBlockNumber..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.,.-_EcuabFee_Ph_CleanBlockNumber..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.
+                         109 	.align	2
+                         110 .LDW51:
+                         111 
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+                         112 --_BlockNumber	r6	param
+                         113 
+                         114 	.section ".bss","awb"
+                         115 .L132:
+                         116 	.type	.L132,@object
+                         117 	.size	.L132,0
+                         118 	.data
+                         119 	.text
+                         120 	.align	2
+                         121 	.align	2
+                         122 ..gh.f.f.1.e.2:
+                         123 	.type	..gh.f.f.1.e.2,@object
+                         124 	.size	..gh.f.f.1.e.2,0
+                         125 	.global	_EcuabFee_Ph_Init
+                         126 _EcuabFee_Ph_Init:
+0000002e 8007e100        127 	prepare	{r28,r29,r31},0
+00000032 06e0            128 	mov	r6,r28
+00000034 dc00            129 	zxh	r28
+                         130 --	    .bf
+                         131 .LDW61:
+00000036 00ea            132 	mov	0,r29
+                         133 .L154:
+00000038 1c30            134 	mov	r28,r6
+                         135 	jarl	_EcuabFee_Ph_CleanBlockNumber,lp
+                         135 <EXPANSION BEGIN>
+                         135 jarl22 _EcuabFee_Ph_CleanBlockNumber , lp 
+0000003a bfffdcff*       135 <EXPANSION END>
+0000003e 0a38            136 	mov	r10,r7
+00000040 1d30            137 	mov	r29,r6
+                         138 	jarl	_EcuabFee_Ph_FindBlockNumberInList,lp
+                         138 <EXPANSION BEGIN>
+                         138 jarl22 _EcuabFee_Ph_FindBlockNumberInList , lp 
+00000042 bfffbeff*       138 <EXPANSION END>
+00000046 e051            139 	cmp	zero,r10
+00000048 ea05*           140 	bne	.L155
+                         141 --line49
+                         142 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.1::
+                         143 .LDWlin1:
+0000004a a4070de80000*   144 	st.h	r29,sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp]
+00000050 4006ff00        145 	dispose	0,{r28,r29,r31},[lp]
+                         146 .L155:
+                         147 --line47
+                         148 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.2::
+                         149 .LDWlin2:
+00000054 41ea            150 	add	1,r29
+00000056 62ea            151 	cmp	2,r29
+00000058 81f5*           152 	bl	.L154
+                         153 --	    .ef
+                         154 .LDW71:
+                         155 --line53
+                         156 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler.3::
+                         157 .LDWlin3:
+0000005a 4006ff00        158 	dispose	0,{r28,r29,r31},[lp]
+                         159 	.type	_EcuabFee_Ph_Init,@function
+                         160 	.size	_EcuabFee_Ph_Init,.-_EcuabFee_Ph_Init
+                         161 	.align	2
+                         162 .LDW81:
+                         163 --_LoopCounter	r29	local
+                         164 
+                         165 --_BlockNumber	r28	param
+                         166 
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+                         167 	.section ".bss","awb"
+                         168 .L192:
+                         169 	.type	.L192,@object
+                         170 	.size	.L192,0
+                         171 	.data
+                         172 	.text
+                         173 	.align	2
+                         174 	.align	2
+                         175 ..gh.f.f.1.e.3:
+                         176 	.type	..gh.f.f.1.e.3,@object
+                         177 	.size	..gh.f.f.1.e.3,0
+                         178 	.global	_EcuabFee_Ph_GetPartitionStartAddress
+                         179 _EcuabFee_Ph_GetPartitionStartAddress:
+                         180 --	    .bf
+                         181 .LDW91:
+0000005e 840707900000*   182 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+00000064 f2f61400        183 	mulhi	20,r18,ep
+00000068 c5f1            184 	add	r5,ep
+0000006a 9e0709500000*   185 	ld.w	rosdaoff23(_EcuabFee_PartitionConfigList)[ep],r10
+                         186 --	    .ef
+                         187 .LDW02:
+00000070 7f00            188 	jmp	[lp]
+                         189 	.type	_EcuabFee_Ph_GetPartitionStartAddress,@function
+                         190 	.size	_EcuabFee_Ph_GetPartitionStartAddress,.-_EcuabFee_Ph_GetPartitionStartAddress
+                         191 	.align	2
+                         192 .LDW12:
+                         193 
+                         194 	.section ".bss","awb"
+                         195 .L273:
+                         196 	.type	.L273,@object
+                         197 	.size	.L273,0
+                         198 	.data
+                         199 	.text
+                         200 	.align	2
+                         201 	.align	2
+                         202 ..gh.f.f.1.e.4:
+                         203 	.type	..gh.f.f.1.e.4,@object
+                         204 	.size	..gh.f.f.1.e.4,0
+                         205 	.global	_EcuabFee_Ph_GetPartitionWriteAlignment
+                         206 _EcuabFee_Ph_GetPartitionWriteAlignment:
+                         207 --	    .bf
+                         208 .LDW22:
+00000072 840707900000*   209 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+00000078 f2f61400        210 	mulhi	20,r18,ep
+0000007c c5f1            211 	add	r5,ep
+0000007e be0707500000*   212 	ld.hu	rosdaoff23(_EcuabFee_PartitionConfigList+6)[ep],r10
+                         213 --	    .ef
+                         214 .LDW32:
+00000084 7f00            215 	jmp	[lp]
+                         216 	.type	_EcuabFee_Ph_GetPartitionWriteAlignment,@function
+                         217 	.size	_EcuabFee_Ph_GetPartitionWriteAlignment,.-_EcuabFee_Ph_GetPartitionWriteAlignment
+                         218 	.align	2
+                         219 .LDW42:
+                         220 
+                         221 	.section ".bss","awb"
+                         222 .L324:
+                         223 	.type	.L324,@object
+                         224 	.size	.L324,0
+                         225 	.data
+                         226 	.text
+                         227 	.align	2
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+                         228 	.align	2
+                         229 ..gh.f.f.1.e.5:
+                         230 	.type	..gh.f.f.1.e.5,@object
+                         231 	.size	..gh.f.f.1.e.5,0
+                         232 	.global	_EcuabFee_Ph_GetPartitionAddressAlignment
+                         233 _EcuabFee_Ph_GetPartitionAddressAlignment:
+                         234 --	    .bf
+                         235 .LDW52:
+00000086 840707900000*   236 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+0000008c f2f61400        237 	mulhi	20,r18,ep
+00000090 c5f1            238 	add	r5,ep
+00000092 be0707500000*   239 	ld.hu	rosdaoff23(_EcuabFee_PartitionConfigList+4)[ep],r10
+                         240 --	    .ef
+                         241 .LDW62:
+00000098 7f00            242 	jmp	[lp]
+                         243 	.type	_EcuabFee_Ph_GetPartitionAddressAlignment,@function
+                         244 	.size	_EcuabFee_Ph_GetPartitionAddressAlignment,.-_EcuabFee_Ph_GetPartitionAddressAlignment
+                         245 	.align	2
+                         246 .LDW72:
+                         247 
+                         248 	.section ".bss","awb"
+                         249 .L372:
+                         250 	.type	.L372,@object
+                         251 	.size	.L372,0
+                         252 	.data
+                         253 	.text
+                         254 	.align	2
+                         255 	.align	2
+                         256 ..gh.f.f.1.e.6:
+                         257 	.type	..gh.f.f.1.e.6,@object
+                         258 	.size	..gh.f.f.1.e.6,0
+                         259 	.global	_EcuabFee_Ph_GetPartitionReadAlignment
+                         260 _EcuabFee_Ph_GetPartitionReadAlignment:
+                         261 --	    .bf
+                         262 .LDW82:
+0000009a 840707900000*   263 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+000000a0 f2f61400        264 	mulhi	20,r18,ep
+000000a4 c5f1            265 	add	r5,ep
+000000a6 be0707500000*   266 	ld.hu	rosdaoff23(_EcuabFee_PartitionConfigList+8)[ep],r10
+                         267 --	    .ef
+                         268 .LDW92:
+000000ac 7f00            269 	jmp	[lp]
+                         270 	.type	_EcuabFee_Ph_GetPartitionReadAlignment,@function
+                         271 	.size	_EcuabFee_Ph_GetPartitionReadAlignment,.-_EcuabFee_Ph_GetPartitionReadAlignment
+                         272 	.align	2
+                         273 .LDW03:
+                         274 
+                         275 	.section ".bss","awb"
+                         276 .L420:
+                         277 	.type	.L420,@object
+                         278 	.size	.L420,0
+                         279 	.data
+                         280 	.text
+                         281 	.align	2
+                         282 	.align	2
+                         283 ..gh.f.f.1.e.7:
+                         284 	.type	..gh.f.f.1.e.7,@object
+                         285 	.size	..gh.f.f.1.e.7,0
+                         286 	.global	_EcuabFee_Ph_GetFlsApiPtr
+                         287 _EcuabFee_Ph_GetFlsApiPtr:
+                         288 --	    .bf
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+                         289 .LDW13:
+000000ae 840707900000*   290 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+000000b4 f2f61400        291 	mulhi	20,r18,ep
+000000b8 c5f1            292 	add	r5,ep
+000000ba 9e0709500000*   293 	ld.w	rosdaoff23(_EcuabFee_PartitionConfigList+12)[ep],r10
+                         294 --	    .ef
+                         295 .LDW23:
+000000c0 7f00            296 	jmp	[lp]
+                         297 	.type	_EcuabFee_Ph_GetFlsApiPtr,@function
+                         298 	.size	_EcuabFee_Ph_GetFlsApiPtr,.-_EcuabFee_Ph_GetFlsApiPtr
+                         299 	.align	2
+                         300 .LDW33:
+                         301 
+                         302 	.section ".bss","awb"
+                         303 .L465:
+                         304 	.type	.L465,@object
+                         305 	.size	.L465,0
+                         306 	.data
+                         307 	.text
+                         308 	.align	2
+                         309 	.align	2
+                         310 ..gh.f.f.1.e.8:
+                         311 	.type	..gh.f.f.1.e.8,@object
+                         312 	.size	..gh.f.f.1.e.8,0
+                         313 	.global	_EcuabFee_Ph_GetFlsEraseValue
+                         314 _EcuabFee_Ph_GetFlsEraseValue:
+                         315 --	    .bf
+                         316 .LDW43:
+000000c2 840707900000*   317 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+000000c8 f2f61400        318 	mulhi	20,r18,ep
+000000cc c5f1            319 	add	r5,ep
+000000ce be0705500000*   320 	ld.bu	rosdaoff23(_EcuabFee_PartitionConfigList+16)[ep],r10
+                         321 --	    .ef
+                         322 .LDW53:
+000000d4 7f00            323 	jmp	[lp]
+                         324 	.type	_EcuabFee_Ph_GetFlsEraseValue,@function
+                         325 	.size	_EcuabFee_Ph_GetFlsEraseValue,.-_EcuabFee_Ph_GetFlsEraseValue
+                         326 	.align	2
+                         327 .LDW63:
+                         328 
+                         329 	.section ".bss","awb"
+                         330 .L516:
+                         331 	.type	.L516,@object
+                         332 	.size	.L516,0
+                         333 	.data
+                         334 	.text
+                         335 	.align	2
+                         336 	.align	2
+                         337 ..gh.f.f.1.e.9:
+                         338 	.type	..gh.f.f.1.e.9,@object
+                         339 	.size	..gh.f.f.1.e.9,0
+                         340 	.global	_EcuabFee_Ph_GetBlankCheckApi
+                         341 _EcuabFee_Ph_GetBlankCheckApi:
+                         342 --	    .bf
+                         343 .LDW73:
+000000d6 840707900000*   344 	ld.h	sdaoff23(_EcuabFee_Ph_PartitionIndex)[gp],r18
+000000dc f2f61400        345 	mulhi	20,r18,ep
+000000e0 c5f1            346 	add	r5,ep
+000000e2 be0705500000*   347 	ld.bu	rosdaoff23(_EcuabFee_PartitionConfigList+17)[ep],r10
+                         348 --	    .ef
+                         349 .LDW83:
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00009181.s
+000000e8 7f00            350 	jmp	[lp]
+                         351 	.type	_EcuabFee_Ph_GetBlankCheckApi,@function
+                         352 	.size	_EcuabFee_Ph_GetBlankCheckApi,.-_EcuabFee_Ph_GetBlankCheckApi
+                         353 	.align	2
+                         354 .LDW93:
+                         355 
+                         356 	.section ".bss","awb"
+                         357 .L564:
+                         358 	.type	.L564,@object
+                         359 	.size	.L564,0
+                         360 	.data
+                         361 	.text
+                         362 	.align	2
+                         363 --_EcuabFee_DatasetSelectionBits	rosdaoff23(_EcuabFee_DatasetSelectionBits)	import
+                         364 --_EcuabFee_PartitionConfigList	rosdaoff23(_EcuabFee_PartitionConfigList)	import
+                         365 --_EcuabFee_Ph_PartitionIndex	sdaoff23(_EcuabFee_Ph_PartitionIndex)	static
+                         366 
+                         367 	.data
+                         368 	.ghsnote version,17
+                         369 	.ghsnote tools,3
+                         370 	.ghsnote options,144
+                         371 	.text
+                         372 	.align	2
+                         373 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CEcuabFee_PartitionHandler...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B37..0::
+                         374 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

@@ -1,0 +1,286 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/ESLib_RSA_MGF1.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\ESLib_RSA_MGF1.dbo -source=ESLib_RSA_MGF1.c -o obj\gh_0000ak81.o -list=lst/ESLib_RSA_MGF1.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s
+Source File: ESLib_RSA_MGF1.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/ESLib_RSA_MGF1.lst
+                           7 --		-object_dir=obj -stderr=err/ESLib_RSA_MGF1.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/vSecPrim/ESLib_RSA_MGF1.c
+                          28 --Source File:   ../source/wrappers/vSecPrim/ESLib_RSA_MGF1.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:33:10 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86376..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_esl_generateMaskMGF1RSASHA1_PSS
+                          46 _esl_generateMaskMGF1RSASHA1_PSS:
+00000000 be07e1f0         47 	prepare	{r24,r25,r26,r27,r28,r29,r31},31
+00000004 031eecff         48 	addi	-20,sp,sp
+00000008 03f0             49 	mov	sp,ep
+0000000a 06e8             50 	mov	r6,r29
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s
+0000000c 07e0             51 	mov	r7,r28
+0000000e 08c8             52 	mov	r8,r25
+00000010 09d8             53 	mov	r9,r27
+00000012 56c5             54 	sld.w	172[ep],r24
+00000014 58d5             55 	sld.w	176[ep],r26
+                          56 --	    .bf
+                          57 .LDW01:
+00000016 e031             58 	cmp	zero,r6
+00000018 f205*            59 	be	.L5
+0000001a e039             60 	cmp	zero,r7
+0000001c d205*            61 	be	.L5
+0000001e e049             62 	cmp	zero,r9
+00000020 b205*            63 	be	.L5
+00000022 e0d1             64 	cmp	zero,r26
+00000024 ca05*            65 	bne	.L4
+                          66 .L5:
+                          67 --line25
+                          68 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.1::
+                          69 .LDWlin1:
+00000026 20560320         70 	movea	8195,zero,r10
+0000002a e525*            71 	br	.L2
+                          72 .L4:
+                          73 --line27
+                          74 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.2::
+                          75 .LDWlin2:
+0000002c 203e6000         76 	movea	96,zero,r7
+                          77 	jarl	_esl_CheckWorkSpaceHeader,lp
+                          77 <EXPANSION BEGIN>
+                          77 jarl22 _esl_CheckWorkSpaceHeader , lp 
+00000030 80ff0000*        77 <EXPANSION END>
+00000034 e051             78 	cmp	zero,r10
+00000036 8a25*            79 	bne	.L2
+                          80 --	    .bs
+                          81 .LDW11:
+                          82 --line31
+                          83 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.3::
+                          84 .LDWlin3:
+00000038 1df0             85 	mov	r29,ep
+0000003a 234e1000         86 	movea	16,sp,r9
+0000003e 1d467000         87 	addi	112,r29,r8
+                          88 .L91:
+00000042 be0709300000     89 	ld.dw	0[ep],r6
+00000048 48f2             90 	add	8,ep
+0000004a a9070f300000     91 	st.dw	r6,0[r9]
+00000050 484a             92 	add	8,r9
+00000052 fe41             93 	cmp	ep,r8
+00000054 faf5*            94 	bne	.L91
+                          95 --line33
+                          96 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.4::
+                          97 .LDWlin4:
+00000056 233e1000         98 	movea	16,sp,r7
+0000005a 1c40             99 	mov	r28,r8
+0000005c 0a30            100 	mov	r10,r6
+0000005e 204e1400        101 	movea	20,zero,r9
+00000062 1a60            102 	mov	r26,r12
+00000064 1868            103 	mov	r24,r13
+00000066 1b70            104 	mov	r27,r14
+00000068 1978            105 	mov	r25,r15
+0000006a 031e1000        106 	addi	16,sp,sp
+0000006e ec476079        107 	pushsp	r12-r15
+                         108 	jarl	_esl_generateMaskMGF1,lp
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s
+                         108 <EXPANSION BEGIN>
+                         108 jarl22 _esl_generateMaskMGF1 , lp 
+00000072 80ff0000*       108 <EXPANSION END>
+                         109 --	    .es
+                         110 .LDW21:
+                         111 .L2:
+                         112 --	    .ef
+                         113 .LDW31:
+                         114 --line37
+                         115 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.5::
+                         116 .LDWlin5:
+00000076 031e1400        117 	addi	20,sp,sp
+0000007a 7e06fff0        118 	dispose	31,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                         119 	.type	_esl_generateMaskMGF1RSASHA1_PSS,@function
+                         120 	.size	_esl_generateMaskMGF1RSASHA1_PSS,.-_esl_generateMaskMGF1RSASHA1_PSS
+                         121 	.align	2
+                         122 .LDW41:
+                         123 --_returnValue	r10	local
+                         124 --_wsHashUnion	16[sp]	local
+                         125 
+                         126 --_wsHash	r29	param
+                         127 --_tempHash	r28	param
+                         128 --_seedLength	r25	param
+                         129 --_seed	r27	param
+                         130 --_maskLength	r24	param
+                         131 --_mask	r26	param
+                         132 
+                         133 	.section ".bss","awb"
+                         134 .L90:
+                         135 	.type	.L90,@object
+                         136 	.size	.L90,0
+                         137 	.data
+                         138 	.section ".MSR_CODE","ax"
+                         139 	.align	2
+                         140 	.align	2
+                         141 ..gh.f.f.1.e.1:
+                         142 	.type	..gh.f.f.1.e.1,@object
+                         143 	.size	..gh.f.f.1.e.1,0
+                         144 	.global	_esl_generateMaskMGF1RSASHA256_PSS
+                         145 _esl_generateMaskMGF1RSASHA256_PSS:
+0000007e be07e1f0        146 	prepare	{r24,r25,r26,r27,r28,r29,r31},31
+00000082 031eecff        147 	addi	-20,sp,sp
+00000086 03f0            148 	mov	sp,ep
+00000088 06e8            149 	mov	r6,r29
+0000008a 07e0            150 	mov	r7,r28
+0000008c 08c8            151 	mov	r8,r25
+0000008e 09d8            152 	mov	r9,r27
+00000090 56c5            153 	sld.w	172[ep],r24
+00000092 58d5            154 	sld.w	176[ep],r26
+                         155 --	    .bf
+                         156 .LDW51:
+00000094 e031            157 	cmp	zero,r6
+00000096 f205*           158 	be	.L199
+00000098 e039            159 	cmp	zero,r7
+0000009a d205*           160 	be	.L199
+0000009c e049            161 	cmp	zero,r9
+0000009e b205*           162 	be	.L199
+000000a0 e0d1            163 	cmp	zero,r26
+000000a2 ca05*           164 	bne	.L198
+                         165 .L199:
+                         166 --line53
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s
+                         167 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.6::
+                         168 .LDWlin6:
+000000a4 20560320        169 	movea	8195,zero,r10
+000000a8 e525*           170 	br	.L196
+                         171 .L198:
+                         172 --line55
+                         173 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.7::
+                         174 .LDWlin7:
+000000aa 203e7000        175 	movea	112,zero,r7
+                         176 	jarl	_esl_CheckWorkSpaceHeader,lp
+                         176 <EXPANSION BEGIN>
+                         176 jarl22 _esl_CheckWorkSpaceHeader , lp 
+000000ae 80ff0000*       176 <EXPANSION END>
+000000b2 e051            177 	cmp	zero,r10
+000000b4 8a25*           178 	bne	.L196
+                         179 --	    .bs
+                         180 .LDW61:
+                         181 --line59
+                         182 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.8::
+                         183 .LDWlin8:
+000000b6 1df0            184 	mov	r29,ep
+000000b8 234e1000        185 	movea	16,sp,r9
+000000bc 1d468000        186 	addi	128,r29,r8
+                         187 .L283:
+000000c0 be0709300000    188 	ld.dw	0[ep],r6
+000000c6 48f2            189 	add	8,ep
+000000c8 a9070f300000    190 	st.dw	r6,0[r9]
+000000ce 484a            191 	add	8,r9
+000000d0 fe41            192 	cmp	ep,r8
+000000d2 faf5*           193 	bne	.L283
+                         194 --line61
+                         195 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.9::
+                         196 .LDWlin9:
+000000d4 233e1000        197 	movea	16,sp,r7
+000000d8 1c40            198 	mov	r28,r8
+000000da 0232            199 	mov	2,r6
+000000dc 204e2000        200 	movea	32,zero,r9
+000000e0 1a60            201 	mov	r26,r12
+000000e2 1868            202 	mov	r24,r13
+000000e4 1b70            203 	mov	r27,r14
+000000e6 1978            204 	mov	r25,r15
+000000e8 031e1000        205 	addi	16,sp,sp
+000000ec ec476079        206 	pushsp	r12-r15
+                         207 	jarl	_esl_generateMaskMGF1,lp
+                         207 <EXPANSION BEGIN>
+                         207 jarl22 _esl_generateMaskMGF1 , lp 
+000000f0 80ff0000*       207 <EXPANSION END>
+                         208 --	    .es
+                         209 .LDW71:
+                         210 .L196:
+                         211 --	    .ef
+                         212 .LDW81:
+                         213 --line65
+                         214 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1.10::
+                         215 .LDWlin10:
+000000f4 031e1400        216 	addi	20,sp,sp
+000000f8 7e06fff0        217 	dispose	31,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                         218 	.type	_esl_generateMaskMGF1RSASHA256_PSS,@function
+                         219 	.size	_esl_generateMaskMGF1RSASHA256_PSS,.-_esl_generateMaskMGF1RSASHA256_PSS
+                         220 	.align	2
+                         221 .LDW91:
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ak81.s
+                         222 --_returnValue	r10	local
+                         223 --_wsHashUnion	16[sp]	local
+                         224 
+                         225 --_wsHash	r29	param
+                         226 --_tempHash	r28	param
+                         227 --_seedLength	r25	param
+                         228 --_seed	r27	param
+                         229 --_maskLength	r24	param
+                         230 --_mask	r26	param
+                         231 
+                         232 	.section ".bss","awb"
+                         233 .L282:
+                         234 	.type	.L282,@object
+                         235 	.size	.L282,0
+                         236 	.data
+                         237 	.section ".MSR_CODE","ax"
+                         238 	.align	2
+                         239 
+                         240 	.data
+                         241 	.ghsnote version,17
+                         242 	.ghsnote tools,3
+                         243 	.ghsnote options,144
+                         244 	.section ".MSR_CODE","ax"
+                         245 	.align	2
+                         246 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CESLib_RSA_MGF1...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86376..0::
+                         247 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

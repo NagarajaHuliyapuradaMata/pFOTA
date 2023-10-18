@@ -1,0 +1,1160 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/vstdlib.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\vstdlib.dbo -source=vstdlib.c -o obj\gh_0000d741.o -list=lst/vstdlib.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+Source File: vstdlib.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/vstdlib.lst
+                           7 --		-object_dir=obj -stderr=err/vstdlib.err -c -cpu=rh850 -sda=all
+                           8 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/VStdLib/vstdlib.c
+                          28 --Source File:   ../source/wrappers/VStdLib/vstdlib.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:09:47 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86C0B..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_VStdLib_MemSet
+                          45 _VStdLib_MemSet:
+00000000 8700             46 	zxb	r7
+                          47 --	    .bf
+                          48 .LDW01:
+00000002 06f0             49 	mov	r6,ep
+00000004 0806e0ff         50 	addi	-32,r8,zero
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+00000008 d165*            51 	bl	.L660
+                          52 --line790
+                          53 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.1::
+                          54 .LDWlin1:
+0000000a c242             55 	shl	2,r8
+0000000c e80600000000*    56 	jmp	.L1054[r8]
+                          57 .L1054:
+00000012 80076a01*        58 	jr	.L658
+00000016 8007b800*        59 	jr	.L695
+0000001a 8007b200*        60 	jr	.L694
+0000001e 8007ac00*        61 	jr	.L693
+00000022 8007a600*        62 	jr	.L692
+00000026 8007a000*        63 	jr	.L691
+0000002a 80079a00*        64 	jr	.L690
+0000002e 80079400*        65 	jr	.L689
+00000032 80078e00*        66 	jr	.L688
+00000036 80078800*        67 	jr	.L687
+0000003a 80078200*        68 	jr	.L686
+0000003e 80077c00*        69 	jr	.L685
+00000042 80077600*        70 	jr	.L684
+00000046 80077000*        71 	jr	.L683
+0000004a 80076a00*        72 	jr	.L682
+0000004e 80076400*        73 	jr	.L681
+00000052 80075e00*        74 	jr	.L680
+00000056 80075800*        75 	jr	.L679
+0000005a 80075200*        76 	jr	.L678
+0000005e 80074c00*        77 	jr	.L677
+00000062 80074600*        78 	jr	.L676
+00000066 80074000*        79 	jr	.L675
+0000006a 80073a00*        80 	jr	.L674
+0000006e 80073400*        81 	jr	.L673
+00000072 80072e00*        82 	jr	.L672
+00000076 80072800*        83 	jr	.L671
+0000007a 80072200*        84 	jr	.L670
+0000007e 80071c00*        85 	jr	.L669
+00000082 80071600*        86 	jr	.L668
+00000086 80071000*        87 	jr	.L667
+0000008a 80070a00*        88 	jr	.L666
+0000008e 80070400*        89 	jr	.L665
+                          90 .L665:
+00000092 9e3b             91 	sst.b	r7,30[ep]
+                          92 .L666:
+00000094 9d3b             93 	sst.b	r7,29[ep]
+                          94 .L667:
+00000096 9c3b             95 	sst.b	r7,28[ep]
+                          96 .L668:
+00000098 9b3b             97 	sst.b	r7,27[ep]
+                          98 .L669:
+0000009a 9a3b             99 	sst.b	r7,26[ep]
+                         100 .L670:
+0000009c 993b            101 	sst.b	r7,25[ep]
+                         102 .L671:
+0000009e 983b            103 	sst.b	r7,24[ep]
+                         104 .L672:
+000000a0 973b            105 	sst.b	r7,23[ep]
+                         106 .L673:
+000000a2 963b            107 	sst.b	r7,22[ep]
+                         108 .L674:
+000000a4 953b            109 	sst.b	r7,21[ep]
+                         110 .L675:
+000000a6 943b            111 	sst.b	r7,20[ep]
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+                         112 .L676:
+000000a8 933b            113 	sst.b	r7,19[ep]
+                         114 .L677:
+000000aa 923b            115 	sst.b	r7,18[ep]
+                         116 .L678:
+000000ac 913b            117 	sst.b	r7,17[ep]
+                         118 .L679:
+000000ae 903b            119 	sst.b	r7,16[ep]
+                         120 .L680:
+000000b0 8f3b            121 	sst.b	r7,15[ep]
+                         122 .L681:
+000000b2 8e3b            123 	sst.b	r7,14[ep]
+                         124 .L682:
+000000b4 8d3b            125 	sst.b	r7,13[ep]
+                         126 .L683:
+000000b6 8c3b            127 	sst.b	r7,12[ep]
+                         128 .L684:
+000000b8 8b3b            129 	sst.b	r7,11[ep]
+                         130 .L685:
+000000ba 8a3b            131 	sst.b	r7,10[ep]
+                         132 .L686:
+000000bc 893b            133 	sst.b	r7,9[ep]
+                         134 .L687:
+000000be 883b            135 	sst.b	r7,8[ep]
+                         136 .L688:
+000000c0 873b            137 	sst.b	r7,7[ep]
+                         138 .L689:
+000000c2 863b            139 	sst.b	r7,6[ep]
+                         140 .L690:
+000000c4 853b            141 	sst.b	r7,5[ep]
+                         142 .L691:
+000000c6 843b            143 	sst.b	r7,4[ep]
+                         144 .L692:
+000000c8 833b            145 	sst.b	r7,3[ep]
+                         146 .L693:
+000000ca 823b            147 	sst.b	r7,2[ep]
+                         148 .L694:
+000000cc 813b            149 	sst.b	r7,1[ep]
+                         150 .L695:
+000000ce 803b            151 	sst.b	r7,0[ep]
+000000d0 7f00            152 	jmp	[lp]
+                         153 .L660:
+                         154 --	    .bs
+                         155 .LDW11:
+                         156 --line797
+                         157 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.2::
+                         158 .LDWlin2:
+000000d2 0032            159 	mov	0,r6
+000000d4 be31            160 	sub	ep,r6
+000000d6 c6760300        161 	andi	3,r6,r14
+000000da c20d*           162 	be	.L709
+                         163 --line801
+                         164 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.3::
+                         165 .LDWlin3:
+000000dc 6172            166 	cmp	1,r14
+000000de 810d*           167 	bl	.L700
+000000e0 e205*           168 	be	.L705
+000000e2 6372            169 	cmp	3,r14
+000000e4 b105*           170 	bl	.L704
+000000e6 ca05*           171 	bne	.L700
+000000e8 823b            172 	sst.b	r7,2[ep]
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+                         173 .L704:
+000000ea 813b            174 	sst.b	r7,1[ep]
+                         175 .L705:
+000000ec 803b            176 	sst.b	r7,0[ep]
+                         177 .L700:
+                         178 --line806
+                         179 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.4::
+                         180 .LDWlin4:
+000000ee cef1            181 	add	r14,ep
+000000f0 ae41            182 	sub	r14,r8
+                         183 .L709:
+000000f2 0790            184 	mov	r7,r18
+000000f4 0798            185 	mov	r7,r19
+000000f6 d892            186 	shl	24,r18
+000000f8 d09a            187 	shl	16,r19
+000000fa 1299            188 	or	r18,r19
+000000fc 0790            189 	mov	r7,r18
+000000fe c892            190 	shl	8,r18
+00000100 1299            191 	or	r18,r19
+00000102 0032            192 	mov	0,r6
+00000104 0799            193 	or	r7,r19
+00000106 d50d*           194 	br	.L711
+                         195 .L710:
+00000108 0690            196 	mov	r6,r18
+0000010a c292            197 	shl	2,r18
+0000010c de91            198 	add	ep,r18
+0000010e 1e48            199 	mov	ep,r9
+00000110 12f0            200 	mov	r18,ep
+00000112 019d            201 	sst.w	r19,0[ep]
+00000114 039d            202 	sst.w	r19,4[ep]
+00000116 059d            203 	sst.w	r19,8[ep]
+00000118 079d            204 	sst.w	r19,12[ep]
+0000011a 09f0            205 	mov	r9,ep
+0000011c 4432            206 	add	4,r6
+0000011e 5042            207 	add	-16,r8
+                         208 .L711:
+00000120 0806f0ff        209 	addi	-16,r8,zero
+00000124 a1f5*           210 	bl	.L710
+00000126 6442            211 	cmp	4,r8
+00000128 c905*           212 	bnl	.L1058
+0000012a e041            213 	cmp	zero,r8
+0000012c 822d*           214 	be	.L658
+0000012e f515*           215 	br	.L716
+                         216 .L1058:
+00000130 6742            217 	cmp	7,r8
+00000132 f30d*           218 	bnh	.L715
+00000134 6b42            219 	cmp	11,r8
+00000136 f305*           220 	bnh	.L714
+00000138 0688            221 	mov	r6,r17
+0000013a c28a            222 	shl	2,r17
+0000013c de89            223 	add	ep,r17
+0000013e 719f0100        224 	st.w	r19,0[r17]
+00000142 4132            225 	add	1,r6
+                         226 .L714:
+00000144 0680            227 	mov	r6,r16
+00000146 c282            228 	shl	2,r16
+00000148 de81            229 	add	ep,r16
+0000014a 709f0100        230 	st.w	r19,0[r16]
+0000014e 4132            231 	add	1,r6
+                         232 .L715:
+00000150 0678            233 	mov	r6,r15
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+00000152 c27a            234 	shl	2,r15
+00000154 de79            235 	add	ep,r15
+00000156 6f9f0100        236 	st.w	r19,0[r15]
+0000015a 4132            237 	add	1,r6
+                         238 .L716:
+0000015c c232            239 	shl	2,r6
+0000015e de31            240 	add	ep,r6
+00000160 c86e0300        241 	andi	3,r8,r13
+00000164 616a            242 	cmp	1,r13
+00000166 b10d*           243 	bl	.L658
+00000168 820d*           244 	be	.L720
+0000016a 636a            245 	cmp	3,r13
+0000016c c105*           246 	bl	.L719
+0000016e fa05*           247 	bne	.L658
+00000170 463f0200        248 	st.b	r7,2[r6]
+                         249 .L719:
+00000174 463f0100        250 	st.b	r7,1[r6]
+                         251 .L720:
+00000178 463f0000        252 	st.b	r7,0[r6]
+                         253 .L658:
+                         254 --	    .es
+                         255 .LDW21:
+                         256 --	    .ef
+                         257 .LDW31:
+                         258 --line834
+                         259 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.5::
+                         260 .LDWlin5:
+0000017c 7f00            261 	jmp	[lp]
+                         262 	.type	_VStdLib_MemSet,@function
+                         263 	.size	_VStdLib_MemSet,.-_VStdLib_MemSet
+                         264 	.align	2
+                         265 .LDW41:
+                         266 --_pDst8	ep	local
+                         267 --_nDstOffset	r14	local
+                         268 --_dPos	r6	local
+                         269 --_remaining	r8	local
+                         270 --_nPattern32	r19	local
+                         271 --_pDst8	r6	local
+                         272 
+                         273 --_pDst	r6	param
+                         274 --_nPattern	r7	param
+                         275 --_nCnt	r8	param
+                         276 
+                         277 	.section ".bss","awb"
+                         278 .L1052:
+                         279 	.type	.L1052,@object
+                         280 	.size	.L1052,0
+                         281 	.data
+                         282 	.ghsnote jtable,2097156,.L1054,.L1054,.L1054,32
+                         283 	.text
+                         284 	.align	2
+                         285 	.align	2
+                         286 ..gh.f.f.1.e.1:
+                         287 	.type	..gh.f.f.1.e.1,@object
+                         288 	.size	..gh.f.f.1.e.1,0
+                         289 	.global	_VStdLib_MemCpy
+                         290 _VStdLib_MemCpy:
+                         291 --	    .bf
+                         292 .LDW51:
+0000017e 06f0            293 	mov	r6,ep
+00000180 0806e0ff        294 	addi	-32,r8,zero
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+00000184 e1074901*       295 	bl	.L1603
+                         296 --line856
+                         297 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.6::
+                         298 .LDWlin6:
+00000188 c242            299 	shl	2,r8
+0000018a e80600000000*   300 	jmp	.L2844[r8]
+                         301 .L2844:
+00000190 80070005*       302 	jr	.L1601
+00000194 80073001*       303 	jr	.L1638
+00000198 80072601*       304 	jr	.L1637
+0000019c 80071c01*       305 	jr	.L1636
+000001a0 80071201*       306 	jr	.L1635
+000001a4 80070801*       307 	jr	.L1634
+000001a8 8007fe00*       308 	jr	.L1633
+000001ac 8007f400*       309 	jr	.L1632
+000001b0 8007ea00*       310 	jr	.L1631
+000001b4 8007e000*       311 	jr	.L1630
+000001b8 8007d600*       312 	jr	.L1629
+000001bc 8007cc00*       313 	jr	.L1628
+000001c0 8007c200*       314 	jr	.L1627
+000001c4 8007b800*       315 	jr	.L1626
+000001c8 8007ae00*       316 	jr	.L1625
+000001cc 8007a400*       317 	jr	.L1624
+000001d0 80079a00*       318 	jr	.L1623
+000001d4 80079000*       319 	jr	.L1622
+000001d8 80078600*       320 	jr	.L1621
+000001dc 80077c00*       321 	jr	.L1620
+000001e0 80077200*       322 	jr	.L1619
+000001e4 80076800*       323 	jr	.L1618
+000001e8 80075e00*       324 	jr	.L1617
+000001ec 80075400*       325 	jr	.L1616
+000001f0 80074a00*       326 	jr	.L1615
+000001f4 80074000*       327 	jr	.L1614
+000001f8 80073600*       328 	jr	.L1613
+000001fc 80072c00*       329 	jr	.L1612
+00000200 80072200*       330 	jr	.L1611
+00000204 80071800*       331 	jr	.L1610
+00000208 80070e00*       332 	jr	.L1609
+0000020c 80070400*       333 	jr	.L1608
+                         334 .L1608:
+00000210 87371f00        335 	ld.bu	30[r7],r6
+00000214 9e33            336 	sst.b	r6,30[ep]
+                         337 .L1609:
+00000216 a79f1d00        338 	ld.bu	29[r7],r19
+0000021a 9d9b            339 	sst.b	r19,29[ep]
+                         340 .L1610:
+0000021c 87971d00        341 	ld.bu	28[r7],r18
+00000220 9c93            342 	sst.b	r18,28[ep]
+                         343 .L1611:
+00000222 a78f1b00        344 	ld.bu	27[r7],r17
+00000226 9b8b            345 	sst.b	r17,27[ep]
+                         346 .L1612:
+00000228 87871b00        347 	ld.bu	26[r7],r16
+0000022c 9a83            348 	sst.b	r16,26[ep]
+                         349 .L1613:
+0000022e a77f1900        350 	ld.bu	25[r7],r15
+00000232 997b            351 	sst.b	r15,25[ep]
+                         352 .L1614:
+00000234 87771900        353 	ld.bu	24[r7],r14
+00000238 9873            354 	sst.b	r14,24[ep]
+                         355 .L1615:
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+0000023a a76f1700        356 	ld.bu	23[r7],r13
+0000023e 976b            357 	sst.b	r13,23[ep]
+                         358 .L1616:
+00000240 87671700        359 	ld.bu	22[r7],r12
+00000244 9663            360 	sst.b	r12,22[ep]
+                         361 .L1617:
+00000246 a75f1500        362 	ld.bu	21[r7],r11
+0000024a 955b            363 	sst.b	r11,21[ep]
+                         364 .L1618:
+0000024c 87571500        365 	ld.bu	20[r7],r10
+00000250 9453            366 	sst.b	r10,20[ep]
+                         367 .L1619:
+00000252 a74f1300        368 	ld.bu	19[r7],r9
+00000256 934b            369 	sst.b	r9,19[ep]
+                         370 .L1620:
+00000258 87471300        371 	ld.bu	18[r7],r8
+0000025c 9243            372 	sst.b	r8,18[ep]
+                         373 .L1621:
+0000025e a7371100        374 	ld.bu	17[r7],r6
+00000262 9133            375 	sst.b	r6,17[ep]
+                         376 .L1622:
+00000264 879f1100        377 	ld.bu	16[r7],r19
+00000268 909b            378 	sst.b	r19,16[ep]
+                         379 .L1623:
+0000026a a7970f00        380 	ld.bu	15[r7],r18
+0000026e 8f93            381 	sst.b	r18,15[ep]
+                         382 .L1624:
+00000270 878f0f00        383 	ld.bu	14[r7],r17
+00000274 8e8b            384 	sst.b	r17,14[ep]
+                         385 .L1625:
+00000276 a7870d00        386 	ld.bu	13[r7],r16
+0000027a 8d83            387 	sst.b	r16,13[ep]
+                         388 .L1626:
+0000027c 877f0d00        389 	ld.bu	12[r7],r15
+00000280 8c7b            390 	sst.b	r15,12[ep]
+                         391 .L1627:
+00000282 a7770b00        392 	ld.bu	11[r7],r14
+00000286 8b73            393 	sst.b	r14,11[ep]
+                         394 .L1628:
+00000288 876f0b00        395 	ld.bu	10[r7],r13
+0000028c 8a6b            396 	sst.b	r13,10[ep]
+                         397 .L1629:
+0000028e a7670900        398 	ld.bu	9[r7],r12
+00000292 8963            399 	sst.b	r12,9[ep]
+                         400 .L1630:
+00000294 875f0900        401 	ld.bu	8[r7],r11
+00000298 885b            402 	sst.b	r11,8[ep]
+                         403 .L1631:
+0000029a a7570700        404 	ld.bu	7[r7],r10
+0000029e 8753            405 	sst.b	r10,7[ep]
+                         406 .L1632:
+000002a0 874f0700        407 	ld.bu	6[r7],r9
+000002a4 864b            408 	sst.b	r9,6[ep]
+                         409 .L1633:
+000002a6 a7470500        410 	ld.bu	5[r7],r8
+000002aa 8543            411 	sst.b	r8,5[ep]
+                         412 .L1634:
+000002ac 87370500        413 	ld.bu	4[r7],r6
+000002b0 8433            414 	sst.b	r6,4[ep]
+                         415 .L1635:
+000002b2 a79f0300        416 	ld.bu	3[r7],r19
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+000002b6 839b            417 	sst.b	r19,3[ep]
+                         418 .L1636:
+000002b8 87970300        419 	ld.bu	2[r7],r18
+000002bc 8293            420 	sst.b	r18,2[ep]
+                         421 .L1637:
+000002be a78f0100        422 	ld.bu	1[r7],r17
+000002c2 818b            423 	sst.b	r17,1[ep]
+                         424 .L1638:
+000002c4 87870100        425 	ld.bu	0[r7],r16
+000002c8 8083            426 	sst.b	r16,0[ep]
+000002ca 7f00            427 	jmp	[lp]
+                         428 .L1603:
+                         429 --	    .bs
+                         430 .LDW61:
+                         431 --line863
+                         432 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.7::
+                         433 .LDWlin7:
+000002cc 0032            434 	mov	0,r6
+000002ce a731            435 	sub	r7,r6
+000002d0 c66e0300        436 	andi	3,r6,r13
+000002d4 b215*           437 	be	.L1641
+                         438 --line868
+                         439 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.8::
+                         440 .LDWlin8:
+000002d6 616a            441 	cmp	1,r13
+000002d8 e10d*           442 	bl	.L1643
+000002da a20d*           443 	be	.L1648
+000002dc 636a            444 	cmp	3,r13
+000002de d105*           445 	bl	.L1647
+000002e0 aa0d*           446 	bne	.L1643
+000002e2 877f0300        447 	ld.bu	2[r7],r15
+000002e6 827b            448 	sst.b	r15,2[ep]
+                         449 .L1647:
+000002e8 a7770100        450 	ld.bu	1[r7],r14
+000002ec 8173            451 	sst.b	r14,1[ep]
+                         452 .L1648:
+000002ee 87670100        453 	ld.bu	0[r7],r12
+000002f2 8063            454 	sst.b	r12,0[ep]
+                         455 .L1643:
+                         456 --line873
+                         457 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.9::
+                         458 .LDWlin9:
+000002f4 cd39            459 	add	r13,r7
+000002f6 cdf1            460 	add	r13,ep
+000002f8 ad41            461 	sub	r13,r8
+                         462 .L1641:
+000002fa 009a            463 	mov	0,r19
+000002fc be99            464 	sub	ep,r19
+000002fe d3860300        465 	andi	3,r19,r16
+00000302 f09f249b        466 	cmove	r16,r19,r19
+00000306 d25d*           467 	be	.L1656
+                         468 --line890
+                         469 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.10::
+                         470 .LDWlin10:
+00000308 0092            471 	mov	0,r18
+0000030a 1e88            472 	mov	ep,r17
+0000030c 1230            473 	mov	r18,r6
+0000030e 0806e0ff        474 	addi	-32,r8,zero
+00000312 e9073502*       475 	bnl	.L1699
+00000316 5c42            476 	add	-4,r8
+00000318 279f0100        477 	ld.w	0[r7],r19
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+0000031c 6282            478 	cmp	2,r16
+0000031e e205*           479 	be	.L1675
+00000320 6382            480 	cmp	3,r16
+00000322 9a0d*           481 	bne	.L1676
+00000324 809b            482 	sst.b	r19,0[ep]
+00000326 0192            483 	mov	1,r18
+00000328 889a            484 	shr	8,r19
+                         485 .L1675:
+0000032a 12f0            486 	mov	r18,ep
+0000032c d1f1            487 	add	r17,ep
+0000032e 809b            488 	sst.b	r19,0[ep]
+00000330 4192            489 	add	1,r18
+00000332 889a            490 	shr	8,r19
+                         491 .L1676:
+00000334 12f0            492 	mov	r18,ep
+00000336 d1f1            493 	add	r17,ep
+00000338 809b            494 	sst.b	r19,0[ep]
+0000033a 127e0100        495 	addi	1,r18,r15
+0000033e 889a            496 	shr	8,r19
+00000340 d179            497 	add	r17,r15
+00000342 0690            498 	mov	r6,r18
+00000344 0132            499 	mov	1,r6
+00000346 6382            500 	cmp	3,r16
+00000348 ea070501*       501 	bne	.L1682
+                         502 .L1681:
+0000034c 0806f0ff        503 	addi	-16,r8,zero
+00000350 e9079901*       504 	bnl	.L1689
+00000354 06f0            505 	mov	r6,ep
+00000356 c2f2            506 	shl	2,ep
+00000358 c7f1            507 	add	r7,ep
+0000035a 0065            508 	sld.w	0[ep],r12
+0000035c 0255            509 	sld.w	4[ep],r10
+0000035e 044d            510 	sld.w	8[ep],r9
+00000360 060d            511 	sld.w	12[ep],r1
+00000362 0c58            512 	mov	r12,r11
+00000364 c85a            513 	shl	8,r11
+00000366 1359            514 	or	r19,r11
+00000368 0a88            515 	mov	r10,r17
+0000036a 0970            516 	mov	r9,r14
+0000036c 0168            517 	mov	r1,r13
+0000036e 12f0            518 	mov	r18,ep
+00000370 9862            519 	shr	24,r12
+00000372 c88a            520 	shl	8,r17
+00000374 9852            521 	shr	24,r10
+00000376 c872            522 	shl	8,r14
+00000378 984a            523 	shr	24,r9
+0000037a c86a            524 	shl	8,r13
+0000037c 0198            525 	mov	r1,r19
+0000037e c2f2            526 	shl	2,ep
+00000380 0c89            527 	or	r12,r17
+00000382 0a71            528 	or	r10,r14
+00000384 0969            529 	or	r9,r13
+00000386 989a            530 	shr	24,r19
+00000388 cff1            531 	add	r15,ep
+0000038a 4492            532 	add	4,r18
+0000038c 4432            533 	add	4,r6
+0000038e 015d            534 	sst.w	r11,0[ep]
+00000390 038d            535 	sst.w	r17,4[ep]
+00000392 0575            536 	sst.w	r14,8[ep]
+00000394 076d            537 	sst.w	r13,12[ep]
+00000396 5042            538 	add	-16,r8
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+00000398 a5dd*           539 	br	.L1681
+                         540 .L1655:
+0000039a 1380            541 	mov	r19,r16
+0000039c c282            542 	shl	2,r16
+0000039e 1030            543 	mov	r16,r6
+000003a0 c731            544 	add	r7,r6
+000003a2 1e48            545 	mov	ep,r9
+000003a4 06f0            546 	mov	r6,ep
+000003a6 007d            547 	sld.w	0[ep],r15
+000003a8 0275            548 	sld.w	4[ep],r14
+000003aa 046d            549 	sld.w	8[ep],r13
+000003ac 0665            550 	sld.w	12[ep],r12
+000003ae c981            551 	add	r9,r16
+000003b0 10f0            552 	mov	r16,ep
+000003b2 017d            553 	sst.w	r15,0[ep]
+000003b4 0375            554 	sst.w	r14,4[ep]
+000003b6 056d            555 	sst.w	r13,8[ep]
+000003b8 0765            556 	sst.w	r12,12[ep]
+000003ba 09f0            557 	mov	r9,ep
+000003bc 449a            558 	add	4,r19
+000003be 5042            559 	add	-16,r8
+                         560 .L1656:
+000003c0 0806f0ff        561 	addi	-16,r8,zero
+000003c4 b1ed*           562 	bl	.L1655
+000003c6 6442            563 	cmp	4,r8
+000003c8 d905*           564 	bnl	.L2848
+000003ca e041            565 	cmp	zero,r8
+000003cc e207c502*       566 	be	.L1601
+000003d0 b525*           567 	br	.L1661
+                         568 .L2848:
+000003d2 6742            569 	cmp	7,r8
+000003d4 f315*           570 	bnh	.L1660
+000003d6 6b42            571 	cmp	11,r8
+000003d8 b30d*           572 	bnh	.L1659
+000003da 1330            573 	mov	r19,r6
+000003dc c232            574 	shl	2,r6
+000003de 0690            575 	mov	r6,r18
+000003e0 c731            576 	add	r7,r6
+000003e2 265f0100        577 	ld.w	0[r6],r11
+000003e6 de91            578 	add	ep,r18
+000003e8 419a            579 	add	1,r19
+000003ea 725f0100        580 	st.w	r11,0[r18]
+                         581 .L1659:
+000003ee 1390            582 	mov	r19,r18
+000003f0 c292            583 	shl	2,r18
+000003f2 1288            584 	mov	r18,r17
+000003f4 c791            585 	add	r7,r18
+000003f6 32570100        586 	ld.w	0[r18],r10
+000003fa de89            587 	add	ep,r17
+000003fc 419a            588 	add	1,r19
+000003fe 71570100        589 	st.w	r10,0[r17]
+                         590 .L1660:
+00000402 1388            591 	mov	r19,r17
+00000404 c28a            592 	shl	2,r17
+00000406 1180            593 	mov	r17,r16
+00000408 c789            594 	add	r7,r17
+0000040a 314f0100        595 	ld.w	0[r17],r9
+0000040e de81            596 	add	ep,r16
+00000410 419a            597 	add	1,r19
+00000412 704f0100        598 	st.w	r9,0[r16]
+                         599 .L1661:
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+00000416 c29a            600 	shl	2,r19
+00000418 1360            601 	mov	r19,r12
+0000041a de61            602 	add	ep,r12
+0000041c c799            603 	add	r7,r19
+0000041e c85e0300        604 	andi	3,r8,r11
+00000422 615a            605 	cmp	1,r11
+00000424 e1076d02*       606 	bl	.L1601
+00000428 d20d*           607 	be	.L1665
+0000042a 635a            608 	cmp	3,r11
+0000042c f105*           609 	bl	.L1664
+0000042e ea076302*       610 	bne	.L1601
+00000432 93470300        611 	ld.bu	2[r19],r8
+00000436 4c470200        612 	st.b	r8,2[r12]
+                         613 .L1664:
+0000043a b33f0100        614 	ld.bu	1[r19],r7
+0000043e 4c3f0100        615 	st.b	r7,1[r12]
+                         616 .L1665:
+00000442 93370100        617 	ld.bu	0[r19],r6
+00000446 4c370000        618 	st.b	r6,0[r12]
+0000044a 7f00            619 	jmp	[lp]
+                         620 .L1682:
+0000044c 6282            621 	cmp	2,r16
+0000044e c225*           622 	be	.L1686
+00000450 954d*           623 	br	.L1688
+                         624 .L1685:
+00000452 06f0            625 	mov	r6,ep
+00000454 c2f2            626 	shl	2,ep
+00000456 c7f1            627 	add	r7,ep
+00000458 008d            628 	sld.w	0[ep],r17
+0000045a 0275            629 	sld.w	4[ep],r14
+0000045c 046d            630 	sld.w	8[ep],r13
+0000045e 060d            631 	sld.w	12[ep],r1
+00000460 1150            632 	mov	r17,r10
+00000462 d052            633 	shl	16,r10
+00000464 0e60            634 	mov	r14,r12
+00000466 0d58            635 	mov	r13,r11
+00000468 0148            636 	mov	r1,r9
+0000046a 12f0            637 	mov	r18,ep
+0000046c 1351            638 	or	r19,r10
+0000046e 908a            639 	shr	16,r17
+00000470 d062            640 	shl	16,r12
+00000472 9072            641 	shr	16,r14
+00000474 d05a            642 	shl	16,r11
+00000476 906a            643 	shr	16,r13
+00000478 d04a            644 	shl	16,r9
+0000047a c2f2            645 	shl	2,ep
+0000047c 1161            646 	or	r17,r12
+0000047e 0e59            647 	or	r14,r11
+00000480 0d49            648 	or	r13,r9
+00000482 0198            649 	mov	r1,r19
+00000484 cff1            650 	add	r15,ep
+00000486 909a            651 	shr	16,r19
+00000488 0155            652 	sst.w	r10,0[ep]
+0000048a 0365            653 	sst.w	r12,4[ep]
+0000048c 055d            654 	sst.w	r11,8[ep]
+0000048e 074d            655 	sst.w	r9,12[ep]
+00000490 4492            656 	add	4,r18
+00000492 4432            657 	add	4,r6
+00000494 5042            658 	add	-16,r8
+                         659 .L1686:
+00000496 0806f0ff        660 	addi	-16,r8,zero
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+0000049a c1dd*           661 	bl	.L1685
+0000049c e525*           662 	br	.L1689
+                         663 .L1687:
+0000049e 06f0            664 	mov	r6,ep
+000004a0 c2f2            665 	shl	2,ep
+000004a2 c7f1            666 	add	r7,ep
+000004a4 0065            667 	sld.w	0[ep],r12
+000004a6 025d            668 	sld.w	4[ep],r11
+000004a8 0455            669 	sld.w	8[ep],r10
+000004aa 060d            670 	sld.w	12[ep],r1
+000004ac 0c48            671 	mov	r12,r9
+000004ae d84a            672 	shl	24,r9
+000004b0 0b88            673 	mov	r11,r17
+000004b2 0a70            674 	mov	r10,r14
+000004b4 0168            675 	mov	r1,r13
+000004b6 12f0            676 	mov	r18,ep
+000004b8 1349            677 	or	r19,r9
+000004ba 8862            678 	shr	8,r12
+000004bc d88a            679 	shl	24,r17
+000004be 885a            680 	shr	8,r11
+000004c0 d872            681 	shl	24,r14
+000004c2 8852            682 	shr	8,r10
+000004c4 d86a            683 	shl	24,r13
+000004c6 c2f2            684 	shl	2,ep
+000004c8 0c89            685 	or	r12,r17
+000004ca 0b71            686 	or	r11,r14
+000004cc 0a69            687 	or	r10,r13
+000004ce 0198            688 	mov	r1,r19
+000004d0 cff1            689 	add	r15,ep
+000004d2 889a            690 	shr	8,r19
+000004d4 014d            691 	sst.w	r9,0[ep]
+000004d6 038d            692 	sst.w	r17,4[ep]
+000004d8 0575            693 	sst.w	r14,8[ep]
+000004da 076d            694 	sst.w	r13,12[ep]
+000004dc 4492            695 	add	4,r18
+000004de 4432            696 	add	4,r6
+000004e0 5042            697 	add	-16,r8
+                         698 .L1688:
+000004e2 0806f0ff        699 	addi	-16,r8,zero
+000004e6 c1dd*           700 	bl	.L1687
+                         701 .L1689:
+000004e8 1088            702 	mov	r16,r17
+000004ea c38a            703 	shl	3,r17
+000004ec 006a            704 	mov	0,r13
+000004ee b169            705 	sub	r17,r13
+000004f0 a515*           706 	br	.L1691
+                         707 .L1690:
+000004f2 06f0            708 	mov	r6,ep
+000004f4 c2f2            709 	shl	2,ep
+000004f6 c7f1            710 	add	r7,ep
+000004f8 005d            711 	sld.w	0[ep],r11
+000004fa 1270            712 	mov	r18,r14
+000004fc c272            713 	shl	2,r14
+000004fe cf71            714 	add	r15,r14
+00000500 ed5fc260        715 	shl	r13,r11,r12
+00000504 1361            716 	or	r19,r12
+00000506 f15f8298        717 	shr	r17,r11,r19
+0000050a 6e670100        718 	st.w	r12,0[r14]
+0000050e 4192            719 	add	1,r18
+00000510 4132            720 	add	1,r6
+00000512 5c42            721 	add	-4,r8
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+                         722 .L1691:
+00000514 6442            723 	cmp	4,r8
+00000516 e9ed*           724 	bnl	.L1690
+00000518 1288            725 	mov	r18,r17
+0000051a c28a            726 	shl	2,r17
+0000051c cf89            727 	add	r15,r17
+0000051e 047a            728 	mov	4,r15
+00000520 b079            729 	sub	r16,r15
+00000522 0092            730 	mov	0,r18
+00000524 627a            731 	cmp	2,r15
+00000526 f205*           732 	be	.L1695
+00000528 637a            733 	cmp	3,r15
+0000052a aa0d*           734 	bne	.L1696
+0000052c 519f0000        735 	st.b	r19,0[r17]
+00000530 0192            736 	mov	1,r18
+00000532 889a            737 	shr	8,r19
+                         738 .L1695:
+00000534 12f0            739 	mov	r18,ep
+00000536 d1f1            740 	add	r17,ep
+00000538 809b            741 	sst.b	r19,0[ep]
+0000053a 4192            742 	add	1,r18
+0000053c 889a            743 	shr	8,r19
+                         744 .L1696:
+0000053e 12f0            745 	mov	r18,ep
+00000540 d1f1            746 	add	r17,ep
+00000542 809b            747 	sst.b	r19,0[ep]
+00000544 4192            748 	add	1,r18
+                         749 .L1699:
+00000546 12f0            750 	mov	r18,ep
+00000548 c232            751 	shl	2,r6
+0000054a d1f1            752 	add	r17,ep
+0000054c c731            753 	add	r7,r6
+0000054e c242            754 	shl	2,r8
+00000550 e80600000000*   755 	jmp	.L2860[r8]
+                         756 .L2860:
+00000556 80073a01*       757 	jr	.L1601
+0000055a 80073001*       758 	jr	.L1731
+0000055e 80072601*       759 	jr	.L1730
+00000562 80071c01*       760 	jr	.L1729
+00000566 80071201*       761 	jr	.L1728
+0000056a 80070801*       762 	jr	.L1727
+0000056e 8007fe00*       763 	jr	.L1726
+00000572 8007f400*       764 	jr	.L1725
+00000576 8007ea00*       765 	jr	.L1724
+0000057a 8007e000*       766 	jr	.L1723
+0000057e 8007d600*       767 	jr	.L1722
+00000582 8007cc00*       768 	jr	.L1721
+00000586 8007c200*       769 	jr	.L1720
+0000058a 8007b800*       770 	jr	.L1719
+0000058e 8007ae00*       771 	jr	.L1718
+00000592 8007a400*       772 	jr	.L1717
+00000596 80079a00*       773 	jr	.L1716
+0000059a 80079000*       774 	jr	.L1715
+0000059e 80078600*       775 	jr	.L1714
+000005a2 80077c00*       776 	jr	.L1713
+000005a6 80077200*       777 	jr	.L1712
+000005aa 80076800*       778 	jr	.L1711
+000005ae 80075e00*       779 	jr	.L1710
+000005b2 80075400*       780 	jr	.L1709
+000005b6 80074a00*       781 	jr	.L1708
+000005ba 80074000*       782 	jr	.L1707
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+000005be 80073600*       783 	jr	.L1706
+000005c2 80072c00*       784 	jr	.L1705
+000005c6 80072200*       785 	jr	.L1704
+000005ca 80071800*       786 	jr	.L1703
+000005ce 80070e00*       787 	jr	.L1702
+000005d2 80070400*       788 	jr	.L1701
+                         789 .L1701:
+000005d6 863f1f00        790 	ld.bu	30[r6],r7
+000005da 9e3b            791 	sst.b	r7,30[ep]
+                         792 .L1702:
+000005dc a69f1d00        793 	ld.bu	29[r6],r19
+000005e0 9d9b            794 	sst.b	r19,29[ep]
+                         795 .L1703:
+000005e2 86971d00        796 	ld.bu	28[r6],r18
+000005e6 9c93            797 	sst.b	r18,28[ep]
+                         798 .L1704:
+000005e8 a68f1b00        799 	ld.bu	27[r6],r17
+000005ec 9b8b            800 	sst.b	r17,27[ep]
+                         801 .L1705:
+000005ee 86871b00        802 	ld.bu	26[r6],r16
+000005f2 9a83            803 	sst.b	r16,26[ep]
+                         804 .L1706:
+000005f4 a67f1900        805 	ld.bu	25[r6],r15
+000005f8 997b            806 	sst.b	r15,25[ep]
+                         807 .L1707:
+000005fa 86771900        808 	ld.bu	24[r6],r14
+000005fe 9873            809 	sst.b	r14,24[ep]
+                         810 .L1708:
+00000600 a66f1700        811 	ld.bu	23[r6],r13
+00000604 976b            812 	sst.b	r13,23[ep]
+                         813 .L1709:
+00000606 86671700        814 	ld.bu	22[r6],r12
+0000060a 9663            815 	sst.b	r12,22[ep]
+                         816 .L1710:
+0000060c a65f1500        817 	ld.bu	21[r6],r11
+00000610 955b            818 	sst.b	r11,21[ep]
+                         819 .L1711:
+00000612 86571500        820 	ld.bu	20[r6],r10
+00000616 9453            821 	sst.b	r10,20[ep]
+                         822 .L1712:
+00000618 a64f1300        823 	ld.bu	19[r6],r9
+0000061c 934b            824 	sst.b	r9,19[ep]
+                         825 .L1713:
+0000061e 86471300        826 	ld.bu	18[r6],r8
+00000622 9243            827 	sst.b	r8,18[ep]
+                         828 .L1714:
+00000624 a63f1100        829 	ld.bu	17[r6],r7
+00000628 913b            830 	sst.b	r7,17[ep]
+                         831 .L1715:
+0000062a 869f1100        832 	ld.bu	16[r6],r19
+0000062e 909b            833 	sst.b	r19,16[ep]
+                         834 .L1716:
+00000630 a6970f00        835 	ld.bu	15[r6],r18
+00000634 8f93            836 	sst.b	r18,15[ep]
+                         837 .L1717:
+00000636 868f0f00        838 	ld.bu	14[r6],r17
+0000063a 8e8b            839 	sst.b	r17,14[ep]
+                         840 .L1718:
+0000063c a6870d00        841 	ld.bu	13[r6],r16
+00000640 8d83            842 	sst.b	r16,13[ep]
+                         843 .L1719:
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+00000642 867f0d00        844 	ld.bu	12[r6],r15
+00000646 8c7b            845 	sst.b	r15,12[ep]
+                         846 .L1720:
+00000648 a6770b00        847 	ld.bu	11[r6],r14
+0000064c 8b73            848 	sst.b	r14,11[ep]
+                         849 .L1721:
+0000064e 866f0b00        850 	ld.bu	10[r6],r13
+00000652 8a6b            851 	sst.b	r13,10[ep]
+                         852 .L1722:
+00000654 a6670900        853 	ld.bu	9[r6],r12
+00000658 8963            854 	sst.b	r12,9[ep]
+                         855 .L1723:
+0000065a 865f0900        856 	ld.bu	8[r6],r11
+0000065e 885b            857 	sst.b	r11,8[ep]
+                         858 .L1724:
+00000660 a6570700        859 	ld.bu	7[r6],r10
+00000664 8753            860 	sst.b	r10,7[ep]
+                         861 .L1725:
+00000666 864f0700        862 	ld.bu	6[r6],r9
+0000066a 864b            863 	sst.b	r9,6[ep]
+                         864 .L1726:
+0000066c a6470500        865 	ld.bu	5[r6],r8
+00000670 8543            866 	sst.b	r8,5[ep]
+                         867 .L1727:
+00000672 863f0500        868 	ld.bu	4[r6],r7
+00000676 843b            869 	sst.b	r7,4[ep]
+                         870 .L1728:
+00000678 a69f0300        871 	ld.bu	3[r6],r19
+0000067c 839b            872 	sst.b	r19,3[ep]
+                         873 .L1729:
+0000067e 86970300        874 	ld.bu	2[r6],r18
+00000682 8293            875 	sst.b	r18,2[ep]
+                         876 .L1730:
+00000684 a68f0100        877 	ld.bu	1[r6],r17
+00000688 818b            878 	sst.b	r17,1[ep]
+                         879 .L1731:
+0000068a 86870100        880 	ld.bu	0[r6],r16
+0000068e 8083            881 	sst.b	r16,0[ep]
+                         882 .L1601:
+                         883 --	    .es
+                         884 .LDW71:
+                         885 --	    .ef
+                         886 .LDW81:
+                         887 --line916
+                         888 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.11::
+                         889 .LDWlin11:
+00000690 7f00            890 	jmp	[lp]
+                         891 	.type	_VStdLib_MemCpy,@function
+                         892 	.size	_VStdLib_MemCpy,.-_VStdLib_MemCpy
+                         893 	.align	2
+                         894 .LDW91:
+                         895 --_pDst8	ep	local
+                         896 --_pSrc8	r7	local
+                         897 --_nSrcOffset	r13	local
+                         898 --_nDstOffset	r16	local
+                         899 --_dPos	r19	local
+                         900 --_remaining	r8	local
+                         901 --_x0	r15	local
+                         902 --_x1	r14	local
+                         903 --_x2	r13	local
+                         904 --_x3	r12	local
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+                         905 --_pDst8	r12	local
+                         906 --_pSrc8	r19	local
+                         907 --_pDst8	r17	local
+                         908 --_dPos	r18	local
+                         909 --_sPos	r6	local
+                         910 --_remaining	r8	local
+                         911 --_pDst32	r15	local
+                         912 --_prev	r19	local
+                         913 --_x0	r11	local
+                         914 --_x1	r12	local
+                         915 --_x2	r10	local
+                         916 --_x3	r9	local
+                         917 --_x4	r1	local
+                         918 --_x0	r10	local
+                         919 --_x1	r17	local
+                         920 --_x2	r14	local
+                         921 --_x3	r13	local
+                         922 --_x4	r1	local
+                         923 --_x0	r9	local
+                         924 --_x1	r12	local
+                         925 --_x2	r11	local
+                         926 --_x3	r10	local
+                         927 --_x4	r1	local
+                         928 --_prevShift	r17	local
+                         929 --_xShift	r13	local
+                         930 --_x1	r11	local
+                         931 --_pDst8	ep	local
+                         932 --_pSrc8	r6	local
+                         933 
+                         934 --_pDst	r6	param
+                         935 --_pSrc	r7	param
+                         936 --_nCnt	r8	param
+                         937 
+                         938 	.section ".bss","awb"
+                         939 .L2842:
+                         940 	.type	.L2842,@object
+                         941 	.size	.L2842,0
+                         942 	.data
+                         943 	.ghsnote jtable,2097156,.L2844,.L2844,.L2844,32
+                         944 	.ghsnote jtable,2097156,.L2860,.L2860,.L2860,32
+                         945 	.text
+                         946 	.align	2
+                         947 	.align	2
+                         948 ..gh.f.f.1.e.2:
+                         949 	.type	..gh.f.f.1.e.2,@object
+                         950 	.size	..gh.f.f.1.e.2,0
+                         951 	.global	_VStdLib_MemCpy16
+                         952 _VStdLib_MemCpy16:
+                         953 --	    .bf
+                         954 .LDW02:
+00000692 008a            955 	mov	0,r17
+00000694 a50d*           956 	br	.L3924
+                         957 .L3923:
+                         958 --line933
+                         959 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.12::
+                         960 .LDWlin12:
+00000696 1190            961 	mov	r17,r18
+00000698 c192            962 	shl	1,r18
+0000069a 12f0            963 	mov	r18,ep
+0000069c c791            964 	add	r7,r18
+0000069e f29f0100        965 	ld.hu	0[r18],r19
+
+                                                                      Page 17
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+000006a2 c6f1            966 	add	r6,ep
+000006a4 418a            967 	add	1,r17
+000006a6 809c            968 	sst.h	r19,0[ep]
+                         969 .L3924:
+000006a8 e889            970 	cmp	r8,r17
+000006aa e1f5*           971 	bl	.L3923
+                         972 --	    .ef
+                         973 .LDW12:
+                         974 --line944
+                         975 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.13::
+                         976 .LDWlin13:
+000006ac 7f00            977 	jmp	[lp]
+                         978 	.type	_VStdLib_MemCpy16,@function
+                         979 	.size	_VStdLib_MemCpy16,.-_VStdLib_MemCpy16
+                         980 	.align	2
+                         981 .LDW22:
+                         982 --_idx	r17	local
+                         983 
+                         984 --_pDst	r6	param
+                         985 --_pSrc	r7	param
+                         986 --_nCnt	r8	param
+                         987 
+                         988 	.section ".bss","awb"
+                         989 .L3963:
+                         990 	.type	.L3963,@object
+                         991 	.size	.L3963,0
+                         992 	.data
+                         993 	.text
+                         994 	.align	2
+                         995 	.align	2
+                         996 ..gh.f.f.1.e.3:
+                         997 	.type	..gh.f.f.1.e.3,@object
+                         998 	.size	..gh.f.f.1.e.3,0
+                         999 	.global	_VStdLib_MemCpy32
+                        1000 _VStdLib_MemCpy32:
+                        1001 --	    .bf
+                        1002 .LDW32:
+000006ae 008a           1003 	mov	0,r17
+000006b0 a50d*          1004 	br	.L4010
+                        1005 .L4009:
+                        1006 --line961
+                        1007 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.14::
+                        1008 .LDWlin14:
+000006b2 1190           1009 	mov	r17,r18
+000006b4 c292           1010 	shl	2,r18
+000006b6 12f0           1011 	mov	r18,ep
+000006b8 c791           1012 	add	r7,r18
+000006ba 329f0100       1013 	ld.w	0[r18],r19
+000006be c6f1           1014 	add	r6,ep
+000006c0 418a           1015 	add	1,r17
+000006c2 019d           1016 	sst.w	r19,0[ep]
+                        1017 .L4010:
+000006c4 e889           1018 	cmp	r8,r17
+000006c6 e1f5*          1019 	bl	.L4009
+                        1020 --	    .ef
+                        1021 .LDW42:
+                        1022 --line972
+                        1023 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.15::
+                        1024 .LDWlin15:
+000006c8 7f00           1025 	jmp	[lp]
+                        1026 	.type	_VStdLib_MemCpy32,@function
+
+                                                                      Page 18
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+                        1027 	.size	_VStdLib_MemCpy32,.-_VStdLib_MemCpy32
+                        1028 	.align	2
+                        1029 .LDW52:
+                        1030 --_idx	r17	local
+                        1031 
+                        1032 --_pDst	r6	param
+                        1033 --_pSrc	r7	param
+                        1034 --_nCnt	r8	param
+                        1035 
+                        1036 	.section ".bss","awb"
+                        1037 .L4043:
+                        1038 	.type	.L4043,@object
+                        1039 	.size	.L4043,0
+                        1040 	.data
+                        1041 	.text
+                        1042 	.align	2
+                        1043 	.align	2
+                        1044 ..gh.f.f.1.e.4:
+                        1045 	.type	..gh.f.f.1.e.4,@object
+                        1046 	.size	..gh.f.f.1.e.4,0
+                        1047 	.global	_VStdLib_MemCpy_s
+                        1048 _VStdLib_MemCpy_s:
+                        1049 --	    .bf
+                        1050 .LDW62:
+000006ca e749           1051 	cmp	r7,r9
+000006cc db05*          1052 	bh	.L4085
+                        1053 --line986
+                        1054 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.16::
+                        1055 .LDWlin16:
+000006ce 0838           1056 	mov	r8,r7
+000006d0 0940           1057 	mov	r9,r8
+000006d2 bf07acfa*      1058 	jr	_VStdLib_MemCpy
+                        1059 .L4085:
+                        1060 --	    .ef
+                        1061 .LDW72:
+                        1062 --line996
+                        1063 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib.17::
+                        1064 .LDWlin17:
+000006d6 7f00           1065 	jmp	[lp]
+                        1066 	.type	_VStdLib_MemCpy_s,@function
+                        1067 	.size	_VStdLib_MemCpy_s,.-_VStdLib_MemCpy_s
+                        1068 	.align	2
+                        1069 .LDW82:
+                        1070 
+                        1071 --_pDst	r6	param
+                        1072 --_nDstSize	r7	param
+                        1073 --_pSrc	r8	param
+                        1074 --_nCnt	r9	param
+                        1075 
+                        1076 	.section ".bss","awb"
+                        1077 .L4124:
+                        1078 	.type	.L4124,@object
+                        1079 	.size	.L4124,0
+                        1080 	.data
+                        1081 	.text
+                        1082 	.align	2
+                        1083 
+                        1084 	.data
+                        1085 	.ghsnote version,17
+                        1086 	.ghsnote tools,3
+                        1087 	.ghsnote options,144
+
+                                                                      Page 19
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000d741.s
+                        1088 	.text
+                        1089 	.align	2
+                        1090 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5Cvstdlib...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86C0B..0::
+                        1091 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

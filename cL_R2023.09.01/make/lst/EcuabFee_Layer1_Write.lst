@@ -1,0 +1,858 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/EcuabFee_Layer1_Write.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\EcuabFee_Layer1_Write.dbo -source=EcuabFee_Layer1_Write.c -o obj\gh_0000b5c1.o -list=lst/EcuabFee_Layer1_Write.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+Source File: EcuabFee_Layer1_Write.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000
+                           7 --		-list=lst/EcuabFee_Layer1_Write.lst -object_dir=obj
+                           8 --		-stderr=err/EcuabFee_Layer1_Write.err -c -cpu=rh850 -sda=all
+                           9 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                          10 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          11 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          12 --		-registermode=32 -I../source/_common -I../source/common
+                          13 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          14 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          15 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          16 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          17 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          18 --		-I../source/projectcfg -I../source/projectcompiler
+                          19 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          20 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          21 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          22 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          23 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          24 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          25 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          26 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          27 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          28 --		-Igendata ../source/EcuabFee/EcuabFee_Layer1_Write.c
+                          29 --Source File:   ../source/EcuabFee/EcuabFee_Layer1_Write.c
+                          30 --Directory:     
+                          31 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          32 --Compile Date:  Wed Sep 06 13:34:15 2023
+                          33 --Host OS:       Win32
+                          34 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          35 --Release:       Compiler v2015.1.7
+                          36 --Revision Date: Thu Oct 22 08:06:12 2015
+                          37 --Release Date:  Thu Oct 22 09:34:32 2015
+                          38 -- ecom  -g -w -OM
+                          39 	.text
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863B7..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_EcuabFee_Wr_InitiateWriteInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                          46 _EcuabFee_Wr_InitiateWriteInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+                          47 _EcuabFee_Wr_InitiateWriteInstance:
+00000000 8a072100         48 	prepare	{r31},5
+                          49 --	    .bf
+                          50 .LDW01:
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+00000004 840709880000*    51 	ld.w	sdaoff23(_EcuabFee_Wr_Instance+16)[gp],r17
+0000000a a40709300000*    52 	ld.dw	sdaoff23(_EcuabFee_Wr_Instance)[gp],r6
+00000010 a40709400000*    53 	ld.dw	sdaoff23(_EcuabFee_Wr_Instance+8)[gp],r8
+00000016 a40709700000*    54 	ld.dw	sdaoff23(_EcuabFee_Wr_UserJobParameter+8)[gp],r14
+0000001c 638f0100         55 	st.w	r17,0[sp]
+00000020 a40709800000*    56 	ld.dw	sdaoff23(_EcuabFee_Wr_UserJobParameter)[gp],r16
+00000026 a307cf700000     57 	st.dw	r14,12[sp]
+0000002c a3074f800000     58 	st.dw	r16,4[sp]
+                          59 	jarl	_EcuabFee_WrInst_StartJob,lp
+                          59 <EXPANSION BEGIN>
+                          59 jarl22 _EcuabFee_WrInst_StartJob , lp 
+00000032 80ff0000*        59 <EXPANSION END>
+00000036 e051             60 	cmp	zero,r10
+00000038 fa05*            61 	bne	.L4
+                          62 --line80
+                          63 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.1::
+                          64 .LDWlin1:
+0000003a 044a             65 	mov	4,r9
+0000003c 84070d480000*    66 	st.b	r9,sdaoff23(_EcuabFee_Wr_ComponentParameter+2)[gp]
+00000042 4a063f00         67 	dispose	5,{r31},[lp]
+                          68 .L4:
+                          69 --line83
+                          70 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.2::
+                          71 .LDWlin2:
+00000046 0132             72 	mov	1,r6
+                          73 	jarl	_EcuabFee_Wr_FinishJob,lp
+                          73 <EXPANSION BEGIN>
+                          73 jarl22 _EcuabFee_Wr_FinishJob , lp 
+00000048 80ff1c01*        73 <EXPANSION END>
+                          74 --	    .ef
+                          75 .LDW11:
+                          76 --line85
+                          77 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.3::
+                          78 .LDWlin3:
+0000004c 4a063f00         79 	dispose	5,{r31},[lp]
+                          80 	.type	_EcuabFee_Wr_InitiateWriteInstance,@function
+                          81 	.size	_EcuabFee_Wr_InitiateWriteInstance,.-_EcuabFee_Wr_InitiateWriteInstance
+                          82 	.type	_EcuabFee_Wr_InitiateWriteInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@function
+                          83 	.size	_EcuabFee_Wr_InitiateWriteInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,.-_EcuabFee_Wr_InitiateWriteInstance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                          84 	.align	2
+                          85 .LDW21:
+                          86 
+                          87 	.section ".bss","awb"
+                          88 .L43:
+                          89 	.type	.L43,@object
+                          90 	.size	.L43,0
+                          91 	.section ".sdata","aw"
+                          92 	.align	4
+                          93 	.global	_EcuabFee_Wr_ComponentParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                          94 _EcuabFee_Wr_ComponentParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+00000000 01               95 _EcuabFee_Wr_ComponentParameter:	.byte	1
+00000001 00               96 	.space	1
+00000002 00               97 	.space	1
+00000003 00               98 	.space	1
+                          99 	.type	_EcuabFee_Wr_ComponentParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@object
+                         100 	.size	_EcuabFee_Wr_ComponentParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,4
+                         101 	.type	_EcuabFee_Wr_ComponentParameter,@object
+                         102 	.size	_EcuabFee_Wr_ComponentParameter,4
+                         103 	.section ".sbss","awb"
+                         104 	.align	4
+                         105 	.global	_EcuabFee_Wr_UserJobParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         106 _EcuabFee_Wr_UserJobParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+00000000 000000000000    107 _EcuabFee_Wr_UserJobParameter:	.space	16
+00000006 000000000000 
+0000000c 00000000 
+                         108 	.type	_EcuabFee_Wr_UserJobParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@object
+                         109 	.size	_EcuabFee_Wr_UserJobParameter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,16
+                         110 	.type	_EcuabFee_Wr_UserJobParameter,@object
+                         111 	.size	_EcuabFee_Wr_UserJobParameter,16
+                         112 	.global	_EcuabFee_Wr_Instance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         113 _EcuabFee_Wr_Instance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+00000010 000000000000    114 _EcuabFee_Wr_Instance:	.space	20
+00000016 000000000000 
+0000001c 000000000000 
+00000022 0000 
+                         115 	.type	_EcuabFee_Wr_Instance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@object
+                         116 	.size	_EcuabFee_Wr_Instance..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,20
+                         117 	.type	_EcuabFee_Wr_Instance,@object
+                         118 	.size	_EcuabFee_Wr_Instance,20
+                         119 	.data
+                         120 	.text
+                         121 	.align	2
+                         122 	.align	2
+                         123 ..gh.f.f.1.e.1:
+                         124 	.type	..gh.f.f.1.e.1,@object
+                         125 	.size	..gh.f.f.1.e.1,0
+                         126 	.global	_EcuabFee_Wr_ProcessInstanceFinderState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         127 _EcuabFee_Wr_ProcessInstanceFinderState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+                         128 _EcuabFee_Wr_ProcessInstanceFinderState:
+00000050 8007e110        129 	prepare	{r27,r28,r29,r31},0
+                         130 --	    .bf
+                         131 .LDW31:
+                         132 	jarl	_EcuabFee_If_GetJobResult,lp
+                         132 <EXPANSION BEGIN>
+                         132 jarl22 _EcuabFee_If_GetJobResult , lp 
+00000054 80ff0000*       132 <EXPANSION END>
+00000058 0ae8            133 	mov	r10,r29
+                         134 --line90
+                         135 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.4::
+                         136 .LDWlin4:
+0000005a e051            137 	cmp	zero,r10
+0000005c d20d*           138 	be	.L89
+0000005e 0a96faff        139 	addi	-6,r10,r18
+00000062 6192            140 	cmp	1,r18
+00000064 8325*           141 	bnh	.L96
+                         142 --line112
+                         143 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.5::
+                         144 .LDWlin5:
+00000066 0a30            145 	mov	r10,r6
+                         146 	jarl	_EcuabFee_If_MapResult,lp
+                         146 <EXPANSION BEGIN>
+                         146 jarl22 _EcuabFee_If_MapResult , lp 
+00000068 80ff0000*       146 <EXPANSION END>
+0000006c 0a30            147 	mov	r10,r6
+                         148 	jarl	_EcuabFee_Wr_FinishJob,lp
+                         148 <EXPANSION BEGIN>
+                         148 jarl22 _EcuabFee_Wr_FinishJob , lp 
+0000006e 80fff600*       148 <EXPANSION END>
+                         149 --line113
+                         150 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.6::
+                         151 .LDWlin6:
+00000072 4006ff10        152 	dispose	0,{r27,r28,r29,r31},[lp]
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         153 .L89:
+                         154 --	    .bs
+                         155 .LDW41:
+                         156 --line93
+                         157 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.7::
+                         158 .LDWlin7:
+00000076 3c0600000000*   159 	mov	sdaoff23(_EcuabFee_Wr_Instance),r28
+0000007c 1c30            160 	mov	r28,r6
+                         161 	jarl	_EcuabFee_Dh_IsLastInstance,lp
+                         161 <EXPANSION BEGIN>
+                         161 jarl22 _EcuabFee_Dh_IsLastInstance , lp 
+0000007e 80ff0000*       161 <EXPANSION END>
+00000082 6152            162 	cmp	1,r10
+00000084 e2df0000        163 	setfe	r27
+                         164 --line95
+                         165 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.8::
+                         166 .LDWlin8:
+00000088 1c30            167 	mov	r28,r6
+                         168 	jarl	_EcuabFee_Dh_IsFirstInstanceAndBlank,lp
+                         168 <EXPANSION BEGIN>
+                         168 jarl22 _EcuabFee_Dh_IsFirstInstanceAndBlank , lp 
+0000008a 80ff0000*       168 <EXPANSION END>
+0000008e 6152            169 	cmp	1,r10
+00000090 a20d*           170 	be	.L96
+00000092 e0d9            171 	cmp	zero,r27
+00000094 8a0d*           172 	bne	.L96
+                         173 --line99
+                         174 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.9::
+                         175 .LDWlin9:
+00000096 1c30            176 	mov	r28,r6
+                         177 	jarl	_EcuabFee_Dh_PrepareNextInstance,lp
+                         177 <EXPANSION BEGIN>
+                         177 jarl22 _EcuabFee_Dh_PrepareNextInstance , lp 
+00000098 80ff0000*       177 <EXPANSION END>
+                         178 --line101
+                         179 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.10::
+                         180 .LDWlin10:
+                         181 	jarl	_EcuabFee_Wr_InitiateWriteInstance,lp
+                         181 <EXPANSION BEGIN>
+                         181 jarl22 _EcuabFee_Wr_InitiateWriteInstance , lp 
+0000009c bfff64ff*       181 <EXPANSION END>
+000000a0 4006ff10        182 	dispose	0,{r27,r28,r29,r31},[lp]
+                         183 .L96:
+                         184 --	    .es
+                         185 .LDW51:
+                         186 --line108
+                         187 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.11::
+                         188 .LDWlin11:
+000000a4 1d30            189 	mov	r29,r6
+                         190 	jarl	_EcuabFee_Wr_InitiateDatasetErase,lp
+                         190 <EXPANSION BEGIN>
+                         190 jarl22 _EcuabFee_Wr_InitiateDatasetErase , lp 
+000000a6 80ffe800*       190 <EXPANSION END>
+                         191 --	    .ef
+                         192 .LDW61:
+                         193 --line115
+                         194 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.12::
+                         195 .LDWlin12:
+000000aa 4006ff10        196 	dispose	0,{r27,r28,r29,r31},[lp]
+                         197 	.type	_EcuabFee_Wr_ProcessInstanceFinderState,@function
+                         198 	.size	_EcuabFee_Wr_ProcessInstanceFinderState,.-_EcuabFee_Wr_ProcessInstanceFinderState
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         199 	.type	_EcuabFee_Wr_ProcessInstanceFinderState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@function
+                         200 	.size	_EcuabFee_Wr_ProcessInstanceFinderState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,.-_EcuabFee_Wr_ProcessInstanceFinderState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         201 	.align	2
+                         202 .LDW71:
+                         203 --_InstanceFinderResult	r29	local
+                         204 --_IsLastInstance	r27	local
+                         205 
+                         206 	.section ".bss","awb"
+                         207 .L164:
+                         208 	.type	.L164,@object
+                         209 	.size	.L164,0
+                         210 	.data
+                         211 	.text
+                         212 	.align	2
+                         213 	.align	2
+                         214 ..gh.f.f.1.e.2:
+                         215 	.type	..gh.f.f.1.e.2,@object
+                         216 	.size	..gh.f.f.1.e.2,0
+                         217 	.global	_EcuabFee_Wr_ProcessDatasetEraseState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         218 _EcuabFee_Wr_ProcessDatasetEraseState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+                         219 _EcuabFee_Wr_ProcessDatasetEraseState:
+000000ae 80076100        220 	prepare	{r29,r31},0
+                         221 --	    .bf
+                         222 .LDW81:
+                         223 	jarl	_EcuabFee_De_GetJobResult,lp
+                         223 <EXPANSION BEGIN>
+                         223 jarl22 _EcuabFee_De_GetJobResult , lp 
+000000b2 80ff0000*       223 <EXPANSION END>
+000000b6 e051            224 	cmp	zero,r10
+000000b8 9a15*           225 	bne	.L249
+                         226 --line119
+                         227 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.13::
+                         228 .LDWlin13:
+                         229 	jarl	_EcuabFee_Dh_GetFirstInstanceAddress,lp
+                         229 <EXPANSION BEGIN>
+                         229 jarl22 _EcuabFee_Dh_GetFirstInstanceAddress , lp 
+000000ba 80ff0000*       229 <EXPANSION END>
+000000be 0ae8            230 	mov	r10,r29
+                         231 	jarl	_EcuabFee_Dh_GetDataLength,lp
+                         231 <EXPANSION BEGIN>
+                         231 jarl22 _EcuabFee_Dh_GetDataLength , lp 
+000000c0 80ff0000*       231 <EXPANSION END>
+000000c4 0a40            232 	mov	r10,r8
+000000c6 1d38            233 	mov	r29,r7
+000000c8 260600000000*   234 	mov	sdaoff23(_EcuabFee_Wr_Instance),r6
+                         235 	jarl	_EcuabFee_Ih_CreateInstance,lp
+                         235 <EXPANSION BEGIN>
+                         235 jarl22 _EcuabFee_Ih_CreateInstance , lp 
+000000ce 80ff0000*       235 <EXPANSION END>
+                         236 --line120
+                         237 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.14::
+                         238 .LDWlin14:
+                         239 	jarl	_EcuabFee_Wr_InitiateWriteInstance,lp
+                         239 <EXPANSION BEGIN>
+                         239 jarl22 _EcuabFee_Wr_InitiateWriteInstance , lp 
+000000d2 bfff2eff*       239 <EXPANSION END>
+000000d6 40067f00        240 	dispose	0,{r29,r31},[lp]
+                         241 .L249:
+                         242 --line123
+                         243 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.15::
+                         244 .LDWlin15:
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         245 	jarl	_EcuabFee_De_GetJobResult,lp
+                         245 <EXPANSION BEGIN>
+                         245 jarl22 _EcuabFee_De_GetJobResult , lp 
+000000da 80ff0000*       245 <EXPANSION END>
+000000de 0a30            246 	mov	r10,r6
+                         247 	jarl	_EcuabFee_Wr_FinishJob,lp
+                         247 <EXPANSION BEGIN>
+                         247 jarl22 _EcuabFee_Wr_FinishJob , lp 
+000000e0 80ff8400*       247 <EXPANSION END>
+                         248 --	    .ef
+                         249 .LDW91:
+                         250 --line125
+                         251 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.16::
+                         252 .LDWlin16:
+000000e4 40067f00        253 	dispose	0,{r29,r31},[lp]
+                         254 	.type	_EcuabFee_Wr_ProcessDatasetEraseState,@function
+                         255 	.size	_EcuabFee_Wr_ProcessDatasetEraseState,.-_EcuabFee_Wr_ProcessDatasetEraseState
+                         256 	.type	_EcuabFee_Wr_ProcessDatasetEraseState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@function
+                         257 	.size	_EcuabFee_Wr_ProcessDatasetEraseState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,.-_EcuabFee_Wr_ProcessDatasetEraseState..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         258 	.align	2
+                         259 .LDW02:
+                         260 
+                         261 	.section ".bss","awb"
+                         262 .L283:
+                         263 	.type	.L283,@object
+                         264 	.size	.L283,0
+                         265 	.data
+                         266 	.text
+                         267 	.align	2
+                         268 	.align	2
+                         269 ..gh.f.f.1.e.3:
+                         270 	.type	..gh.f.f.1.e.3,@object
+                         271 	.size	..gh.f.f.1.e.3,0
+                         272 	.global	_EcuabFee_Wr_ProcessStateMachine..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         273 _EcuabFee_Wr_ProcessStateMachine..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+                         274 _EcuabFee_Wr_ProcessStateMachine:
+000000e8 80072100        275 	prepare	{r31},0
+                         276 --	    .bf
+                         277 .LDW12:
+000000ec 840705900000*   278 	ld.b	sdaoff23(_EcuabFee_Wr_ComponentParameter+2)[gp],r18
+000000f2 6192            279 	cmp	1,r18
+000000f4 e10d*           280 	bl	.L336
+000000f6 a215*           281 	be	.L329
+000000f8 6392            282 	cmp	3,r18
+000000fa d11d*           283 	bl	.L333
+000000fc 8225*           284 	be	.L334
+000000fe 6492            285 	cmp	4,r18
+00000100 8a0d*           286 	bne	.L336
+                         287 --line156
+                         288 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.17::
+                         289 .LDWlin17:
+                         290 	jarl	_EcuabFee_WrInst_GetJobResult,lp
+                         290 <EXPANSION BEGIN>
+                         290 jarl22 _EcuabFee_WrInst_GetJobResult , lp 
+00000102 80ff0000*       290 <EXPANSION END>
+00000106 0a30            291 	mov	r10,r6
+                         292 	jarl	_EcuabFee_Wr_FinishJob,lp
+                         292 <EXPANSION BEGIN>
+                         292 jarl22 _EcuabFee_Wr_FinishJob , lp 
+00000108 80ff5c00*       292 <EXPANSION END>
+                         293 --line158
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         294 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.18::
+                         295 .LDWlin18:
+0000010c 40063f00        296 	dispose	0,{r31},[lp]
+                         297 .L336:
+                         298 --line161
+                         299 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.19::
+                         300 .LDWlin19:
+00000110 0132            301 	mov	1,r6
+                         302 	jarl	_EcuabFee_Wr_FinishJob,lp
+                         302 <EXPANSION BEGIN>
+                         302 jarl22 _EcuabFee_Wr_FinishJob , lp 
+00000112 80ff5200*       302 <EXPANSION END>
+                         303 --line162
+                         304 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.20::
+                         305 .LDWlin20:
+00000116 40063f00        306 	dispose	0,{r31},[lp]
+                         307 .L329:
+                         308 --line131
+                         309 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.21::
+                         310 .LDWlin21:
+0000011a 260600000000*   311 	mov	sdaoff23(_EcuabFee_Wr_Instance),r6
+                         312 	jarl	_EcuabFee_If_StartJob,lp
+                         312 <EXPANSION BEGIN>
+                         312 jarl22 _EcuabFee_If_StartJob , lp 
+00000120 80ff0000*       312 <EXPANSION END>
+00000124 e051            313 	cmp	zero,r10
+00000126 daf5*           314 	bne	.L336
+                         315 --line133
+                         316 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.22::
+                         317 .LDWlin22:
+00000128 024a            318 	mov	2,r9
+0000012a 84070d480000*   319 	st.b	r9,sdaoff23(_EcuabFee_Wr_ComponentParameter+2)[gp]
+00000130 40063f00        320 	dispose	0,{r31},[lp]
+                         321 .L333:
+                         322 --line144
+                         323 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.23::
+                         324 .LDWlin23:
+                         325 	jarl	_EcuabFee_Wr_ProcessInstanceFinderState,lp
+                         325 <EXPANSION BEGIN>
+                         325 jarl22 _EcuabFee_Wr_ProcessInstanceFinderState , lp 
+00000134 bfff1cff*       325 <EXPANSION END>
+                         326 --line146
+                         327 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.24::
+                         328 .LDWlin24:
+00000138 40063f00        329 	dispose	0,{r31},[lp]
+                         330 .L334:
+                         331 --line150
+                         332 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.25::
+                         333 .LDWlin25:
+                         334 	jarl	_EcuabFee_Wr_ProcessDatasetEraseState,lp
+                         334 <EXPANSION BEGIN>
+                         334 jarl22 _EcuabFee_Wr_ProcessDatasetEraseState , lp 
+0000013c bfff72ff*       334 <EXPANSION END>
+                         335 --	    .ef
+                         336 .LDW22:
+                         337 --line164
+                         338 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.26::
+                         339 .LDWlin26:
+00000140 40063f00        340 	dispose	0,{r31},[lp]
+                         341 	.type	_EcuabFee_Wr_ProcessStateMachine,@function
+                         342 	.size	_EcuabFee_Wr_ProcessStateMachine,.-_EcuabFee_Wr_ProcessStateMachine
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         343 	.type	_EcuabFee_Wr_ProcessStateMachine..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@function
+                         344 	.size	_EcuabFee_Wr_ProcessStateMachine..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,.-_EcuabFee_Wr_ProcessStateMachine..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         345 	.align	2
+                         346 .LDW32:
+                         347 
+                         348 	.section ".bss","awb"
+                         349 .L394:
+                         350 	.type	.L394,@object
+                         351 	.size	.L394,0
+                         352 	.data
+                         353 	.text
+                         354 	.align	2
+                         355 	.align	2
+                         356 ..gh.f.f.1.e.4:
+                         357 	.type	..gh.f.f.1.e.4,@object
+                         358 	.size	..gh.f.f.1.e.4,0
+                         359 	.global	_EcuabFee_Wr_Execute
+                         360 _EcuabFee_Wr_Execute:
+                         361 --	    .bf
+                         362 .LDW42:
+00000144 840709880000*   363 	ld.w	sdaoff23(_EcuabFee_Wr_ComponentParameter)[gp],r17
+0000014a 1190            364 	mov	r17,r18
+0000014c d092            365 	shl	16,r18
+0000014e b892            366 	sar	24,r18
+00000150 6292            367 	cmp	2,r18
+00000152 da05*           368 	bne	.L501
+00000154 988a            369 	shr	24,r17
+00000156 ba05*           370 	bne	.L501
+00000158 bf0790ff*       371 	jr	_EcuabFee_Wr_ProcessStateMachine
+                         372 .L501:
+                         373 --	    .ef
+                         374 .LDW52:
+                         375 --line215
+                         376 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.27::
+                         377 .LDWlin27:
+0000015c 7f00            378 	jmp	[lp]
+                         379 	.type	_EcuabFee_Wr_Execute,@function
+                         380 	.size	_EcuabFee_Wr_Execute,.-_EcuabFee_Wr_Execute
+                         381 	.align	2
+                         382 .LDW62:
+                         383 
+                         384 	.section ".bss","awb"
+                         385 .L539:
+                         386 	.type	.L539,@object
+                         387 	.size	.L539,0
+                         388 	.data
+                         389 	.text
+                         390 	.align	2
+                         391 	.align	2
+                         392 ..gh.f.f.1.e.5:
+                         393 	.type	..gh.f.f.1.e.5,@object
+                         394 	.size	..gh.f.f.1.e.5,0
+                         395 	.global	_EcuabFee_Wr_Cancel
+                         396 _EcuabFee_Wr_Cancel:
+                         397 --	    .bf
+                         398 .LDW72:
+0000015e 0332            399 	mov	3,r6
+00000160 80070400*       400 	jr	_EcuabFee_Wr_FinishJob
+                         401 --	    .ef
+                         402 .LDW82:
+                         403 	.type	_EcuabFee_Wr_Cancel,@function
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         404 	.size	_EcuabFee_Wr_Cancel,.-_EcuabFee_Wr_Cancel
+                         405 	.align	2
+                         406 .LDW92:
+                         407 
+                         408 	.section ".bss","awb"
+                         409 .L609:
+                         410 	.type	.L609,@object
+                         411 	.size	.L609,0
+                         412 	.data
+                         413 	.text
+                         414 	.align	2
+                         415 	.align	2
+                         416 ..gh.f.f.1.e.6:
+                         417 	.type	..gh.f.f.1.e.6,@object
+                         418 	.size	..gh.f.f.1.e.6,0
+                         419 	.global	_EcuabFee_Wr_FinishJob..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         420 _EcuabFee_Wr_FinishJob..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+                         421 _EcuabFee_Wr_FinishJob:
+00000164 80076100        422 	prepare	{r29,r31},0
+00000168 06e8            423 	mov	r6,r29
+                         424 --	    .bf
+                         425 .LDW03:
+0000016a 260600000000*   426 	mov	_EcuabFee_Wr_Execute,r6
+00000170 270600000000*   427 	mov	_EcuabFee_Wr_Cancel,r7
+00000176 0042            428 	mov	0,r8
+                         429 	jarl	_EcuabFee_Tm_RemoveTask,lp
+                         429 <EXPANSION BEGIN>
+                         429 jarl22 _EcuabFee_Tm_RemoveTask , lp 
+00000178 80ff0000*       429 <EXPANSION END>
+                         430 --line169
+                         431 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.28::
+                         432 .LDWlin28:
+0000017c 3e0600000000*   433 	mov	sdaoff23(_EcuabFee_Wr_ComponentParameter),ep
+00000182 0192            434 	mov	1,r18
+00000184 80eb            435 	sst.b	r29,0[ep]
+00000186 8293            436 	sst.b	r18,2[ep]
+00000188 8193            437 	sst.b	r18,1[ep]
+                         438 --	    .ef
+                         439 .LDW13:
+0000018a 40067f00        440 	dispose	0,{r29,r31},[lp]
+                         441 	.type	_EcuabFee_Wr_FinishJob,@function
+                         442 	.size	_EcuabFee_Wr_FinishJob,.-_EcuabFee_Wr_FinishJob
+                         443 	.type	_EcuabFee_Wr_FinishJob..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@function
+                         444 	.size	_EcuabFee_Wr_FinishJob..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,.-_EcuabFee_Wr_FinishJob..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         445 	.align	2
+                         446 .LDW23:
+                         447 
+                         448 --_JobResult	r29	param
+                         449 
+                         450 	.section ".bss","awb"
+                         451 .L657:
+                         452 	.type	.L657,@object
+                         453 	.size	.L657,0
+                         454 	.data
+                         455 	.text
+                         456 	.align	2
+                         457 	.align	2
+                         458 ..gh.f.f.1.e.7:
+                         459 	.type	..gh.f.f.1.e.7,@object
+                         460 	.size	..gh.f.f.1.e.7,0
+                         461 	.global	_EcuabFee_Wr_InitiateDatasetErase..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         462 _EcuabFee_Wr_InitiateDatasetErase..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.:
+                         463 _EcuabFee_Wr_InitiateDatasetErase:
+0000018e 80072100        464 	prepare	{r31},0
+00000192 a600            465 	sxb	r6
+                         466 --	    .bf
+                         467 .LDW33:
+                         468 	jarl	_EcuabFee_De_StartJob,lp
+                         468 <EXPANSION BEGIN>
+                         468 jarl22 _EcuabFee_De_StartJob , lp 
+00000194 80ff0000*       468 <EXPANSION END>
+00000198 e051            469 	cmp	zero,r10
+0000019a fa05*           470 	bne	.L677
+                         471 --line71
+                         472 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.29::
+                         473 .LDWlin29:
+0000019c 034a            474 	mov	3,r9
+0000019e 84070d480000*   475 	st.b	r9,sdaoff23(_EcuabFee_Wr_ComponentParameter+2)[gp]
+000001a4 40063f00        476 	dispose	0,{r31},[lp]
+                         477 .L677:
+                         478 --line74
+                         479 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.30::
+                         480 .LDWlin30:
+000001a8 0132            481 	mov	1,r6
+                         482 	jarl	_EcuabFee_Wr_FinishJob,lp
+                         482 <EXPANSION BEGIN>
+                         482 jarl22 _EcuabFee_Wr_FinishJob , lp 
+000001aa bfffbaff*       482 <EXPANSION END>
+                         483 --	    .ef
+                         484 .LDW43:
+                         485 --line76
+                         486 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.31::
+                         487 .LDWlin31:
+000001ae 40063f00        488 	dispose	0,{r31},[lp]
+                         489 	.type	_EcuabFee_Wr_InitiateDatasetErase,@function
+                         490 	.size	_EcuabFee_Wr_InitiateDatasetErase,.-_EcuabFee_Wr_InitiateDatasetErase
+                         491 	.type	_EcuabFee_Wr_InitiateDatasetErase..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,@function
+                         492 	.size	_EcuabFee_Wr_InitiateDatasetErase..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.,.-_EcuabFee_Wr_InitiateDatasetErase..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.
+                         493 	.align	2
+                         494 .LDW53:
+                         495 
+                         496 --_InstanceFinderResult	r6	param
+                         497 
+                         498 	.section ".bss","awb"
+                         499 .L715:
+                         500 	.type	.L715,@object
+                         501 	.size	.L715,0
+                         502 	.data
+                         503 	.text
+                         504 	.align	2
+                         505 	.align	2
+                         506 ..gh.f.f.1.e.8:
+                         507 	.type	..gh.f.f.1.e.8,@object
+                         508 	.size	..gh.f.f.1.e.8,0
+                         509 	.global	_EcuabFee_Wr_Init
+                         510 _EcuabFee_Wr_Init:
+000001b2 80077b000000*   511 	prepare	{r29,r31},0,sdaoff23(_EcuabFee_Wr_ComponentParameter)
+000001b8 0000*
+                         512 --	    .bf
+                         513 .LDW63:
+000001ba 01ea            514 	mov	1,r29
+000001bc 81eb            515 	sst.b	r29,1[ep]
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+000001be 8003            516 	sst.b	zero,0[ep]
+000001c0 260600000000*   517 	mov	sdaoff23(_EcuabFee_Wr_Instance),r6
+                         518 	jarl	_EcuabFee_Ih_InitInstance,lp
+                         518 <EXPANSION BEGIN>
+                         518 jarl22 _EcuabFee_Ih_InitInstance , lp 
+000001c6 80ff0000*       518 <EXPANSION END>
+                         519 --line180
+                         520 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.32::
+                         521 .LDWlin32:
+000001ca 84070de80000*   522 	st.b	r29,sdaoff23(_EcuabFee_Wr_ComponentParameter+2)[gp]
+                         523 --	    .ef
+                         524 .LDW73:
+000001d0 40067f00        525 	dispose	0,{r29,r31},[lp]
+                         526 	.type	_EcuabFee_Wr_Init,@function
+                         527 	.size	_EcuabFee_Wr_Init,.-_EcuabFee_Wr_Init
+                         528 	.align	2
+                         529 .LDW83:
+                         530 
+                         531 	.section ".bss","awb"
+                         532 .L785:
+                         533 	.type	.L785,@object
+                         534 	.size	.L785,0
+                         535 	.data
+                         536 	.text
+                         537 	.align	2
+                         538 	.align	2
+                         539 ..gh.f.f.1.e.9:
+                         540 	.type	..gh.f.f.1.e.9,@object
+                         541 	.size	..gh.f.f.1.e.9,0
+                         542 	.global	_EcuabFee_Wr_GetStatus
+                         543 _EcuabFee_Wr_GetStatus:
+                         544 --	    .bf
+                         545 .LDW93:
+000001d4 840705500000*   546 	ld.b	sdaoff23(_EcuabFee_Wr_ComponentParameter+1)[gp],r10
+                         547 --	    .ef
+                         548 .LDW04:
+000001da 7f00            549 	jmp	[lp]
+                         550 	.type	_EcuabFee_Wr_GetStatus,@function
+                         551 	.size	_EcuabFee_Wr_GetStatus,.-_EcuabFee_Wr_GetStatus
+                         552 	.align	2
+                         553 .LDW14:
+                         554 
+                         555 	.section ".bss","awb"
+                         556 .L833:
+                         557 	.type	.L833,@object
+                         558 	.size	.L833,0
+                         559 	.data
+                         560 	.text
+                         561 	.align	2
+                         562 	.align	2
+                         563 ..gh.f.f.1.e.10:
+                         564 	.type	..gh.f.f.1.e.10,@object
+                         565 	.size	..gh.f.f.1.e.10,0
+                         566 	.global	_EcuabFee_Wr_GetJobResult
+                         567 _EcuabFee_Wr_GetJobResult:
+                         568 --	    .bf
+                         569 .LDW24:
+000001dc 840705500000*   570 	ld.b	sdaoff23(_EcuabFee_Wr_ComponentParameter)[gp],r10
+                         571 --	    .ef
+                         572 .LDW34:
+000001e2 7f00            573 	jmp	[lp]
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         574 	.type	_EcuabFee_Wr_GetJobResult,@function
+                         575 	.size	_EcuabFee_Wr_GetJobResult,.-_EcuabFee_Wr_GetJobResult
+                         576 	.align	2
+                         577 .LDW44:
+                         578 
+                         579 	.section ".bss","awb"
+                         580 .L881:
+                         581 	.type	.L881,@object
+                         582 	.size	.L881,0
+                         583 	.data
+                         584 	.text
+                         585 	.align	2
+                         586 	.align	2
+                         587 ..gh.f.f.1.e.11:
+                         588 	.type	..gh.f.f.1.e.11,@object
+                         589 	.size	..gh.f.f.1.e.11,0
+                         590 	.global	_EcuabFee_Wr_StartJob
+                         591 _EcuabFee_Wr_StartJob:
+000001e4 031eecff        592 	addi	-20,sp,sp
+000001e8 03f0            593 	mov	sp,ep
+000001ea 094d            594 	sst.w	r9,16[ep]
+000001ec 0745            595 	sst.w	r8,12[ep]
+000001ee 053d            596 	sst.w	r7,8[ep]
+000001f0 0335            597 	sst.w	r6,4[ep]
+000001f2 01fd            598 	sst.w	lp,0[ep]
+                         599 --	    .bf
+                         600 .LDW54:
+000001f4 840705380000*   601 	ld.b	sdaoff23(_EcuabFee_Wr_ComponentParameter+2)[gp],r7
+000001fa 613a            602 	cmp	1,r7
+000001fc fa1d*           603 	bne	.L901
+                         604 --line195
+                         605 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.33::
+                         606 .LDWlin33:
+000001fe 260600000000*   607 	mov	_EcuabFee_Wr_Execute,r6
+00000204 270600000000*   608 	mov	_EcuabFee_Wr_Cancel,r7
+0000020a 0042            609 	mov	0,r8
+                         610 	jarl	_EcuabFee_Tm_AddTask,lp
+                         610 <EXPANSION BEGIN>
+                         610 jarl22 _EcuabFee_Tm_AddTask , lp 
+0000020c 80ff0000*       610 <EXPANSION END>
+                         611 --line197
+                         612 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.34::
+                         613 .LDWlin34:
+00000210 e051            614 	cmp	zero,r10
+00000212 da15*           615 	bne	.L899
+                         616 --line201
+                         617 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.35::
+                         618 .LDWlin35:
+00000214 a30749300000    619 	ld.dw	4[sp],r6
+0000021a a307c9900000    620 	ld.dw	12[sp],r18
+00000220 024a            621 	mov	2,r9
+00000222 3e0600000000*   622 	mov	sdaoff23(_EcuabFee_Wr_ComponentParameter),ep
+00000228 814b            623 	sst.b	r9,1[ep]
+0000022a 804b            624 	sst.b	r9,0[ep]
+0000022c a4070f300000*   625 	st.dw	r6,sdaoff23(_EcuabFee_Wr_UserJobParameter)[gp]
+00000232 a4070f900000*   626 	st.dw	r18,sdaoff23(_EcuabFee_Wr_UserJobParameter+8)[gp]
+00000238 a505*           627 	br	.L899
+                         628 .L901:
+                         629 --line205
+                         630 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write.36::
+                         631 .LDWlin36:
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+0000023a 0152            632 	mov	1,r10
+                         633 .L899:
+                         634 --	    .ef
+                         635 .LDW64:
+0000023c 23ff0100        636 	ld.w	0[sp],lp
+00000240 031e1400        637 	addi	20,sp,sp
+00000244 7f00            638 	jmp	[lp]
+                         639 	.type	_EcuabFee_Wr_StartJob,@function
+                         640 	.size	_EcuabFee_Wr_StartJob,.-_EcuabFee_Wr_StartJob
+                         641 	.align	2
+                         642 .LDW74:
+                         643 --_retVal	r10	local
+                         644 
+                         645 --_EcuabFee_UserJobParameter	4[sp]	param
+                         646 
+                         647 	.section ".bss","awb"
+                         648 .L956:
+                         649 	.type	.L956,@object
+                         650 	.size	.L956,0
+                         651 	.data
+                         652 	.text
+                         653 	.align	2
+                         654 	.align	2
+                         655 ..gh.f.f.1.e.12:
+                         656 	.type	..gh.f.f.1.e.12,@object
+                         657 	.size	..gh.f.f.1.e.12,0
+                         658 	.global	_EcuabFee_Wr_SuspendWrites
+                         659 _EcuabFee_Wr_SuspendWrites:
+                         660 --	    .bf
+                         661 .LDW84:
+00000246 0192            662 	mov	1,r18
+00000248 84070d900000*   663 	st.b	r18,sdaoff23(_EcuabFee_Wr_ComponentParameter+3)[gp]
+                         664 --	    .ef
+                         665 .LDW94:
+0000024e 7f00            666 	jmp	[lp]
+                         667 	.type	_EcuabFee_Wr_SuspendWrites,@function
+                         668 	.size	_EcuabFee_Wr_SuspendWrites,.-_EcuabFee_Wr_SuspendWrites
+                         669 	.align	2
+                         670 .LDW05:
+                         671 
+                         672 	.section ".bss","awb"
+                         673 .L1041:
+                         674 	.type	.L1041,@object
+                         675 	.size	.L1041,0
+                         676 	.data
+                         677 	.text
+                         678 	.align	2
+                         679 	.align	2
+                         680 ..gh.f.f.1.e.13:
+                         681 	.type	..gh.f.f.1.e.13,@object
+                         682 	.size	..gh.f.f.1.e.13,0
+                         683 	.global	_EcuabFee_Wr_ResumeWrites
+                         684 _EcuabFee_Wr_ResumeWrites:
+                         685 --	    .bf
+                         686 .LDW15:
+00000250 84070d000000*   687 	st.b	zero,sdaoff23(_EcuabFee_Wr_ComponentParameter+3)[gp]
+                         688 --	    .ef
+                         689 .LDW25:
+00000256 7f00            690 	jmp	[lp]
+                         691 	.type	_EcuabFee_Wr_ResumeWrites,@function
+                         692 	.size	_EcuabFee_Wr_ResumeWrites,.-_EcuabFee_Wr_ResumeWrites
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000b5c1.s
+                         693 	.align	2
+                         694 .LDW35:
+                         695 
+                         696 	.section ".bss","awb"
+                         697 .L1089:
+                         698 	.type	.L1089,@object
+                         699 	.size	.L1089,0
+                         700 	.data
+                         701 	.text
+                         702 	.align	2
+                         703 --_EcuabFee_Wr_ComponentParameter	sdaoff23(_EcuabFee_Wr_ComponentParameter)	static
+                         704 --_EcuabFee_Wr_Instance	sdaoff23(_EcuabFee_Wr_Instance)	static
+                         705 --_EcuabFee_Wr_UserJobParameter	sdaoff23(_EcuabFee_Wr_UserJobParameter)	static
+                         706 
+                         707 	.data
+                         708 	.ghsnote version,17
+                         709 	.ghsnote tools,3
+                         710 	.ghsnote options,144
+                         711 	.text
+                         712 	.align	2
+                         713 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CEcuabFee_Layer1_Write...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F863B7..0::
+                         714 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

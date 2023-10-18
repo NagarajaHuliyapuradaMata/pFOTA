@@ -1,0 +1,198 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds01.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/McalCry_Hash.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\McalCry_Hash.dbo -source=McalCry_Hash.c -o obj\gh_0000ds01.o -list=lst/McalCry_Hash.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds01.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds01.s
+Source File: McalCry_Hash.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/McalCry_Hash.lst
+                           7 --		-object_dir=obj -stderr=err/McalCry_Hash.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/McalCry/McalCry_Hash.c
+                          28 --Source File:   ../source/McalCry/McalCry_Hash.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:06:38 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 	.align	2
+                          41 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B4E..0::
+                          42 	.align	2
+                          43 ..gh.f.f.1.e.0:
+                          44 	.type	..gh.f.f.1.e.0,@object
+                          45 	.size	..gh.f.f.1.e.0,0
+                          46 	.global	_McalCry_Dispatch_SHA512
+                          47 _McalCry_Dispatch_SHA512:
+00000000 a007e110         48 	prepare	{r27,r28,r29,r31},16
+00000004 8800             49 	zxb	r8
+                          50 --	    .bf
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds01.s
+                          51 .LDW01:
+00000006 850709e80000*    52 	ld.w	rosdaoff23(_McalCry_SHA512)[r5],r29
+0000000c 6142             53 	cmp	1,r8
+0000000e 9215*            54 	be	.L64
+00000010 07e0             55 	mov	r7,r28
+00000012 0152             56 	mov	1,r10
+00000014 6242             57 	cmp	2,r8
+00000016 9a25*            58 	bne	.L728
+                          59 --line672
+                          60 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash.1::
+                          61 .LDWlin1:
+00000018 273f0d00         62 	ld.w	12[r7],r7
+0000001c 3c470900         63 	ld.w	8[r28],r8
+00000020 1d30             64 	mov	r29,r6
+                          65 	jarl	_esl_updateSHA512,lp
+                          65 <EXPANSION BEGIN>
+                          65 jarl22 _esl_updateSHA512 , lp 
+00000022 80ff0000*        65 <EXPANSION END>
+00000026 e051             66 	cmp	zero,r10
+00000028 e1571453         67 	cmovne	1,r10,r10
+                          68 --line673
+                          69 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash.2::
+                          70 .LDWlin2:
+0000002c 6006ff10         71 	dispose	16,{r27,r28,r29,r31},[lp]
+                          72 .L64:
+                          73 --line666
+                          74 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash.3::
+                          75 .LDWlin3:
+00000030 08e0             76 	mov	r8,r28
+00000032 1d30             77 	mov	r29,r6
+00000034 280600000000*    78 	mov	_FblLookForWatchdogVoid,r8
+0000003a 203ed800         79 	movea	216,zero,r7
+                          80 	jarl	_esl_initWorkSpaceHeader,lp
+                          80 <EXPANSION BEGIN>
+                          80 jarl22 _esl_initWorkSpaceHeader , lp 
+0000003e 80ff0000*        80 <EXPANSION END>
+00000042 e051             81 	cmp	zero,r10
+00000044 fa05*            82 	bne	.L62
+00000046 1d30             83 	mov	r29,r6
+                          84 	jarl	_esl_initSHA512,lp
+                          84 <EXPANSION BEGIN>
+                          84 jarl22 _esl_initSHA512 , lp 
+00000048 80ff0000*        84 <EXPANSION END>
+0000004c e051             85 	cmp	zero,r10
+0000004e e15714e3         86 	cmovne	1,r10,r28
+                          87 .L62:
+00000052 1c50             88 	mov	r28,r10
+                          89 --line667
+                          90 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash.4::
+                          91 .LDWlin4:
+00000054 6006ff10         92 	dispose	16,{r27,r28,r29,r31},[lp]
+                          93 .L728:
+00000058 6442             94 	cmp	4,r8
+0000005a 8a1d*            95 	bne	.L57
+                          96 --line678
+                          97 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash.5::
+                          98 .LDWlin5:
+0000005c 0ad8             99 	mov	r10,r27
+0000005e 1d30            100 	mov	r29,r6
+00000060 0338            101 	mov	sp,r7
+                         102 	jarl	_esl_finalizeSHA512,lp
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds01.s
+                         102 <EXPANSION BEGIN>
+                         102 jarl22 _esl_finalizeSHA512 , lp 
+00000062 80ff0000*       102 <EXPANSION END>
+00000066 e051            103 	cmp	zero,r10
+00000068 8a15*           104 	bne	.L81
+0000006a 3cf72500        105 	ld.w	36[r28],ep
+0000006e 0045            106 	sld.w	0[ep],r8
+00000070 0806bfff        107 	addi	-65,r8,zero
+00000074 c905*           108 	bnl	.L86
+00000076 20464000        109 	movea	64,zero,r8
+0000007a 0145            110 	sst.w	r8,0[ep]
+                         111 .L86:
+0000007c 3c372100        112 	ld.w	32[r28],r6
+00000080 0338            113 	mov	sp,r7
+                         114 	jarl	_VStdLib_MemCpy,lp
+                         114 <EXPANSION BEGIN>
+                         114 jarl22 _VStdLib_MemCpy , lp 
+00000082 80ff0000*       114 <EXPANSION END>
+00000086 00da            115 	mov	0,r27
+                         116 .L81:
+00000088 1b50            117 	mov	r27,r10
+                         118 .L57:
+                         119 --	    .ef
+                         120 .LDW11:
+                         121 --line687
+                         122 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash.6::
+                         123 .LDWlin6:
+0000008a 6006ff10        124 	dispose	16,{r27,r28,r29,r31},[lp]
+                         125 	.type	_McalCry_Dispatch_SHA512,@function
+                         126 	.size	_McalCry_Dispatch_SHA512,.-_McalCry_Dispatch_SHA512
+                         127 	.align	2
+                         128 .LDW21:
+                         129 --_retVal	r10	local
+                         130 --_workSpaceSha512	r29	local
+                         131 --_retValCv	r10	local
+                         132 --_retVal	r28	local
+                         133 --_retValCv	r10	local
+                         134 --_retVal	r27	local
+                         135 --_tempHashBuf	0[sp]	local
+                         136 --_retVal	r27	local
+                         137 
+                         138 --_objectId	none	param
+                         139 --_job	r28	param
+                         140 --_mode	r8	param
+                         141 
+                         142 	.section ".bss","awb"
+                         143 .L726:
+                         144 	.type	.L726,@object
+                         145 	.size	.L726,0
+                         146 	.data
+                         147 	.section ".MSR_CODE","ax"
+                         148 	.align	2
+                         149 --_McalCry_ObjectInfo	rosdaoff23(_McalCry_ObjectInfo)	import
+                         150 --_McalCry_SHA512	rosdaoff23(_McalCry_SHA512)	import
+                         151 
+                         152 	.data
+                         153 	.ghsnote version,17
+                         154 	.ghsnote tools,3
+                         155 	.ghsnote options,144
+                         156 	.section ".MSR_CODE","ax"
+                         157 	.align	2
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds01.s
+                         158 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Hash...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B4E..0::
+                         159 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

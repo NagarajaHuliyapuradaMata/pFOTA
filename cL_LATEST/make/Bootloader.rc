@@ -1,0 +1,23 @@
+/* ICE setup */ 
+connect 850eserv2 -fastflashload -rh850 -e1lpd4=11000 -dclock=16000,0,swoff -df=c:\GHS\comp_201517\rh850\DR7F701018.dvf -id ffffffffffffffffffffffffffffffff -noiop 
+                                         
+/* Set target clock */                   
+target dclock 16000 0 swoff 
+                                         
+/* Disable interrupts */                 
+target reg psw=0x0020                    
+                                         
+/* Unmask reset sources */               
+target pinmask k                         
+                                         
+/* load program and go to main */        
+load Bootloader.elf    
+                                         
+/* Set breakpoint to main */             
+b main                                   
+                                         
+/* Reset target */                       
+target rst                               
+                                         
+/* Run application*/                     
+c                                        

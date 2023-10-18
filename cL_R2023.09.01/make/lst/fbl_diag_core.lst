@@ -1,0 +1,2794 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/fbl_diag_core.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\fbl_diag_core.dbo -source=fbl_diag_core.c -o obj\gh_000029k1.o -list=lst/fbl_diag_core.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+Source File: fbl_diag_core.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/fbl_diag_core.lst
+                           7 --		-object_dir=obj -stderr=err/fbl_diag_core.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/SwcServiceStartUp/fbl_diag_core.c
+                          28 --Source File:   ../source/SwcServiceStartUp/fbl_diag_core.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:37:23 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".RAMCODE","ax"
+                          39 	.align	2
+                          40 	.align	2
+                          41 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86473..0::
+                          42 	.align	2
+                          43 ..gh.f.f.1.e.0:
+                          44 	.type	..gh.f.f.1.e.0,@object
+                          45 	.size	..gh.f.f.1.e.0,0
+                          46 	.global	_FblDiagResetServiceFlags..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                          47 _FblDiagResetServiceFlags..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                          48 _FblDiagResetServiceFlags:
+                          49 --	    .bf
+                          50 .LDW01:
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+00000000 3e0600000000*    51 	mov	sdaoff23(_fblDiagStates),ep
+00000006 0095             52 	sld.w	0[ep],r18
+00000008 208e97fc         53 	movea	-873,zero,r17
+0000000c 84070d000000*    54 	st.b	zero,sdaoff23(_diagErrorCode)[gp]
+00000012 84070d000000*    55 	st.b	zero,sdaoff23(_diagResponseFlag)[gp]
+00000018 5191             56 	and	r17,r18
+0000001a 0195             57 	sst.w	r18,0[ep]
+                          58 --	    .ef
+                          59 .LDW11:
+0000001c 7f00             60 	jmp	[lp]
+                          61 	.type	_FblDiagResetServiceFlags,@function
+                          62 	.size	_FblDiagResetServiceFlags,.-_FblDiagResetServiceFlags
+                          63 	.type	_FblDiagResetServiceFlags..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                          64 	.size	_FblDiagResetServiceFlags..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagResetServiceFlags..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                          65 	.align	2
+                          66 .LDW21:
+                          67 
+                          68 	.section ".bss","awb"
+                          69 .L36:
+                          70 	.type	.L36,@object
+                          71 	.size	.L36,0
+                          72 	.section ".sbss","awb"
+                          73 	.align	4
+                          74 	.global	_serviceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                          75 _serviceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+00000000 00000000         76 _serviceInfo:	.space	4
+                          77 	.type	_serviceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                          78 	.size	_serviceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,4
+                          79 	.type	_serviceInfo,@object
+                          80 	.size	_serviceInfo,4
+                          81 	.global	_subServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                          82 _subServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+00000004 00000000         83 _subServiceInfo:	.space	4
+                          84 	.type	_subServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                          85 	.size	_subServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,4
+                          86 	.type	_subServiceInfo,@object
+                          87 	.size	_subServiceInfo,4
+                          88 	.global	_fblDiagServicePreHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                          89 _fblDiagServicePreHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+00000008 00000000         90 _fblDiagServicePreHandler:	.space	4
+                          91 	.type	_fblDiagServicePreHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                          92 	.size	_fblDiagServicePreHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,4
+                          93 	.type	_fblDiagServicePreHandler,@object
+                          94 	.size	_fblDiagServicePreHandler,4
+                          95 	.global	_fblDiagServiceMainHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                          96 _fblDiagServiceMainHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+0000000c 00000000         97 _fblDiagServiceMainHandler:	.space	4
+                          98 	.type	_fblDiagServiceMainHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                          99 	.size	_fblDiagServiceMainHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,4
+                         100 	.type	_fblDiagServiceMainHandler,@object
+                         101 	.size	_fblDiagServiceMainHandler,4
+                         102 	.global	_fblDiagServiceNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         103 _fblDiagServiceNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+00000010 00000000        104 _fblDiagServiceNrcHandler:	.space	4
+                         105 	.type	_fblDiagServiceNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                         106 	.size	_fblDiagServiceNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,4
+                         107 	.type	_fblDiagServiceNrcHandler,@object
+                         108 	.size	_fblDiagServiceNrcHandler,4
+                         109 	.global	_fblDiagServicePostHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         110 _fblDiagServicePostHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+00000014 00000000        111 _fblDiagServicePostHandler:	.space	4
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         112 	.type	_fblDiagServicePostHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                         113 	.size	_fblDiagServicePostHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,4
+                         114 	.type	_fblDiagServicePostHandler,@object
+                         115 	.size	_fblDiagServicePostHandler,4
+                         116 	.global	_diagResLen..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         117 _diagResLen..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+00000018 0000            118 _diagResLen:	.space	2
+                         119 	.type	_diagResLen..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                         120 	.size	_diagResLen..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,2
+                         121 	.type	_diagResLen,@object
+                         122 	.size	_diagResLen,2
+                         123 	.global	_diagPostParam..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         124 _diagPostParam..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+0000001a 00              125 _diagPostParam:	.space	1
+                         126 	.type	_diagPostParam..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                         127 	.size	_diagPostParam..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,1
+                         128 	.type	_diagPostParam,@object
+                         129 	.size	_diagPostParam,1
+                         130 	.global	_rcrrpBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         131 _rcrrpBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+0000001b 000000          132 _rcrrpBuffer:	.space	3
+                         133 	.type	_rcrrpBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@object
+                         134 	.size	_rcrrpBuffer..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,3
+                         135 	.type	_rcrrpBuffer,@object
+                         136 	.size	_rcrrpBuffer,3
+                         137 	.data
+                         138 	.section ".RAMCODE","ax"
+                         139 	.text
+                         140 	.align	2
+                         141 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86473..1::
+                         142 	.align	2
+                         143 ..gh.f.f.1.e.1:
+                         144 	.type	..gh.f.f.1.e.1,@object
+                         145 	.size	..gh.f.f.1.e.1,0
+                         146 	.global	_FblDiagDeinit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         147 _FblDiagDeinit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                         148 _FblDiagDeinit:
+00000000 80072100        149 	prepare	{r31},0
+                         150 --	    .bf
+                         151 .LDW31:
+                         152 	jarl	_FblMemDeinit,lp
+                         152 <EXPANSION BEGIN>
+                         152 jarl22 _FblMemDeinit , lp 
+00000004 80ff0000*       152 <EXPANSION END>
+                         153 --line585
+                         154 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.1::
+                         155 .LDWlin1:
+00000008 2b0600000000*   156 	mov	sdaoff23(_fblDiagStates),r11
+0000000e cbd70000        157 	tst1	2,0[r11]
+00000012 b215*           158 	be	.L56
+                         159 --line586
+                         160 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.2::
+                         161 .LDWlin2:
+00000014 cb970000        162 	clr1	2,0[r11]
+00000018 2c0600000000*   163 	mov	sdaoff23(_fblDiagStates+2),r12
+0000001e cccf0000        164 	tst1	1,0[r12]
+00000022 920d*           165 	be	.L58
+                         166 --line591
+                         167 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.3::
+                         168 .LDWlin3:
+00000024 0032            169 	mov	0,r6
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         170 	jarl	_MemDriver_DeinitSync,lp
+                         170 <EXPANSION BEGIN>
+                         170 jarl22 _MemDriver_DeinitSync , lp 
+00000026 80ff0000*       170 <EXPANSION END>
+                         171 --line595
+                         172 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.4::
+                         173 .LDWlin4:
+0000002a 2b0600000000*   174 	mov	sdaoff23(_fblDiagStates+2),r11
+00000030 cb8f0000        175 	clr1	1,0[r11]
+                         176 .L58:
+                         177 	jarl	_ApplFblResetVfp,lp
+                         177 <EXPANSION BEGIN>
+                         177 jarl22 _ApplFblResetVfp , lp 
+00000034 80ff0000*       177 <EXPANSION END>
+                         178 .L56:
+                         179 --line601
+                         180 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.5::
+                         181 .LDWlin5:
+00000038 2b0600000000*   182 	mov	sdaoff23(_fblDiagStates+1),r11
+0000003e cbaf0000        183 	clr1	5,0[r11]
+00000042 a4070d000000*   184 	st.h	zero,sdaoff23(_ecuResetTimeout)[gp]
+                         185 	jarl	_FblDiagResetServiceFlags,lp
+                         185 <EXPANSION BEGIN>
+                         185 jarl22 _FblDiagResetServiceFlags , lp 
+00000048 80ff0000*       185 <EXPANSION END>
+                         186 --line605
+                         187 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.6::
+                         188 .LDWlin6:
+0000004c 2c0600000000*   189 	mov	sdaoff23(_fblMainStates),r12
+00000052 cc370000        190 	set1	6,0[r12]
+                         191 --	    .ef
+                         192 .LDW41:
+00000056 40063f00        193 	dispose	0,{r31},[lp]
+                         194 	.type	_FblDiagDeinit,@function
+                         195 	.size	_FblDiagDeinit,.-_FblDiagDeinit
+                         196 	.type	_FblDiagDeinit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                         197 	.size	_FblDiagDeinit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagDeinit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         198 	.align	2
+                         199 .LDW51:
+                         200 
+                         201 	.section ".bss","awb"
+                         202 .L101:
+                         203 	.type	.L101,@object
+                         204 	.size	.L101,0
+                         205 	.data
+                         206 	.text
+                         207 	.align	2
+                         208 	.align	2
+                         209 ..gh.f.f.1.e.2:
+                         210 	.type	..gh.f.f.1.e.2,@object
+                         211 	.size	..gh.f.f.1.e.2,0
+                         212 	.global	_FblDiagEcuReset
+                         213 _FblDiagEcuReset:
+                         214 --	    .bf
+                         215 .LDW61:
+0000005a 2b0600000000*   216 	mov	sdaoff23(_diagResponseFlag),r11
+00000060 a4070d000000*   217 	st.h	zero,sdaoff23(_testerPresentTimeout)[gp]
+00000066 cb0f0000        218 	set1	1,0[r11]
+0000006a bf0796ff*       219 	jr	_FblDiagDeinit
+                         220 --	    .ef
+                         221 .LDW71:
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         222 	.type	_FblDiagEcuReset,@function
+                         223 	.size	_FblDiagEcuReset,.-_FblDiagEcuReset
+                         224 	.align	2
+                         225 .LDW81:
+                         226 
+                         227 	.section ".bss","awb"
+                         228 .L177:
+                         229 	.type	.L177,@object
+                         230 	.size	.L177,0
+                         231 	.data
+                         232 	.text
+                         233 	.align	2
+                         234 	.align	2
+                         235 ..gh.f.f.1.e.3:
+                         236 	.type	..gh.f.f.1.e.3,@object
+                         237 	.size	..gh.f.f.1.e.3,0
+                         238 	.global	_FblDiagSetError
+                         239 _FblDiagSetError:
+0000006e 8600            240 	zxb	r6
+                         241 --	    .bf
+                         242 .LDW91:
+00000070 2b0600000000*   243 	mov	sdaoff23(_fblDiagStates),r11
+00000076 84070d300000*   244 	st.b	r6,sdaoff23(_diagErrorCode)[gp]
+0000007c cbdf0000        245 	tst1	3,0[r11]
+00000080 a21d*           246 	be	.L198
+00000082 2b0600000000*   247 	mov	sdaoff23(_fblDiagStates+1),r11
+00000088 cbc70000        248 	tst1	0,0[r11]
+0000008c ca15*           249 	bne	.L198
+0000008e 0606efff        250 	addi	-17,r6,zero
+00000092 f20d*           251 	be	.L199
+00000094 0606eeff        252 	addi	-18,r6,zero
+00000098 c20d*           253 	be	.L199
+0000009a 0606cfff        254 	addi	-49,r6,zero
+0000009e 0292            255 	mov	2,r18
+000000a0 aa0d*           256 	bne	.L198
+                         257 .L228:
+000000a2 3e0600000000*   258 	mov	sdaoff23(_diagResponseFlag),ep
+000000a8 6098            259 	sld.bu	0[ep],r19
+000000aa 1299            260 	or	r18,r19
+000000ac 809b            261 	sst.b	r19,0[ep]
+                         262 --	    .ef
+                         263 .LDW02:
+                         264 --line221
+                         265 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.7::
+                         266 .LDWlin7:
+000000ae 7f00            267 	jmp	[lp]
+                         268 .L199:
+                         269 --line216
+                         270 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.8::
+                         271 .LDWlin8:
+000000b0 0292            272 	mov	2,r18
+000000b2 85fd*           273 	br	.L228
+                         274 .L198:
+                         275 --line219
+                         276 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.9::
+                         277 .LDWlin9:
+000000b4 20961000        278 	movea	16,zero,r18
+000000b8 d5f5*           279 	br	.L228
+                         280 	.type	_FblDiagSetError,@function
+                         281 	.size	_FblDiagSetError,.-_FblDiagSetError
+                         282 	.align	2
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         283 .LDW12:
+                         284 
+                         285 --_errorCode	r6	param
+                         286 
+                         287 	.section ".bss","awb"
+                         288 .L269:
+                         289 	.type	.L269,@object
+                         290 	.size	.L269,0
+                         291 	.data
+                         292 	.text
+                         293 	.align	2
+                         294 	.align	2
+                         295 ..gh.f.f.1.e.4:
+                         296 	.type	..gh.f.f.1.e.4,@object
+                         297 	.size	..gh.f.f.1.e.4,0
+                         298 	.global	_DiagExRCRResponsePending
+                         299 _DiagExRCRResponsePending:
+000000ba 80072100        300 	prepare	{r31},0
+000000be 8600            301 	zxb	r6
+                         302 --	    .bf
+                         303 .LDW22:
+000000c0 2b0600000000*   304 	mov	sdaoff23(_fblDiagStates),r11
+000000c6 cbff0000        305 	tst1	7,0[r11]
+000000ca c23d*           306 	be	.L351
+                         307 --line233
+                         308 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.10::
+                         309 .LDWlin10:
+000000cc 6132            310 	cmp	1,r6
+000000ce f215*           311 	be	.L356
+000000d0 6232            312 	cmp	2,r6
+000000d2 fa05*           313 	bne	.L362
+000000d4 2b0600000000*   314 	mov	sdaoff23(_fblDiagStates+1),r11
+000000da cbc70000        315 	tst1	0,0[r11]
+000000de f20d*           316 	be	.L356
+                         317 .L362:
+000000e0 a40707880000*   318 	ld.hu	sdaoff23(_P2Timer)[gp],r17
+000000e6 2b0600000000*   319 	mov	sdaoff23(_fblDiagStates+1),r11
+000000ec 2096c409        320 	movea	2500,zero,r18
+000000f0 cbc70000        321 	tst1	0,0[r11]
+000000f4 e597049b        322 	cmove	5,r18,r19
+000000f8 f389            323 	cmp	r19,r17
+000000fa c925*           324 	bnl	.L351
+                         325 .L356:
+                         326 --line240
+                         327 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.11::
+                         328 .LDWlin11:
+000000fc a40705700000*   329 	ld.bu	sdaoff23(_diagServiceCurrent)[gp],r14
+00000102 0382            330 	mov	3,r16
+00000104 207e7f00        331 	movea	127,zero,r15
+00000108 3e0600000000*   332 	mov	sdaoff23(_rcrrpBuffer),ep
+0000010e 206e7800        333 	movea	120,zero,r13
+00000112 84070d800000*   334 	st.b	r16,sdaoff23(_diagPostParam)[gp]
+00000118 807b            335 	sst.b	r15,0[ep]
+0000011a 8173            336 	sst.b	r14,1[ep]
+0000011c 826b            337 	sst.b	r13,2[ep]
+0000011e 1e30            338 	mov	ep,r6
+                         339 	jarl	_FblCwTransmitRP,lp
+                         339 <EXPANSION BEGIN>
+                         339 jarl22 _FblCwTransmitRP , lp 
+00000120 80ff0000*       339 <EXPANSION END>
+                         340 --line244
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         341 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.12::
+                         342 .LDWlin12:
+00000124 20668813        343 	movea	5000,zero,r12
+00000128 a4070d600000*   344 	st.h	r12,sdaoff23(_P2Timer)[gp]
+0000012e 2b0600000000*   345 	mov	sdaoff23(_diagResponseFlag),r11
+00000134 2c0600000000*   346 	mov	sdaoff23(_fblDiagStates+1),r12
+0000013a cb8f0000        347 	clr1	1,0[r11]
+0000013e cc070000        348 	set1	0,0[r12]
+                         349 .L351:
+                         350 --	    .ef
+                         351 .LDW32:
+00000142 40063f00        352 	dispose	0,{r31},[lp]
+                         353 	.type	_DiagExRCRResponsePending,@function
+                         354 	.size	_DiagExRCRResponsePending,.-_DiagExRCRResponsePending
+                         355 	.align	2
+                         356 .LDW42:
+                         357 
+                         358 --_forceSend	r6	param
+                         359 
+                         360 	.section ".bss","awb"
+                         361 .L427:
+                         362 	.type	.L427,@object
+                         363 	.size	.L427,0
+                         364 	.data
+                         365 	.text
+                         366 	.align	2
+                         367 	.align	2
+                         368 ..gh.f.f.1.e.5:
+                         369 	.type	..gh.f.f.1.e.5,@object
+                         370 	.size	..gh.f.f.1.e.5,0
+                         371 	.global	_FblRealTimeSupport
+                         372 _FblRealTimeSupport:
+00000146 80076100        373 	prepare	{r29,r31},0
+                         374 --	    .bf
+                         375 .LDW52:
+                         376 	jarl	_FblLookForWatchdog,lp
+                         376 <EXPANSION BEGIN>
+                         376 jarl22 _FblLookForWatchdog , lp 
+0000014a 80ff0000*       376 <EXPANSION END>
+0000014e 0ae8            377 	mov	r10,r29
+                         378 --line227
+                         379 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.13::
+                         380 .LDWlin13:
+00000150 0032            381 	mov	0,r6
+                         382 	jarl	_DiagExRCRResponsePending,lp
+                         382 <EXPANSION BEGIN>
+                         382 jarl22 _DiagExRCRResponsePending , lp 
+00000152 bfff68ff*       382 <EXPANSION END>
+                         383 --	    .ef
+                         384 .LDW62:
+                         385 --line228
+                         386 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.14::
+                         387 .LDWlin14:
+00000156 1d50            388 	mov	r29,r10
+00000158 40067f00        389 	dispose	0,{r29,r31},[lp]
+                         390 	.type	_FblRealTimeSupport,@function
+                         391 	.size	_FblRealTimeSupport,.-_FblRealTimeSupport
+                         392 	.align	2
+                         393 .LDW72:
+                         394 
+                         395 	.section ".bss","awb"
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         396 .L532:
+                         397 	.type	.L532,@object
+                         398 	.size	.L532,0
+                         399 	.data
+                         400 	.text
+                         401 	.align	2
+                         402 	.align	2
+                         403 ..gh.f.f.1.e.6:
+                         404 	.type	..gh.f.f.1.e.6,@object
+                         405 	.size	..gh.f.f.1.e.6,0
+                         406 	.global	_FblDiagMemGetActiveBuffer
+                         407 _FblDiagMemGetActiveBuffer:
+0000015c 80072100        408 	prepare	{r31},0
+                         409 --	    .bf
+                         410 .LDW82:
+                         411 	jarl	_FblMemGetActiveBuffer,lp
+                         411 <EXPANSION BEGIN>
+                         411 jarl22 _FblMemGetActiveBuffer , lp 
+00000160 80ff0000*       411 <EXPANSION END>
+00000164 84070f500000*   412 	st.w	r10,sdaoff23(_DiagBuffer)[gp]
+                         413 --line255
+                         414 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.15::
+                         415 .LDWlin15:
+0000016a 4152            416 	add	1,r10
+                         417 --	    .ef
+                         418 .LDW92:
+0000016c 40063f00        419 	dispose	0,{r31},[lp]
+                         420 	.type	_FblDiagMemGetActiveBuffer,@function
+                         421 	.size	_FblDiagMemGetActiveBuffer,.-_FblDiagMemGetActiveBuffer
+                         422 	.align	2
+                         423 .LDW03:
+                         424 
+                         425 	.section ".bss","awb"
+                         426 .L577:
+                         427 	.type	.L577,@object
+                         428 	.size	.L577,0
+                         429 	.data
+                         430 	.text
+                         431 	.align	2
+                         432 	.align	2
+                         433 ..gh.f.f.1.e.7:
+                         434 	.type	..gh.f.f.1.e.7,@object
+                         435 	.size	..gh.f.f.1.e.7,0
+                         436 	.global	_DiagProcessingDone
+                         437 _DiagProcessingDone:
+                         438 --	    .bf
+                         439 .LDW13:
+00000170 2b0600000000*   440 	mov	sdaoff23(_diagResponseFlag),r11
+00000176 cb1f0000        441 	set1	3,0[r11]
+0000017a a4070d300000*   442 	st.h	r6,sdaoff23(_diagResLen)[gp]
+                         443 --	    .ef
+                         444 .LDW23:
+00000180 7f00            445 	jmp	[lp]
+                         446 	.type	_DiagProcessingDone,@function
+                         447 	.size	_DiagProcessingDone,.-_DiagProcessingDone
+                         448 	.align	2
+                         449 .LDW33:
+                         450 
+                         451 --_dataLength	r6	param
+                         452 
+                         453 	.section ".bss","awb"
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         454 .L625:
+                         455 	.type	.L625,@object
+                         456 	.size	.L625,0
+                         457 	.data
+                         458 	.text
+                         459 	.align	2
+                         460 	.align	2
+                         461 ..gh.f.f.1.e.8:
+                         462 	.type	..gh.f.f.1.e.8,@object
+                         463 	.size	..gh.f.f.1.e.8,0
+                         464 	.global	_FblDiagDiscardReception..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         465 _FblDiagDiscardReception..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                         466 _FblDiagDiscardReception:
+                         467 --	    .bf
+                         468 .LDW43:
+00000182 2b0600000000*   469 	mov	sdaoff23(_fblDiagStates+1),r11
+00000188 cb9f0000        470 	clr1	3,0[r11]
+                         471 --	    .ef
+                         472 .LDW53:
+0000018c 7f00            473 	jmp	[lp]
+                         474 	.type	_FblDiagDiscardReception,@function
+                         475 	.size	_FblDiagDiscardReception,.-_FblDiagDiscardReception
+                         476 	.type	_FblDiagDiscardReception..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                         477 	.size	_FblDiagDiscardReception..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagDiscardReception..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         478 	.align	2
+                         479 .LDW63:
+                         480 
+                         481 	.section ".bss","awb"
+                         482 .L673:
+                         483 	.type	.L673,@object
+                         484 	.size	.L673,0
+                         485 	.data
+                         486 	.text
+                         487 	.section ".RAMCODE","ax"
+                         488 	.align	2
+                         489 	.align	2
+                         490 ..gh.f.f.1.e.9:
+                         491 	.type	..gh.f.f.1.e.9,@object
+                         492 	.size	..gh.f.f.1.e.9,0
+                         493 	.global	_FblDiagConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         494 _FblDiagConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                         495 _FblDiagConfirmation:
+0000001e 80076100        496 	prepare	{r29,r31},0
+                         497 --	    .bf
+                         498 .LDW73:
+00000022 2b0600000000*   499 	mov	sdaoff23(_fblDiagStates),r11
+00000028 cba70000        500 	clr1	4,0[r11]
+0000002c a4070d000000*   501 	st.h	zero,sdaoff23(_P2Timer)[gp]
+00000032 cbef0000        502 	tst1	5,0[r11]
+00000036 b20d*           503 	be	.L693
+00000038 840709e80000*   504 	ld.w	sdaoff23(_fblDiagServicePostHandler)[gp],r29
+0000003e e0e9            505 	cmp	zero,r29
+00000040 e205*           506 	be	.L693
+                         507 --line295
+                         508 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.16::
+                         509 .LDWlin16:
+00000042 a40705300000*   510 	ld.bu	sdaoff23(_diagPostParam)[gp],r6
+00000048 fdc760f9        511 	jarl	[r29],lp
+                         512 .L693:
+                         513 --line299
+                         514 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.17::
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         515 .LDWlin17:
+                         516 	jarl	_FblDiagResetServiceFlags,lp
+                         516 <EXPANSION BEGIN>
+                         516 jarl22 _FblDiagResetServiceFlags , lp 
+0000004c bfffb4ff*       516 <EXPANSION END>
+                         517 --line302
+                         518 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.18::
+                         519 .LDWlin18:
+00000050 2b0600000000*   520 	mov	sdaoff23(_fblDiagStates),r11
+00000056 cbd70000        521 	tst1	2,0[r11]
+0000005a aa0d*           522 	bne	.L697
+0000005c cbcf0000        523 	tst1	1,0[r11]
+00000060 fa05*           524 	bne	.L697
+00000062 2b0600000000*   525 	mov	sdaoff23(_fblMainStates),r11
+00000068 cbef0000        526 	tst1	5,0[r11]
+0000006c e205*           527 	be	.L691
+                         528 .L697:
+                         529 --line307
+                         530 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.19::
+                         531 .LDWlin19:
+0000006e 2096d007        532 	movea	2000,zero,r18
+00000072 a4070d900000*   533 	st.h	r18,sdaoff23(_testerPresentTimeout)[gp]
+                         534 .L691:
+                         535 --	    .ef
+                         536 .LDW83:
+00000078 40067f00        537 	dispose	0,{r29,r31},[lp]
+                         538 	.type	_FblDiagConfirmation,@function
+                         539 	.size	_FblDiagConfirmation,.-_FblDiagConfirmation
+                         540 	.type	_FblDiagConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                         541 	.size	_FblDiagConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagConfirmation..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         542 	.align	2
+                         543 .LDW93:
+                         544 
+                         545 	.section ".bss","awb"
+                         546 .L751:
+                         547 	.type	.L751,@object
+                         548 	.size	.L751,0
+                         549 	.data
+                         550 	.section ".RAMCODE","ax"
+                         551 	.text
+                         552 	.align	2
+                         553 	.align	2
+                         554 ..gh.f.f.1.e.10:
+                         555 	.type	..gh.f.f.1.e.10,@object
+                         556 	.size	..gh.f.f.1.e.10,0
+                         557 	.global	_FblDiagResponseProcessor..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         558 _FblDiagResponseProcessor..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                         559 _FblDiagResponseProcessor:
+0000018e 80072100        560 	prepare	{r31},0
+                         561 --	    .bf
+                         562 .LDW04:
+00000192 a40705680000*   563 	ld.bu	sdaoff23(_diagResponseFlag)[gp],r13
+00000198 cd061a00        564 	andi	26,r13,zero
+0000019c e2070f01*       565 	be	.L829
+                         566 --line316
+                         567 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.20::
+                         568 .LDWlin20:
+000001a0 3e0600000000*   569 	mov	sdaoff23(_fblDiagStates),ep
+000001a6 0095            570 	sld.w	0[ep],r18
+000001a8 20667fff        571 	movea	-129,zero,r12
+000001ac 205efffe        572 	movea	-257,zero,r11
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+000001b0 a4070d000000*   573 	st.h	zero,sdaoff23(_P2Timer)[gp]
+000001b6 4c91            574 	and	r12,r18
+000001b8 4b91            575 	and	r11,r18
+000001ba 0195            576 	sst.w	r18,0[ep]
+                         577 	jarl	_FblDiagDiscardReception,lp
+                         577 <EXPANSION BEGIN>
+                         577 jarl22 _FblDiagDiscardReception , lp 
+000001bc bfffc6ff*       577 <EXPANSION END>
+                         578 --line321
+                         579 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.21::
+                         580 .LDWlin21:
+000001c0 a40705800000*   581 	ld.bu	sdaoff23(_diagServiceCurrent)[gp],r16
+000001c6 a40705880000*   582 	ld.bu	sdaoff23(_diagResponseFlag)[gp],r17
+000001cc 84070d800000*   583 	st.b	r16,sdaoff23(_errStatLastServiceId)[gp]
+000001d2 d1060400        584 	andi	4,r17,zero
+000001d6 aa55*           585 	bne	.L907
+                         586 --line336
+                         587 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.22::
+                         588 .LDWlin22:
+000001d8 d1061000        589 	andi	16,r17,zero
+000001dc c24d*           590 	be	.L838
+                         591 --line340
+                         592 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.23::
+                         593 .LDWlin23:
+000001de 840709f00000*   594 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000001e4 0142            595 	mov	1,r8
+000001e6 84070d400000*   596 	st.b	r8,sdaoff23(_diagPostParam)[gp]
+000001ec 203e7f00        597 	movea	127,zero,r7
+000001f0 8183            598 	sst.b	r16,1[ep]
+000001f2 840709f00000*   599 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000001f8 803b            600 	sst.b	r7,0[ep]
+000001fa 840709f00000*   601 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+00000200 a40705300000*   602 	ld.bu	sdaoff23(_diagErrorCode)[gp],r6
+00000206 8233            603 	sst.b	r6,2[ep]
+00000208 a40705980000*   604 	ld.bu	sdaoff23(_diagErrorCode)[gp],r19
+0000020e e099            605 	cmp	zero,r19
+00000210 da05*           606 	bne	.L840
+                         607 --line344
+                         608 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.24::
+                         609 .LDWlin24:
+00000212 20365000        610 	movea	80,zero,r6
+                         611 	jarl	_ApplFblFatalError,lp
+                         611 <EXPANSION BEGIN>
+                         611 jarl22 _ApplFblFatalError , lp 
+00000216 80ff0000*       611 <EXPANSION END>
+                         612 .L840:
+                         613 --line345
+                         614 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.25::
+                         615 .LDWlin25:
+0000021a 840709300000*   616 	ld.w	sdaoff23(_DiagBuffer)[gp],r6
+00000220 033a            617 	mov	3,r7
+                         618 	jarl	_FblCwPduTransmit,lp
+                         618 <EXPANSION BEGIN>
+                         618 jarl22 _FblCwPduTransmit , lp 
+00000222 80ff0000*       618 <EXPANSION END>
+                         619 --line347
+                         620 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.26::
+                         621 .LDWlin26:
+00000226 84070d000000*   622 	st.b	zero,sdaoff23(_diagResponseFlag)[gp]
+0000022c f535*           623 	br	.L837
+                         624 .L843:
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         625 --line362
+                         626 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.27::
+                         627 .LDWlin27:
+0000022e 848a            628 	shr	4,r17
+00000230 991d*           629 	bnl	.L852
+                         630 --line366
+                         631 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.28::
+                         632 .LDWlin28:
+00000232 840709f00000*   633 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+00000238 84070d000000*   634 	st.b	zero,sdaoff23(_diagPostParam)[gp]
+0000023e 10764000        635 	addi	64,r16,r14
+00000242 8073            636 	sst.b	r14,0[ep]
+00000244 a40707780000*   637 	ld.hu	sdaoff23(_diagResLen)[gp],r15
+0000024a 840709300000*   638 	ld.w	sdaoff23(_DiagBuffer)[gp],r6
+00000250 0f3e0100        639 	addi	1,r15,r7
+00000254 c700            640 	zxh	r7
+                         641 	jarl	_FblCwPduTransmit,lp
+                         641 <EXPANSION BEGIN>
+                         641 jarl22 _FblCwPduTransmit , lp 
+00000256 80ff0000*       641 <EXPANSION END>
+                         642 --line369
+                         643 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.29::
+                         644 .LDWlin29:
+0000025a 84070d000000*   645 	st.b	zero,sdaoff23(_diagResponseFlag)[gp]
+00000260 d51d*           646 	br	.L837
+                         647 .L852:
+                         648 --line373
+                         649 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.30::
+                         650 .LDWlin30:
+00000262 20365000        651 	movea	80,zero,r6
+                         652 	jarl	_ApplFblFatalError,lp
+                         652 <EXPANSION BEGIN>
+                         652 jarl22 _ApplFblFatalError , lp 
+00000266 80ff0000*       652 <EXPANSION END>
+                         653 --line375
+                         654 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.31::
+                         655 .LDWlin31:
+0000026a 84070d000000*   656 	st.b	zero,sdaoff23(_diagPostParam)[gp]
+00000270 40063f00        657 	dispose	0,{r31},[lp]
+                         658 .L838:
+                         659 --line349
+                         660 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.32::
+                         661 .LDWlin32:
+00000274 d1060200        662 	andi	2,r17,zero
+00000278 b2dd*           663 	be	.L843
+                         664 .L907:
+                         665 --line355
+                         666 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.33::
+                         667 .LDWlin33:
+0000027a 048a            668 	mov	4,r17
+0000027c 84070d880000*   669 	st.b	r17,sdaoff23(_diagPostParam)[gp]
+                         670 	jarl	_FblDiagConfirmation,lp
+                         670 <EXPANSION BEGIN>
+                         670 jarl22 _FblDiagConfirmation , lp 
+00000282 80ff0000*       670 <EXPANSION END>
+00000286 2b0600000000*   671 	mov	sdaoff23(_fblDiagStates+1),r11
+0000028c cbef0000        672 	tst1	5,0[r11]
+00000290 b205*           673 	be	.L845
+                         674 --line355
+                         675 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.34::
+                         676 .LDWlin34:
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+00000292 cb3f0000        677 	set1	7,0[r11]
+                         678 .L845:
+                         679 	jarl	_FblCwResetRxBlock,lp
+                         679 <EXPANSION BEGIN>
+                         679 jarl22 _FblCwResetRxBlock , lp 
+00000296 80ff0000*       679 <EXPANSION END>
+                         680 .L837:
+                         681 --line378
+                         682 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.35::
+                         683 .LDWlin35:
+0000029a a40705300000*   684 	ld.bu	sdaoff23(_diagPostParam)[gp],r6
+000002a0 6332            685 	cmp	3,r6
+000002a2 ca05*           686 	bne	.L829
+                         687 --line380
+                         688 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.36::
+                         689 .LDWlin36:
+000002a4 84070d000000*   690 	st.b	zero,sdaoff23(_diagResponseFlag)[gp]
+                         691 .L829:
+                         692 --	    .ef
+                         693 .LDW14:
+000002aa 40063f00        694 	dispose	0,{r31},[lp]
+                         695 	.type	_FblDiagResponseProcessor,@function
+                         696 	.size	_FblDiagResponseProcessor,.-_FblDiagResponseProcessor
+                         697 	.type	_FblDiagResponseProcessor..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                         698 	.size	_FblDiagResponseProcessor..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagResponseProcessor..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         699 	.align	2
+                         700 .LDW24:
+                         701 
+                         702 	.section ".bss","awb"
+                         703 .L993:
+                         704 	.type	.L993,@object
+                         705 	.size	.L993,0
+                         706 	.data
+                         707 	.text
+                         708 	.align	2
+                         709 	.align	2
+                         710 ..gh.f.f.1.e.11:
+                         711 	.type	..gh.f.f.1.e.11,@object
+                         712 	.size	..gh.f.f.1.e.11,0
+                         713 	.global	_ChkSuppressPosRspMsgIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         714 _ChkSuppressPosRspMsgIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                         715 _ChkSuppressPosRspMsgIndication:
+                         716 --	    .bf
+                         717 .LDW34:
+000002ae c6ff0000        718 	tst1	7,0[r6]
+000002b2 d20d*           719 	be	.L1143
+                         720 --line387
+                         721 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.37::
+                         722 .LDWlin37:
+000002b4 2b0600000000*   723 	mov	sdaoff23(_diagResponseFlag),r11
+000002ba 2c0600000000*   724 	mov	sdaoff23(_fblDiagStates+1),r12
+000002c0 cb0f0000        725 	set1	1,0[r11]
+000002c4 cc0f0000        726 	set1	1,0[r12]
+000002c8 c6bf0000        727 	clr1	7,0[r6]
+                         728 .L1143:
+                         729 --	    .ef
+                         730 .LDW44:
+000002cc 7f00            731 	jmp	[lp]
+                         732 	.type	_ChkSuppressPosRspMsgIndication,@function
+                         733 	.size	_ChkSuppressPosRspMsgIndication,.-_ChkSuppressPosRspMsgIndication
+                         734 	.type	_ChkSuppressPosRspMsgIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         735 	.size	_ChkSuppressPosRspMsgIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_ChkSuppressPosRspMsgIndication..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                         736 	.align	2
+                         737 .LDW54:
+                         738 
+                         739 --_subparam	r6	param
+                         740 
+                         741 	.section ".bss","awb"
+                         742 .L1174:
+                         743 	.type	.L1174,@object
+                         744 	.size	.L1174,0
+                         745 	.data
+                         746 	.text
+                         747 	.align	2
+                         748 	.align	2
+                         749 ..gh.f.f.1.e.12:
+                         750 	.type	..gh.f.f.1.e.12,@object
+                         751 	.size	..gh.f.f.1.e.12,0
+                         752 	.global	_FblDiagSegmentNext
+                         753 _FblDiagSegmentNext:
+                         754 --	    .bf
+                         755 .LDW64:
+000002ce a40705900000*   756 	ld.bu	sdaoff23(_segmentCount)[gp],r18
+000002d4 6892            757 	cmp	8,r18
+000002d6 c105*           758 	bl	.L1209
+                         759 --line399
+                         760 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.38::
+                         761 .LDWlin38:
+000002d8 2056ff00        762 	movea	255,zero,r10
+000002dc 7f00            763 	jmp	[lp]
+                         764 .L1209:
+                         765 --line402
+                         766 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.39::
+                         767 .LDWlin39:
+000002de 12560100        768 	addi	1,r18,r10
+000002e2 8a00            769 	zxb	r10
+000002e4 84070d500000*   770 	st.b	r10,sdaoff23(_segmentCount)[gp]
+                         771 --	    .ef
+                         772 .LDW74:
+000002ea 7f00            773 	jmp	[lp]
+                         774 	.type	_FblDiagSegmentNext,@function
+                         775 	.size	_FblDiagSegmentNext,.-_FblDiagSegmentNext
+                         776 	.align	2
+                         777 .LDW84:
+                         778 --_result	r10	local
+                         779 
+                         780 	.section ".bss","awb"
+                         781 .L1260:
+                         782 	.type	.L1260,@object
+                         783 	.size	.L1260,0
+                         784 	.data
+                         785 	.text
+                         786 	.align	2
+                         787 	.align	2
+                         788 ..gh.f.f.1.e.13:
+                         789 	.type	..gh.f.f.1.e.13,@object
+                         790 	.size	..gh.f.f.1.e.13,0
+                         791 	.global	_FblDiagInitPowerOn
+                         792 _FblDiagInitPowerOn:
+000002ec 80072100        793 	prepare	{r31},0
+                         794 --	    .bf
+                         795 .LDW94:
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+000002f0 0192            796 	mov	1,r18
+000002f2 84070d000000*   797 	st.b	zero,sdaoff23(_diagResponseFlag)[gp]
+000002f8 84070d000000*   798 	st.b	zero,sdaoff23(_diagErrorCode)[gp]
+000002fe 84070f000000*   799 	st.w	zero,sdaoff23(_fblDiagServicePreHandler)[gp]
+00000304 84070f000000*   800 	st.w	zero,sdaoff23(_fblDiagServiceMainHandler)[gp]
+0000030a 84070f000000*   801 	st.w	zero,sdaoff23(_fblDiagServiceNrcHandler)[gp]
+00000310 84070f000000*   802 	st.w	zero,sdaoff23(_fblDiagServicePostHandler)[gp]
+00000316 84070f900000*   803 	st.w	r18,sdaoff23(_fblDiagStates)[gp]
+0000031c a4070d000000*   804 	st.h	zero,sdaoff23(_testerPresentTimeout)[gp]
+00000322 a4070d000000*   805 	st.h	zero,sdaoff23(_P2Timer)[gp]
+                         806 	jarl	_ApplFblResetVfp,lp
+                         806 <EXPANSION BEGIN>
+                         806 jarl22 _ApplFblResetVfp , lp 
+00000328 80ff0000*       806 <EXPANSION END>
+                         807 --line466
+                         808 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.40::
+                         809 .LDWlin40:
+0000032c a4070d000000*   810 	st.h	zero,sdaoff23(_ecuResetTimeout)[gp]
+                         811 	jarl	_FblDiagOemInitPowerOn,lp
+                         811 <EXPANSION BEGIN>
+                         811 jarl22 _FblDiagOemInitPowerOn , lp 
+00000332 80ff0000*       811 <EXPANSION END>
+                         812 --	    .ef
+                         813 .LDW05:
+                         814 --line487
+                         815 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.41::
+                         816 .LDWlin41:
+00000336 40063f00        817 	dispose	0,{r31},[lp]
+                         818 	.type	_FblDiagInitPowerOn,@function
+                         819 	.size	_FblDiagInitPowerOn,.-_FblDiagInitPowerOn
+                         820 	.align	2
+                         821 .LDW15:
+                         822 
+                         823 	.section ".bss","awb"
+                         824 .L1352:
+                         825 	.type	.L1352,@object
+                         826 	.size	.L1352,0
+                         827 	.data
+                         828 	.text
+                         829 	.align	2
+                         830 	.align	2
+                         831 ..gh.f.f.1.e.14:
+                         832 	.type	..gh.f.f.1.e.14,@object
+                         833 	.size	..gh.f.f.1.e.14,0
+                         834 	.global	_FblDiagInit
+                         835 _FblDiagInit:
+0000033a 80072100        836 	prepare	{r31},0
+                         837 --	    .bf
+                         838 .LDW25:
+                         839 	jarl	_FblMemInitPowerOn,lp
+                         839 <EXPANSION BEGIN>
+                         839 jarl22 _FblMemInitPowerOn , lp 
+0000033e 80ff0000*       839 <EXPANSION END>
+00000342 84070f500000*   840 	st.w	r10,sdaoff23(_DiagBuffer)[gp]
+                         841 --line495
+                         842 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.42::
+                         843 .LDWlin42:
+00000348 84070f000000*   844 	st.w	zero,sdaoff23(_secSecurityAccessDelay)[gp]
+                         845 	jarl	_ApplFblInitErrStatus,lp
+                         845 <EXPANSION BEGIN>
+                         845 jarl22 _ApplFblInitErrStatus , lp 
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+0000034e 80ff0000*       845 <EXPANSION END>
+                         846 --line506
+                         847 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.43::
+                         848 .LDWlin43:
+00000352 84070d000000*   849 	st.b	zero,sdaoff23(_segmentCount)[gp]
+                         850 	jarl	_ApplFblSecurityInit,lp
+                         850 <EXPANSION BEGIN>
+                         850 jarl22 _ApplFblSecurityInit , lp 
+00000358 80ff0000*       850 <EXPANSION END>
+                         851 --	    .ef
+                         852 .LDW35:
+                         853 --line517
+                         854 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.44::
+                         855 .LDWlin44:
+0000035c 40063f00        856 	dispose	0,{r31},[lp]
+                         857 	.type	_FblDiagInit,@function
+                         858 	.size	_FblDiagInit,.-_FblDiagInit
+                         859 	.align	2
+                         860 .LDW45:
+                         861 
+                         862 	.section ".bss","awb"
+                         863 .L1393:
+                         864 	.type	.L1393,@object
+                         865 	.size	.L1393,0
+                         866 	.data
+                         867 	.text
+                         868 	.section ".RAMCODE","ax"
+                         869 	.align	2
+                         870 	.align	2
+                         871 ..gh.f.f.1.e.15:
+                         872 	.type	..gh.f.f.1.e.15,@object
+                         873 	.size	..gh.f.f.1.e.15,0
+                         874 	.global	_FblDiagRxGetPhysBuffer
+                         875 _FblDiagRxGetPhysBuffer:
+0000007c c600            876 	zxh	r6
+                         877 --	    .bf
+                         878 .LDW55:
+0000007e 069effff        879 	addi	-1,r6,r19
+00000082 0052            880 	mov	0,r10
+00000084 130601f0        881 	addi	-4095,r19,zero
+00000088 f10d*           882 	bl	.L1411
+0000008a 2b0600000000*   883 	mov	sdaoff23(_fblDiagStates),r11
+00000090 cbe70000        884 	tst1	4,0[r11]
+00000094 9a0d*           885 	bne	.L1411
+                         886 --line1270
+                         887 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.45::
+                         888 .LDWlin45:
+00000096 cb270000        889 	set1	4,0[r11]
+0000009a cb9f0000        890 	clr1	3,0[r11]
+0000009e 840709500000*   891 	ld.w	sdaoff23(_DiagBuffer)[gp],r10
+000000a4 7f00            892 	jmp	[lp]
+                         893 .L1411:
+                         894 --	    .ef
+                         895 .LDW65:
+                         896 --line1275
+                         897 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.46::
+                         898 .LDWlin46:
+000000a6 7f00            899 	jmp	[lp]
+                         900 	.type	_FblDiagRxGetPhysBuffer,@function
+                         901 	.size	_FblDiagRxGetPhysBuffer,.-_FblDiagRxGetPhysBuffer
+                         902 	.align	2
+
+                                                                      Page 17
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                         903 .LDW75:
+                         904 --_result	r10	local
+                         905 
+                         906 --_rxDataLength	r6	param
+                         907 
+                         908 	.section ".bss","awb"
+                         909 .L1464:
+                         910 	.type	.L1464,@object
+                         911 	.size	.L1464,0
+                         912 	.data
+                         913 	.section ".RAMCODE","ax"
+                         914 	.text
+                         915 	.align	2
+                         916 	.align	2
+                         917 ..gh.f.f.1.e.16:
+                         918 	.type	..gh.f.f.1.e.16,@object
+                         919 	.size	..gh.f.f.1.e.16,0
+                         920 	.global	_FblDiagInitStartFromReset
+                         921 _FblDiagInitStartFromReset:
+00000360 80076100        922 	prepare	{r29,r31},0
+00000364 06e8            923 	mov	r6,r29
+00000366 9d00            924 	zxb	r29
+                         925 --	    .bf
+                         926 .LDW85:
+00000368 0232            927 	mov	2,r6
+                         928 	jarl	_FblDiagRxGetPhysBuffer,lp
+                         928 <EXPANSION BEGIN>
+                         928 jarl22 _FblDiagRxGetPhysBuffer , lp 
+0000036a 80ff0000*       928 <EXPANSION END>
+0000036e 840709300000*   929 	ld.w	sdaoff23(_DiagBuffer)[gp],r6
+00000374 e651            930 	cmp	r6,r10
+00000376 ca65*           931 	bne	.L1514
+                         932 --line1086
+                         933 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.47::
+                         934 .LDWlin47:
+00000378 3e0600000000*   935 	mov	sdaoff23(_fblDiagStates),ep
+0000037e de070000        936 	set1	0,0[ep]
+00000382 de970000        937 	clr1	2,0[ep]
+00000386 de8f0000        938 	clr1	1,0[ep]
+0000038a 61ea            939 	cmp	1,r29
+0000038c 920d*           940 	be	.L1520
+0000038e 62ea            941 	cmp	2,r29
+00000390 923d*           942 	be	.L1526
+                         943 .L1531:
+                         944 --line1157
+                         945 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.48::
+                         946 .LDWlin48:
+                         947 	jarl	_FblDiagConfirmation,lp
+                         947 <EXPANSION BEGIN>
+                         947 jarl22 _FblDiagConfirmation , lp 
+00000392 80ff0000*       947 <EXPANSION END>
+                         948 --line1158
+                         949 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.49::
+                         950 .LDWlin49:
+                         951 	jarl	_FblCwResetRxBlock,lp
+                         951 <EXPANSION BEGIN>
+                         951 jarl22 _FblCwResetRxBlock , lp 
+00000396 80ff0000*       951 <EXPANSION END>
+                         952 --line1159
+                         953 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.50::
+                         954 .LDWlin50:
+
+                                                                      Page 18
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+0000039a 40067f00        955 	dispose	0,{r29,r31},[lp]
+                         956 .L1520:
+                         957 --line1092
+                         958 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.51::
+                         959 .LDWlin51:
+0000039e 20761000        960 	movea	16,zero,r14
+000003a2 84070d700000*   961 	st.b	r14,sdaoff23(_diagServiceCurrent)[gp]
+000003a8 46ef0100        962 	st.b	r29,1[r6]
+000003ac 840709f00000*   963 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000003b2 a4070de80000*   964 	st.h	r29,sdaoff23(_DiagDataLength)[gp]
+000003b8 0a6a            965 	mov	10,r13
+000003ba 1462            966 	mov	-12,r12
+000003bc 8203            967 	sst.b	zero,2[ep]
+000003be 840709f00000*   968 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000003c4 836b            969 	sst.b	r13,3[ep]
+000003c6 840709f00000*   970 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000003cc 84eb            971 	sst.b	r29,4[ep]
+000003ce 840709f00000*   972 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000003d4 8563            973 	sst.b	r12,5[ep]
+                         974 	jarl	_FblCwPrepareResponseAddress,lp
+                         974 <EXPANSION BEGIN>
+                         974 jarl22 _FblCwPrepareResponseAddress , lp 
+000003d6 80ff0000*       974 <EXPANSION END>
+000003da e051            975 	cmp	zero,r10
+000003dc badd*           976 	bne	.L1531
+                         977 --line1111
+                         978 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.52::
+                         979 .LDWlin52:
+000003de 2b0600000000*   980 	mov	sdaoff23(_fblDiagStates),r11
+000003e4 290600000000*   981 	mov	_FblDiagDefaultPostHandler,r9
+000003ea cb2f0000        982 	set1	5,0[r11]
+000003ee 84070f480000*   983 	st.w	r9,sdaoff23(_fblDiagServicePostHandler)[gp]
+000003f4 0532            984 	mov	5,r6
+                         985 	jarl	_DiagProcessingDone,lp
+                         985 <EXPANSION BEGIN>
+                         985 jarl22 _DiagProcessingDone , lp 
+000003f6 bfff7afd*       985 <EXPANSION END>
+                         986 --line1115
+                         987 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.53::
+                         988 .LDWlin53:
+                         989 	jarl	_FblDiagResponseProcessor,lp
+                         989 <EXPANSION BEGIN>
+                         989 jarl22 _FblDiagResponseProcessor , lp 
+000003fa bfff94fd*       989 <EXPANSION END>
+000003fe 40067f00        990 	dispose	0,{r29,r31},[lp]
+                         991 .L1526:
+                         992 --line1127
+                         993 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.54::
+                         994 .LDWlin54:
+00000402 20461100        995 	movea	17,zero,r8
+00000406 84070d400000*   996 	st.b	r8,sdaoff23(_diagServiceCurrent)[gp]
+0000040c 270600000000*   997 	mov	sdaoff23(_DiagDataLength),r7
+                         998 	jarl	_FblDiagOemPrepareRrResponse,lp
+                         998 <EXPANSION BEGIN>
+                         998 jarl22 _FblDiagOemPrepareRrResponse , lp 
+00000412 80ff0000*       998 <EXPANSION END>
+                         999 --line1137
+                        1000 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.55::
+                        1001 .LDWlin55:
+                        1002 	jarl	_FblCwPrepareResponseAddress,lp
+                        1002 <EXPANSION BEGIN>
+
+                                                                      Page 19
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1002 jarl22 _FblCwPrepareResponseAddress , lp 
+00000416 80ff0000*      1002 <EXPANSION END>
+0000041a e051           1003 	cmp	zero,r10
+0000041c babd*          1004 	bne	.L1531
+                        1005 --line1141
+                        1006 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.56::
+                        1007 .LDWlin56:
+0000041e 2b0600000000*  1008 	mov	sdaoff23(_fblDiagStates),r11
+00000424 290600000000*  1009 	mov	_FblDiagDefaultPostHandler,r9
+0000042a cb2f0000       1010 	set1	5,0[r11]
+0000042e 84070f480000*  1011 	st.w	r9,sdaoff23(_fblDiagServicePostHandler)[gp]
+00000434 0132           1012 	mov	1,r6
+                        1013 	jarl	_DiagProcessingDone,lp
+                        1013 <EXPANSION BEGIN>
+                        1013 jarl22 _DiagProcessingDone , lp 
+00000436 bfff3afd*      1013 <EXPANSION END>
+                        1014 --line1145
+                        1015 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.57::
+                        1016 .LDWlin57:
+                        1017 	jarl	_FblDiagResponseProcessor,lp
+                        1017 <EXPANSION BEGIN>
+                        1017 jarl22 _FblDiagResponseProcessor , lp 
+0000043a bfff54fd*      1017 <EXPANSION END>
+                        1018 .L1514:
+                        1019 --	    .ef
+                        1020 .LDW95:
+                        1021 --line1163
+                        1022 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.58::
+                        1023 .LDWlin58:
+0000043e 40067f00       1024 	dispose	0,{r29,r31},[lp]
+                        1025 	.type	_FblDiagInitStartFromReset,@function
+                        1026 	.size	_FblDiagInitStartFromReset,.-_FblDiagInitStartFromReset
+                        1027 	.align	2
+                        1028 .LDW06:
+                        1029 
+                        1030 --_resetRequestType	r29	param
+                        1031 
+                        1032 	.section ".bss","awb"
+                        1033 .L1596:
+                        1034 	.type	.L1596,@object
+                        1035 	.size	.L1596,0
+                        1036 	.data
+                        1037 	.text
+                        1038 	.section ".RAMCODE","ax"
+                        1039 	.align	2
+                        1040 	.align	2
+                        1041 ..gh.f.f.1.e.17:
+                        1042 	.type	..gh.f.f.1.e.17,@object
+                        1043 	.size	..gh.f.f.1.e.17,0
+                        1044 	.global	_FblDiagRxStartIndication
+                        1045 _FblDiagRxStartIndication:
+                        1046 --	    .bf
+                        1047 .LDW16:
+000000a8 2b0600000000*  1048 	mov	sdaoff23(_fblDiagStates),r11
+000000ae 320600000000*  1049 	mov	_FblDiagDefaultPostHandler,r18
+000000b4 a4070d000000*  1050 	st.h	zero,sdaoff23(_testerPresentTimeout)[gp]
+000000ba cb370000       1051 	set1	6,0[r11]
+000000be 84070d000000*  1052 	st.b	zero,sdaoff23(_diagErrorCode)[gp]
+000000c4 84070f000000*  1053 	st.w	zero,sdaoff23(_fblDiagServicePreHandler)[gp]
+000000ca 84070f000000*  1054 	st.w	zero,sdaoff23(_fblDiagServiceMainHandler)[gp]
+000000d0 84070f000000*  1055 	st.w	zero,sdaoff23(_fblDiagServiceNrcHandler)[gp]
+
+                                                                      Page 20
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+000000d6 84070f900000*  1056 	st.w	r18,sdaoff23(_fblDiagServicePostHandler)[gp]
+000000dc 84070f000000*  1057 	st.w	zero,sdaoff23(_serviceInfo)[gp]
+000000e2 84070f000000*  1058 	st.w	zero,sdaoff23(_subServiceInfo)[gp]
+                        1059 --	    .ef
+                        1060 .LDW26:
+000000e8 7f00           1061 	jmp	[lp]
+                        1062 	.type	_FblDiagRxStartIndication,@function
+                        1063 	.size	_FblDiagRxStartIndication,.-_FblDiagRxStartIndication
+                        1064 	.align	2
+                        1065 .LDW36:
+                        1066 
+                        1067 	.section ".bss","awb"
+                        1068 .L1713:
+                        1069 	.type	.L1713,@object
+                        1070 	.size	.L1713,0
+                        1071 	.data
+                        1072 	.section ".RAMCODE","ax"
+                        1073 	.align	2
+                        1074 	.align	2
+                        1075 ..gh.f.f.1.e.18:
+                        1076 	.type	..gh.f.f.1.e.18,@object
+                        1077 	.size	..gh.f.f.1.e.18,0
+                        1078 	.global	_FblDiagRxIndication
+                        1079 _FblDiagRxIndication:
+000000ea 80072100       1080 	prepare	{r31},0
+                        1081 --	    .bf
+                        1082 .LDW46:
+000000ee 0796ffff       1083 	addi	-1,r7,r18
+000000f2 d200           1084 	zxh	r18
+000000f4 0a9a           1085 	mov	10,r19
+000000f6 06f0           1086 	mov	r6,ep
+000000f8 84070f300000*  1087 	st.w	r6,sdaoff23(_DiagBuffer)[gp]
+000000fe a4070d900000*  1088 	st.h	r18,sdaoff23(_DiagDataLength)[gp]
+00000104 a4070d980000*  1089 	st.h	r19,sdaoff23(_P2Timer)[gp]
+0000010a 6030           1090 	sld.bu	0[ep],r6
+0000010c 0606c2ff       1091 	addi	-62,r6,zero
+00000110 ba15*          1092 	bne	.L1733
+00000112 6198           1093 	sld.bu	1[ep],r19
+00000114 130680ff       1094 	addi	-128,r19,zero
+00000118 fa0d*          1095 	bne	.L1733
+0000011a 6192           1096 	cmp	1,r18
+0000011c da0d*          1097 	bne	.L1733
+0000011e 2b0600000000*  1098 	mov	sdaoff23(_fblDiagStates),r11
+00000124 cbdf0000       1099 	tst1	3,0[r11]
+00000128 f205*          1100 	be	.L1733
+                        1101 --line1238
+                        1102 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.59::
+                        1103 .LDWlin59:
+                        1104 	jarl	_FblDiagConfirmation,lp
+                        1104 <EXPANSION BEGIN>
+                        1104 jarl22 _FblDiagConfirmation , lp 
+0000012a bffff4fe*      1104 <EXPANSION END>
+                        1105 --line1239
+                        1106 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.60::
+                        1107 .LDWlin60:
+                        1108 	jarl	_FblCwResetRxBlock,lp
+                        1108 <EXPANSION BEGIN>
+                        1108 jarl22 _FblCwResetRxBlock , lp 
+0000012e 80ff0000*      1108 <EXPANSION END>
+00000132 40063f00       1109 	dispose	0,{r31},[lp]
+                        1110 .L1733:
+
+                                                                      Page 21
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1111 --line1242
+                        1112 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.61::
+                        1113 .LDWlin61:
+00000136 0192           1114 	mov	1,r18
+00000138 84070d900000*  1115 	st.b	r18,sdaoff23(_diagResponseFlag)[gp]
+0000013e 6088           1116 	sld.bu	0[ep],r17
+00000140 84070d880000*  1117 	st.b	r17,sdaoff23(_diagServiceCurrent)[gp]
+                        1118 --	    .ef
+                        1119 .LDW56:
+00000146 40063f00       1120 	dispose	0,{r31},[lp]
+                        1121 	.type	_FblDiagRxIndication,@function
+                        1122 	.size	_FblDiagRxIndication,.-_FblDiagRxIndication
+                        1123 	.align	2
+                        1124 .LDW66:
+                        1125 
+                        1126 --_pbDiagBuffer	r6	param
+                        1127 --_rxDataLength	r7	param
+                        1128 
+                        1129 	.section ".bss","awb"
+                        1130 .L1786:
+                        1131 	.type	.L1786,@object
+                        1132 	.size	.L1786,0
+                        1133 	.data
+                        1134 	.section ".RAMCODE","ax"
+                        1135 	.text
+                        1136 	.align	2
+                        1137 	.align	2
+                        1138 ..gh.f.f.1.e.19:
+                        1139 	.type	..gh.f.f.1.e.19,@object
+                        1140 	.size	..gh.f.f.1.e.19,0
+                        1141 	.global	_FblDiagGetServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1142 _FblDiagGetServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                        1143 _FblDiagGetServiceInfo:
+00000442 8600           1144 	zxb	r6
+                        1145 --	    .bf
+                        1146 .LDW76:
+00000444 0052           1147 	mov	0,r10
+00000446 0a90           1148 	mov	r10,r18
+00000448 e50d*          1149 	br	.L1860
+                        1150 .L1859:
+                        1151 --line1028
+                        1152 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.62::
+                        1153 .LDWlin62:
+0000044a 12f0           1154 	mov	r18,ep
+0000044c ecf74402       1155 	mul	44,ep,zero
+00000450 330600000000*  1156 	mov	rosdaoff23(_kFblDiagServiceTable),r19
+00000456 d3f1           1157 	add	r19,ep
+00000458 6088           1158 	sld.bu	0[ep],r17
+0000045a e689           1159 	cmp	r6,r17
+0000045c ba05*          1160 	bne	.L1858
+0000045e 1e50           1161 	mov	ep,r10
+00000460 7f00           1162 	jmp	[lp]
+                        1163 .L1858:
+                        1164 --line1027
+                        1165 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.63::
+                        1166 .LDWlin63:
+00000462 4192           1167 	add	1,r18
+                        1168 .L1860:
+00000464 850709800000*  1169 	ld.w	rosdaoff23(_kSizeOfServiceTable)[r5],r16
+0000046a f091           1170 	cmp	r16,r18
+0000046c f1ed*          1171 	bl	.L1859
+
+                                                                      Page 22
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1172 --	    .ef
+                        1173 .LDW86:
+                        1174 --line1027
+                        1175 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.64::
+                        1176 .LDWlin64:
+0000046e 7f00           1177 	jmp	[lp]
+                        1178 	.type	_FblDiagGetServiceInfo,@function
+                        1179 	.size	_FblDiagGetServiceInfo,.-_FblDiagGetServiceInfo
+                        1180 	.type	_FblDiagGetServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                        1181 	.size	_FblDiagGetServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagGetServiceInfo..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1182 	.align	2
+                        1183 .LDW96:
+                        1184 --_serviceTableEntry	r10	local
+                        1185 --_serviceIndex	r18	local
+                        1186 
+                        1187 --_receivedServiceId	r6	param
+                        1188 
+                        1189 	.section ".bss","awb"
+                        1190 .L1914:
+                        1191 	.type	.L1914,@object
+                        1192 	.size	.L1914,0
+                        1193 	.data
+                        1194 	.text
+                        1195 	.align	2
+                        1196 	.align	2
+                        1197 ..gh.f.f.1.e.20:
+                        1198 	.type	..gh.f.f.1.e.20,@object
+                        1199 	.size	..gh.f.f.1.e.20,0
+                        1200 	.global	_FblDiagDefaultNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1201 _FblDiagDefaultNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                        1202 _FblDiagDefaultNrcHandler:
+00000470 80072100       1203 	prepare	{r31},0
+                        1204 --	    .bf
+                        1205 .LDW07:
+00000474 840709900000*  1206 	ld.w	sdaoff23(_DiagBuffer)[gp],r18
+0000047a a40707380000*  1207 	ld.hu	sdaoff23(_DiagDataLength)[gp],r7
+00000480 2b0600000000*  1208 	mov	sdaoff23(_fblDiagStates),r11
+00000486 cb3f0000       1209 	set1	7,0[r11]
+0000048a 12360100       1210 	addi	1,r18,r6
+                        1211 	jarl	_ApplDiagUserService,lp
+                        1211 <EXPANSION BEGIN>
+                        1211 jarl22 _ApplDiagUserService , lp 
+0000048e 80ff0000*      1211 <EXPANSION END>
+                        1212 --line842
+                        1213 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.65::
+                        1214 .LDWlin65:
+00000492 0052           1215 	mov	0,r10
+                        1216 --	    .ef
+                        1217 .LDW17:
+00000494 40063f00       1218 	dispose	0,{r31},[lp]
+                        1219 	.type	_FblDiagDefaultNrcHandler,@function
+                        1220 	.size	_FblDiagDefaultNrcHandler,.-_FblDiagDefaultNrcHandler
+                        1221 	.type	_FblDiagDefaultNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                        1222 	.size	_FblDiagDefaultNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagDefaultNrcHandler..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1223 	.align	2
+                        1224 .LDW27:
+                        1225 
+                        1226 --_serviceErrorMask	none	param
+                        1227 
+                        1228 	.section ".bss","awb"
+                        1229 .L2001:
+
+                                                                      Page 23
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1230 	.type	.L2001,@object
+                        1231 	.size	.L2001,0
+                        1232 	.data
+                        1233 	.text
+                        1234 	.align	2
+                        1235 	.align	2
+                        1236 ..gh.f.f.1.e.21:
+                        1237 	.type	..gh.f.f.1.e.21,@object
+                        1238 	.size	..gh.f.f.1.e.21,0
+                        1239 	.global	_FblDiagCheckServiceTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1240 _FblDiagCheckServiceTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                        1241 _FblDiagCheckServiceTableEntry:
+00000498 8007e100       1242 	prepare	{r28,r29,r31},0
+0000049c 06f0           1243 	mov	r6,ep
+0000049e c800           1244 	zxh	r8
+                        1245 --	    .bf
+                        1246 .LDW37:
+000004a0 0895           1247 	sld.w	16[ep],r18
+000004a2 0a7d           1248 	sld.w	20[ep],r15
+000004a4 2b0600000000*  1249 	mov	sdaoff23(_fblDiagStates),r11
+000004aa e091           1250 	cmp	zero,r18
+000004ac e2ef0000       1251 	setfe	r29
+000004b0 ef41           1252 	cmp	r15,r8
+000004b2 e1ef02eb       1253 	cmovl	1,r29,r29
+000004b6 cbdf0000       1254 	tst1	3,0[r11]
+000004ba e205*          1255 	be	.L2025
+000004bc deef0400       1256 	tst1	5,4[ep]
+000004c0 ba05*          1257 	bne	.L2025
+                        1258 --line990
+                        1259 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.66::
+                        1260 .LDWlin66:
+000004c2 9dee0002       1261 	ori	512,r29,r29
+                        1262 .L2025:
+000004c6 840709300000*  1263 	ld.w	sdaoff23(_fblDiagStates)[gp],r6
+000004cc 029d           1264 	sld.w	4[ep],r19
+000004ce c6360700       1265 	andi	7,r6,r6
+000004d2 5331           1266 	and	r19,r6
+000004d4 ba05*          1267 	bne	.L2028
+                        1268 --line994
+                        1269 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.67::
+                        1270 .LDWlin67:
+000004d6 9dee0004       1271 	ori	1024,r29,r29
+                        1272 .L2028:
+000004da 7488           1273 	sld.hu	8[ep],r17
+000004dc f141           1274 	cmp	r17,r8
+000004de b905*          1275 	bnl	.L2030
+                        1276 --line998
+                        1277 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.68::
+                        1278 .LDWlin68:
+000004e0 9dee0008       1279 	ori	2048,r29,r29
+                        1280 .L2030:
+000004e4 849a           1281 	shr	4,r19
+000004e6 990d*          1282 	bnl	.L2032
+000004e8 2b0600000000*  1283 	mov	sdaoff23(_fblDiagStates+2),r11
+000004ee cbdf0000       1284 	tst1	3,0[r11]
+000004f2 ba05*          1285 	bne	.L2032
+                        1286 --line1002
+                        1287 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.69::
+                        1288 .LDWlin69:
+000004f4 9dee0010       1289 	ori	4096,r29,r29
+                        1290 .L2032:
+
+                                                                      Page 24
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+000004f8 06e5           1291 	sld.w	12[ep],r28
+000004fa e0e1           1292 	cmp	zero,r28
+000004fc 820d*          1293 	be	.L2035
+                        1294 --line1006
+                        1295 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.70::
+                        1296 .LDWlin70:
+000004fe 0730           1297 	mov	r7,r6
+00000500 0838           1298 	mov	r8,r7
+00000502 fcc760f9       1299 	jarl	[r28],lp
+00000506 6152           1300 	cmp	1,r10
+00000508 8a0d*          1301 	bne	.L2039
+0000050a d505*          1302 	br	.L2041
+                        1303 .L2035:
+                        1304 --line1012
+                        1305 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.71::
+                        1306 .LDWlin71:
+0000050c e091           1307 	cmp	zero,r18
+0000050e da05*          1308 	bne	.L2039
+00000510 e889           1309 	cmp	r8,r17
+00000512 b205*          1310 	be	.L2039
+                        1311 .L2041:
+                        1312 --line1014
+                        1313 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.72::
+                        1314 .LDWlin72:
+00000514 9dee0020       1315 	ori	8192,r29,r29
+                        1316 .L2039:
+00000518 1d50           1317 	mov	r29,r10
+                        1318 --	    .ef
+                        1319 .LDW47:
+0000051a 4006ff00       1320 	dispose	0,{r28,r29,r31},[lp]
+                        1321 	.type	_FblDiagCheckServiceTableEntry,@function
+                        1322 	.size	_FblDiagCheckServiceTableEntry,.-_FblDiagCheckServiceTableEntry
+                        1323 	.type	_FblDiagCheckServiceTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                        1324 	.size	_FblDiagCheckServiceTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagCheckServiceTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1325 	.align	2
+                        1326 .LDW57:
+                        1327 --_result	r29	local
+                        1328 
+                        1329 --_pServiceInfo	ep	param
+                        1330 --_pbDiagData	r16	param
+                        1331 --_diagReqDataLen	r8	param
+                        1332 
+                        1333 	.section ".bss","awb"
+                        1334 .L2181:
+                        1335 	.type	.L2181,@object
+                        1336 	.size	.L2181,0
+                        1337 	.data
+                        1338 	.text
+                        1339 	.align	2
+                        1340 	.align	2
+                        1341 ..gh.f.f.1.e.22:
+                        1342 	.type	..gh.f.f.1.e.22,@object
+                        1343 	.size	..gh.f.f.1.e.22,0
+                        1344 	.global	_FblDiagFindSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1345 _FblDiagFindSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                        1346 _FblDiagFindSubTableEntry:
+0000051e 8007e1f0       1347 	prepare	{r24,r25,r26,r27,r28,r29,r31},0
+00000522 06c8           1348 	mov	r6,r25
+00000524 07e8           1349 	mov	r7,r29
+00000526 08c0           1350 	mov	r8,r24
+                        1351 --	    .bf
+
+                                                                      Page 25
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1352 .LDW67:
+00000528 c70f0200       1353 	set1	1,2[r7]
+0000052c c7070200       1354 	set1	0,2[r7]
+00000530 c7070000       1355 	set1	0,0[r7]
+00000534 26df0500       1356 	ld.w	4[r6],r27
+00000538 00d2           1357 	mov	0,r26
+0000053a 1ae0           1358 	mov	r26,r28
+0000053c dbde1000       1359 	andi	16,r27,r27
+00000540 d205*          1360 	be	.L2352
+                        1361 --line868
+                        1362 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.73::
+                        1363 .LDWlin73:
+00000542 01da           1364 	mov	1,r27
+00000544 0830           1365 	mov	r8,r6
+                        1366 	jarl	_ChkSuppressPosRspMsgIndication,lp
+                        1366 <EXPANSION BEGIN>
+                        1366 jarl22 _ChkSuppressPosRspMsgIndication , lp 
+00000546 bfff68fd*      1366 <EXPANSION END>
+                        1367 .L2352:
+                        1368 --line875
+                        1369 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.74::
+                        1370 .LDWlin74:
+0000054a 397f1500       1371 	ld.w	20[r25],r15
+0000054e bb79           1372 	sub	r27,r15
+00000550 857d*          1373 	br	.L2353
+                        1374 .L2355:
+                        1375 --line879
+                        1376 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.75::
+                        1377 .LDWlin75:
+00000552 1ae0           1378 	mov	r26,r28
+00000554 f4e74202       1379 	mulu	20,r28,zero
+00000558 39471900       1380 	ld.w	24[r25],r8
+0000055c 0092           1381 	mov	0,r18
+0000055e 1280           1382 	mov	r18,r16
+00000560 c8e1           1383 	add	r8,r28
+00000562 d515*          1384 	br	.L2359
+                        1385 .L2358:
+                        1386 --line883
+                        1387 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.76::
+                        1388 .LDWlin76:
+00000564 3cf70100       1389 	ld.w	0[r28],ep
+00000568 1068           1390 	mov	r16,r13
+0000056a d869           1391 	add	r24,r13
+0000056c 8d3f0100       1392 	ld.bu	0[r13],r7
+00000570 d0f1           1393 	add	r16,ep
+00000572 6030           1394 	sld.bu	0[ep],r6
+00000574 e731           1395 	cmp	r7,r6
+00000576 a20d*          1396 	be	.L2357
+                        1397 --line885
+                        1398 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.77::
+                        1399 .LDWlin77:
+00000578 fb81           1400 	cmp	r27,r16
+0000057a d905*          1401 	bnl	.L2362
+                        1402 --line887
+                        1403 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.78::
+                        1404 .LDWlin78:
+0000057c 409e0100       1405 	movhi	hi(65536),zero,r19
+00000580 1391           1406 	or	r19,r18
+00000582 c505*          1407 	br	.L2357
+                        1408 .L2362:
+                        1409 --line891
+
+                                                                      Page 26
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1410 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.79::
+                        1411 .LDWlin79:
+00000584 408e0200       1412 	movhi	hi(131072),zero,r17
+00000588 1191           1413 	or	r17,r18
+                        1414 .L2357:
+0000058a 4182           1415 	add	1,r16
+                        1416 .L2359:
+0000058c 0f60           1417 	mov	r15,r12
+0000058e db61           1418 	add	r27,r12
+00000590 ec81           1419 	cmp	r12,r16
+00000592 91ed*          1420 	bl	.L2358
+                        1421 --line896
+                        1422 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.80::
+                        1423 .LDWlin80:
+00000594 405e0100       1424 	movhi	1,zero,r11
+00000598 5259           1425 	and	r18,r11
+0000059a ba25*          1426 	bne	.L2365
+                        1427 --line898
+                        1428 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.81::
+                        1429 .LDWlin81:
+0000059c dd870200       1430 	clr1	0,2[r29]
+000005a0 840709500000*  1431 	ld.w	sdaoff23(_fblDiagStates)[gp],r10
+000005a6 3c4f0500       1432 	ld.w	4[r28],r9
+000005aa 3d8f0100       1433 	ld.w	0[r29],r17
+000005ae ca560700       1434 	andi	7,r10,r10
+000005b2 4a49           1435 	and	r10,r9
+000005b4 fa05*          1436 	bne	.L2367
+                        1437 --line902
+                        1438 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.82::
+                        1439 .LDWlin82:
+000005b6 406e0800       1440 	movhi	hi(524288),zero,r13
+000005ba 0d89           1441 	or	r13,r17
+000005bc 7d8f0100       1442 	st.w	r17,0[r29]
+000005c0 0d91           1443 	or	r13,r18
+                        1444 .L2367:
+000005c2 dcdf0400       1445 	tst1	3,4[r28]
+000005c6 d20d*          1446 	be	.L2365
+000005c8 2b0600000000*  1447 	mov	sdaoff23(_fblDiagStates+2),r11
+000005ce cbdf0000       1448 	tst1	3,0[r11]
+000005d2 fa05*          1449 	bne	.L2365
+                        1450 --line908
+                        1451 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.83::
+                        1452 .LDWlin83:
+000005d4 40664000       1453 	movhi	hi(4194304),zero,r12
+000005d8 0c89           1454 	or	r12,r17
+000005da 7d8f0100       1455 	st.w	r17,0[r29]
+000005de 0c91           1456 	or	r12,r18
+                        1457 .L2365:
+000005e0 1238           1458 	mov	r18,r7
+000005e2 923a           1459 	shr	18,r7
+000005e4 b125*          1460 	bl	.L2372
+                        1461 --line915
+                        1462 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.84::
+                        1463 .LDWlin84:
+000005e6 dd8f0200       1464 	clr1	1,2[r29]
+000005ea 840709300000*  1465 	ld.w	sdaoff23(_fblDiagStates)[gp],r6
+000005f0 3c9f0500       1466 	ld.w	4[r28],r19
+000005f4 3d8f0100       1467 	ld.w	0[r29],r17
+000005f8 c6360700       1468 	andi	7,r6,r6
+000005fc 4699           1469 	and	r6,r19
+000005fe fa05*          1470 	bne	.L2374
+
+                                                                      Page 27
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1471 --line919
+                        1472 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.85::
+                        1473 .LDWlin85:
+00000600 405e1000       1474 	movhi	hi(1048576),zero,r11
+00000604 0b89           1475 	or	r11,r17
+00000606 7d8f0100       1476 	st.w	r17,0[r29]
+0000060a 0b91           1477 	or	r11,r18
+                        1478 .L2374:
+0000060c dcdf0400       1479 	tst1	3,4[r28]
+00000610 d20d*          1480 	be	.L2372
+00000612 2b0600000000*  1481 	mov	sdaoff23(_fblDiagStates+2),r11
+00000618 cbdf0000       1482 	tst1	3,0[r11]
+0000061c fa05*          1483 	bne	.L2372
+                        1484 --line925
+                        1485 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.86::
+                        1486 .LDWlin86:
+0000061e 40568000       1487 	movhi	hi(8388608),zero,r10
+00000622 0a89           1488 	or	r10,r17
+00000624 7d8f0100       1489 	st.w	r17,0[r29]
+00000628 0a91           1490 	or	r10,r18
+                        1491 .L2372:
+0000062a 41d2           1492 	add	1,r26
+0000062c 40760300       1493 	movhi	3,zero,r14
+00000630 5271           1494 	and	r18,r14
+00000632 fa05*          1495 	bne	.L2353
+                        1496 --line934
+                        1497 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.87::
+                        1498 .LDWlin87:
+00000634 1df0           1499 	mov	r29,ep
+00000636 008d           1500 	sld.w	0[ep],r17
+00000638 d18efeff       1501 	andi	65534,r17,r17
+0000063c 1191           1502 	or	r17,r18
+0000063e 0195           1503 	sst.w	r18,0[ep]
+                        1504 .L2353:
+00000640 ddc70000       1505 	tst1	0,0[r29]
+00000644 d205*          1506 	be	.L2354
+00000646 399f1100       1507 	ld.w	16[r25],r19
+0000064a f3d1           1508 	cmp	r19,r26
+0000064c b185*          1509 	bl	.L2355
+                        1510 .L2354:
+                        1511 --line940
+                        1512 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.88::
+                        1513 .LDWlin88:
+0000064e 1c50           1514 	mov	r28,r10
+                        1515 --	    .ef
+                        1516 .LDW77:
+00000650 4006fff0       1517 	dispose	0,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                        1518 	.type	_FblDiagFindSubTableEntry,@function
+                        1519 	.size	_FblDiagFindSubTableEntry,.-_FblDiagFindSubTableEntry
+                        1520 	.type	_FblDiagFindSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                        1521 	.size	_FblDiagFindSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagFindSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1522 	.align	2
+                        1523 .LDW87:
+                        1524 --_subTableEntry	r28	local
+                        1525 --_tempServiceErrorMask	r18	local
+                        1526 --_subFunctionLength	r27	local
+                        1527 --_subParamLength	r15	local
+                        1528 --_subTableIndex	r26	local
+                        1529 --_subTableIdIndex	r16	local
+                        1530 
+                        1531 --_pServiceInfo	r25	param
+
+                                                                      Page 28
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1532 --_pServiceErrorMask	r29	param
+                        1533 --_pbDiagData	r24	param
+                        1534 --_diagReqDataLen	none	param
+                        1535 
+                        1536 	.section ".bss","awb"
+                        1537 .L2626:
+                        1538 	.type	.L2626,@object
+                        1539 	.size	.L2626,0
+                        1540 	.data
+                        1541 	.text
+                        1542 	.align	2
+                        1543 	.align	2
+                        1544 ..gh.f.f.1.e.23:
+                        1545 	.type	..gh.f.f.1.e.23,@object
+                        1546 	.size	..gh.f.f.1.e.23,0
+                        1547 	.global	_FblDiagCheckSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1548 _FblDiagCheckSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                        1549 _FblDiagCheckSubTableEntry:
+00000654 8007e100       1550 	prepare	{r28,r29,r31},0
+00000658 06f0           1551 	mov	r6,ep
+0000065a c800           1552 	zxh	r8
+                        1553 --	    .bf
+                        1554 .LDW97:
+0000065c 2b0600000000*  1555 	mov	sdaoff23(_fblDiagStates),r11
+00000662 00ea           1556 	mov	0,r29
+00000664 cbdf0000       1557 	tst1	3,0[r11]
+00000668 e205*          1558 	be	.L2888
+0000066a deef0400       1559 	tst1	5,4[ep]
+0000066e ba05*          1560 	bne	.L2888
+                        1561 --line951
+                        1562 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.89::
+                        1563 .LDWlin89:
+00000670 40ee0400       1564 	movhi	hi(262144),zero,r29
+                        1565 .L2888:
+00000674 7430           1566 	sld.hu	8[ep],r6
+00000676 e641           1567 	cmp	r6,r8
+00000678 c905*          1568 	bnl	.L2891
+                        1569 --line955
+                        1570 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.90::
+                        1571 .LDWlin90:
+0000067a 40962000       1572 	movhi	hi(2097152),zero,r18
+0000067e 12e9           1573 	or	r18,r29
+                        1574 .L2891:
+00000680 06e5           1575 	sld.w	12[ep],r28
+00000682 e0e1           1576 	cmp	zero,r28
+00000684 820d*          1577 	be	.L2893
+                        1578 --line959
+                        1579 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.91::
+                        1580 .LDWlin91:
+00000686 0730           1581 	mov	r7,r6
+00000688 0838           1582 	mov	r8,r7
+0000068a fcc760f9       1583 	jarl	[r28],lp
+0000068e 6152           1584 	cmp	1,r10
+00000690 fa05*          1585 	bne	.L2897
+00000692 b505*          1586 	br	.L2899
+                        1587 .L2893:
+                        1588 --line965
+                        1589 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.92::
+                        1590 .LDWlin92:
+00000694 e831           1591 	cmp	r8,r6
+00000696 c205*          1592 	be	.L2897
+
+                                                                      Page 29
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1593 .L2899:
+                        1594 --line967
+                        1595 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.93::
+                        1596 .LDWlin93:
+00000698 404e0001       1597 	movhi	hi(16777216),zero,r9
+0000069c 09e9           1598 	or	r9,r29
+                        1599 .L2897:
+0000069e 1d50           1600 	mov	r29,r10
+                        1601 --	    .ef
+                        1602 .LDW08:
+000006a0 4006ff00       1603 	dispose	0,{r28,r29,r31},[lp]
+                        1604 	.type	_FblDiagCheckSubTableEntry,@function
+                        1605 	.size	_FblDiagCheckSubTableEntry,.-_FblDiagCheckSubTableEntry
+                        1606 	.type	_FblDiagCheckSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                        1607 	.size	_FblDiagCheckSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagCheckSubTableEntry..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1608 	.align	2
+                        1609 .LDW18:
+                        1610 --_result	r29	local
+                        1611 
+                        1612 --_pSubtableInfo	ep	param
+                        1613 --_pbDiagData	r19	param
+                        1614 --_diagReqDataLen	r8	param
+                        1615 
+                        1616 	.section ".bss","awb"
+                        1617 .L2988:
+                        1618 	.type	.L2988,@object
+                        1619 	.size	.L2988,0
+                        1620 	.data
+                        1621 	.text
+                        1622 	.align	2
+                        1623 	.align	2
+                        1624 ..gh.f.f.1.e.24:
+                        1625 	.type	..gh.f.f.1.e.24,@object
+                        1626 	.size	..gh.f.f.1.e.24,0
+                        1627 	.global	_FblDiagServiceProcessingTask..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1628 _FblDiagServiceProcessingTask..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.:
+                        1629 _FblDiagServiceProcessingTask:
+000006a4 8207e110       1630 	prepare	{r27,r28,r29,r31},1
+000006a8 07e0           1631 	mov	r7,r28
+000006aa 06d8           1632 	mov	r6,r27
+000006ac dc00           1633 	zxh	r28
+                        1634 --	    .bf
+                        1635 .LDW28:
+000006ae a40705980000*  1636 	ld.bu	sdaoff23(_diagResponseFlag)[gp],r19
+000006b4 63070100       1637 	st.w	zero,0[sp]
+000006b8 619a           1638 	cmp	1,r19
+000006ba ea075101*      1639 	bne	.L3120
+                        1640 --line616
+                        1641 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.94::
+                        1642 .LDWlin94:
+                        1643 	jarl	_ApplFblSecuritySeedInit,lp
+                        1643 <EXPANSION BEGIN>
+                        1643 jarl22 _ApplFblSecuritySeedInit , lp 
+000006be 80ff0000*      1643 <EXPANSION END>
+                        1644 --line620
+                        1645 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.95::
+                        1646 .LDWlin95:
+000006c2 a40705300000*  1647 	ld.bu	sdaoff23(_diagServiceCurrent)[gp],r6
+000006c8 20968000       1648 	movea	128,zero,r18
+000006cc 84070d900000*  1649 	st.b	r18,sdaoff23(_diagResponseFlag)[gp]
+                        1650 	jarl	_FblDiagGetServiceInfo,lp
+
+                                                                      Page 30
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1650 <EXPANSION BEGIN>
+                        1650 jarl22 _FblDiagGetServiceInfo , lp 
+000006d2 bfff70fd*      1650 <EXPANSION END>
+000006d6 84070f500000*  1651 	st.w	r10,sdaoff23(_serviceInfo)[gp]
+                        1652 --line622
+                        1653 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.96::
+                        1654 .LDWlin96:
+000006dc e051           1655 	cmp	zero,r10
+000006de ba15*          1656 	bne	.L3091
+                        1657 --line624
+                        1658 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.97::
+                        1659 .LDWlin97:
+000006e0 20ee0001       1660 	movea	256,zero,r29
+000006e4 310600000000*  1661 	mov	_FblDiagDefaultNrcHandler,r17
+000006ea 63ef0100       1662 	st.w	r29,0[sp]
+000006ee 84070f880000*  1663 	st.w	r17,sdaoff23(_fblDiagServiceNrcHandler)[gp]
+                        1664 .L3119:
+000006f4 1d30           1665 	mov	r29,r6
+000006f6 840709e80000*  1666 	ld.w	sdaoff23(_fblDiagServiceNrcHandler)[gp],r29
+000006fc fdc760f9       1667 	jarl	[r29],lp
+00000700 80072201*      1668 	br	.L3121
+                        1669 .L3091:
+00000704 0a30           1670 	mov	r10,r6
+                        1671 --line629
+                        1672 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.98::
+                        1673 .LDWlin98:
+00000706 1b38           1674 	mov	r27,r7
+00000708 1c40           1675 	mov	r28,r8
+                        1676 	jarl	_FblDiagCheckServiceTableEntry,lp
+                        1676 <EXPANSION BEGIN>
+                        1676 jarl22 _FblDiagCheckServiceTableEntry , lp 
+0000070a bfff8efd*      1676 <EXPANSION END>
+                        1677 --line631
+                        1678 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.99::
+                        1679 .LDWlin99:
+0000070e 840709f00000*  1680 	ld.w	sdaoff23(_serviceInfo)[gp],ep
+00000714 63570100       1681 	st.w	r10,0[sp]
+00000718 a40707400000*  1682 	ld.hu	sdaoff23(_DiagDataLength)[gp],r8
+0000071e 0e85           1683 	sld.w	28[ep],r16
+00000720 107d           1684 	sld.w	32[ep],r15
+00000722 1475           1685 	sld.w	40[ep],r14
+00000724 126d           1686 	sld.w	36[ep],r13
+00000726 840709f00000*  1687 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+0000072c 84070f800000*  1688 	st.w	r16,sdaoff23(_fblDiagServicePreHandler)[gp]
+00000732 84070f780000*  1689 	st.w	r15,sdaoff23(_fblDiagServiceMainHandler)[gp]
+00000738 84070f700000*  1690 	st.w	r14,sdaoff23(_fblDiagServicePostHandler)[gp]
+0000073e 84070f680000*  1691 	st.w	r13,sdaoff23(_fblDiagServiceNrcHandler)[gp]
+00000744 6030           1692 	sld.bu	0[ep],r6
+00000746 1e3e0100       1693 	addi	1,ep,r7
+                        1694 	jarl	_DcmCheckMessageAuthentication,lp
+                        1694 <EXPANSION BEGIN>
+                        1694 jarl22 _DcmCheckMessageAuthentication , lp 
+0000074a 80ff0000*      1694 <EXPANSION END>
+                        1695 --line640
+                        1696 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.100::
+                        1697 .LDWlin100:
+0000074e 6152           1698 	cmp	1,r10
+00000750 ea05*          1699 	bne	.L3094
+                        1700 --line642
+                        1701 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.101::
+                        1702 .LDWlin101:
+
+                                                                      Page 31
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+00000752 20ee0010       1703 	movea	4096,zero,r29
+00000756 63ef0100       1704 	st.w	r29,0[sp]
+0000075a d5cd*          1705 	br	.L3119
+                        1706 .L3094:
+                        1707 --line644
+                        1708 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.102::
+                        1709 .LDWlin102:
+0000075c e051           1710 	cmp	zero,r10
+0000075e ea0d*          1711 	bne	.L3096
+                        1712 --line646
+                        1713 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.103::
+                        1714 .LDWlin103:
+00000760 a40707980000*  1715 	ld.hu	sdaoff23(_DiagDataLength)[gp],r19
+00000766 1306efff       1716 	addi	-17,r19,zero
+0000076a 890d*          1717 	bnl	.L3096
+                        1718 --line648
+                        1719 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.104::
+                        1720 .LDWlin104:
+0000076c 1366f0ff       1721 	addi	-16,r19,r12
+00000770 50e2           1722 	add	-16,r28
+00000772 a4070d600000*  1723 	st.h	r12,sdaoff23(_DiagDataLength)[gp]
+00000778 dc00           1724 	zxh	r28
+                        1725 .L3096:
+0000077a 23ef0100       1726 	ld.w	0[sp],r29
+0000077e 1d0600f0       1727 	addi	-4096,r29,zero
+00000782 92bd*          1728 	be	.L3119
+                        1729 --line658
+                        1730 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.105::
+                        1731 .LDWlin105:
+00000784 dd060100       1732 	andi	1,r29,zero
+00000788 9a1d*          1733 	bne	.L3104
+                        1734 --line660
+                        1735 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.106::
+                        1736 .LDWlin106:
+0000078a 840709300000*  1737 	ld.w	sdaoff23(_serviceInfo)[gp],r6
+00000790 1b40           1738 	mov	r27,r8
+00000792 1c48           1739 	mov	r28,r9
+00000794 0338           1740 	mov	sp,r7
+                        1741 	jarl	_FblDiagFindSubTableEntry,lp
+                        1741 <EXPANSION BEGIN>
+                        1741 jarl22 _FblDiagFindSubTableEntry , lp 
+00000796 bfff88fd*      1741 <EXPANSION END>
+                        1742 --line662
+                        1743 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.107::
+                        1744 .LDWlin107:
+0000079a 23ef0100       1745 	ld.w	0[sp],r29
+0000079e 84070f500000*  1746 	st.w	r10,sdaoff23(_subServiceInfo)[gp]
+000007a4 dd060100       1747 	andi	1,r29,zero
+000007a8 e20d*          1748 	be	.L3106
+                        1749 --line664
+                        1750 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.108::
+                        1751 .LDWlin108:
+000007aa dd06feff       1752 	andi	65534,r29,zero
+000007ae aa1d*          1753 	bne	.L3113
+                        1754 --line666
+                        1755 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.109::
+                        1756 .LDWlin109:
+000007b0 840709400000*  1757 	ld.w	sdaoff23(_fblDiagServiceMainHandler)[gp],r8
+000007b6 e041           1758 	cmp	zero,r8
+000007b8 d215*          1759 	be	.L3113
+                        1760 .L3104:
+
+                                                                      Page 32
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1761 --line680
+                        1762 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.110::
+                        1763 .LDWlin110:
+000007ba ddeefeff       1764 	andi	65534,r29,r29
+000007be 63ef0100       1765 	st.w	r29,0[sp]
+000007c2 8515*          1766 	br	.L3113
+                        1767 .L3106:
+000007c4 0a30           1768 	mov	r10,r6
+                        1769 --line674
+                        1770 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.111::
+                        1771 .LDWlin111:
+000007c6 1b38           1772 	mov	r27,r7
+000007c8 1c40           1773 	mov	r28,r8
+                        1774 	jarl	_FblDiagCheckSubTableEntry,lp
+                        1774 <EXPANSION BEGIN>
+                        1774 jarl22 _FblDiagCheckSubTableEntry , lp 
+000007ca bfff8afe*      1774 <EXPANSION END>
+                        1775 --line675
+                        1776 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.112::
+                        1777 .LDWlin112:
+000007ce 840709f00000*  1778 	ld.w	sdaoff23(_subServiceInfo)[gp],ep
+000007d4 0ae9           1779 	or	r10,r29
+000007d6 63ef0100       1780 	st.w	r29,0[sp]
+000007da 083d           1781 	sld.w	16[ep],r7
+000007dc 84070f380000*  1782 	st.w	r7,sdaoff23(_fblDiagServiceMainHandler)[gp]
+                        1783 .L3113:
+000007e2 81ea           1784 	shr	1,r29
+000007e4 ea0d*          1785 	bne	.L3089
+000007e6 840709e80000*  1786 	ld.w	sdaoff23(_fblDiagServicePreHandler)[gp],r29
+000007ec e0e9           1787 	cmp	zero,r29
+000007ee 920d*          1788 	be	.L3089
+                        1789 --line687
+                        1790 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.113::
+                        1791 .LDWlin113:
+000007f0 1b30           1792 	mov	r27,r6
+000007f2 1c38           1793 	mov	r28,r7
+000007f4 fdc760f9       1794 	jarl	[r29],lp
+000007f8 6152           1795 	cmp	1,r10
+000007fa ba05*          1796 	bne	.L3089
+                        1797 --line689
+                        1798 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.114::
+                        1799 .LDWlin114:
+000007fc c3270300       1800 	set1	4,3[sp]
+                        1801 .L3089:
+00000800 23ef0100       1802 	ld.w	0[sp],r29
+00000804 e0e9           1803 	cmp	zero,r29
+00000806 fa07effe*      1804 	bne	.L3119
+                        1805 .L3120:
+                        1806 --line702
+                        1807 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.115::
+                        1808 .LDWlin115:
+0000080a 840709e80000*  1809 	ld.w	sdaoff23(_fblDiagServiceMainHandler)[gp],r29
+00000810 2b0600000000*  1810 	mov	sdaoff23(_fblDiagStates),r11
+00000816 cb3f0000       1811 	set1	7,0[r11]
+0000081a 1b30           1812 	mov	r27,r6
+0000081c 1c38           1813 	mov	r28,r7
+0000081e fdc760f9       1814 	jarl	[r29],lp
+                        1815 .L3121:
+                        1816 --line710
+                        1817 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.116::
+                        1818 .LDWlin116:
+
+                                                                      Page 33
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+00000822 2b0600000000*  1819 	mov	sdaoff23(_fblDiagStates),r11
+00000828 0ae8           1820 	mov	r10,r29
+0000082a cb2f0000       1821 	set1	5,0[r11]
+                        1822 	jarl	_FblDiagResponseProcessor,lp
+                        1822 <EXPANSION BEGIN>
+                        1822 jarl22 _FblDiagResponseProcessor , lp 
+0000082e bfff60f9*      1822 <EXPANSION END>
+                        1823 --line715
+                        1824 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.117::
+                        1825 .LDWlin117:
+00000832 1d50           1826 	mov	r29,r10
+                        1827 --	    .ef
+                        1828 .LDW38:
+00000834 4206ff10       1829 	dispose	1,{r27,r28,r29,r31},[lp]
+                        1830 	.type	_FblDiagServiceProcessingTask,@function
+                        1831 	.size	_FblDiagServiceProcessingTask,.-_FblDiagServiceProcessingTask
+                        1832 	.type	_FblDiagServiceProcessingTask..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,@function
+                        1833 	.size	_FblDiagServiceProcessingTask..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.,.-_FblDiagServiceProcessingTask..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.
+                        1834 	.align	2
+                        1835 .LDW48:
+                        1836 --_result	r29	local
+                        1837 --_serviceProcessingErrors	0[sp]	local
+                        1838 --_ucMsgAuthResult	r10	local
+                        1839 
+                        1840 --_pbDiagData	r27	param
+                        1841 --_diagReqDataLen	r28	param
+                        1842 
+                        1843 	.section ".bss","awb"
+                        1844 .L3365:
+                        1845 	.type	.L3365,@object
+                        1846 	.size	.L3365,0
+                        1847 	.data
+                        1848 	.text
+                        1849 	.align	2
+                        1850 	.align	2
+                        1851 ..gh.f.f.1.e.25:
+                        1852 	.type	..gh.f.f.1.e.25,@object
+                        1853 	.size	..gh.f.f.1.e.25,0
+                        1854 	.global	_FblDiagStateTask
+                        1855 _FblDiagStateTask:
+00000838 80072100       1856 	prepare	{r31},0
+                        1857 --	    .bf
+                        1858 .LDW58:
+0000083c 2b0600000000*  1859 	mov	sdaoff23(_fblDiagStates+1),r11
+00000842 cbef0000       1860 	tst1	5,0[r11]
+00000846 8a15*          1861 	bne	.L3583
+00000848 a40705880000*  1862 	ld.bu	sdaoff23(_diagResponseFlag)[gp],r17
+0000084e e089           1863 	cmp	zero,r17
+00000850 b20d*          1864 	be	.L3583
+                        1865 --line726
+                        1866 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.118::
+                        1867 .LDWlin118:
+00000852 840709900000*  1868 	ld.w	sdaoff23(_DiagBuffer)[gp],r18
+00000858 a40707380000*  1869 	ld.hu	sdaoff23(_DiagDataLength)[gp],r7
+0000085e 12360100       1870 	addi	1,r18,r6
+                        1871 	jarl	_FblDiagServiceProcessingTask,lp
+                        1871 <EXPANSION BEGIN>
+                        1871 jarl22 _FblDiagServiceProcessingTask , lp 
+00000862 bfff42fe*      1871 <EXPANSION END>
+                        1872 .L3583:
+                        1873 --line734
+
+                                                                      Page 34
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1874 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.119::
+                        1875 .LDWlin119:
+00000866 2b0600000000*  1876 	mov	sdaoff23(_fblDiagStates+1),r11
+0000086c cbef0000       1877 	tst1	5,0[r11]
+00000870 920d*          1878 	be	.L3586
+00000872 cbff0000       1879 	tst1	7,0[r11]
+00000876 e205*          1880 	be	.L3586
+00000878 cbf70000       1881 	tst1	6,0[r11]
+0000087c b205*          1882 	be	.L3586
+                        1883 --line736
+                        1884 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.120::
+                        1885 .LDWlin120:
+                        1886 	jarl	_FblDiagDeinit,lp
+                        1886 <EXPANSION BEGIN>
+                        1886 jarl22 _FblDiagDeinit , lp 
+0000087e bfff82f7*      1886 <EXPANSION END>
+                        1887 .L3586:
+                        1888 --line741
+                        1889 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.121::
+                        1890 .LDWlin121:
+00000882 840709800000*  1891 	ld.w	sdaoff23(_secSecurityAccessDelay)[gp],r16
+00000888 6182           1892 	cmp	1,r16
+0000088a 9a0d*          1893 	bne	.L3581
+                        1894 --line751
+                        1895 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.122::
+                        1896 .LDWlin122:
+0000088c 1030           1897 	mov	r16,r6
+0000088e 203eff00       1898 	movea	255,zero,r7
+                        1899 	jarl	_ApplFblRWSecurityAccessDelayFlag,lp
+                        1899 <EXPANSION BEGIN>
+                        1899 jarl22 _ApplFblRWSecurityAccessDelayFlag , lp 
+00000892 80ff0000*      1899 <EXPANSION END>
+                        1900 --line754
+                        1901 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.123::
+                        1902 .LDWlin123:
+00000896 84070f000000*  1903 	st.w	zero,sdaoff23(_secSecurityAccessDelay)[gp]
+                        1904 .L3581:
+                        1905 --	    .ef
+                        1906 .LDW68:
+0000089c 40063f00       1907 	dispose	0,{r31},[lp]
+                        1908 	.type	_FblDiagStateTask,@function
+                        1909 	.size	_FblDiagStateTask,.-_FblDiagStateTask
+                        1910 	.align	2
+                        1911 .LDW78:
+                        1912 
+                        1913 	.section ".bss","awb"
+                        1914 .L3657:
+                        1915 	.type	.L3657,@object
+                        1916 	.size	.L3657,0
+                        1917 	.data
+                        1918 	.text
+                        1919 	.align	2
+                        1920 	.align	2
+                        1921 ..gh.f.f.1.e.26:
+                        1922 	.type	..gh.f.f.1.e.26,@object
+                        1923 	.size	..gh.f.f.1.e.26,0
+                        1924 	.global	_FblDiagInitStartFromAppl
+                        1925 _FblDiagInitStartFromAppl:
+000008a0 80072100       1926 	prepare	{r31},0
+                        1927 --	    .bf
+                        1928 .LDW88:
+
+                                                                      Page 35
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+000008a4 0232           1929 	mov	2,r6
+                        1930 	jarl	_FblDiagRxGetPhysBuffer,lp
+                        1930 <EXPANSION BEGIN>
+                        1930 jarl22 _FblDiagRxGetPhysBuffer , lp 
+000008a6 80ff0000*      1930 <EXPANSION END>
+000008aa 840709f00000*  1931 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000008b0 fe51           1932 	cmp	ep,r10
+000008b2 ba3d*          1933 	bne	.L3755
+                        1934 --line1042
+                        1935 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.124::
+                        1936 .LDWlin124:
+000008b4 20861000       1937 	movea	16,zero,r16
+000008b8 8083           1938 	sst.b	r16,0[ep]
+000008ba 840709f00000*  1939 	ld.w	sdaoff23(_DiagBuffer)[gp],ep
+000008c0 027a           1940 	mov	2,r15
+000008c2 0172           1941 	mov	1,r14
+000008c4 205ed007       1942 	movea	2000,zero,r11
+000008c8 817b           1943 	sst.b	r15,1[ep]
+000008ca 3e0600000000*  1944 	mov	sdaoff23(_fblDiagStates),ep
+000008d0 de0f0000       1945 	set1	1,0[ep]
+000008d4 de970000       1946 	clr1	2,0[ep]
+000008d8 a4070d700000*  1947 	st.h	r14,sdaoff23(_DiagDataLength)[gp]
+000008de de870000       1948 	clr1	0,0[ep]
+000008e2 a4070d580000*  1949 	st.h	r11,sdaoff23(_testerPresentTimeout)[gp]
+                        1950 	jarl	_FblCwPrepareResponseAddress,lp
+                        1950 <EXPANSION BEGIN>
+                        1950 jarl22 _FblCwPrepareResponseAddress , lp 
+000008e8 80ff0000*      1950 <EXPANSION END>
+000008ec e051           1951 	cmp	zero,r10
+000008ee fa15*          1952 	bne	.L3757
+                        1953 --line1062
+                        1954 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.125::
+                        1955 .LDWlin125:
+                        1956 	jarl	_FblDiagRxStartIndication,lp
+                        1956 <EXPANSION BEGIN>
+                        1956 jarl22 _FblDiagRxStartIndication , lp 
+000008f0 80ff0000*      1956 <EXPANSION END>
+                        1957 --line1063
+                        1958 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.126::
+                        1959 .LDWlin126:
+000008f4 a40707880000*  1960 	ld.hu	sdaoff23(_DiagDataLength)[gp],r17
+000008fa 840709300000*  1961 	ld.w	sdaoff23(_DiagBuffer)[gp],r6
+00000900 113e0100       1962 	addi	1,r17,r7
+00000904 c700           1963 	zxh	r7
+                        1964 	jarl	_FblDiagRxIndication,lp
+                        1964 <EXPANSION BEGIN>
+                        1964 jarl22 _FblDiagRxIndication , lp 
+00000906 80ff0000*      1964 <EXPANSION END>
+                        1965 --line1065
+                        1966 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.127::
+                        1967 .LDWlin127:
+0000090a 2b0600000000*  1968 	mov	sdaoff23(_fblDiagStates+2),r11
+00000910 cb070000       1969 	set1	0,0[r11]
+                        1970 	jarl	_FblDiagStateTask,lp
+                        1970 <EXPANSION BEGIN>
+                        1970 jarl22 _FblDiagStateTask , lp 
+00000914 bfff24ff*      1970 <EXPANSION END>
+00000918 40063f00       1971 	dispose	0,{r31},[lp]
+                        1972 .L3757:
+                        1973 --line1071
+                        1974 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.128::
+
+                                                                      Page 36
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        1975 .LDWlin128:
+                        1976 	jarl	_FblDiagConfirmation,lp
+                        1976 <EXPANSION BEGIN>
+                        1976 jarl22 _FblDiagConfirmation , lp 
+0000091c 80ff0000*      1976 <EXPANSION END>
+                        1977 --line1072
+                        1978 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.129::
+                        1979 .LDWlin129:
+                        1980 	jarl	_FblCwResetRxBlock,lp
+                        1980 <EXPANSION BEGIN>
+                        1980 jarl22 _FblCwResetRxBlock , lp 
+00000920 80ff0000*      1980 <EXPANSION END>
+00000924 40063f00       1981 	dispose	0,{r31},[lp]
+                        1982 .L3755:
+                        1983 --line1076
+                        1984 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.130::
+                        1985 .LDWlin130:
+                        1986 	jarl	_FblCwResetRxBlock,lp
+                        1986 <EXPANSION BEGIN>
+                        1986 jarl22 _FblCwResetRxBlock , lp 
+00000928 80ff0000*      1986 <EXPANSION END>
+                        1987 --	    .ef
+                        1988 .LDW98:
+                        1989 --line1078
+                        1990 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.131::
+                        1991 .LDWlin131:
+0000092c 40063f00       1992 	dispose	0,{r31},[lp]
+                        1993 	.type	_FblDiagInitStartFromAppl,@function
+                        1994 	.size	_FblDiagInitStartFromAppl,.-_FblDiagInitStartFromAppl
+                        1995 	.align	2
+                        1996 .LDW09:
+                        1997 
+                        1998 	.section ".bss","awb"
+                        1999 .L3797:
+                        2000 	.type	.L3797,@object
+                        2001 	.size	.L3797,0
+                        2002 	.data
+                        2003 	.text
+                        2004 	.align	2
+                        2005 	.align	2
+                        2006 ..gh.f.f.1.e.27:
+                        2007 	.type	..gh.f.f.1.e.27,@object
+                        2008 	.size	..gh.f.f.1.e.27,0
+                        2009 	.global	_FblDiagPostInit
+                        2010 _FblDiagPostInit:
+00000930 82072100       2011 	prepare	{r31},1
+                        2012 --	    .bf
+                        2013 .LDW19:
+00000934 0232           2014 	mov	2,r6
+00000936 003a           2015 	mov	0,r7
+                        2016 	jarl	_ApplFblRWSecurityAccessDelayFlag,lp
+                        2016 <EXPANSION BEGIN>
+                        2016 jarl22 _ApplFblRWSecurityAccessDelayFlag , lp 
+00000938 80ff0000*      2016 <EXPANSION END>
+0000093c 0a0601ff       2017 	addi	-255,r10,zero
+00000940 ca05*          2018 	bne	.L3859
+                        2019 --line529
+                        2020 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.132::
+                        2021 .LDWlin132:
+00000942 84070f000000*  2022 	st.w	zero,sdaoff23(_secSecurityAccessDelay)[gp]
+                        2023 .L3859:
+
+                                                                      Page 37
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+00000948 0132           2024 	mov	1,r6
+0000094a 233e0200       2025 	movea	2,sp,r7
+0000094e 0640           2026 	mov	r6,r8
+                        2027 	jarl	_ApplFblNvReadProcessData,lp
+                        2027 <EXPANSION BEGIN>
+                        2027 jarl22 _ApplFblNvReadProcessData , lp 
+00000950 80ff0000*      2027 <EXPANSION END>
+00000954 e051           2028 	cmp	zero,r10
+00000956 ea35*          2029 	bne	.L3861
+00000958 834f0300       2030 	ld.bu	2[sp],r9
+0000095c e049           2031 	cmp	zero,r9
+0000095e a235*          2032 	be	.L3861
+                        2033 --line541
+                        2034 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.133::
+                        2035 .LDWlin133:
+00000960 0132           2036 	mov	1,r6
+00000962 43070300       2037 	st.b	zero,3[sp]
+00000966 233e0300       2038 	movea	3,sp,r7
+0000096a 0640           2039 	mov	r6,r8
+                        2040 	jarl	_ApplFblNvWriteProcessData,lp
+                        2040 <EXPANSION BEGIN>
+                        2040 jarl22 _ApplFblNvWriteProcessData , lp 
+0000096c 80ff0000*      2040 <EXPANSION END>
+                        2041 --line543
+                        2042 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.134::
+                        2043 .LDWlin134:
+00000970 2b0600000000*  2044 	mov	sdaoff23(_fblMainStates),r11
+00000976 cbcf0000       2045 	tst1	1,0[r11]
+0000097a 8225*          2046 	be	.L3864
+                        2047 --line545
+                        2048 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.135::
+                        2049 .LDWlin135:
+0000097c 20368200       2050 	movea	130,zero,r6
+                        2051 	jarl	_ApplFblFatalError,lp
+                        2051 <EXPANSION BEGIN>
+                        2051 jarl22 _ApplFblFatalError , lp 
+00000980 80ff0000*      2051 <EXPANSION END>
+                        2052 --line547
+                        2053 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.136::
+                        2054 .LDWlin136:
+00000984 83370300       2055 	ld.bu	2[sp],r6
+                        2056 	jarl	_FblDiagInitStartFromReset,lp
+                        2056 <EXPANSION BEGIN>
+                        2056 jarl22 _FblDiagInitStartFromReset , lp 
+00000988 bfffd8f9*      2056 <EXPANSION END>
+                        2057 --line548
+                        2058 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.137::
+                        2059 .LDWlin137:
+0000098c 3e0600000000*  2060 	mov	sdaoff23(_fblDiagStates),ep
+00000992 008d           2061 	sld.w	0[ep],r17
+00000994 1c42           2062 	mov	-4,r8
+00000996 40360100       2063 	movhi	hi(65536),zero,r6
+0000099a 203ed007       2064 	movea	2000,zero,r7
+0000099e 4889           2065 	and	r8,r17
+000009a0 91960400       2066 	ori	4,r17,r18
+000009a4 0691           2067 	or	r6,r18
+000009a6 2b0600000000*  2068 	mov	sdaoff23(_fblMainStates),r11
+000009ac a4070d380000*  2069 	st.h	r7,sdaoff23(_testerPresentTimeout)[gp]
+000009b2 0195           2070 	sst.w	r18,0[ep]
+000009b4 cb8f0000       2071 	clr1	1,0[r11]
+000009b8 d505*          2072 	br	.L3861
+
+                                                                      Page 38
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        2073 .L3864:
+                        2074 --line556
+                        2075 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.138::
+                        2076 .LDWlin138:
+000009ba 83370300       2077 	ld.bu	2[sp],r6
+                        2078 	jarl	_FblDiagInitStartFromReset,lp
+                        2078 <EXPANSION BEGIN>
+                        2078 jarl22 _FblDiagInitStartFromReset , lp 
+000009be bfffa2f9*      2078 <EXPANSION END>
+                        2079 .L3861:
+                        2080 --line561
+                        2081 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.139::
+                        2082 .LDWlin139:
+000009c2 2b0600000000*  2083 	mov	sdaoff23(_fblMainStates),r11
+000009c8 cbcf0000       2084 	tst1	1,0[r11]
+000009cc b205*          2085 	be	.L3857
+                        2086 --line563
+                        2087 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.140::
+                        2088 .LDWlin140:
+                        2089 	jarl	_FblDiagInitStartFromAppl,lp
+                        2089 <EXPANSION BEGIN>
+                        2089 jarl22 _FblDiagInitStartFromAppl , lp 
+000009ce bfffd2fe*      2089 <EXPANSION END>
+                        2090 .L3857:
+                        2091 --	    .ef
+                        2092 .LDW29:
+                        2093 --line575
+                        2094 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.141::
+                        2095 .LDWlin141:
+000009d2 42063f00       2096 	dispose	1,{r31},[lp]
+                        2097 	.type	_FblDiagPostInit,@function
+                        2098 	.size	_FblDiagPostInit,.-_FblDiagPostInit
+                        2099 	.align	2
+                        2100 .LDW39:
+                        2101 --_resetCauseRead	2[sp]	local
+                        2102 --_resetCauseWrite	3[sp]	local
+                        2103 
+                        2104 	.section ".bss","awb"
+                        2105 .L3940:
+                        2106 	.type	.L3940,@object
+                        2107 	.size	.L3940,0
+                        2108 	.data
+                        2109 	.text
+                        2110 	.align	2
+                        2111 	.align	2
+                        2112 ..gh.f.f.1.e.28:
+                        2113 	.type	..gh.f.f.1.e.28,@object
+                        2114 	.size	..gh.f.f.1.e.28,0
+                        2115 	.global	_FblDiagTimerTask
+                        2116 _FblDiagTimerTask:
+000009d6 80072100       2117 	prepare	{r31},0
+                        2118 --	    .bf
+                        2119 .LDW49:
+000009da a40707900000*  2120 	ld.hu	sdaoff23(_testerPresentTimeout)[gp],r18
+000009e0 e091           2121 	cmp	zero,r18
+000009e2 a20d*          2122 	be	.L4038
+                        2123 --line777
+                        2124 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.142::
+                        2125 .LDWlin142:
+000009e4 5f92           2126 	add	-1,r18
+000009e6 d200           2127 	zxh	r18
+
+                                                                      Page 39
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+000009e8 a4070d900000*  2128 	st.h	r18,sdaoff23(_testerPresentTimeout)[gp]
+000009ee e091           2129 	cmp	zero,r18
+000009f0 ba05*          2130 	bne	.L4038
+                        2131 --line784
+                        2132 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.143::
+                        2133 .LDWlin143:
+                        2134 	jarl	_FblDiagEcuReset,lp
+                        2134 <EXPANSION BEGIN>
+                        2134 jarl22 _FblDiagEcuReset , lp 
+000009f2 bfff68f6*      2134 <EXPANSION END>
+                        2135 .L4038:
+                        2136 --line789
+                        2137 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.144::
+                        2138 .LDWlin144:
+000009f6 a40707880000*  2139 	ld.hu	sdaoff23(_ecuResetTimeout)[gp],r17
+000009fc e089           2140 	cmp	zero,r17
+000009fe a20d*          2141 	be	.L4042
+                        2142 --line791
+                        2143 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.145::
+                        2144 .LDWlin145:
+00000a00 5f8a           2145 	add	-1,r17
+00000a02 d100           2146 	zxh	r17
+00000a04 a4070d880000*  2147 	st.h	r17,sdaoff23(_ecuResetTimeout)[gp]
+00000a0a e089           2148 	cmp	zero,r17
+00000a0c ba05*          2149 	bne	.L4042
+                        2150 --line794
+                        2151 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.146::
+                        2152 .LDWlin146:
+                        2153 	jarl	_FblDiagEcuReset,lp
+                        2153 <EXPANSION BEGIN>
+                        2153 jarl22 _FblDiagEcuReset , lp 
+00000a0e bfff4cf6*      2153 <EXPANSION END>
+                        2154 .L4042:
+                        2155 --line813
+                        2156 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.147::
+                        2157 .LDWlin147:
+00000a12 840709800000*  2158 	ld.w	sdaoff23(_secSecurityAccessDelay)[gp],r16
+00000a18 6182           2159 	cmp	1,r16
+00000a1a e305*          2160 	bnh	.L4046
+                        2161 --line815
+                        2162 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.148::
+                        2163 .LDWlin148:
+00000a1c 107effff       2164 	addi	-1,r16,r15
+00000a20 84070f780000*  2165 	st.w	r15,sdaoff23(_secSecurityAccessDelay)[gp]
+                        2166 .L4046:
+                        2167 	jarl	_FblDiagOemTimerTask,lp
+                        2167 <EXPANSION BEGIN>
+                        2167 jarl22 _FblDiagOemTimerTask , lp 
+00000a26 80ff0000*      2167 <EXPANSION END>
+                        2168 --	    .ef
+                        2169 .LDW59:
+                        2170 --line828
+                        2171 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.149::
+                        2172 .LDWlin149:
+00000a2a 40063f00       2173 	dispose	0,{r31},[lp]
+                        2174 	.type	_FblDiagTimerTask,@function
+                        2175 	.size	_FblDiagTimerTask,.-_FblDiagTimerTask
+                        2176 	.align	2
+                        2177 .LDW69:
+                        2178 
+                        2179 	.section ".bss","awb"
+
+                                                                      Page 40
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        2180 .L4116:
+                        2181 	.type	.L4116,@object
+                        2182 	.size	.L4116,0
+                        2183 	.data
+                        2184 	.text
+                        2185 	.section ".RAMCODE","ax"
+                        2186 	.align	2
+                        2187 	.align	2
+                        2188 ..gh.f.f.1.e.29:
+                        2189 	.type	..gh.f.f.1.e.29,@object
+                        2190 	.size	..gh.f.f.1.e.29,0
+                        2191 	.global	_FblDiagRxGetFuncBuffer
+                        2192 _FblDiagRxGetFuncBuffer:
+0000014a 80072100       2193 	prepare	{r31},0
+0000014e c600           2194 	zxh	r6
+                        2195 --	    .bf
+                        2196 .LDW79:
+                        2197 	jarl	_FblDiagRxGetPhysBuffer,lp
+                        2197 <EXPANSION BEGIN>
+                        2197 jarl22 _FblDiagRxGetPhysBuffer , lp 
+00000150 bfff2cff*      2197 <EXPANSION END>
+                        2198 --line1281
+                        2199 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.150::
+                        2200 .LDWlin150:
+00000154 e051           2201 	cmp	zero,r10
+00000156 820d*          2202 	be	.L4206
+                        2203 --line1282
+                        2204 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.151::
+                        2205 .LDWlin151:
+00000158 2b0600000000*  2206 	mov	sdaoff23(_fblDiagStates),r11
+0000015e cb1f0000       2207 	set1	3,0[r11]
+00000162 40063f00       2208 	dispose	0,{r31},[lp]
+                        2209 .L4206:
+                        2210 --	    .ef
+                        2211 .LDW89:
+                        2212 --line1285
+                        2213 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.152::
+                        2214 .LDWlin152:
+00000166 40063f00       2215 	dispose	0,{r31},[lp]
+                        2216 	.type	_FblDiagRxGetFuncBuffer,@function
+                        2217 	.size	_FblDiagRxGetFuncBuffer,.-_FblDiagRxGetFuncBuffer
+                        2218 	.align	2
+                        2219 .LDW99:
+                        2220 --_funcBuffer	r10	local
+                        2221 
+                        2222 --_rxDataLength	r6	param
+                        2223 
+                        2224 	.section ".bss","awb"
+                        2225 .L4251:
+                        2226 	.type	.L4251,@object
+                        2227 	.size	.L4251,0
+                        2228 	.data
+                        2229 	.section ".RAMCODE","ax"
+                        2230 	.align	2
+                        2231 	.align	2
+                        2232 ..gh.f.f.1.e.30:
+                        2233 	.type	..gh.f.f.1.e.30,@object
+                        2234 	.size	..gh.f.f.1.e.30,0
+                        2235 	.global	_FblDiagRxErrorIndication
+                        2236 _FblDiagRxErrorIndication:
+                        2237 --	    .bf
+
+                                                                      Page 41
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        2238 .LDW001:
+0000016a bf07b4fe*      2239 	jr	_FblDiagConfirmation
+                        2240 --	    .ef
+                        2241 .LDW101:
+                        2242 	.type	_FblDiagRxErrorIndication,@function
+                        2243 	.size	_FblDiagRxErrorIndication,.-_FblDiagRxErrorIndication
+                        2244 	.align	2
+                        2245 .LDW201:
+                        2246 
+                        2247 	.section ".bss","awb"
+                        2248 .L4321:
+                        2249 	.type	.L4321,@object
+                        2250 	.size	.L4321,0
+                        2251 	.data
+                        2252 	.section ".RAMCODE","ax"
+                        2253 	.align	2
+                        2254 	.align	2
+                        2255 ..gh.f.f.1.e.31:
+                        2256 	.type	..gh.f.f.1.e.31,@object
+                        2257 	.size	..gh.f.f.1.e.31,0
+                        2258 	.global	_FblDiagTxErrorIndication
+                        2259 _FblDiagTxErrorIndication:
+0000016e 8600           2260 	zxb	r6
+                        2261 --	    .bf
+                        2262 .LDW301:
+00000170 6332           2263 	cmp	3,r6
+00000172 b205*          2264 	be	.L4340
+00000174 bf07aafe*      2265 	jr	_FblDiagConfirmation
+                        2266 .L4340:
+                        2267 --	    .ef
+                        2268 .LDW401:
+                        2269 --line1296
+                        2270 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.153::
+                        2271 .LDWlin153:
+00000178 7f00           2272 	jmp	[lp]
+                        2273 	.type	_FblDiagTxErrorIndication,@function
+                        2274 	.size	_FblDiagTxErrorIndication,.-_FblDiagTxErrorIndication
+                        2275 	.align	2
+                        2276 .LDW501:
+                        2277 
+                        2278 --_cwMsgType	r6	param
+                        2279 
+                        2280 	.section ".bss","awb"
+                        2281 .L4374:
+                        2282 	.type	.L4374,@object
+                        2283 	.size	.L4374,0
+                        2284 	.data
+                        2285 	.section ".RAMCODE","ax"
+                        2286 	.align	2
+                        2287 	.align	2
+                        2288 ..gh.f.f.1.e.32:
+                        2289 	.type	..gh.f.f.1.e.32,@object
+                        2290 	.size	..gh.f.f.1.e.32,0
+                        2291 	.global	_FblDiagTxConfirmation
+                        2292 _FblDiagTxConfirmation:
+0000017a 80072100       2293 	prepare	{r31},0
+0000017e 8600           2294 	zxb	r6
+                        2295 --	    .bf
+                        2296 .LDW601:
+00000180 6332           2297 	cmp	3,r6
+00000182 b205*          2298 	be	.L4411
+
+                                                                      Page 42
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        2299 --line1300
+                        2300 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.154::
+                        2301 .LDWlin154:
+                        2302 	jarl	_FblDiagConfirmation,lp
+                        2302 <EXPANSION BEGIN>
+                        2302 jarl22 _FblDiagConfirmation , lp 
+00000184 bfff9afe*      2302 <EXPANSION END>
+                        2303 .L4411:
+                        2304 --line1303
+                        2305 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.155::
+                        2306 .LDWlin155:
+00000188 2b0600000000*  2307 	mov	sdaoff23(_fblDiagStates+1),r11
+0000018e cbef0000       2308 	tst1	5,0[r11]
+00000192 b205*          2309 	be	.L4409
+                        2310 --line1304
+                        2311 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core.156::
+                        2312 .LDWlin156:
+00000194 cb3f0000       2313 	set1	7,0[r11]
+                        2314 .L4409:
+                        2315 --	    .ef
+                        2316 .LDW701:
+00000198 40063f00       2317 	dispose	0,{r31},[lp]
+                        2318 	.type	_FblDiagTxConfirmation,@function
+                        2319 	.size	_FblDiagTxConfirmation,.-_FblDiagTxConfirmation
+                        2320 	.align	2
+                        2321 .LDW801:
+                        2322 
+                        2323 --_cwMsgType	r6	param
+                        2324 
+                        2325 	.section ".bss","awb"
+                        2326 .L4448:
+                        2327 	.type	.L4448,@object
+                        2328 	.size	.L4448,0
+                        2329 	.data
+                        2330 	.section ".RAMCODE","ax"
+                        2331 	.text
+                        2332 	.align	2
+                        2333 	.align	2
+                        2334 ..gh.f.f.1.e.33:
+                        2335 	.type	..gh.f.f.1.e.33,@object
+                        2336 	.size	..gh.f.f.1.e.33,0
+                        2337 	.global	_FblDiagMemPreWrite
+                        2338 _FblDiagMemPreWrite:
+                        2339 --	    .bf
+                        2340 .LDW901:
+00000a2e 0052           2341 	mov	0,r10
+                        2342 --	    .ef
+                        2343 .LDW011:
+00000a30 7f00           2344 	jmp	[lp]
+                        2345 	.type	_FblDiagMemPreWrite,@function
+                        2346 	.size	_FblDiagMemPreWrite,.-_FblDiagMemPreWrite
+                        2347 	.align	2
+                        2348 .LDW111:
+                        2349 
+                        2350 	.section ".bss","awb"
+                        2351 .L4529:
+                        2352 	.type	.L4529,@object
+                        2353 	.size	.L4529,0
+                        2354 	.data
+                        2355 	.text
+                        2356 	.align	2
+
+                                                                      Page 43
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        2357 	.align	2
+                        2358 ..gh.f.f.1.e.34:
+                        2359 	.type	..gh.f.f.1.e.34,@object
+                        2360 	.size	..gh.f.f.1.e.34,0
+                        2361 	.global	_FblDiagMemPostWrite
+                        2362 _FblDiagMemPostWrite:
+                        2363 --	    .bf
+                        2364 .LDW211:
+00000a32 0052           2365 	mov	0,r10
+                        2366 --	    .ef
+                        2367 .LDW311:
+00000a34 7f00           2368 	jmp	[lp]
+                        2369 	.type	_FblDiagMemPostWrite,@function
+                        2370 	.size	_FblDiagMemPostWrite,.-_FblDiagMemPostWrite
+                        2371 	.align	2
+                        2372 .LDW411:
+                        2373 
+                        2374 	.section ".bss","awb"
+                        2375 .L4577:
+                        2376 	.type	.L4577,@object
+                        2377 	.size	.L4577,0
+                        2378 	.data
+                        2379 	.text
+                        2380 	.align	2
+                        2381 --_P2Timer	sdaoff23(_P2Timer)	import
+                        2382 --_fblMainStates	sdaoff23(_fblMainStates)	import
+                        2383 --_kFblDiagServiceTable	rosdaoff23(_kFblDiagServiceTable)	import
+                        2384 --_kSizeOfServiceTable	rosdaoff23(_kSizeOfServiceTable)	import
+                        2385 --_diagPostParam	sdaoff23(_diagPostParam)	static
+                        2386 --_rcrrpBuffer	sdaoff23(_rcrrpBuffer)	static
+                        2387 --_diagResLen	sdaoff23(_diagResLen)	static
+                        2388 --_serviceInfo	sdaoff23(_serviceInfo)	static
+                        2389 --_subServiceInfo	sdaoff23(_subServiceInfo)	static
+                        2390 --_fblDiagServicePreHandler	sdaoff23(_fblDiagServicePreHandler)	static
+                        2391 --_fblDiagServiceMainHandler	sdaoff23(_fblDiagServiceMainHandler)	static
+                        2392 --_fblDiagServiceNrcHandler	sdaoff23(_fblDiagServiceNrcHandler)	static
+                        2393 --_fblDiagServicePostHandler	sdaoff23(_fblDiagServicePostHandler)	static
+                        2394 
+                        2395 	.data
+                        2396 	.sbss	_DiagBuffer,4,4
+                        2397 	.type	_DiagBuffer,@object
+                        2398 	.size	_DiagBuffer,4
+                        2399 	.sbss	_fblDiagStates,4,4
+                        2400 	.type	_fblDiagStates,@object
+                        2401 	.size	_fblDiagStates,4
+                        2402 	.sbss	_errStatDescriptor,36,4
+                        2403 	.type	_errStatDescriptor,@object
+                        2404 	.size	_errStatDescriptor,36
+                        2405 	.sbss	_secSecurityAccessDelay,4,4
+                        2406 	.type	_secSecurityAccessDelay,@object
+                        2407 	.size	_secSecurityAccessDelay,4
+                        2408 	.sbss	_DiagDataLength,2,2
+                        2409 	.type	_DiagDataLength,@object
+                        2410 	.size	_DiagDataLength,2
+                        2411 	.sbss	_testerPresentTimeout,2,2
+                        2412 	.type	_testerPresentTimeout,@object
+                        2413 	.size	_testerPresentTimeout,2
+                        2414 	.sbss	_errStatErrorCode,2,2
+                        2415 	.type	_errStatErrorCode,@object
+                        2416 	.size	_errStatErrorCode,2
+                        2417 	.sbss	_errStatFblStates,2,2
+
+                                                                      Page 44
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_000029k1.s
+                        2418 	.type	_errStatFblStates,@object
+                        2419 	.size	_errStatFblStates,2
+                        2420 	.sbss	_errStatFlashDrvErrorCode,2,2
+                        2421 	.type	_errStatFlashDrvErrorCode,@object
+                        2422 	.size	_errStatFlashDrvErrorCode,2
+                        2423 	.sbss	_ecuResetTimeout,2,2
+                        2424 	.type	_ecuResetTimeout,@object
+                        2425 	.size	_ecuResetTimeout,2
+                        2426 	.sbss	_diagServiceCurrent,1,1
+                        2427 	.type	_diagServiceCurrent,@object
+                        2428 	.size	_diagServiceCurrent,1
+                        2429 	.sbss	_errStatLastServiceId,1,1
+                        2430 	.type	_errStatLastServiceId,@object
+                        2431 	.size	_errStatLastServiceId,1
+                        2432 	.sbss	_errStatFlashDrvVersion,3,1
+                        2433 	.type	_errStatFlashDrvVersion,@object
+                        2434 	.size	_errStatFlashDrvVersion,3
+                        2435 	.sbss	_diagResponseFlag,1,1
+                        2436 	.type	_diagResponseFlag,@object
+                        2437 	.size	_diagResponseFlag,1
+                        2438 	.sbss	_diagErrorCode,1,1
+                        2439 	.type	_diagErrorCode,@object
+                        2440 	.size	_diagErrorCode,1
+                        2441 	.sbss	_segmentCount,1,1
+                        2442 	.type	_segmentCount,@object
+                        2443 	.size	_segmentCount,1
+                        2444 	.ghsnote version,17
+                        2445 	.ghsnote tools,3
+                        2446 	.ghsnote options,144
+                        2447 	.text
+                        2448 	.align	2
+                        2449 	.section ".RAMCODE","ax"
+                        2450 	.align	2
+                        2451 	.text
+                        2452 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86473..1::
+                        2453 	.section ".RAMCODE","ax"
+                        2454 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_diag_core...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F86473..0::
+                        2455 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

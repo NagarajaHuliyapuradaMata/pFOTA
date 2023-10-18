@@ -1,0 +1,1093 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/actIAES.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\actIAES.dbo -source=actIAES.c -o obj\gh_00006j41.o -list=lst/actIAES.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+Source File: actIAES.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/actIAES.lst
+                           7 --		-object_dir=obj -stderr=err/actIAES.err -c -cpu=rh850 -sda=all
+                           8 --		-large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/wrappers/vSecPrim/actIAES.c
+                          28 --Source File:   ../source/wrappers/vSecPrim/actIAES.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:36:28 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F8643C..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_actAESInitEncryptBlock
+                          46 _actAESInitEncryptBlock:
+                          47 --	    .bf
+                          48 .LDW01:
+00000000 80070000*        49 	jr	_actAESKeySetup
+                          50 --	    .ef
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                          51 .LDW11:
+                          52 	.type	_actAESInitEncryptBlock,@function
+                          53 	.size	_actAESInitEncryptBlock,.-_actAESInitEncryptBlock
+                          54 	.align	2
+                          55 .LDW21:
+                          56 
+                          57 --_info	r6	param
+                          58 --_key	r7	param
+                          59 --_key_len	r8	param
+                          60 --_watchdog	r9	param
+                          61 
+                          62 	.section ".bss","awb"
+                          63 .L33:
+                          64 	.type	.L33,@object
+                          65 	.size	.L33,0
+                          66 	.data
+                          67 	.section ".MSR_CODE","ax"
+                          68 	.align	2
+                          69 	.align	2
+                          70 ..gh.f.f.1.e.1:
+                          71 	.type	..gh.f.f.1.e.1,@object
+                          72 	.size	..gh.f.f.1.e.1,0
+                          73 	.global	_actAESEncryptBlock
+                          74 _actAESEncryptBlock:
+00000004 9007e170         75 	prepare	{r25,r26,r27,r28,r29,r31},8
+00000008 07e0             76 	mov	r7,r28
+0000000a 08c8             77 	mov	r8,r25
+0000000c 09d8             78 	mov	r9,r27
+                          79 --	    .bf
+                          80 .LDW31:
+0000000e 269f0101         81 	ld.w	256[r6],r19
+00000012 06e8             82 	mov	r6,r29
+00000014 0930             83 	mov	r9,r6
+00000016 1396fcff         84 	addi	-4,r19,r18
+0000001a 8192             85 	shr	1,r18
+0000001c 12d60400         86 	addi	4,r18,r26
+                          87 	jarl	_actWatchdogTriggerFunction,lp
+                          87 <EXPANSION BEGIN>
+                          87 jarl22 _actWatchdogTriggerFunction , lp 
+00000020 80ff0000*        87 <EXPANSION END>
+                          88 --line35
+                          89 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.1::
+                          90 .LDWlin1:
+00000024 1c38             91 	mov	r28,r7
+00000026 23361000         92 	movea	16,sp,r6
+0000002a 20461000         93 	movea	16,zero,r8
+                          94 	jarl	_actCpyLEtoU32,lp
+                          94 <EXPANSION BEGIN>
+                          94 jarl22 _actCpyLEtoU32 , lp 
+0000002e 80ff0000*        94 <EXPANSION END>
+                          95 --line37
+                          96 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.2::
+                          97 .LDWlin2:
+00000032 00e2             98 	mov	0,r28
+                          99 .L56:
+00000034 1cf0            100 	mov	r28,ep
+00000036 c2f2            101 	shl	2,ep
+00000038 1e88            102 	mov	ep,r17
+0000003a dd89            103 	add	r29,r17
+0000003c c3f1            104 	add	sp,ep
+0000003e 0885            105 	sld.w	16[ep],r16
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+00000040 318f0100        106 	ld.w	0[r17],r17
+00000044 41e2            107 	add	1,r28
+00000046 3181            108 	xor	r17,r16
+00000048 0985            109 	sst.w	r16,16[ep]
+0000004a 64e2            110 	cmp	4,r28
+0000004c c1f5*           111 	bl	.L56
+0000004e 00e2            112 	mov	0,r28
+00000050 f505*           113 	br	.L60
+                         114 .L59:
+                         115 --line45
+                         116 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.3::
+                         117 .LDWlin3:
+                         118 	jarl	_actAESEncryptionRound,lp
+                         118 <EXPANSION BEGIN>
+                         118 jarl22 _actAESEncryptionRound , lp 
+00000052 80ff0000*       118 <EXPANSION END>
+                         119 --line47
+                         120 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.4::
+                         121 .LDWlin4:
+00000056 1b30            122 	mov	r27,r6
+                         123 	jarl	_actWatchdogTriggerFunction,lp
+                         123 <EXPANSION BEGIN>
+                         123 jarl22 _actWatchdogTriggerFunction , lp 
+00000058 80ff0000*       123 <EXPANSION END>
+                         124 --line42
+                         125 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.5::
+                         126 .LDWlin5:
+0000005c 41e2            127 	add	1,r28
+                         128 .L60:
+0000005e 1dee1000        129 	addi	16,r29,r29
+00000062 1d40            130 	mov	r29,r8
+00000064 0330            131 	mov	sp,r6
+00000066 233e1000        132 	movea	16,sp,r7
+                         133 	jarl	_actAESEncryptionRound,lp
+                         133 <EXPANSION BEGIN>
+                         133 jarl22 _actAESEncryptionRound , lp 
+0000006a 80ff0000*       133 <EXPANSION END>
+                         134 --line42
+                         135 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.6::
+                         136 .LDWlin6:
+0000006e 1dee1000        137 	addi	16,r29,r29
+00000072 1d40            138 	mov	r29,r8
+00000074 23361000        139 	movea	16,sp,r6
+00000078 0338            140 	mov	sp,r7
+0000007a fae1            141 	cmp	r26,r28
+0000007c b1ed*           142 	bl	.L59
+                         143 --line51
+                         144 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.7::
+                         145 .LDWlin7:
+                         146 	jarl	_actAESEncryptionFinalRound,lp
+                         146 <EXPANSION BEGIN>
+                         146 jarl22 _actAESEncryptionFinalRound , lp 
+0000007e 80ff0000*       146 <EXPANSION END>
+                         147 --line53
+                         148 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.8::
+                         149 .LDWlin8:
+00000082 1930            150 	mov	r25,r6
+00000084 233e1000        151 	movea	16,sp,r7
+00000088 0442            152 	mov	4,r8
+                         153 	jarl	_actCpyU32toLE,lp
+                         153 <EXPANSION BEGIN>
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         153 jarl22 _actCpyU32toLE , lp 
+0000008a 80ff0000*       153 <EXPANSION END>
+                         154 --line55
+                         155 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.9::
+                         156 .LDWlin9:
+0000008e 1b30            157 	mov	r27,r6
+                         158 	jarl	_actWatchdogTriggerFunction,lp
+                         158 <EXPANSION BEGIN>
+                         158 jarl22 _actWatchdogTriggerFunction , lp 
+00000090 80ff0000*       158 <EXPANSION END>
+                         159 --	    .ef
+                         160 .LDW41:
+                         161 --line56
+                         162 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.10::
+                         163 .LDWlin10:
+00000094 5006ff70        164 	dispose	8,{r25,r26,r27,r28,r29,r31},[lp]
+                         165 	.type	_actAESEncryptBlock,@function
+                         166 	.size	_actAESEncryptBlock,.-_actAESEncryptBlock
+                         167 	.align	2
+                         168 .LDW51:
+                         169 --_k_ptr	r29	local
+                         170 --_b0	16[sp]	local
+                         171 --_b1	0[sp]	local
+                         172 --_i	r28	local
+                         173 --_iterations	r26	local
+                         174 
+                         175 --_info	r6	param
+                         176 --_in_block	r28	param
+                         177 --_out_block	r25	param
+                         178 --_watchdog	r27	param
+                         179 
+                         180 	.section ".bss","awb"
+                         181 .L114:
+                         182 	.type	.L114,@object
+                         183 	.size	.L114,0
+                         184 	.data
+                         185 	.section ".MSR_CODE","ax"
+                         186 	.align	2
+                         187 	.align	2
+                         188 ..gh.f.f.1.e.2:
+                         189 	.type	..gh.f.f.1.e.2,@object
+                         190 	.size	..gh.f.f.1.e.2,0
+                         191 	.global	_actAESInitDecryptBlock
+                         192 _actAESInitDecryptBlock:
+00000098 8007e100        193 	prepare	{r28,r29,r31},0
+0000009c 06e0            194 	mov	r6,r28
+                         195 --	    .bf
+                         196 .LDW61:
+                         197 	jarl	_actAESKeySetup,lp
+                         197 <EXPANSION BEGIN>
+                         197 jarl22 _actAESKeySetup , lp 
+0000009e 80ff0000*       197 <EXPANSION END>
+000000a2 0ae8            198 	mov	r10,r29
+                         199 --line64
+                         200 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.11::
+                         201 .LDWlin11:
+000000a4 e051            202 	cmp	zero,r10
+000000a6 ca05*           203 	bne	.L175
+                         204 --line65
+                         205 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.12::
+                         206 .LDWlin12:
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+000000a8 1c30            207 	mov	r28,r6
+                         208 	jarl	_actAESMakeDecryptionKey,lp
+                         208 <EXPANSION BEGIN>
+                         208 jarl22 _actAESMakeDecryptionKey , lp 
+000000aa 80ff0000*       208 <EXPANSION END>
+                         209 .L175:
+                         210 --line68
+                         211 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.13::
+                         212 .LDWlin13:
+000000ae 1d50            213 	mov	r29,r10
+                         214 --	    .ef
+                         215 .LDW71:
+000000b0 4006ff00        216 	dispose	0,{r28,r29,r31},[lp]
+                         217 	.type	_actAESInitDecryptBlock,@function
+                         218 	.size	_actAESInitDecryptBlock,.-_actAESInitDecryptBlock
+                         219 	.align	2
+                         220 .LDW81:
+                         221 --_result	r29	local
+                         222 
+                         223 --_info	r28	param
+                         224 --_key	r7	param
+                         225 --_key_len	r8	param
+                         226 --_watchdog	r9	param
+                         227 
+                         228 	.section ".bss","awb"
+                         229 .L203:
+                         230 	.type	.L203,@object
+                         231 	.size	.L203,0
+                         232 	.data
+                         233 	.section ".MSR_CODE","ax"
+                         234 	.align	2
+                         235 	.align	2
+                         236 ..gh.f.f.1.e.3:
+                         237 	.type	..gh.f.f.1.e.3,@object
+                         238 	.size	..gh.f.f.1.e.3,0
+                         239 	.global	_actAESDecryptBlock
+                         240 _actAESDecryptBlock:
+000000b4 9007e1f1        241 	prepare	{r23,r24,r25,r26,r27,r28,r29,r31},8
+000000b8 06d0            242 	mov	r6,r26
+000000ba 07e0            243 	mov	r7,r28
+000000bc 08b8            244 	mov	r8,r23
+000000be 09c8            245 	mov	r9,r25
+                         246 --	    .bf
+                         247 .LDW91:
+000000c0 26970101        248 	ld.w	256[r6],r18
+000000c4 1288            249 	mov	r18,r17
+000000c6 c48a            250 	shl	4,r17
+000000c8 1286fcff        251 	addi	-4,r18,r16
+000000cc c689            252 	add	r6,r17
+000000ce 8182            253 	shr	1,r16
+000000d0 c292            254 	shl	2,r18
+000000d2 11ee5000        255 	addi	80,r17,r29
+000000d6 10c60400        256 	addi	4,r16,r24
+000000da 12de1400        257 	addi	20,r18,r27
+000000de 0930            258 	mov	r9,r6
+                         259 	jarl	_actWatchdogTriggerFunction,lp
+                         259 <EXPANSION BEGIN>
+                         259 jarl22 _actWatchdogTriggerFunction , lp 
+000000e0 80ff0000*       259 <EXPANSION END>
+                         260 --line82
+                         261 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.14::
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         262 .LDWlin14:
+000000e4 1c38            263 	mov	r28,r7
+000000e6 23361000        264 	movea	16,sp,r6
+000000ea 20461000        265 	movea	16,zero,r8
+                         266 	jarl	_actCpyLEtoU32,lp
+                         266 <EXPANSION BEGIN>
+                         266 jarl22 _actCpyLEtoU32 , lp 
+000000ee 80ff0000*       266 <EXPANSION END>
+                         267 --line84
+                         268 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.15::
+                         269 .LDWlin15:
+000000f2 00e2            270 	mov	0,r28
+                         271 .L243:
+000000f4 1cf0            272 	mov	r28,ep
+000000f6 c2f2            273 	shl	2,ep
+000000f8 1e78            274 	mov	ep,r15
+000000fa dd79            275 	add	r29,r15
+000000fc c3f1            276 	add	sp,ep
+000000fe 0875            277 	sld.w	16[ep],r14
+00000100 2f671100        278 	ld.w	16[r15],r12
+00000104 41e2            279 	add	1,r28
+00000106 2c71            280 	xor	r12,r14
+00000108 0975            281 	sst.w	r14,16[ep]
+0000010a 64e2            282 	cmp	4,r28
+0000010c c1f5*           283 	bl	.L243
+0000010e 00e2            284 	mov	0,r28
+00000110 b50d*           285 	br	.L247
+                         286 .L246:
+                         287 --line91
+                         288 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.16::
+                         289 .LDWlin16:
+                         290 	jarl	_actAESDecryptionRound,lp
+                         290 <EXPANSION BEGIN>
+                         290 jarl22 _actAESDecryptionRound , lp 
+00000112 80ff0000*       290 <EXPANSION END>
+                         291 --line92
+                         292 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.17::
+                         293 .LDWlin17:
+00000116 5cda            294 	add	-4,r27
+00000118 1be8            295 	mov	r27,r29
+0000011a c2ea            296 	shl	2,r29
+0000011c dae9            297 	add	r26,r29
+0000011e 1930            298 	mov	r25,r6
+                         299 	jarl	_actWatchdogTriggerFunction,lp
+                         299 <EXPANSION BEGIN>
+                         299 jarl22 _actWatchdogTriggerFunction , lp 
+00000120 80ff0000*       299 <EXPANSION END>
+                         300 --line87
+                         301 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.18::
+                         302 .LDWlin18:
+00000124 41e2            303 	add	1,r28
+                         304 .L247:
+00000126 1d40            305 	mov	r29,r8
+00000128 0330            306 	mov	sp,r6
+0000012a 233e1000        307 	movea	16,sp,r7
+                         308 	jarl	_actAESDecryptionRound,lp
+                         308 <EXPANSION BEGIN>
+                         308 jarl22 _actAESDecryptionRound , lp 
+0000012e 80ff0000*       308 <EXPANSION END>
+                         309 --line87
+                         310 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.19::
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         311 .LDWlin19:
+00000132 5cda            312 	add	-4,r27
+00000134 1b40            313 	mov	r27,r8
+00000136 c242            314 	shl	2,r8
+00000138 da41            315 	add	r26,r8
+0000013a 23361000        316 	movea	16,sp,r6
+0000013e 0338            317 	mov	sp,r7
+00000140 f8e1            318 	cmp	r24,r28
+00000142 81ed*           319 	bl	.L246
+                         320 --line99
+                         321 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.20::
+                         322 .LDWlin20:
+                         323 	jarl	_actAESDecryptionFinalRound,lp
+                         323 <EXPANSION BEGIN>
+                         323 jarl22 _actAESDecryptionFinalRound , lp 
+00000144 80ff0000*       323 <EXPANSION END>
+                         324 --line101
+                         325 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.21::
+                         326 .LDWlin21:
+00000148 1730            327 	mov	r23,r6
+0000014a 233e1000        328 	movea	16,sp,r7
+0000014e 0442            329 	mov	4,r8
+                         330 	jarl	_actCpyU32toLE,lp
+                         330 <EXPANSION BEGIN>
+                         330 jarl22 _actCpyU32toLE , lp 
+00000150 80ff0000*       330 <EXPANSION END>
+                         331 --line103
+                         332 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.22::
+                         333 .LDWlin22:
+00000154 1930            334 	mov	r25,r6
+                         335 	jarl	_actWatchdogTriggerFunction,lp
+                         335 <EXPANSION BEGIN>
+                         335 jarl22 _actWatchdogTriggerFunction , lp 
+00000156 80ff0000*       335 <EXPANSION END>
+                         336 --	    .ef
+                         337 .LDW02:
+                         338 --line104
+                         339 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.23::
+                         340 .LDWlin23:
+0000015a 5006fff1        341 	dispose	8,{r23,r24,r25,r26,r27,r28,r29,r31},[lp]
+                         342 	.type	_actAESDecryptBlock,@function
+                         343 	.size	_actAESDecryptBlock,.-_actAESDecryptBlock
+                         344 	.align	2
+                         345 .LDW12:
+                         346 --_k_ptr	r29	local
+                         347 --_b0	16[sp]	local
+                         348 --_b1	0[sp]	local
+                         349 --_i	r28	local
+                         350 --_iterations	r24	local
+                         351 --_arrayIndex	r27	local
+                         352 
+                         353 --_info	r26	param
+                         354 --_in_block	r28	param
+                         355 --_out_block	r23	param
+                         356 --_watchdog	r25	param
+                         357 
+                         358 	.section ".bss","awb"
+                         359 .L306:
+                         360 	.type	.L306,@object
+                         361 	.size	.L306,0
+                         362 	.data
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         363 	.section ".MSR_CODE","ax"
+                         364 	.align	2
+                         365 	.align	2
+                         366 ..gh.f.f.1.e.4:
+                         367 	.type	..gh.f.f.1.e.4,@object
+                         368 	.size	..gh.f.f.1.e.4,0
+                         369 	.global	_actAESInitEncrypt
+                         370 _actAESInitEncrypt:
+0000015e 8407e1f0        371 	prepare	{r24,r25,r26,r27,r28,r29,r31},2
+00000162 23f62400        372 	movea	36,sp,ep
+00000166 06e0            373 	mov	r6,r28
+00000168 07d8            374 	mov	r7,r27
+0000016a 08d0            375 	mov	r8,r26
+0000016c 09c8            376 	mov	r9,r25
+0000016e 60e8            377 	sld.bu	0[ep],r29
+00000170 02c5            378 	sld.w	4[ep],r24
+                         379 --	    .bf
+                         380 .LDW22:
+00000172 dd36f000        381 	andi	240,r29,r6
+                         382 	jarl	_actPaddingInit,lp
+                         382 <EXPANSION BEGIN>
+                         382 jarl22 _actPaddingInit , lp 
+00000176 80ff0000*       382 <EXPANSION END>
+                         383 --line114
+                         384 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.24::
+                         385 .LDWlin24:
+0000017a e051            386 	cmp	zero,r10
+0000017c ca0d*           387 	bne	.L365
+                         388 --line115
+                         389 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.25::
+                         390 .LDWlin25:
+0000017e 03f0            391 	mov	sp,ep
+00000180 1c30            392 	mov	r28,r6
+00000182 1b38            393 	mov	r27,r7
+00000184 1a40            394 	mov	r26,r8
+00000186 1948            395 	mov	r25,r9
+00000188 01ed            396 	sst.w	r29,0[ep]
+0000018a 03c5            397 	sst.w	r24,4[ep]
+                         398 	jarl	_actAESInit,lp
+                         398 <EXPANSION BEGIN>
+                         398 jarl22 _actAESInit , lp 
+0000018c 80ff0000*       398 <EXPANSION END>
+00000190 4406fff0        399 	dispose	2,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                         400 .L365:
+                         401 --	    .ef
+                         402 .LDW32:
+                         403 --line118
+                         404 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.26::
+                         405 .LDWlin26:
+00000194 4406fff0        406 	dispose	2,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                         407 	.type	_actAESInitEncrypt,@function
+                         408 	.size	_actAESInitEncrypt,.-_actAESInitEncrypt
+                         409 	.align	2
+                         410 .LDW42:
+                         411 --_result	r10	local
+                         412 
+                         413 --_info	r28	param
+                         414 --_key	r27	param
+                         415 --_key_len	r26	param
+                         416 --_iv	r25	param
+                         417 --_mode	r29	param
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         418 --_watchdog	r24	param
+                         419 
+                         420 	.section ".bss","awb"
+                         421 .L395:
+                         422 	.type	.L395,@object
+                         423 	.size	.L395,0
+                         424 	.data
+                         425 	.section ".MSR_CODE","ax"
+                         426 	.align	2
+                         427 	.align	2
+                         428 ..gh.f.f.1.e.5:
+                         429 	.type	..gh.f.f.1.e.5,@object
+                         430 	.size	..gh.f.f.1.e.5,0
+                         431 	.global	_actAESEncrypt
+                         432 _actAESEncrypt:
+00000198 8407e1f0        433 	prepare	{r24,r25,r26,r27,r28,r29,r31},2
+0000019c 06e8            434 	mov	r6,r29
+0000019e 09c0            435 	mov	r9,r24
+000001a0 23f72500        436 	ld.w	36[sp],ep
+000001a4 83d72900        437 	ld.bu	40[sp],r26
+000001a8 23cf2d00        438 	ld.w	44[sp],r25
+                         439 --	    .bf
+                         440 .LDW52:
+000001ac 268f0501        441 	ld.w	260[r6],r17
+000001b0 00da            442 	mov	0,r27
+000001b2 11e0            443 	mov	r17,r28
+000001b4 c8e1            444 	add	r8,r28
+000001b6 84e2            445 	shr	4,r28
+000001b8 c4e2            446 	shl	4,r28
+000001ba 08061000        447 	addi	16,r8,zero
+000001be 9125*           448 	bl	.L457
+                         449 --line133
+                         450 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.27::
+                         451 .LDWlin27:
+000001c0 61d2            452 	cmp	1,r26
+000001c2 ea0d*           453 	bne	.L441
+000001c4 86972901        454 	ld.bu	296[r6],r18
+000001c8 d2360f00        455 	andi	15,r18,r6
+000001cc 6432            456 	cmp	4,r6
+000001ce aa0d*           457 	bne	.L451
+000001d0 d206f000        458 	andi	240,r18,zero
+000001d4 fa05*           459 	bne	.L451
+                         460 --line134
+                         461 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.28::
+                         462 .LDWlin28:
+000001d6 0095            463 	sld.w	0[ep],r18
+000001d8 f191            464 	cmp	r17,r18
+000001da e915*           465 	bnl	.L440
+000001dc a515*           466 	br	.L457
+                         467 .L441:
+                         468 --line141
+                         469 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.29::
+                         470 .LDWlin29:
+000001de e0d1            471 	cmp	zero,r26
+000001e0 e205*           472 	be	.L450
+                         473 .L451:
+000001e2 9d872901        474 	ld.bu	296[r29],r16
+000001e6 d006f000        475 	andi	240,r16,zero
+000001ea ea05*           476 	bne	.L449
+                         477 .L450:
+                         478 --line142
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         479 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.30::
+                         480 .LDWlin30:
+000001ec 007d            481 	sld.w	0[ep],r15
+000001ee 1c88            482 	mov	r28,r17
+000001f0 fc79            483 	cmp	r28,r15
+000001f2 a90d*           484 	bnl	.L440
+000001f4 e505*           485 	br	.L457
+                         486 .L449:
+                         487 --line150
+                         488 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.31::
+                         489 .LDWlin31:
+000001f6 0075            490 	sld.w	0[ep],r14
+000001f8 1c8e1000        491 	addi	16,r28,r17
+000001fc f171            492 	cmp	r17,r14
+000001fe c905*           493 	bnl	.L440
+                         494 .L457:
+                         495 --line151
+                         496 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.32::
+                         497 .LDWlin32:
+00000200 20def800        498 	movea	248,zero,r27
+00000204 e535*           499 	br	.L459
+                         500 .L440:
+                         501 --line158
+                         502 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.33::
+                         503 .LDWlin33:
+00000206 018d            504 	sst.w	r17,0[ep]
+00000208 e041            505 	cmp	zero,r8
+0000020a a20d*           506 	be	.L461
+                         507 --line160
+                         508 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.34::
+                         509 .LDWlin34:
+0000020c 2d0600000000*   510 	mov	_actAESEncryptMultipleBlocks,r13
+00000212 03f0            511 	mov	sp,ep
+00000214 1d30            512 	mov	r29,r6
+00000216 016d            513 	sst.w	r13,0[ep]
+00000218 03cd            514 	sst.w	r25,4[ep]
+                         515 	jarl	_actAESTransform,lp
+                         515 <EXPANSION BEGIN>
+                         515 jarl22 _actAESTransform , lp 
+0000021a 80ff0000*       515 <EXPANSION END>
+                         516 .L461:
+                         517 --line163
+                         518 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.35::
+                         519 .LDWlin35:
+0000021e 61d2            520 	cmp	1,r26
+00000220 da25*           521 	bne	.L463
+                         522 --line164
+                         523 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.36::
+                         524 .LDWlin36:
+00000222 9d972901        525 	ld.bu	296[r29],r18
+00000226 d2660f00        526 	andi	15,r18,r12
+0000022a 6462            527 	cmp	4,r12
+0000022c ca05*           528 	bne	.L466
+0000022e d206f000        529 	andi	240,r18,zero
+00000232 e20d*           530 	be	.L470
+                         531 .L466:
+                         532 --line166
+                         533 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.37::
+                         534 .LDWlin37:
+00000234 d236f000        535 	andi	240,r18,r6
+00000238 1d460401        536 	addi	260,r29,r8
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+0000023c 1d4e1801        537 	addi	280,r29,r9
+00000240 203e1000        538 	movea	16,zero,r7
+                         539 	jarl	_actPaddingPad,lp
+                         539 <EXPANSION BEGIN>
+                         539 jarl22 _actPaddingPad , lp 
+00000244 80ff0000*       539 <EXPANSION END>
+00000248 0ad8            540 	mov	r10,r27
+                         541 --line169
+                         542 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.38::
+                         543 .LDWlin38:
+0000024a e051            544 	cmp	zero,r10
+0000024c fa0d*           545 	bne	.L463
+                         546 .L470:
+0000024e 3d9f0501        547 	ld.w	260[r29],r19
+00000252 e099            548 	cmp	zero,r19
+00000254 b20d*           549 	be	.L463
+                         550 --line171
+                         551 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.39::
+                         552 .LDWlin39:
+00000256 1c40            553 	mov	r28,r8
+00000258 1d30            554 	mov	r29,r6
+0000025a 1d3e1801        555 	addi	280,r29,r7
+0000025e d841            556 	add	r24,r8
+00000260 63cf0100        557 	st.w	r25,0[sp]
+00000264 1a48            558 	mov	r26,r9
+                         559 	jarl	_actAESEncryptMultipleBlocks,lp
+                         559 <EXPANSION BEGIN>
+                         559 jarl22 _actAESEncryptMultipleBlocks , lp 
+00000266 80ff0000*       559 <EXPANSION END>
+                         560 .L463:
+                         561 --line175
+                         562 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.40::
+                         563 .LDWlin40:
+0000026a 1930            564 	mov	r25,r6
+                         565 	jarl	_actWatchdogTriggerFunction,lp
+                         565 <EXPANSION BEGIN>
+                         565 jarl22 _actWatchdogTriggerFunction , lp 
+0000026c 80ff0000*       565 <EXPANSION END>
+                         566 .L459:
+                         567 --line178
+                         568 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.41::
+                         569 .LDWlin41:
+00000270 1b50            570 	mov	r27,r10
+                         571 --	    .ef
+                         572 .LDW62:
+00000272 4406fff0        573 	dispose	2,{r24,r25,r26,r27,r28,r29,r31},[lp]
+                         574 	.type	_actAESEncrypt,@function
+                         575 	.size	_actAESEncrypt,.-_actAESEncrypt
+                         576 	.align	2
+                         577 .LDW72:
+                         578 --_result	r27	local
+                         579 --_out_size	r28	local
+                         580 
+                         581 --_info	r29	param
+                         582 --_in	r7	param
+                         583 --_in_length	r8	param
+                         584 --_out_buffer	r24	param
+                         585 --_out_length	ep	param
+                         586 --_final	r26	param
+                         587 --_watchdog	r25	param
+                         588 
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         589 	.section ".bss","awb"
+                         590 .L677:
+                         591 	.type	.L677,@object
+                         592 	.size	.L677,0
+                         593 	.data
+                         594 	.section ".MSR_CODE","ax"
+                         595 	.align	2
+                         596 	.align	2
+                         597 ..gh.f.f.1.e.6:
+                         598 	.type	..gh.f.f.1.e.6,@object
+                         599 	.size	..gh.f.f.1.e.6,0
+                         600 	.global	_actAESInitDecrypt
+                         601 _actAESInitDecrypt:
+00000276 8407e1f1        602 	prepare	{r23,r24,r25,r26,r27,r28,r29,r31},2
+0000027a 23f62800        603 	movea	40,sp,ep
+0000027e 06e0            604 	mov	r6,r28
+00000280 07d0            605 	mov	r7,r26
+00000282 08c8            606 	mov	r8,r25
+00000284 09c0            607 	mov	r9,r24
+00000286 60d8            608 	sld.bu	0[ep],r27
+00000288 02bd            609 	sld.w	4[ep],r23
+                         610 --	    .bf
+                         611 .LDW82:
+0000028a db36f000        612 	andi	240,r27,r6
+                         613 	jarl	_actPaddingInit,lp
+                         613 <EXPANSION BEGIN>
+                         613 jarl22 _actPaddingInit , lp 
+0000028e 80ff0000*       613 <EXPANSION END>
+00000292 0ae8            614 	mov	r10,r29
+                         615 --line189
+                         616 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.42::
+                         617 .LDWlin42:
+00000294 e051            618 	cmp	zero,r10
+00000296 ea15*           619 	bne	.L892
+                         620 --line190
+                         621 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.43::
+                         622 .LDWlin43:
+00000298 03f0            623 	mov	sp,ep
+0000029a 1c30            624 	mov	r28,r6
+0000029c 1a38            625 	mov	r26,r7
+0000029e 1940            626 	mov	r25,r8
+000002a0 1848            627 	mov	r24,r9
+000002a2 01dd            628 	sst.w	r27,0[ep]
+000002a4 03bd            629 	sst.w	r23,4[ep]
+                         630 	jarl	_actAESInit,lp
+                         630 <EXPANSION BEGIN>
+                         630 jarl22 _actAESInit , lp 
+000002a6 80ff0000*       630 <EXPANSION END>
+000002aa 0ae8            631 	mov	r10,r29
+                         632 --line192
+                         633 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.44::
+                         634 .LDWlin44:
+000002ac e051            635 	cmp	zero,r10
+000002ae aa0d*           636 	bne	.L892
+                         637 --line193
+                         638 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.45::
+                         639 .LDWlin45:
+000002b0 9c972901        640 	ld.bu	296[r28],r18
+000002b4 d29e0f00        641 	andi	15,r18,r19
+000002b8 649a            642 	cmp	4,r19
+000002ba c205*           643 	be	.L892
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         644 --line195
+                         645 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.46::
+                         646 .LDWlin46:
+000002bc 1c30            647 	mov	r28,r6
+                         648 	jarl	_actAESMakeDecryptionKey,lp
+                         648 <EXPANSION BEGIN>
+                         648 jarl22 _actAESMakeDecryptionKey , lp 
+000002be 80ff0000*       648 <EXPANSION END>
+                         649 .L892:
+                         650 --line200
+                         651 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.47::
+                         652 .LDWlin47:
+000002c2 1d50            653 	mov	r29,r10
+                         654 --	    .ef
+                         655 .LDW92:
+000002c4 4406fff1        656 	dispose	2,{r23,r24,r25,r26,r27,r28,r29,r31},[lp]
+                         657 	.type	_actAESInitDecrypt,@function
+                         658 	.size	_actAESInitDecrypt,.-_actAESInitDecrypt
+                         659 	.align	2
+                         660 .LDW03:
+                         661 --_result	r29	local
+                         662 
+                         663 --_info	r28	param
+                         664 --_key	r26	param
+                         665 --_key_len	r25	param
+                         666 --_iv	r24	param
+                         667 --_mode	r27	param
+                         668 --_watchdog	r23	param
+                         669 
+                         670 	.section ".bss","awb"
+                         671 .L949:
+                         672 	.type	.L949,@object
+                         673 	.size	.L949,0
+                         674 	.data
+                         675 	.section ".MSR_CODE","ax"
+                         676 	.align	2
+                         677 	.align	2
+                         678 ..gh.f.f.1.e.7:
+                         679 	.type	..gh.f.f.1.e.7,@object
+                         680 	.size	..gh.f.f.1.e.7,0
+                         681 	.global	_actAESDecrypt
+                         682 _actAESDecrypt:
+000002c8 8407e3f7        683 	prepare	{r21,r22,r23,r24,r25,r26,r27,r28,r29,r31},2,sp
+000002cc 06e8            684 	mov	r6,r29
+000002ce 07b8            685 	mov	r7,r23
+000002d0 08e0            686 	mov	r8,r28
+000002d2 09b0            687 	mov	r9,r22
+000002d4 18cd            688 	sld.w	48[ep],r25
+000002d6 83af3500        689 	ld.bu	52[sp],r21
+000002da 1cc5            690 	sld.w	56[ep],r24
+                         691 --	    .bf
+                         692 .LDW13:
+000002dc 26470501        693 	ld.w	260[r6],r8
+000002e0 00d2            694 	mov	0,r26
+000002e2 0890            695 	mov	r8,r18
+000002e4 dc91            696 	add	r28,r18
+000002e6 61aa            697 	cmp	1,r21
+000002e8 aa15*           698 	bne	.L1014
+                         699 --line213
+                         700 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.48::
+                         701 .LDWlin48:
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+000002ea 868f2901        702 	ld.bu	296[r6],r17
+000002ee d1860f00        703 	andi	15,r17,r16
+000002f2 6482            704 	cmp	4,r16
+000002f4 ca05*           705 	bne	.L1008
+000002f6 d106f000        706 	andi	240,r17,zero
+000002fa 920d*           707 	be	.L1014
+                         708 .L1008:
+                         709 --line215
+                         710 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.49::
+                         711 .LDWlin49:
+000002fc e091            712 	cmp	zero,r18
+000002fe c205*           713 	be	.L1011
+00000300 d2060f00        714 	andi	15,r18,zero
+00000304 e205*           715 	be	.L1016
+                         716 .L1011:
+                         717 --line217
+                         718 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.50::
+                         719 .LDWlin50:
+00000306 20d6f500        720 	movea	245,zero,r26
+0000030a e57d*           721 	br	.L1013
+                         722 .L1014:
+                         723 --line223
+                         724 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.51::
+                         725 .LDWlin51:
+0000030c e091            726 	cmp	zero,r18
+0000030e c20d*           727 	be	.L1015
+                         728 .L1016:
+                         729 --line230
+                         730 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.52::
+                         731 .LDWlin52:
+00000310 396f0100        732 	ld.w	0[r25],r13
+00000314 12deffff        733 	addi	-1,r18,r27
+00000318 84da            734 	shr	4,r27
+0000031a c4da            735 	shl	4,r27
+0000031c fb69            736 	cmp	r27,r13
+0000031e d905*           737 	bnl	.L1021
+                         738 --line231
+                         739 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.53::
+                         740 .LDWlin53:
+00000320 20d6f800        741 	movea	248,zero,r26
+00000324 9575*           742 	br	.L1013
+                         743 .L1015:
+                         744 --line227
+                         745 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.54::
+                         746 .LDWlin54:
+00000326 12d8            747 	mov	r18,r27
+                         748 .L1021:
+00000328 e0e1            749 	cmp	zero,r28
+0000032a 9235*           750 	be	.L1022
+                         751 --line237
+                         752 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.55::
+                         753 .LDWlin55:
+0000032c 1206efff        754 	addi	-17,r18,zero
+00000330 d10d*           755 	bl	.L1024
+                         756 --line239
+                         757 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.56::
+                         758 .LDWlin56:
+00000332 06361801        759 	addi	280,r6,r6
+00000336 c831            760 	add	r8,r6
+00000338 1c40            761 	mov	r28,r8
+                         762 	jarl	_VStdLib_MemCpy,lp
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         762 <EXPANSION BEGIN>
+                         762 jarl22 _VStdLib_MemCpy , lp 
+0000033a 80ff0000*       762 <EXPANSION END>
+                         763 --line240
+                         764 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.57::
+                         765 .LDWlin57:
+0000033e 3df60401        766 	movea	260,r29,ep
+00000342 003d            767 	sld.w	0[ep],r7
+00000344 dc39            768 	add	r28,r7
+00000346 013d            769 	sst.w	r7,0[ep]
+00000348 a525*           770 	br	.L1022
+                         771 .L1024:
+                         772 --line244
+                         773 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.58::
+                         774 .LDWlin58:
+0000034a 330600000000*   775 	mov	_actAESDecryptMultipleBlocks,r19
+00000350 d2060f00        776 	andi	15,r18,zero
+00000354 63c70500        777 	st.w	r24,4[sp]
+00000358 da15*           778 	bne	.L1027
+                         779 --line246
+                         780 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.59::
+                         781 .LDWlin59:
+0000035a 1c46f0ff        782 	addi	-16,r28,r8
+0000035e 639f0100        783 	st.w	r19,0[sp]
+                         784 	jarl	_actAESTransform,lp
+                         784 <EXPANSION BEGIN>
+                         784 jarl22 _actAESTransform , lp 
+00000362 80ff0000*       784 <EXPANSION END>
+                         785 --line247
+                         786 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.60::
+                         787 .LDWlin60:
+00000366 d7e1            788 	add	r23,r28
+00000368 1d361801        789 	addi	280,r29,r6
+0000036c 1c3ef0ff        790 	addi	-16,r28,r7
+00000370 20461000        791 	movea	16,zero,r8
+                         792 	jarl	_VStdLib_MemCpy,lp
+                         792 <EXPANSION BEGIN>
+                         792 jarl22 _VStdLib_MemCpy , lp 
+00000374 80ff0000*       792 <EXPANSION END>
+                         793 --line248
+                         794 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.61::
+                         795 .LDWlin61:
+00000378 20561000        796 	movea	16,zero,r10
+0000037c 7d570501        797 	st.w	r10,260[r29]
+00000380 e505*           798 	br	.L1022
+                         799 .L1027:
+                         800 --line252
+                         801 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.62::
+                         802 .LDWlin62:
+00000382 1c40            803 	mov	r28,r8
+00000384 639f0100        804 	st.w	r19,0[sp]
+                         805 	jarl	_actAESTransform,lp
+                         805 <EXPANSION BEGIN>
+                         805 jarl22 _actAESTransform , lp 
+00000388 80ff0000*       805 <EXPANSION END>
+                         806 .L1022:
+                         807 --line257
+                         808 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.63::
+                         809 .LDWlin63:
+0000038c 61aa            810 	cmp	1,r21
+0000038e fa35*           811 	bne	.L1030
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         812 --line259
+                         813 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.64::
+                         814 .LDWlin64:
+00000390 1d3e1801        815 	addi	280,r29,r7
+00000394 1d30            816 	mov	r29,r6
+00000396 0740            817 	mov	r7,r8
+00000398 63c70100        818 	st.w	r24,0[sp]
+0000039c 1548            819 	mov	r21,r9
+                         820 	jarl	_actAESDecryptMultipleBlocks,lp
+                         820 <EXPANSION BEGIN>
+                         820 jarl22 _actAESDecryptMultipleBlocks , lp 
+0000039e 80ff0000*       820 <EXPANSION END>
+                         821 --line261
+                         822 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.65::
+                         823 .LDWlin65:
+000003a2 9d8f2901        824 	ld.bu	296[r29],r17
+000003a6 d1960f00        825 	andi	15,r17,r18
+000003aa 6492            826 	cmp	4,r18
+000003ac ca05*           827 	bne	.L1033
+000003ae d106f000        828 	andi	240,r17,zero
+000003b2 e20d*           829 	be	.L1036
+                         830 .L1033:
+                         831 --line263
+                         832 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.66::
+                         833 .LDWlin66:
+000003b4 d136f000        834 	andi	240,r17,r6
+000003b8 1d460401        835 	addi	260,r29,r8
+000003bc 1d4e1801        836 	addi	280,r29,r9
+000003c0 203e1000        837 	movea	16,zero,r7
+                         838 	jarl	_actPaddingUnpad,lp
+                         838 <EXPANSION BEGIN>
+                         838 jarl22 _actPaddingUnpad , lp 
+000003c4 80ff0000*       838 <EXPANSION END>
+000003c8 0ad0            839 	mov	r10,r26
+                         840 --line266
+                         841 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.67::
+                         842 .LDWlin67:
+000003ca e051            843 	cmp	zero,r10
+000003cc aa1d*           844 	bne	.L1040
+                         845 .L1036:
+                         846 --line268
+                         847 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.68::
+                         848 .LDWlin68:
+000003ce 3d470501        849 	ld.w	260[r29],r8
+000003d2 399f0100        850 	ld.w	0[r25],r19
+000003d6 0830            851 	mov	r8,r6
+000003d8 db31            852 	add	r27,r6
+000003da e699            853 	cmp	r6,r19
+000003dc c905*           854 	bnl	.L1037
+                         855 --line270
+                         856 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.69::
+                         857 .LDWlin69:
+000003de 20d6f800        858 	movea	248,zero,r26
+000003e2 f50d*           859 	br	.L1040
+                         860 .L1037:
+                         861 --line274
+                         862 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.70::
+                         863 .LDWlin70:
+000003e4 1b30            864 	mov	r27,r6
+000003e6 d631            865 	add	r22,r6
+000003e8 1d3e1801        866 	addi	280,r29,r7
+
+                                                                      Page 17
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         867 	jarl	_VStdLib_MemCpy,lp
+                         867 <EXPANSION BEGIN>
+                         867 jarl22 _VStdLib_MemCpy , lp 
+000003ec 80ff0000*       867 <EXPANSION END>
+                         868 --line275
+                         869 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.71::
+                         870 .LDWlin71:
+000003f0 3d9f0501        871 	ld.w	260[r29],r19
+000003f4 db99            872 	add	r27,r19
+000003f6 799f0100        873 	st.w	r19,0[r25]
+000003fa b505*           874 	br	.L1040
+                         875 .L1030:
+                         876 --line281
+                         877 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.72::
+                         878 .LDWlin72:
+000003fc 79df0100        879 	st.w	r27,0[r25]
+                         880 .L1040:
+00000400 1830            881 	mov	r24,r6
+                         882 	jarl	_actWatchdogTriggerFunction,lp
+                         882 <EXPANSION BEGIN>
+                         882 jarl22 _actWatchdogTriggerFunction , lp 
+00000402 80ff0000*       882 <EXPANSION END>
+                         883 .L1013:
+                         884 --line288
+                         885 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES.73::
+                         886 .LDWlin73:
+00000406 1a50            887 	mov	r26,r10
+                         888 --	    .ef
+                         889 .LDW23:
+00000408 4406fff7        890 	dispose	2,{r21,r22,r23,r24,r25,r26,r27,r28,r29,r31},[lp]
+                         891 	.type	_actAESDecrypt,@function
+                         892 	.size	_actAESDecrypt,.-_actAESDecrypt
+                         893 	.align	2
+                         894 .LDW33:
+                         895 --_result	r26	local
+                         896 --_total_bytes	r18	local
+                         897 --_out_size	r27	local
+                         898 
+                         899 --_info	r29	param
+                         900 --_in	r23	param
+                         901 --_in_length	r28	param
+                         902 --_out_buffer	r22	param
+                         903 --_out_length	r25	param
+                         904 --_final	r21	param
+                         905 --_watchdog	r24	param
+                         906 
+                         907 	.section ".bss","awb"
+                         908 .L1351:
+                         909 	.type	.L1351,@object
+                         910 	.size	.L1351,0
+                         911 	.data
+                         912 	.section ".MSR_CODE","ax"
+                         913 	.align	2
+                         914 
+                         915 	.data
+                         916 	.ghsnote version,17
+                         917 	.ghsnote tools,3
+                         918 	.ghsnote options,144
+                         919 	.section ".MSR_CODE","ax"
+                         920 	.align	2
+                         921 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5CactIAES...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F8643C..0::
+
+                                                                      Page 18
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00006j41.s
+                         922 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

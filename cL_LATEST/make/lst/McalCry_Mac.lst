@@ -1,0 +1,362 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/McalCry_Mac.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make\obj\McalCry_Mac.dbo -source=McalCry_Mac.c -o obj\gh_00000ng1.o -list=lst/McalCry_Mac.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+Source File: McalCry_Mac.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/McalCry_Mac.lst
+                           7 --		-object_dir=obj -stderr=err/McalCry_Mac.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/McalCry/McalCry_Mac.c
+                          28 --Source File:   ../source/McalCry/McalCry_Mac.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_LATEST\make
+                          31 --Compile Date:  Wed Sep 06 14:06:45 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.section ".MSR_CODE","ax"
+                          39 	.align	2
+                          40 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B55..0::
+                          41 	.align	2
+                          42 ..gh.f.f.1.e.0:
+                          43 	.type	..gh.f.f.1.e.0,@object
+                          44 	.size	..gh.f.f.1.e.0,0
+                          45 	.global	_McalCry_CompareMac..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.
+                          46 _McalCry_CompareMac..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.:
+                          47 _McalCry_CompareMac:
+                          48 --	    .bf
+                          49 .LDW01:
+00000000 0888             50 	mov	r8,r17
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+00000002 0052             51 	mov	0,r10
+00000004 838a             52 	shr	3,r17
+00000006 9100             53 	zxb	r17
+00000008 0a90             54 	mov	r10,r18
+0000000a d50d*            55 	br	.L46
+                          56 .L45:
+                          57 --line181
+                          58 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.1::
+                          59 .LDWlin1:
+0000000c 12f0             60 	mov	r18,ep
+0000000e 1280             61 	mov	r18,r16
+00000010 c6f1             62 	add	r6,ep
+00000012 c781             63 	add	r7,r16
+00000014 90870100         64 	ld.bu	0[r16],r16
+00000018 6078             65 	sld.bu	0[ep],r15
+0000001a f079             66 	cmp	r16,r15
+0000001c e1571453         67 	cmovne	1,r10,r10
+00000020 4192             68 	add	1,r18
+00000022 9200             69 	zxb	r18
+                          70 .L46:
+00000024 f191             71 	cmp	r17,r18
+00000026 b1f5*            72 	bl	.L45
+                          73 --line186
+                          74 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.2::
+                          75 .LDWlin2:
+00000028 c8860700         76 	andi	7,r8,r16
+0000002c b215*            77 	be	.L41
+                          78 --line188
+                          79 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.3::
+                          80 .LDWlin3:
+0000002e 087a             81 	mov	8,r15
+00000030 11f0             82 	mov	r17,ep
+00000032 b079             83 	sub	r16,r15
+00000034 c6f1             84 	add	r6,ep
+00000036 c789             85 	add	r7,r17
+00000038 91670100         86 	ld.bu	0[r17],r12
+0000003c 6080             87 	sld.bu	0[ep],r16
+0000003e 0172             88 	mov	1,r14
+00000040 ef77c298         89 	shl	r15,r14,r19
+00000044 136effff         90 	addi	-1,r19,r13
+00000048 2d48             91 	not	r13,r9
+0000004a 2c81             92 	xor	r12,r16
+0000004c 4981             93 	and	r9,r16
+0000004e e1571453         94 	cmovne	1,r10,r10
+                          95 .L41:
+                          96 --	    .ef
+                          97 .LDW11:
+00000052 7f00             98 	jmp	[lp]
+                          99 	.type	_McalCry_CompareMac,@function
+                         100 	.size	_McalCry_CompareMac,.-_McalCry_CompareMac
+                         101 	.type	_McalCry_CompareMac..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.,@function
+                         102 	.size	_McalCry_CompareMac..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.,.-_McalCry_CompareMac..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.
+                         103 	.align	2
+                         104 .LDW21:
+                         105 --_result	r10	local
+                         106 --_verifyBitMask	r9	local
+                         107 --_numberBitsInLastByte	r16	local
+                         108 --_numberOfFullBytesInMac	r17	local
+                         109 --_i	r18	local
+                         110 
+                         111 --_mac1	r6	param
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+                         112 --_mac2	r7	param
+                         113 --_lengthInBit	r8	param
+                         114 
+                         115 	.section ".bss","awb"
+                         116 .L140:
+                         117 	.type	.L140,@object
+                         118 	.size	.L140,0
+                         119 	.data
+                         120 	.section ".MSR_CODE","ax"
+                         121 	.align	2
+                         122 	.align	2
+                         123 	.align	2
+                         124 ..gh.f.f.1.e.1:
+                         125 	.type	..gh.f.f.1.e.1,@object
+                         126 	.size	..gh.f.f.1.e.1,0
+                         127 	.global	_McalCry_DispatchHmacSHA1ModeStart..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.
+                         128 _McalCry_DispatchHmacSHA1ModeStart..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.:
+                         129 _McalCry_DispatchHmacSHA1ModeStart:
+00000054 8607e110        130 	prepare	{r27,r28,r29,r31},3
+00000058 06e0            131 	mov	r6,r28
+0000005a 07d8            132 	mov	r7,r27
+                         133 --	    .bf
+                         134 .LDW31:
+0000005c 01ea            135 	mov	1,r29
+0000005e 0330            136 	mov	sp,r6
+00000060 003a            137 	mov	0,r7
+00000062 1d40            138 	mov	r29,r8
+                         139 	jarl	_McalCry_Local_ElementGetterSetId,lp
+                         139 <EXPANSION BEGIN>
+                         139 jarl22 _McalCry_Local_ElementGetterSetId , lp 
+00000064 80ff0000*       139 <EXPANSION END>
+                         140 --line644
+                         141 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.4::
+                         142 .LDWlin4:
+00000068 1c30            143 	mov	r28,r6
+0000006a 280600000000*   144 	mov	_FblLookForWatchdogVoid,r8
+00000070 203ea400        145 	movea	164,zero,r7
+                         146 	jarl	_esl_initWorkSpaceHeader,lp
+                         146 <EXPANSION BEGIN>
+                         146 jarl22 _esl_initWorkSpaceHeader , lp 
+00000074 80ff0000*       146 <EXPANSION END>
+00000078 e051            147 	cmp	zero,r10
+0000007a 8a1d*           148 	bne	.L220
+                         149 --line645
+                         150 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.5::
+                         151 .LDWlin5:
+0000007c 3b374900        152 	ld.w	72[r27],r6
+00000080 0338            153 	mov	sp,r7
+00000082 1d40            154 	mov	r29,r8
+00000084 0a48            155 	mov	r10,r9
+                         156 	jarl	_McalCry_Local_GetElementsIndexJob,lp
+                         156 <EXPANSION BEGIN>
+                         156 jarl22 _McalCry_Local_GetElementsIndexJob , lp 
+00000086 80ff0000*       156 <EXPANSION END>
+0000008a 0ae8            157 	mov	r10,r29
+                         158 --line646
+                         159 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.6::
+                         160 .LDWlin6:
+0000008c e051            161 	cmp	zero,r10
+0000008e ea0d*           162 	bne	.L220
+                         163 --line648
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+                         164 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.7::
+                         165 .LDWlin7:
+00000090 03f0            166 	mov	sp,ep
+00000092 7440            167 	sld.hu	8[ep],r8
+00000094 023d            168 	sld.w	4[ep],r7
+00000096 290600000000*   169 	mov	sdaoff23(_McalCry_KeyStorage),r9
+0000009c 1c30            170 	mov	r28,r6
+0000009e c941            171 	add	r9,r8
+                         172 	jarl	_esl_initHashMACSHA1,lp
+                         172 <EXPANSION BEGIN>
+                         172 jarl22 _esl_initHashMACSHA1 , lp 
+000000a0 80ff0000*       172 <EXPANSION END>
+                         173 --line654
+                         174 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.8::
+                         175 .LDWlin8:
+000000a4 e051            176 	cmp	zero,r10
+000000a6 e15714eb        177 	cmovne	1,r10,r29
+                         178 .L220:
+000000aa 1d50            179 	mov	r29,r10
+                         180 --	    .ef
+                         181 .LDW41:
+000000ac 4606ff10        182 	dispose	3,{r27,r28,r29,r31},[lp]
+                         183 	.type	_McalCry_DispatchHmacSHA1ModeStart,@function
+                         184 	.size	_McalCry_DispatchHmacSHA1ModeStart,.-_McalCry_DispatchHmacSHA1ModeStart
+                         185 	.type	_McalCry_DispatchHmacSHA1ModeStart..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.,@function
+                         186 	.size	_McalCry_DispatchHmacSHA1ModeStart..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.,.-_McalCry_DispatchHmacSHA1ModeStart..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.
+                         187 	.align	2
+                         188 .LDW51:
+                         189 --_retValCv	r10	local
+                         190 --_retVal	r29	local
+                         191 --_keyElements	0[sp]	local
+                         192 
+                         193 --_workSpace	r28	param
+                         194 --_job	r27	param
+                         195 
+                         196 	.section ".bss","awb"
+                         197 .L514:
+                         198 	.type	.L514,@object
+                         199 	.size	.L514,0
+                         200 	.data
+                         201 	.section ".MSR_CODE","ax"
+                         202 	.align	2
+                         203 	.align	2
+                         204 ..gh.f.f.1.e.2:
+                         205 	.type	..gh.f.f.1.e.2,@object
+                         206 	.size	..gh.f.f.1.e.2,0
+                         207 	.global	_McalCry_Dispatch_HmacSha1Verify
+                         208 _McalCry_Dispatch_HmacSha1Verify:
+000000b0 8a07e130        209 	prepare	{r26,r27,r28,r29,r31},5
+000000b4 8800            210 	zxb	r8
+                         211 --	    .bf
+                         212 .LDW61:
+000000b6 850709300000*   213 	ld.w	rosdaoff23(_McalCry_HmacSha1Verify)[r5],r6
+000000bc 6142            214 	cmp	1,r8
+000000be c20d*           215 	be	.L571
+000000c0 07e8            216 	mov	r7,r29
+000000c2 01e2            217 	mov	1,r28
+000000c4 6242            218 	cmp	2,r8
+000000c6 ca0d*           219 	bne	.L1093
+                         220 --line1000
+                         221 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.9::
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+                         222 .LDWlin9:
+000000c8 273f0d00        223 	ld.w	12[r7],r7
+000000cc 3d470900        224 	ld.w	8[r29],r8
+                         225 	jarl	_esl_updateHashMACSHA1,lp
+                         225 <EXPANSION BEGIN>
+                         225 jarl22 _esl_updateHashMACSHA1 , lp 
+000000d0 80ff0000*       225 <EXPANSION END>
+                         226 --line1001
+                         227 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.10::
+                         228 .LDWlin10:
+000000d4 e51d*           229 	br	.L572
+                         230 .L571:
+                         231 --line994
+                         232 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.11::
+                         233 .LDWlin11:
+                         234 	jarl	_McalCry_DispatchHmacSHA1ModeStart,lp
+                         234 <EXPANSION BEGIN>
+                         234 jarl22 _McalCry_DispatchHmacSHA1ModeStart , lp 
+000000d6 bfff7eff*       234 <EXPANSION END>
+000000da 0ae0            235 	mov	r10,r28
+                         236 --line995
+                         237 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.12::
+                         238 .LDWlin12:
+000000dc d51d*           239 	br	.L592
+                         240 .L1093:
+000000de 6442            241 	cmp	4,r8
+000000e0 ba1d*           242 	bne	.L592
+                         243 --line1006
+                         244 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.13::
+                         245 .LDWlin13:
+000000e2 0338            246 	mov	sp,r7
+                         247 	jarl	_esl_finalizeHashMACSHA1,lp
+                         247 <EXPANSION BEGIN>
+                         247 jarl22 _esl_finalizeHashMACSHA1 , lp 
+000000e4 80ff0000*       247 <EXPANSION END>
+000000e8 0ad8            248 	mov	r10,r27
+000000ea e051            249 	cmp	zero,r10
+000000ec 9a15*           250 	bne	.L581
+000000ee 3d471500        251 	ld.w	20[r29],r8
+000000f2 08065fff        252 	addi	-161,r8,zero
+000000f6 a10d*           253 	bl	.L586
+000000f8 1df0            254 	mov	r29,ep
+000000fa 0835            255 	sld.w	16[ep],r6
+000000fc 18d5            256 	sld.w	48[ep],r26
+000000fe 0338            257 	mov	sp,r7
+                         258 	jarl	_McalCry_CompareMac,lp
+                         258 <EXPANSION BEGIN>
+                         258 jarl22 _McalCry_CompareMac , lp 
+00000100 bfff00ff*       258 <EXPANSION END>
+00000104 5a570000        259 	st.b	r10,0[r26]
+00000108 b505*           260 	br	.L581
+                         261 .L586:
+0000010a 20de0020        262 	movea	8192,zero,r27
+                         263 .L581:
+0000010e 1b50            264 	mov	r27,r10
+                         265 .L572:
+                         266 --line1016
+                         267 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac.14::
+                         268 .LDWlin14:
+00000110 e051            269 	cmp	zero,r10
+00000112 e15714e3        270 	cmovne	1,r10,r28
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_00000ng1.s
+                         271 .L592:
+00000116 1c50            272 	mov	r28,r10
+                         273 --	    .ef
+                         274 .LDW71:
+00000118 4a06ff30        275 	dispose	5,{r26,r27,r28,r29,r31},[lp]
+                         276 	.type	_McalCry_Dispatch_HmacSha1Verify,@function
+                         277 	.size	_McalCry_Dispatch_HmacSha1Verify,.-_McalCry_Dispatch_HmacSha1Verify
+                         278 	.align	2
+                         279 .LDW81:
+                         280 --_retVal	r28	local
+                         281 --_retValCv	r27	local
+                         282 --_workspace	r6	local
+                         283 --_retValCv	r27	local
+                         284 --_macBuffer	0[sp]	local
+                         285 
+                         286 --_objectId	none	param
+                         287 --_job	r29	param
+                         288 --_mode	r8	param
+                         289 
+                         290 	.section ".bss","awb"
+                         291 .L1091:
+                         292 	.type	.L1091,@object
+                         293 	.size	.L1091,0
+                         294 	.data
+                         295 	.section ".MSR_CODE","ax"
+                         296 	.align	2
+                         297 --_McalCry_HmacSha1Verify	rosdaoff23(_McalCry_HmacSha1Verify)	import
+                         298 --_McalCry_ObjectInfo	rosdaoff23(_McalCry_ObjectInfo)	import
+                         299 --_McalCry_KeyStorage	sdaoff23(_McalCry_KeyStorage)	import
+                         300 
+                         301 	.data
+                         302 	.ghsnote version,17
+                         303 	.ghsnote tools,3
+                         304 	.ghsnote options,144
+                         305 	.section ".MSR_CODE","ax"
+                         306 	.align	2
+                         307 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CMcalCry_Mac...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake..64F86B55..0::
+                         308 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0

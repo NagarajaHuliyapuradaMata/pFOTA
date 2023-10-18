@@ -1,0 +1,1133 @@
+                                                                      Page 1
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+Command Line: C:\GHS\comp_201517\ease850.exe -w -stderr=err/fbl_lbt_access.err -elf -b0 -I../source/_common -I../source/common -I../source/ecuabcanif -I../source/ecuabcantrcv -I../source/ecuabcryif -I../source/ecuabfee -I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan -I../source/mcalcry -I../source/mcaldio -I../source/mcaleep -I../source/mcalfls -I../source/mcalmcu -I../source/projectara -I../source/projectcfg -I../source/projectcompiler -I../source/swcservicebswm -I../source/swcservicecantp -I../source/swcservicecomm -I../source/swcservicecsm -I../source/swcservicedcm -I../source/swcservicedem -I../source/swcservicedet -I../source/swcserviceecum -I../source/swcservicenvm -I../source/swcserviceos -I../source/swcservicepdur -I../source/swcserviceschm -I../source/swcservicestartup -I../source/wrappers/swcservicesecm -I../source/wrappers/vsecprim -I../source/wrappers/vstdlib -Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800 -Igendata -IC:\GHS\comp_201517\lib\rh850 -cg_underscore -cpu=rh850g3k -nofpu -no_v850_simd -rh850_fpsimd=none -nomacro -patch_dbo=C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make\obj\fbl_lbt_access.dbo -source=fbl_lbt_access.c -o obj\gh_0000ds41.o -list=lst/fbl_lbt_access.lst C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s 
+Original File: C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+Source File: fbl_lbt_access.c
+Directory: C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+Host OS: Windows
+EASE: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win32-comp-ecom
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 07:50:13 2015
+
+Release Date: Thu Oct 22 09:32:32 2015
+
+                           1 --Driver Command: ccrh850 -DBRS_DERIVATIVE_701018 -DBRS_OSC_CLK=16
+                           2 --		-DBRS_TIMEBASE_CLOCK=80 -DBRS_EVA_BOARD_
+                           3 --		-DBRS_DERIVATIVE_GROUP_F1L -DBRS_OS_USECASE_BRS
+                           4 --		-DBRS_PLATFORM_RH850 -DBRS_COMP_GHS
+                           5 --		-DBRS_CPU_LOCAL_RAM_SIZE_CORE0=32
+                           6 --		-DBRS_CPU_RAM_START_CORE0=0xFEDF8000 -list=lst/fbl_lbt_access.lst
+                           7 --		-object_dir=obj -stderr=err/fbl_lbt_access.err -c -cpu=rh850
+                           8 --		-sda=all -large_sda -prepare_dispose -pragma_asm_inline -no_callt
+                           9 --		-inline_prologue -notda -reserve_r2 -fsoft
+                          10 --		--unknown_pragma_warnings -list -g -Ogeneral -shortenum
+                          11 --		-registermode=32 -I../source/_common -I../source/common
+                          12 --		-I../source/ecuabcanif -I../source/ecuabcantrcv
+                          13 --		-I../source/ecuabcryif -I../source/ecuabfee
+                          14 --		-I../source/ecuabmemif -I../source/libautosar -I../source/mcalcan
+                          15 --		-I../source/mcalcry -I../source/mcaldio -I../source/mcaleep
+                          16 --		-I../source/mcalfls -I../source/mcalmcu -I../source/projectara
+                          17 --		-I../source/projectcfg -I../source/projectcompiler
+                          18 --		-I../source/swcservicebswm -I../source/swcservicecantp
+                          19 --		-I../source/swcservicecomm -I../source/swcservicecsm
+                          20 --		-I../source/swcservicedcm -I../source/swcservicedem
+                          21 --		-I../source/swcservicedet -I../source/swcserviceecum
+                          22 --		-I../source/swcservicenvm -I../source/swcserviceos
+                          23 --		-I../source/swcservicepdur -I../source/swcserviceschm
+                          24 --		-I../source/swcservicestartup -I../source/wrappers/swcservicesecm
+                          25 --		-I../source/wrappers/vsecprim -I../source/wrappers/vstdlib
+                          26 --		-Ic:/ghs/comp_201517/ansi -Ic:/ghs/comp_201517/include/v800
+                          27 --		-Igendata ../source/SwcServiceStartUp/fbl_lbt_access.c
+                          28 --Source File:   ../source/SwcServiceStartUp/fbl_lbt_access.c
+                          29 --Directory:     
+                          30 --		C:\_ECU2\ECU_Rivian_A1\Target\repo_projects\pFOTA\cL_R2023.09.01\make
+                          31 --Compile Date:  Wed Sep 06 13:37:30 2023
+                          32 --Host OS:       Win32
+                          33 --Version:       C-RH850 2015.1.7 RELEASE VERSION
+                          34 --Release:       Compiler v2015.1.7
+                          35 --Revision Date: Thu Oct 22 08:06:12 2015
+                          36 --Release Date:  Thu Oct 22 09:34:32 2015
+                          37 -- ecom  -g -w -OM
+                          38 	.text
+                          39 ..bof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F8647A..0::
+                          40 	.align	2
+                          41 ..gh.f.f.1.e.0:
+                          42 	.type	..gh.f.f.1.e.0,@object
+                          43 	.size	..gh.f.f.1.e.0,0
+                          44 	.global	_FblLbtBlockFilterHit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.
+                          45 _FblLbtBlockFilterHit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.:
+                          46 _FblLbtBlockFilterHit:
+00000000 06f0             47 	mov	r6,ep
+                          48 --	    .bf
+                          49 .LDW01:
+00000002 6130             50 	sld.bu	1[ep],r6
+
+                                                                      Page 2
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+00000004 6132             51 	cmp	1,r6
+00000006 ea0d*            52 	bne	.L4
+                          53 --line35
+                          54 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.1::
+                          55 .LDWlin1:
+00000008 a79f0100         56 	ld.bu	1[r7],r19
+0000000c 6048             57 	sld.bu	0[ep],r9
+0000000e 619a             58 	cmp	1,r19
+00000010 da05*            59 	bne	.L6
+                          60 --line37
+                          61 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.2::
+                          62 .LDWlin2:
+00000012 614a             63 	cmp	1,r9
+00000014 e2570000         64 	setfe	r10
+00000018 7f00             65 	jmp	[lp]
+                          66 .L6:
+                          67 --line41
+                          68 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.3::
+                          69 .LDWlin3:
+0000001a e049             70 	cmp	zero,r9
+0000001c e2570000         71 	setfe	r10
+00000020 7f00             72 	jmp	[lp]
+                          73 .L4:
+00000022 0152             74 	mov	1,r10
+                          75 --	    .ef
+                          76 .LDW11:
+                          77 --line55
+                          78 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.4::
+                          79 .LDWlin4:
+00000024 7f00             80 	jmp	[lp]
+                          81 	.type	_FblLbtBlockFilterHit,@function
+                          82 	.size	_FblLbtBlockFilterHit,.-_FblLbtBlockFilterHit
+                          83 	.type	_FblLbtBlockFilterHit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,@function
+                          84 	.size	_FblLbtBlockFilterHit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,.-_FblLbtBlockFilterHit..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.
+                          85 	.align	2
+                          86 .LDW21:
+                          87 --_result	r10	local
+                          88 
+                          89 --_blockFilter	ep	param
+                          90 --_blockDescriptor	r7	param
+                          91 
+                          92 	.section ".bss","awb"
+                          93 .L60:
+                          94 	.type	.L60,@object
+                          95 	.size	.L60,0
+                          96 	.data
+                          97 	.text
+                          98 	.align	2
+                          99 	.align	2
+                         100 	.align	2
+                         101 ..gh.f.f.1.e.1:
+                         102 	.type	..gh.f.f.1.e.1,@object
+                         103 	.size	..gh.f.f.1.e.1,0
+                         104 	.global	_FblLbtInitPowerOn
+                         105 _FblLbtInitPowerOn:
+                         106 --	    .bf
+                         107 .LDW31:
+00000026 320600000000*   108 	mov	rosdaoff23(_FblLogicalBlockTable),r18
+0000002c 84070f900000*   109 	st.w	r18,sdaoff23(_fblLbtActive)[gp]
+                         110 --	    .ef
+                         111 .LDW41:
+
+                                                                      Page 3
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+00000032 7f00            112 	jmp	[lp]
+                         113 	.type	_FblLbtInitPowerOn,@function
+                         114 	.size	_FblLbtInitPowerOn,.-_FblLbtInitPowerOn
+                         115 	.align	2
+                         116 .LDW51:
+                         117 
+                         118 	.section ".bss","awb"
+                         119 .L145:
+                         120 	.type	.L145,@object
+                         121 	.size	.L145,0
+                         122 	.section ".sbss","awb"
+                         123 	.align	4
+                         124 	.global	_fblLbtActive..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.
+                         125 _fblLbtActive..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.:
+00000000 00000000        126 _fblLbtActive:	.space	4
+                         127 	.type	_fblLbtActive..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,@object
+                         128 	.size	_fblLbtActive..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,4
+                         129 	.type	_fblLbtActive,@object
+                         130 	.size	_fblLbtActive,4
+                         131 	.global	_fblLbtBlockIteratorFilter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.
+                         132 _fblLbtBlockIteratorFilter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.:
+00000004 0000            133 _fblLbtBlockIteratorFilter:	.space	2
+                         134 	.type	_fblLbtBlockIteratorFilter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,@object
+                         135 	.size	_fblLbtBlockIteratorFilter..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,2
+                         136 	.type	_fblLbtBlockIteratorFilter,@object
+                         137 	.size	_fblLbtBlockIteratorFilter,2
+                         138 	.global	_fblLbtBlockIteratorNr..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.
+                         139 _fblLbtBlockIteratorNr..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.:
+00000006 00              140 _fblLbtBlockIteratorNr:	.space	1
+                         141 	.type	_fblLbtBlockIteratorNr..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,@object
+                         142 	.size	_fblLbtBlockIteratorNr..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,1
+                         143 	.type	_fblLbtBlockIteratorNr,@object
+                         144 	.size	_fblLbtBlockIteratorNr,1
+                         145 	.global	_fblLbtBlockIteratorDone..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.
+                         146 _fblLbtBlockIteratorDone..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.:
+00000007 00              147 _fblLbtBlockIteratorDone:	.space	1
+                         148 	.type	_fblLbtBlockIteratorDone..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,@object
+                         149 	.size	_fblLbtBlockIteratorDone..C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.,1
+                         150 	.type	_fblLbtBlockIteratorDone,@object
+                         151 	.size	_fblLbtBlockIteratorDone,1
+                         152 	.data
+                         153 	.text
+                         154 	.align	2
+                         155 	.align	2
+                         156 ..gh.f.f.1.e.2:
+                         157 	.type	..gh.f.f.1.e.2,@object
+                         158 	.size	..gh.f.f.1.e.2,0
+                         159 	.global	_FblLbtBlockFilterInit
+                         160 _FblLbtBlockFilterInit:
+00000034 06f0            161 	mov	r6,ep
+                         162 --	    .bf
+                         163 .LDW61:
+00000036 8103            164 	sst.b	zero,1[ep]
+                         165 --	    .ef
+                         166 .LDW71:
+00000038 7f00            167 	jmp	[lp]
+                         168 	.type	_FblLbtBlockFilterInit,@function
+                         169 	.size	_FblLbtBlockFilterInit,.-_FblLbtBlockFilterInit
+                         170 	.align	2
+                         171 .LDW81:
+                         172 
+
+                                                                      Page 4
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         173 --_blockFilter	ep	param
+                         174 
+                         175 	.section ".bss","awb"
+                         176 .L193:
+                         177 	.type	.L193,@object
+                         178 	.size	.L193,0
+                         179 	.data
+                         180 	.text
+                         181 	.align	2
+                         182 	.align	2
+                         183 ..gh.f.f.1.e.3:
+                         184 	.type	..gh.f.f.1.e.3,@object
+                         185 	.size	..gh.f.f.1.e.3,0
+                         186 	.global	_FblLbtBlockFilterSetMandatoryType
+                         187 _FblLbtBlockFilterSetMandatoryType:
+0000003a 06f0            188 	mov	r6,ep
+                         189 --	    .bf
+                         190 .LDW91:
+0000003c 0132            191 	mov	1,r6
+0000003e 803b            192 	sst.b	r7,0[ep]
+00000040 8133            193 	sst.b	r6,1[ep]
+                         194 --	    .ef
+                         195 .LDW02:
+00000042 7f00            196 	jmp	[lp]
+                         197 	.type	_FblLbtBlockFilterSetMandatoryType,@function
+                         198 	.size	_FblLbtBlockFilterSetMandatoryType,.-_FblLbtBlockFilterSetMandatoryType
+                         199 	.align	2
+                         200 .LDW12:
+                         201 
+                         202 --_blockFilter	ep	param
+                         203 --_mandatoryType	r7	param
+                         204 
+                         205 	.section ".bss","awb"
+                         206 .L241:
+                         207 	.type	.L241,@object
+                         208 	.size	.L241,0
+                         209 	.data
+                         210 	.text
+                         211 	.align	2
+                         212 	.align	2
+                         213 ..gh.f.f.1.e.4:
+                         214 	.type	..gh.f.f.1.e.4,@object
+                         215 	.size	..gh.f.f.1.e.4,0
+                         216 	.global	_FblLbtBlockNext
+                         217 _FblLbtBlockNext:
+00000044 92077b000000*   218 	prepare	{r29,r31},9,rosdaoff23(_FblLogicalBlockTable+8)
+0000004a 0000*
+0000004c 06e8            219 	mov	r6,r29
+                         220 --	    .bf
+                         221 .LDW22:
+0000004e 0388            222 	mov	sp,r17
+00000050 1e4e2000        223 	addi	32,ep,r9
+                         224 .L347:
+00000054 be0709300000    225 	ld.dw	0[ep],r6
+0000005a 48f2            226 	add	8,ep
+0000005c b1070f300000    227 	st.dw	r6,0[r17]
+00000062 488a            228 	add	8,r17
+00000064 fe49            229 	cmp	ep,r9
+00000066 faf5*           230 	bne	.L347
+00000068 009d            231 	sld.w	0[ep],r19
+                         232 --line236
+
+                                                                      Page 5
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         233 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.5::
+                         234 .LDWlin5:
+0000006a 0052            235 	mov	0,r10
+0000006c 719f0100        236 	st.w	r19,0[r17]
+00000070 a525*           237 	br	.L261
+                         238 .L263:
+                         239 --line239
+                         240 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.6::
+                         241 .LDWlin6:
+00000072 f28e2400        242 	mulhi	36,r18,r17
+00000076 48f2            243 	add	8,ep
+00000078 0380            244 	mov	sp,r16
+0000007a d1f1            245 	add	r17,ep
+0000007c 1e7e2000        246 	addi	32,ep,r15
+                         247 .L349:
+00000080 be0709600000    248 	ld.dw	0[ep],r12
+00000086 48f2            249 	add	8,ep
+00000088 b0070f600000    250 	st.dw	r12,0[r16]
+0000008e 4882            251 	add	8,r16
+00000090 fe79            252 	cmp	ep,r15
+00000092 faf5*           253 	bne	.L349
+00000094 005d            254 	sld.w	0[ep],r11
+                         255 --line241
+                         256 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.7::
+                         257 .LDWlin7:
+00000096 12560100        258 	addi	1,r18,r10
+0000009a 260600000000*   259 	mov	sdaoff23(_fblLbtBlockIteratorFilter),r6
+000000a0 0338            260 	mov	sp,r7
+000000a2 705f0100        261 	st.w	r11,0[r16]
+000000a6 84070d500000*   262 	st.b	r10,sdaoff23(_fblLbtBlockIteratorNr)[gp]
+                         263 	jarl	_FblLbtBlockFilterHit,lp
+                         263 <EXPANSION BEGIN>
+                         263 jarl22 _FblLbtBlockFilterHit , lp 
+000000ac bfff54ff*       263 <EXPANSION END>
+                         264 --line244
+                         265 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.8::
+                         266 .LDWlin8:
+000000b0 6152            267 	cmp	1,r10
+000000b2 8215*           268 	be	.L268
+                         269 .L261:
+                         270 --line238
+                         271 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.9::
+                         272 .LDWlin9:
+000000b4 840709f00000*   273 	ld.w	sdaoff23(_fblLbtActive)[gp],ep
+000000ba a40705900000*   274 	ld.bu	sdaoff23(_fblLbtBlockIteratorNr)[gp],r18
+000000c0 6548            275 	sld.bu	5[ep],r9
+000000c2 e991            276 	cmp	r9,r18
+000000c4 f1d5*           277 	bl	.L263
+                         278 --line250
+                         279 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.10::
+                         280 .LDWlin10:
+000000c6 e051            281 	cmp	zero,r10
+000000c8 da05*           282 	bne	.L268
+                         283 --line251
+                         284 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.11::
+                         285 .LDWlin11:
+000000ca 0142            286 	mov	1,r8
+000000cc 84070d400000*   287 	st.b	r8,sdaoff23(_fblLbtBlockIteratorDone)[gp]
+                         288 .L268:
+000000d2 03f0            289 	mov	sp,ep
+000000d4 1d30            290 	mov	r29,r6
+
+                                                                      Page 6
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+000000d6 033e2000        291 	addi	32,sp,r7
+                         292 .L351:
+000000da be0709900000    293 	ld.dw	0[ep],r18
+000000e0 48f2            294 	add	8,ep
+000000e2 a6070f900000    295 	st.dw	r18,0[r6]
+000000e8 4832            296 	add	8,r6
+000000ea fe39            297 	cmp	ep,r7
+000000ec faf5*           298 	bne	.L351
+000000ee 008d            299 	sld.w	0[ep],r17
+000000f0 668f0100        300 	st.w	r17,0[r6]
+                         301 --	    .ef
+                         302 .LDW32:
+                         303 --line251
+                         304 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.12::
+                         305 .LDWlin12:
+000000f4 52067f00        306 	dispose	9,{r29,r31},[lp]
+                         307 	.type	_FblLbtBlockNext,@function
+                         308 	.size	_FblLbtBlockNext,.-_FblLbtBlockNext
+                         309 	.align	2
+                         310 .LDW42:
+                         311 --_blockDescriptor	0[sp]	local
+                         312 --_filterResult	r10	local
+                         313 
+                         314 --LRETURN..	r29	param
+                         315 
+                         316 	.section ".bss","awb"
+                         317 .L346:
+                         318 	.type	.L346,@object
+                         319 	.size	.L346,0
+                         320 	.data
+                         321 	.text
+                         322 	.align	2
+                         323 	.align	2
+                         324 ..gh.f.f.1.e.5:
+                         325 	.type	..gh.f.f.1.e.5,@object
+                         326 	.size	..gh.f.f.1.e.5,0
+                         327 	.global	_FblLbtBlockFirst
+                         328 _FblLbtBlockFirst:
+000000f8 07f0            329 	mov	r7,ep
+                         330 --	    .bf
+                         331 .LDW52:
+000000fa 6098            332 	sld.bu	0[ep],r19
+000000fc 6188            333 	sld.bu	1[ep],r17
+000000fe 320600000000*   334 	mov	sdaoff23(_fblLbtBlockIteratorFilter),r18
+00000104 12f0            335 	mov	r18,ep
+00000106 84070d000000*   336 	st.b	zero,sdaoff23(_fblLbtBlockIteratorNr)[gp]
+0000010c 809b            337 	sst.b	r19,0[ep]
+0000010e 818b            338 	sst.b	r17,1[ep]
+00000110 84070d000000*   339 	st.b	zero,sdaoff23(_fblLbtBlockIteratorDone)[gp]
+00000116 bf072eff*       340 	jr	_FblLbtBlockNext
+                         341 --	    .ef
+                         342 .LDW62:
+                         343 	.type	_FblLbtBlockFirst,@function
+                         344 	.size	_FblLbtBlockFirst,.-_FblLbtBlockFirst
+                         345 	.align	2
+                         346 .LDW72:
+                         347 
+                         348 --LRETURN..	r6	param
+                         349 --_blockFilter	ep	param
+                         350 
+                         351 	.section ".bss","awb"
+
+                                                                      Page 7
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         352 .L497:
+                         353 	.type	.L497,@object
+                         354 	.size	.L497,0
+                         355 	.data
+                         356 	.text
+                         357 	.align	2
+                         358 	.align	2
+                         359 ..gh.f.f.1.e.6:
+                         360 	.type	..gh.f.f.1.e.6,@object
+                         361 	.size	..gh.f.f.1.e.6,0
+                         362 	.global	_FblLbtBlockDone
+                         363 _FblLbtBlockDone:
+                         364 --	    .bf
+                         365 .LDW82:
+0000011a a40705500000*   366 	ld.bu	sdaoff23(_fblLbtBlockIteratorDone)[gp],r10
+                         367 --	    .ef
+                         368 .LDW92:
+00000120 7f00            369 	jmp	[lp]
+                         370 	.type	_FblLbtBlockDone,@function
+                         371 	.size	_FblLbtBlockDone,.-_FblLbtBlockDone
+                         372 	.align	2
+                         373 .LDW03:
+                         374 
+                         375 	.section ".bss","awb"
+                         376 .L548:
+                         377 	.type	.L548,@object
+                         378 	.size	.L548,0
+                         379 	.data
+                         380 	.text
+                         381 	.align	2
+                         382 	.align	2
+                         383 ..gh.f.f.1.e.7:
+                         384 	.type	..gh.f.f.1.e.7,@object
+                         385 	.size	..gh.f.f.1.e.7,0
+                         386 	.global	_FblLbtGetBlockCount
+                         387 _FblLbtGetBlockCount:
+                         388 --	    .bf
+                         389 .LDW13:
+00000122 840709f00000*   390 	ld.w	sdaoff23(_fblLbtActive)[gp],ep
+00000128 6550            391 	sld.bu	5[ep],r10
+                         392 --	    .ef
+                         393 .LDW23:
+0000012a 7f00            394 	jmp	[lp]
+                         395 	.type	_FblLbtGetBlockCount,@function
+                         396 	.size	_FblLbtGetBlockCount,.-_FblLbtGetBlockCount
+                         397 	.align	2
+                         398 .LDW33:
+                         399 
+                         400 	.section ".bss","awb"
+                         401 .L596:
+                         402 	.type	.L596,@object
+                         403 	.size	.L596,0
+                         404 	.data
+                         405 	.text
+                         406 	.align	2
+                         407 	.align	2
+                         408 ..gh.f.f.1.e.8:
+                         409 	.type	..gh.f.f.1.e.8,@object
+                         410 	.size	..gh.f.f.1.e.8,0
+                         411 	.global	_FblLbtGetMagicFlag
+                         412 _FblLbtGetMagicFlag:
+
+                                                                      Page 8
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         413 --	    .bf
+                         414 .LDW43:
+0000012c 840709f00000*   415 	ld.w	sdaoff23(_fblLbtActive)[gp],ep
+00000132 0055            416 	sld.w	0[ep],r10
+                         417 --	    .ef
+                         418 .LDW53:
+00000134 7f00            419 	jmp	[lp]
+                         420 	.type	_FblLbtGetMagicFlag,@function
+                         421 	.size	_FblLbtGetMagicFlag,.-_FblLbtGetMagicFlag
+                         422 	.align	2
+                         423 .LDW63:
+                         424 
+                         425 	.section ".bss","awb"
+                         426 .L641:
+                         427 	.type	.L641,@object
+                         428 	.size	.L641,0
+                         429 	.data
+                         430 	.text
+                         431 	.align	2
+                         432 	.align	2
+                         433 ..gh.f.f.1.e.9:
+                         434 	.type	..gh.f.f.1.e.9,@object
+                         435 	.size	..gh.f.f.1.e.9,0
+                         436 	.global	_FblLbtCheckAddressRange
+                         437 _FblLbtCheckAddressRange:
+                         438 --	    .bf
+                         439 .LDW73:
+00000136 0152            440 	mov	1,r10
+00000138 e731            441 	cmp	r7,r6
+0000013a d105*           442 	bl	.L659
+0000013c a731            443 	sub	r7,r6
+0000013e e831            444 	cmp	r8,r6
+                         445 --line740
+                         446 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.13::
+                         447 .LDWlin13:
+00000140 e9570000        448 	setfnl	r10
+                         449 .L659:
+                         450 --	    .ef
+                         451 .LDW83:
+00000144 7f00            452 	jmp	[lp]
+                         453 	.type	_FblLbtCheckAddressRange,@function
+                         454 	.size	_FblLbtCheckAddressRange,.-_FblLbtCheckAddressRange
+                         455 	.align	2
+                         456 .LDW93:
+                         457 --_result	r10	local
+                         458 
+                         459 --_address	r6	param
+                         460 --_rangeStart	r7	param
+                         461 --_rangeLength	r8	param
+                         462 
+                         463 	.section ".bss","awb"
+                         464 .L710:
+                         465 	.type	.L710,@object
+                         466 	.size	.L710,0
+                         467 	.data
+                         468 	.text
+                         469 	.align	2
+                         470 	.align	2
+                         471 ..gh.f.f.1.e.10:
+                         472 	.type	..gh.f.f.1.e.10,@object
+                         473 	.size	..gh.f.f.1.e.10,0
+
+                                                                      Page 9
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         474 	.global	_FblLbtCheckRangeContained
+                         475 _FblLbtCheckRangeContained:
+00000146 8007e170        476 	prepare	{r25,r26,r27,r28,r29,r31},0
+0000014a 06e0            477 	mov	r6,r28
+0000014c 07d0            478 	mov	r7,r26
+0000014e 08c8            479 	mov	r8,r25
+00000150 09e8            480 	mov	r9,r29
+                         481 --	    .bf
+                         482 .LDW04:
+00000152 0838            483 	mov	r8,r7
+00000154 01da            484 	mov	1,r27
+00000156 0940            485 	mov	r9,r8
+                         486 	jarl	_FblLbtCheckAddressRange,lp
+                         486 <EXPANSION BEGIN>
+                         486 jarl22 _FblLbtCheckAddressRange , lp 
+00000158 bfffdeff*       486 <EXPANSION END>
+0000015c e051            487 	cmp	zero,r10
+0000015e 8a0d*           488 	bne	.L756
+00000160 e9d1            489 	cmp	r9,r26
+00000162 eb05*           490 	bh	.L756
+00000164 b9e1            491 	sub	r25,r28
+00000166 bae9            492 	sub	r26,r29
+00000168 fde1            493 	cmp	r29,r28
+                         494 --line754
+                         495 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.14::
+                         496 .LDWlin14:
+0000016a ebdf0000        497 	setfh	r27
+                         498 .L756:
+0000016e 1b50            499 	mov	r27,r10
+                         500 --	    .ef
+                         501 .LDW14:
+00000170 4006ff70        502 	dispose	0,{r25,r26,r27,r28,r29,r31},[lp]
+                         503 	.type	_FblLbtCheckRangeContained,@function
+                         504 	.size	_FblLbtCheckRangeContained,.-_FblLbtCheckRangeContained
+                         505 	.align	2
+                         506 .LDW24:
+                         507 --_result	r27	local
+                         508 
+                         509 --_address	r28	param
+                         510 --_length	r26	param
+                         511 --_rangeStart	r25	param
+                         512 --_rangeLength	r29	param
+                         513 
+                         514 	.section ".bss","awb"
+                         515 .L812:
+                         516 	.type	.L812,@object
+                         517 	.size	.L812,0
+                         518 	.data
+                         519 	.text
+                         520 	.align	2
+                         521 	.align	2
+                         522 ..gh.f.f.1.e.11:
+                         523 	.type	..gh.f.f.1.e.11,@object
+                         524 	.size	..gh.f.f.1.e.11,0
+                         525 	.global	_FblLbtGetBlockNrByAddressLength
+                         526 _FblLbtGetBlockNrByAddressLength:
+00000174 9407e130        527 	prepare	{r26,r27,r28,r29,r31},10
+00000178 06e0            528 	mov	r6,r28
+0000017a 07d8            529 	mov	r7,r27
+0000017c 08d0            530 	mov	r8,r26
+                         531 --	    .bf
+
+                                                                      Page 10
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         532 .LDW34:
+0000017e 01ea            533 	mov	1,r29
+00000180 23360200        534 	movea	2,sp,r6
+                         535 	jarl	_FblLbtBlockFilterInit,lp
+                         535 <EXPANSION BEGIN>
+                         535 jarl22 _FblLbtBlockFilterInit , lp 
+00000184 bfffb0fe*       535 <EXPANSION END>
+                         536 --line279
+                         537 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.15::
+                         538 .LDWlin15:
+00000188 4232            539 	add	2,r6
+0000018a 233e0200        540 	movea	2,sp,r7
+                         541 	jarl	_FblLbtBlockFirst,lp
+                         541 <EXPANSION BEGIN>
+                         541 jarl22 _FblLbtBlockFirst , lp 
+0000018e bfff6aff*       541 <EXPANSION END>
+                         542 --line279
+                         543 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.16::
+                         544 .LDWlin16:
+00000192 c515*           545 	br	.L867
+                         546 .L866:
+                         547 --line282
+                         548 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.17::
+                         549 .LDWlin17:
+00000194 03f0            550 	mov	sp,ep
+00000196 0445            551 	sld.w	8[ep],r8
+00000198 064d            552 	sld.w	12[ep],r9
+0000019a 1c30            553 	mov	r28,r6
+0000019c 1b38            554 	mov	r27,r7
+                         555 	jarl	_FblLbtCheckRangeContained,lp
+                         555 <EXPANSION BEGIN>
+                         555 jarl22 _FblLbtCheckRangeContained , lp 
+0000019e bfffa8ff*       555 <EXPANSION END>
+000001a2 0ae8            556 	mov	r10,r29
+                         557 --line285
+                         558 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.18::
+                         559 .LDWlin18:
+000001a4 e051            560 	cmp	zero,r10
+000001a6 ea05*           561 	bne	.L865
+                         562 --line287
+                         563 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.19::
+                         564 .LDWlin19:
+000001a8 83970500        565 	ld.bu	4[sp],r18
+000001ac 5a970000        566 	st.b	r18,0[r26]
+000001b0 950d*           567 	br	.L870
+                         568 .L865:
+                         569 --line279
+                         570 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.20::
+                         571 .LDWlin20:
+000001b2 23360400        572 	movea	4,sp,r6
+                         573 	jarl	_FblLbtBlockNext,lp
+                         573 <EXPANSION BEGIN>
+                         573 jarl22 _FblLbtBlockNext , lp 
+000001b6 bfff8efe*       573 <EXPANSION END>
+                         574 .L867:
+                         575 	jarl	_FblLbtBlockDone,lp
+                         575 <EXPANSION BEGIN>
+                         575 jarl22 _FblLbtBlockDone , lp 
+000001ba bfff60ff*       575 <EXPANSION END>
+000001be e051            576 	cmp	zero,r10
+000001c0 a2ed*           577 	be	.L866
+
+                                                                      Page 11
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         578 .L870:
+                         579 --line292
+                         580 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.21::
+                         581 .LDWlin21:
+000001c2 1d50            582 	mov	r29,r10
+                         583 --	    .ef
+                         584 .LDW44:
+000001c4 5406ff30        585 	dispose	10,{r26,r27,r28,r29,r31},[lp]
+                         586 	.type	_FblLbtGetBlockNrByAddressLength,@function
+                         587 	.size	_FblLbtGetBlockNrByAddressLength,.-_FblLbtGetBlockNrByAddressLength
+                         588 	.align	2
+                         589 .LDW54:
+                         590 --_result	r29	local
+                         591 --_localBlockDescriptor	4[sp]	local
+                         592 --_blockFilter	2[sp]	local
+                         593 
+                         594 --_address	r28	param
+                         595 --_length	r27	param
+                         596 --_blockNr	r26	param
+                         597 
+                         598 	.section ".bss","awb"
+                         599 .L930:
+                         600 	.type	.L930,@object
+                         601 	.size	.L930,0
+                         602 	.data
+                         603 	.text
+                         604 	.align	2
+                         605 	.align	2
+                         606 ..gh.f.f.1.e.12:
+                         607 	.type	..gh.f.f.1.e.12,@object
+                         608 	.size	..gh.f.f.1.e.12,0
+                         609 	.global	_FblLbtGetBlockDescriptorByNr
+                         610 _FblLbtGetBlockDescriptorByNr:
+000001c8 8600            611 	zxb	r6
+                         612 --	    .bf
+                         613 .LDW64:
+000001ca 840709f00000*   614 	ld.w	sdaoff23(_fblLbtActive)[gp],ep
+000001d0 6598            615 	sld.bu	5[ep],r19
+000001d2 f331            616 	cmp	r19,r6
+000001d4 e915*           617 	bnl	.L995
+                         618 --line302
+                         619 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.22::
+                         620 .LDWlin22:
+000001d6 e6962400        621 	mulhi	36,r6,r18
+000001da 48f2            622 	add	8,ep
+000001dc d2f1            623 	add	r18,ep
+000001de 1e8e2000        624 	addi	32,ep,r17
+                         625 .L1041:
+000001e2 be0709700000    626 	ld.dw	0[ep],r14
+000001e8 48f2            627 	add	8,ep
+000001ea a7070f700000    628 	st.dw	r14,0[r7]
+000001f0 483a            629 	add	8,r7
+000001f2 fe89            630 	cmp	ep,r17
+000001f4 faf5*           631 	bne	.L1041
+000001f6 006d            632 	sld.w	0[ep],r13
+                         633 --line303
+                         634 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.23::
+                         635 .LDWlin23:
+000001f8 0052            636 	mov	0,r10
+000001fa 676f0100        637 	st.w	r13,0[r7]
+000001fe 7f00            638 	jmp	[lp]
+
+                                                                      Page 12
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         639 .L995:
+00000200 0152            640 	mov	1,r10
+                         641 --	    .ef
+                         642 .LDW74:
+                         643 --line306
+                         644 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.24::
+                         645 .LDWlin24:
+00000202 7f00            646 	jmp	[lp]
+                         647 	.type	_FblLbtGetBlockDescriptorByNr,@function
+                         648 	.size	_FblLbtGetBlockDescriptorByNr,.-_FblLbtGetBlockDescriptorByNr
+                         649 	.align	2
+                         650 .LDW84:
+                         651 --_result	r10	local
+                         652 
+                         653 --_blockNr	r6	param
+                         654 --_blockDescriptor	r7	param
+                         655 
+                         656 	.section ".bss","awb"
+                         657 .L1040:
+                         658 	.type	.L1040,@object
+                         659 	.size	.L1040,0
+                         660 	.data
+                         661 	.text
+                         662 	.align	2
+                         663 	.align	2
+                         664 ..gh.f.f.1.e.13:
+                         665 	.type	..gh.f.f.1.e.13,@object
+                         666 	.size	..gh.f.f.1.e.13,0
+                         667 	.global	_FblLbtGetBlockDescriptorByAddressLength
+                         668 _FblLbtGetBlockDescriptorByAddressLength:
+00000204 82076100        669 	prepare	{r29,r31},1
+00000208 08e8            670 	mov	r8,r29
+                         671 --	    .bf
+                         672 .LDW94:
+0000020a 23460300        673 	movea	3,sp,r8
+                         674 	jarl	_FblLbtGetBlockNrByAddressLength,lp
+                         674 <EXPANSION BEGIN>
+                         674 jarl22 _FblLbtGetBlockNrByAddressLength , lp 
+0000020e bfff66ff*       674 <EXPANSION END>
+                         675 --line316
+                         676 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.25::
+                         677 .LDWlin25:
+00000212 e051            678 	cmp	zero,r10
+00000214 8a0d*           679 	bne	.L1102
+                         680 --line317
+                         681 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.26::
+                         682 .LDWlin26:
+00000216 a3370300        683 	ld.bu	3[sp],r6
+0000021a 1d38            684 	mov	r29,r7
+                         685 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         685 <EXPANSION BEGIN>
+                         685 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+0000021c bfffacff*       685 <EXPANSION END>
+00000220 42067f00        686 	dispose	1,{r29,r31},[lp]
+                         687 .L1102:
+                         688 --	    .ef
+                         689 .LDW05:
+                         690 --line320
+                         691 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.27::
+                         692 .LDWlin27:
+00000224 42067f00        693 	dispose	1,{r29,r31},[lp]
+
+                                                                      Page 13
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         694 	.type	_FblLbtGetBlockDescriptorByAddressLength,@function
+                         695 	.size	_FblLbtGetBlockDescriptorByAddressLength,.-_FblLbtGetBlockDescriptorByAddressLength
+                         696 	.align	2
+                         697 .LDW15:
+                         698 --_result	r10	local
+                         699 --_localBlockNr	3[sp]	local
+                         700 
+                         701 --_address	r6	param
+                         702 --_length	r7	param
+                         703 --_blockDescriptor	r29	param
+                         704 
+                         705 	.section ".bss","awb"
+                         706 .L1152:
+                         707 	.type	.L1152,@object
+                         708 	.size	.L1152,0
+                         709 	.data
+                         710 	.text
+                         711 	.align	2
+                         712 	.align	2
+                         713 ..gh.f.f.1.e.14:
+                         714 	.type	..gh.f.f.1.e.14,@object
+                         715 	.size	..gh.f.f.1.e.14,0
+                         716 	.global	_FblLbtGetBlockBmHeaderAddressByNr
+                         717 _FblLbtGetBlockBmHeaderAddressByNr:
+00000228 9207e100        718 	prepare	{r28,r29,r31},9
+0000022c 8600            719 	zxb	r6
+0000022e 07e0            720 	mov	r7,r28
+                         721 --	    .bf
+                         722 .LDW25:
+00000230 01ea            723 	mov	1,r29
+00000232 63070d00        724 	st.w	zero,12[sp]
+00000236 0338            725 	mov	sp,r7
+                         726 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         726 <EXPANSION BEGIN>
+                         726 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+00000238 bfff90ff*       726 <EXPANSION END>
+0000023c e051            727 	cmp	zero,r10
+0000023e ea05*           728 	bne	.L1195
+                         729 --line421
+                         730 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.28::
+                         731 .LDWlin28:
+00000240 234f0d00        732 	ld.w	12[sp],r9
+00000244 0ae8            733 	mov	r10,r29
+00000246 7c4f0100        734 	st.w	r9,0[r28]
+                         735 .L1195:
+0000024a 1d50            736 	mov	r29,r10
+                         737 --	    .ef
+                         738 .LDW35:
+0000024c 5206ff00        739 	dispose	9,{r28,r29,r31},[lp]
+                         740 	.type	_FblLbtGetBlockBmHeaderAddressByNr,@function
+                         741 	.size	_FblLbtGetBlockBmHeaderAddressByNr,.-_FblLbtGetBlockBmHeaderAddressByNr
+                         742 	.align	2
+                         743 .LDW45:
+                         744 --_result	r29	local
+                         745 --_blockDescriptor	0[sp]	local
+                         746 
+                         747 --_blockNr	r6	param
+                         748 --_bmHeaderAddress	r28	param
+                         749 
+                         750 	.section ".bss","awb"
+                         751 .L1232:
+
+                                                                      Page 14
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         752 	.type	.L1232,@object
+                         753 	.size	.L1232,0
+                         754 	.data
+                         755 	.text
+                         756 	.align	2
+                         757 	.align	2
+                         758 ..gh.f.f.1.e.15:
+                         759 	.type	..gh.f.f.1.e.15,@object
+                         760 	.size	..gh.f.f.1.e.15,0
+                         761 	.global	_FblLbtGetBlockMaxProgAttemptsByNr
+                         762 _FblLbtGetBlockMaxProgAttemptsByNr:
+00000250 9207e100        763 	prepare	{r28,r29,r31},9
+00000254 8600            764 	zxb	r6
+00000256 07e0            765 	mov	r7,r28
+                         766 --	    .bf
+                         767 .LDW55:
+00000258 01ea            768 	mov	1,r29
+0000025a 63071000        769 	st.h	zero,16[sp]
+0000025e 0338            770 	mov	sp,r7
+                         771 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         771 <EXPANSION BEGIN>
+                         771 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+00000260 bfff68ff*       771 <EXPANSION END>
+00000264 e051            772 	cmp	zero,r10
+00000266 ea05*           773 	bne	.L1270
+                         774 --line441
+                         775 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.29::
+                         776 .LDWlin29:
+00000268 e34f1100        777 	ld.hu	16[sp],r9
+0000026c 0ae8            778 	mov	r10,r29
+0000026e 7c4f0000        779 	st.h	r9,0[r28]
+                         780 .L1270:
+00000272 1d50            781 	mov	r29,r10
+                         782 --	    .ef
+                         783 .LDW65:
+00000274 5206ff00        784 	dispose	9,{r28,r29,r31},[lp]
+                         785 	.type	_FblLbtGetBlockMaxProgAttemptsByNr,@function
+                         786 	.size	_FblLbtGetBlockMaxProgAttemptsByNr,.-_FblLbtGetBlockMaxProgAttemptsByNr
+                         787 	.align	2
+                         788 .LDW75:
+                         789 --_result	r29	local
+                         790 --_blockDescriptor	0[sp]	local
+                         791 
+                         792 --_blockNr	r6	param
+                         793 --_maxProgAttempts	r28	param
+                         794 
+                         795 	.section ".bss","awb"
+                         796 .L1312:
+                         797 	.type	.L1312,@object
+                         798 	.size	.L1312,0
+                         799 	.data
+                         800 	.text
+                         801 	.align	2
+                         802 	.align	2
+                         803 ..gh.f.f.1.e.16:
+                         804 	.type	..gh.f.f.1.e.16,@object
+                         805 	.size	..gh.f.f.1.e.16,0
+                         806 	.global	_FblLbtGetBlockVerifyInputFuncByNr
+                         807 _FblLbtGetBlockVerifyInputFuncByNr:
+00000278 9207e100        808 	prepare	{r28,r29,r31},9
+0000027c 8600            809 	zxb	r6
+
+                                                                      Page 15
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+0000027e 07e0            810 	mov	r7,r28
+                         811 --	    .bf
+                         812 .LDW85:
+00000280 01ea            813 	mov	1,r29
+00000282 63071500        814 	st.w	zero,20[sp]
+00000286 0338            815 	mov	sp,r7
+                         816 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         816 <EXPANSION BEGIN>
+                         816 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+00000288 bfff40ff*       816 <EXPANSION END>
+0000028c e051            817 	cmp	zero,r10
+0000028e ea05*           818 	bne	.L1350
+                         819 --line461
+                         820 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.30::
+                         821 .LDWlin30:
+00000290 234f1500        822 	ld.w	20[sp],r9
+00000294 0ae8            823 	mov	r10,r29
+00000296 7c4f0100        824 	st.w	r9,0[r28]
+                         825 .L1350:
+0000029a 1d50            826 	mov	r29,r10
+                         827 --	    .ef
+                         828 .LDW95:
+0000029c 5206ff00        829 	dispose	9,{r28,r29,r31},[lp]
+                         830 	.type	_FblLbtGetBlockVerifyInputFuncByNr,@function
+                         831 	.size	_FblLbtGetBlockVerifyInputFuncByNr,.-_FblLbtGetBlockVerifyInputFuncByNr
+                         832 	.align	2
+                         833 .LDW06:
+                         834 --_result	r29	local
+                         835 --_blockDescriptor	0[sp]	local
+                         836 
+                         837 --_blockNr	r6	param
+                         838 --_blockVerifyFunc	r28	param
+                         839 
+                         840 	.section ".bss","awb"
+                         841 .L1392:
+                         842 	.type	.L1392,@object
+                         843 	.size	.L1392,0
+                         844 	.data
+                         845 	.text
+                         846 	.align	2
+                         847 	.align	2
+                         848 ..gh.f.f.1.e.17:
+                         849 	.type	..gh.f.f.1.e.17,@object
+                         850 	.size	..gh.f.f.1.e.17,0
+                         851 	.global	_FblLbtGetBlockVerifyProcessedFuncByNr
+                         852 _FblLbtGetBlockVerifyProcessedFuncByNr:
+000002a0 9207e100        853 	prepare	{r28,r29,r31},9
+000002a4 8600            854 	zxb	r6
+000002a6 07e0            855 	mov	r7,r28
+                         856 --	    .bf
+                         857 .LDW16:
+000002a8 01ea            858 	mov	1,r29
+000002aa 63071900        859 	st.w	zero,24[sp]
+000002ae 0338            860 	mov	sp,r7
+                         861 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         861 <EXPANSION BEGIN>
+                         861 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+000002b0 bfff18ff*       861 <EXPANSION END>
+000002b4 e051            862 	cmp	zero,r10
+000002b6 ea05*           863 	bne	.L1430
+                         864 --line481
+
+                                                                      Page 16
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         865 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.31::
+                         866 .LDWlin31:
+000002b8 234f1900        867 	ld.w	24[sp],r9
+000002bc 0ae8            868 	mov	r10,r29
+000002be 7c4f0100        869 	st.w	r9,0[r28]
+                         870 .L1430:
+000002c2 1d50            871 	mov	r29,r10
+                         872 --	    .ef
+                         873 .LDW26:
+000002c4 5206ff00        874 	dispose	9,{r28,r29,r31},[lp]
+                         875 	.type	_FblLbtGetBlockVerifyProcessedFuncByNr,@function
+                         876 	.size	_FblLbtGetBlockVerifyProcessedFuncByNr,.-_FblLbtGetBlockVerifyProcessedFuncByNr
+                         877 	.align	2
+                         878 .LDW36:
+                         879 --_result	r29	local
+                         880 --_blockDescriptor	0[sp]	local
+                         881 
+                         882 --_blockNr	r6	param
+                         883 --_blockVerifyFunc	r28	param
+                         884 
+                         885 	.section ".bss","awb"
+                         886 .L1472:
+                         887 	.type	.L1472,@object
+                         888 	.size	.L1472,0
+                         889 	.data
+                         890 	.text
+                         891 	.align	2
+                         892 	.align	2
+                         893 ..gh.f.f.1.e.18:
+                         894 	.type	..gh.f.f.1.e.18,@object
+                         895 	.size	..gh.f.f.1.e.18,0
+                         896 	.global	_FblLbtGetBlockVerifyPipelinedFuncByNr
+                         897 _FblLbtGetBlockVerifyPipelinedFuncByNr:
+000002c8 9207e100        898 	prepare	{r28,r29,r31},9
+000002cc 8600            899 	zxb	r6
+000002ce 07e0            900 	mov	r7,r28
+                         901 --	    .bf
+                         902 .LDW46:
+000002d0 01ea            903 	mov	1,r29
+000002d2 63071d00        904 	st.w	zero,28[sp]
+000002d6 0338            905 	mov	sp,r7
+                         906 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         906 <EXPANSION BEGIN>
+                         906 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+000002d8 bffff0fe*       906 <EXPANSION END>
+000002dc e051            907 	cmp	zero,r10
+000002de ea05*           908 	bne	.L1510
+                         909 --line501
+                         910 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.32::
+                         911 .LDWlin32:
+000002e0 234f1d00        912 	ld.w	28[sp],r9
+000002e4 0ae8            913 	mov	r10,r29
+000002e6 7c4f0100        914 	st.w	r9,0[r28]
+                         915 .L1510:
+000002ea 1d50            916 	mov	r29,r10
+                         917 --	    .ef
+                         918 .LDW56:
+000002ec 5206ff00        919 	dispose	9,{r28,r29,r31},[lp]
+                         920 	.type	_FblLbtGetBlockVerifyPipelinedFuncByNr,@function
+                         921 	.size	_FblLbtGetBlockVerifyPipelinedFuncByNr,.-_FblLbtGetBlockVerifyPipelinedFuncByNr
+                         922 	.align	2
+
+                                                                      Page 17
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         923 .LDW66:
+                         924 --_result	r29	local
+                         925 --_blockDescriptor	0[sp]	local
+                         926 
+                         927 --_blockNr	r6	param
+                         928 --_blockVerifyFunc	r28	param
+                         929 
+                         930 	.section ".bss","awb"
+                         931 .L1552:
+                         932 	.type	.L1552,@object
+                         933 	.size	.L1552,0
+                         934 	.data
+                         935 	.text
+                         936 	.align	2
+                         937 	.align	2
+                         938 ..gh.f.f.1.e.19:
+                         939 	.type	..gh.f.f.1.e.19,@object
+                         940 	.size	..gh.f.f.1.e.19,0
+                         941 	.global	_FblLbtGetBlockVerifyOutputFuncByNr
+                         942 _FblLbtGetBlockVerifyOutputFuncByNr:
+000002f0 9207e100        943 	prepare	{r28,r29,r31},9
+000002f4 8600            944 	zxb	r6
+000002f6 07e0            945 	mov	r7,r28
+                         946 --	    .bf
+                         947 .LDW76:
+000002f8 01ea            948 	mov	1,r29
+000002fa 63072100        949 	st.w	zero,32[sp]
+000002fe 0338            950 	mov	sp,r7
+                         951 	jarl	_FblLbtGetBlockDescriptorByNr,lp
+                         951 <EXPANSION BEGIN>
+                         951 jarl22 _FblLbtGetBlockDescriptorByNr , lp 
+00000300 bfffc8fe*       951 <EXPANSION END>
+00000304 e051            952 	cmp	zero,r10
+00000306 ea05*           953 	bne	.L1590
+                         954 --line521
+                         955 ..lin.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access.33::
+                         956 .LDWlin33:
+00000308 234f2100        957 	ld.w	32[sp],r9
+0000030c 0ae8            958 	mov	r10,r29
+0000030e 7c4f0100        959 	st.w	r9,0[r28]
+                         960 .L1590:
+00000312 1d50            961 	mov	r29,r10
+                         962 --	    .ef
+                         963 .LDW86:
+00000314 5206ff00        964 	dispose	9,{r28,r29,r31},[lp]
+                         965 	.type	_FblLbtGetBlockVerifyOutputFuncByNr,@function
+                         966 	.size	_FblLbtGetBlockVerifyOutputFuncByNr,.-_FblLbtGetBlockVerifyOutputFuncByNr
+                         967 	.align	2
+                         968 .LDW96:
+                         969 --_result	r29	local
+                         970 --_blockDescriptor	0[sp]	local
+                         971 
+                         972 --_blockNr	r6	param
+                         973 --_blockVerifyFunc	r28	param
+                         974 
+                         975 	.section ".bss","awb"
+                         976 .L1632:
+                         977 	.type	.L1632,@object
+                         978 	.size	.L1632,0
+                         979 	.data
+                         980 	.text
+
+                                                                      Page 18
+                                                              C:\Users\nhuliyap\AppData\Local\Temp\gh_0000ds41.s
+                         981 	.align	2
+                         982 	.align	2
+                         983 ..gh.f.f.1.e.20:
+                         984 	.type	..gh.f.f.1.e.20,@object
+                         985 	.size	..gh.f.f.1.e.20,0
+                         986 	.global	_FblLbtActivateLbtBlockByAddress
+                         987 _FblLbtActivateLbtBlockByAddress:
+                         988 --	    .bf
+                         989 .LDW07:
+00000318 84070f300000*   990 	st.w	r6,sdaoff23(_fblLbtActive)[gp]
+                         991 --	    .ef
+                         992 .LDW17:
+0000031e 7f00            993 	jmp	[lp]
+                         994 	.type	_FblLbtActivateLbtBlockByAddress,@function
+                         995 	.size	_FblLbtActivateLbtBlockByAddress,.-_FblLbtActivateLbtBlockByAddress
+                         996 	.align	2
+                         997 .LDW27:
+                         998 
+                         999 --_address	r6	param
+                        1000 
+                        1001 	.section ".bss","awb"
+                        1002 .L1697:
+                        1003 	.type	.L1697,@object
+                        1004 	.size	.L1697,0
+                        1005 	.data
+                        1006 	.text
+                        1007 	.align	2
+                        1008 --_FblLogicalBlockTable	rosdaoff23(_FblLogicalBlockTable)	import
+                        1009 --_fblLbtBlockIteratorNr	sdaoff23(_fblLbtBlockIteratorNr)	static
+                        1010 --_fblLbtBlockIteratorFilter	sdaoff23(_fblLbtBlockIteratorFilter)	static
+                        1011 --_fblLbtBlockIteratorDone	sdaoff23(_fblLbtBlockIteratorDone)	static
+                        1012 --_fblLbtActive	sdaoff23(_fblLbtActive)	static
+                        1013 
+                        1014 	.data
+                        1015 	.ghsnote version,17
+                        1016 	.ghsnote tools,3
+                        1017 	.ghsnote options,144
+                        1018 	.text
+                        1019 	.align	2
+                        1020 ..eof.C.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake.5Cobj.5Cfbl_lbt_access...43.3A.5C_ECU2.5CECU_Rivian_A1.5CTarget.5Crepo_projects.5CpFOTA.5CcL_R2023.2E09.2E01.5Cmake..64F8647A..0::
+                        1021 .rh850_flags REGMODE32,DATA_ALIGN8,GP_FIX,EP_NONFIX,TP_FIX,REG2_RESERVE,G3K,SDA_EXTRA_REGS_0
