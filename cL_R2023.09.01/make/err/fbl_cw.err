@@ -1,6 +1,0 @@
-
-"../source/SwcServiceStartUp/fbl_cw.c", line 240: warning #550-D: variable
-          "rxBuffer" was set but never used
-  V_MEMRAM0 static V_MEMRAM1 vuint8 V_MEMRAM2 * rxBuffer[kFblCwNumberOfRequests];
-                                                ^
-
