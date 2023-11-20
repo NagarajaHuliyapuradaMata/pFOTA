@@ -1,8 +1,5 @@
 #define CRYIF_CFG_SOURCE
 
-/*
-+ INCLUDES
-*/
 #include "CfgEcuabCryIf.hpp"
 #include "EcuabCryIf.hpp"
 #include "McalCry.hpp"
