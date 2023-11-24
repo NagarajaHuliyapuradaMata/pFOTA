@@ -19,7 +19,7 @@ add_definitions(
 )
 
 add_executable(
-   pFOTA_R2024
+   ${PROJECT_NAME}
 
    ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgSwcServiceStartUp.c
    ${PROJECT_SOURCE_DIR}/source/ProjectCfg/CfgMcalFls.c
@@ -34,7 +34,7 @@ add_executable(
 )
 
 target_include_directories(
-   pFOTA_R2024 PUBLIC
+   ${PROJECT_NAME} PUBLIC
    "${PROJECT_SOURCE_DIR}/source/common"
    "${PROJECT_SOURCE_DIR}/source/ProjectCompiler"
    "${PROJECT_SOURCE_DIR}/source/ProjectCfg"
