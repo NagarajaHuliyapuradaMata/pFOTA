@@ -52,8 +52,8 @@
 #define ECUABFEE_CFG_MAJOR_VERSION    (2u)
 #define ECUABFEE_CFG_MINOR_VERSION    (0u)
 
-#define ECUABFEE_DEV_ERROR_DETECT	(STD_OFF)
-#define ECUABFEE_DEV_ERROR_REPORT	(STD_OFF)
+#define ECUABFEE_DEV_ERROR_DETECT   (STD_OFF)
+#define ECUABFEE_DEV_ERROR_REPORT   (STD_OFF)
 
 #define ECUABFEE_VERSION_INFO_API STD_OFF
 
@@ -97,13 +97,13 @@ typedef P2FUNC(MemIf_StatusType, ECUABFEE_PRIVATE_CODE, EcuabFee_GetStatusPtrTyp
 typedef P2FUNC(MemIf_JobResultType, ECUABFEE_PRIVATE_CODE, EcuabFee_GetJobResultPtrType)(void);
 
 typedef struct{
-	EcuabFee_ReadPtrType Read;
-	EcuabFee_WritePtrType Write;
-	EcuabFee_ComparePtrType Compare;
-	EcuabFee_ErasePtrType Erase;
-	EcuabFee_BlankCheckPtrType BlankCheck;
-	EcuabFee_GetStatusPtrType GetStatus;
-	EcuabFee_GetJobResultPtrType GetJobResult;
+   EcuabFee_ReadPtrType Read;
+   EcuabFee_WritePtrType Write;
+   EcuabFee_ComparePtrType Compare;
+   EcuabFee_ErasePtrType Erase;
+   EcuabFee_BlankCheckPtrType BlankCheck;
+   EcuabFee_GetStatusPtrType GetStatus;
+   EcuabFee_GetJobResultPtrType GetJobResult;
 }EcuabFee_FlsApiType;
 
 typedef P2CONST(EcuabFee_FlsApiType, AUTOMATIC, ECUABFEE_APPL_DATA) EcuabFee_FlsApiPtrType;
@@ -141,7 +141,7 @@ extern CONST(uint8, ECUABFEE_PRIVATE_CONST) EcuabFee_DatasetSelectionBits;
 #include "MemMap.hpp"
 
 #define ECUABFEE_START_SEC_CONST_UNSPECIFIED
-#include "MemMap.hpp"	
+#include "MemMap.hpp"
 
 extern CONST(EcuabFee_PartitionConfigType, ECUABFEE_PRIVATE_CONST) EcuabFee_PartitionConfigList[ECUABFEE_NUMBER_OF_PARTITIONS];
 extern CONST(EcuabFee_BlockConfigType, ECUABFEE_PRIVATE_CONST) EcuabFee_BlockConfigList[ECUABFEE_NUMBER_OF_BLOCKS];
@@ -151,7 +151,7 @@ extern CONST(EcuabFee_CbkJobEndNotificationType, ECUABFEE_PRIVATE_CONST) EcuabFe
 extern CONST(EcuabFee_CbkJobErrorNotificationType, ECUABFEE_PRIVATE_CONST) EcuabFee_CbkJobErrorNotification;
 
 #define ECUABFEE_STOP_SEC_CONST_UNSPECIFIED
-#include "MemMap.hpp"	
+#include "MemMap.hpp"
 
 #endif
 

@@ -109,12 +109,12 @@
 
 #define V_ENABLE_USE_DUMMY_STATEMENT
 
-#define kFblDiagSubRequestSeed	0x01		
-#define kFblDiagSubSendKey		0x02		
+#define kFblDiagSubRequestSeed   0x01
+#define kFblDiagSubSendKey      0x02
 
-#define kDiagRqlWriteDataByIdentifierFingerPrintParameter  23	
+#define kDiagRqlWriteDataByIdentifierFingerPrintParameter  23
 
-#define kFblMainStartMessageDelay	50u		
+#define kFblMainStartMessageDelay   50u
 
 #endif
 

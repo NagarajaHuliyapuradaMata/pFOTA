@@ -57,7 +57,7 @@ SecM_StatusType SecM_AEADEncrypt_Job(SecM_WordType jobId,  SecM_OperationModeTyp
 #if defined( SEC_ENABLE_JOB_AEADDECRYPT )
 SecM_StatusType SecM_AEADDecrypt_Job(SecM_WordType jobId, SecM_OperationModeType mode
    ,  SecM_ConstRamDataType ciphertextPtr, SecM_WordType ciphertextLength
-   ,  SecM_ConstRamDataType associatedDataPtr, SecM_WordType associatedDataLength 
+   ,  SecM_ConstRamDataType associatedDataPtr, SecM_WordType associatedDataLength
    ,  SecM_ConstRamDataType tagPtr, SecM_WordType tagLength
    ,  SecM_RamDataType plaintextPtr, SecM_RamWordType plaintextLengthPtr);
 #endif

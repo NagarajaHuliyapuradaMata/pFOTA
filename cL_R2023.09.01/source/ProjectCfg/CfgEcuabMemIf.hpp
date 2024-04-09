@@ -49,8 +49,8 @@
 #define MEMIF_POSTBUILD_VARIANT_SUPPORT STD_OFF
 #endif
 
-#define MEMIF_CFG_MAJOR_VERSION	(5u)
-#define MEMIF_CFG_MINOR_VERSION	(2u)
+#define MEMIF_CFG_MAJOR_VERSION   (5u)
+#define MEMIF_CFG_MINOR_VERSION   (2u)
 
 #define MEMIF_DEV_ERROR_DETECT       (STD_OFF)
 #define MEMIF_DEV_ERROR_REPORT       (STD_OFF)
@@ -71,18 +71,18 @@ typedef P2FUNC (MemIf_JobResultType, MEMIF_CODE, MemIf_ApiGetJobResultType)(void
 typedef P2FUNC (void, MEMIF_CODE, MemIf_ApiSetModeType)(MemIf_ModeType Mode);
 
 typedef struct{
-	MemIf_ApiReadType                   Read;
-	MemIf_ApiWriteType                  Write;
-	MemIf_ApiEraseImmediateBlockType    EraseImmediateBlock;
-	MemIf_ApiInvalidateBlockType        InvalidateBlock;
-	MemIf_ApiCancelType                 Cancel;
-	MemIf_ApiGetStatusType              GetStatus;
-	MemIf_ApiGetJobResultType           GetJobResult;
-	MemIf_ApiSetModeType                SetMode;
+   MemIf_ApiReadType                   Read;
+   MemIf_ApiWriteType                  Write;
+   MemIf_ApiEraseImmediateBlockType    EraseImmediateBlock;
+   MemIf_ApiInvalidateBlockType        InvalidateBlock;
+   MemIf_ApiCancelType                 Cancel;
+   MemIf_ApiGetStatusType              GetStatus;
+   MemIf_ApiGetJobResultType           GetJobResult;
+   MemIf_ApiSetModeType                SetMode;
 }MemIf_MemHwAApi_Type;
 
 #define MEMIF_START_SEC_CONST_8BIT
-#include "MemMap.hpp"	
+#include "MemMap.hpp"
 
 extern CONST(uint8, MEMIF_CONST) MemIf_NumberOfDevices;
 
@@ -95,7 +95,7 @@ extern CONST(uint8, MEMIF_CONST) MemIf_NumberOfDevices;
 extern CONST(MemIf_MemHwAApi_Type, MEMIF_CONST) MemIf_MemHwaApis[MEMIF_NUMBER_OF_DEVICES];
 
 #define MEMIF_STOP_SEC_CONST_32BIT
-#include "MemMap.hpp"	
+#include "MemMap.hpp"
 
 #endif
 

@@ -8,28 +8,28 @@
 
 #ifdef AUTOSAR_IMPLEMENTATION
 #if defined R_FDL_START_SEC_PUBLIC_CODE
-		#undef R_FDL_START_SEC_PUBLIC_CODE			
+      #undef R_FDL_START_SEC_PUBLIC_CODE
 #define FDL_START_SEC_PUBLIC_CODE
 #elif defined R_FDL_STOP_SEC_PUBLIC_CODE
-		#undef R_FDL_STOP_SEC_PUBLIC_CODE
+      #undef R_FDL_STOP_SEC_PUBLIC_CODE
 #define FDL_STOP_SEC_PUBLIC_CODE
 #elif defined R_FDL_START_SEC_CONST
-		#undef R_FDL_START_SEC_CONST
+      #undef R_FDL_START_SEC_CONST
 #define FDL_START_SEC_CONST_UNSPECIFIED
 #elif defined R_FDL_STOP_SEC_CONST
-		#undef R_FDL_STOP_SEC_CONST
+      #undef R_FDL_STOP_SEC_CONST
 #define FDL_STOP_SEC_CONST_UNSPECIFIED
 #elif defined R_FDL_START_SEC_VAR
-		#undef R_FDL_START_SEC_VAR
+      #undef R_FDL_START_SEC_VAR
 #define FDL_START_SEC_VAR_UNSPECIFIED
 #elif defined R_FDL_STOP_SEC_VAR
-		#undef R_FDL_STOP_SEC_VAR
+      #undef R_FDL_STOP_SEC_VAR
 #define FDL_STOP_SEC_VAR_UNSPECIFIED
 #else
 #error "r_fdl_mem_map.h: No valid section define found"
 #endif
 
-#include "MemMap.hpp"	
+#include "MemMap.hpp"
 #else
 
 #if defined R_FDL_START_SEC_PUBLIC_CODE

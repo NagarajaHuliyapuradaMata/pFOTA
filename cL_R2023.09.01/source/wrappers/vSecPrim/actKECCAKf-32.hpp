@@ -213,8 +213,7 @@ VSECPRIM_LOCAL_FUNC(void) KECCAKf(
   actL1trigger (watchdog);
 
   for(r = 0u; r < KECCAK_ROUNDS; r++){
-      for(x = 0u; x <= 8u; x += WORD_NUMBER_64BITWORD_UINT32)
-      {
+      for(x = 0u; x <= 8u; x += WORD_NUMBER_64BITWORD_UINT32){
         actKECCAKCpy64 (&(C [x]), &(info->state [x]));
 
         actKECCAKXor64(&(C [x]), &(info->state [x + (1u *SLICE_LENGTH_UINT32)]));
@@ -226,8 +225,7 @@ VSECPRIM_LOCAL_FUNC(void) KECCAKf(
         actKECCAKXor64(&(C [x]), &(info->state [x + (4u *SLICE_LENGTH_UINT32)]));
       }
 
-      for(x = 0u; x <= 8u; x += WORD_NUMBER_64BITWORD_UINT32)
-      {
+      for(x = 0u; x <= 8u; x += WORD_NUMBER_64BITWORD_UINT32){
         actKECCAKRotL64 (Dx, &(C [(x + 2u) % SLICE_LENGTH_UINT32]), 1u);
         actKECCAKXor64(Dx, &(C [(x + 8u) % SLICE_LENGTH_UINT32]));
 
@@ -239,8 +237,7 @@ VSECPRIM_LOCAL_FUNC(void) KECCAKf(
 
       actKECCAKfPermutationRhoPi(info, Dx);
 
-      for(y = 0u; y <= (4u *SLICE_LENGTH_UINT32); y += SLICE_LENGTH_UINT32)
-      {
+      for(y = 0u; y <= (4u *SLICE_LENGTH_UINT32); y += SLICE_LENGTH_UINT32){
         for(x = 0u; x <= 8u; x += WORD_NUMBER_64BITWORD_UINT32)
         {
           actKECCAKCpy64(&(C[x]), &(info->state[y + x]));

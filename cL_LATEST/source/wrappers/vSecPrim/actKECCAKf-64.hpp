@@ -133,8 +133,7 @@ VSECPRIM_LOCAL_FUNC(void) KECCAKf(
     for(x = 0u; x < SLICE_LENGTH; x++){
       Dx = C [(x + 4u) % SLICE_LENGTH] ^ actRotl64 (C [(x + 1u) % SLICE_LENGTH], 1u);
 
-      for(y = 0u; y <= (SLICE_LENGTH * (SLICE_LENGTH - 1u)); y += SLICE_LENGTH)
-      {
+      for(y = 0u; y <= (SLICE_LENGTH * (SLICE_LENGTH - 1u)); y += SLICE_LENGTH){
         info->state[y + x] ^= Dx;
       }
     }
@@ -153,13 +152,11 @@ VSECPRIM_LOCAL_FUNC(void) KECCAKf(
     info->state[dst] = Dx;
 
     for(y = 0u; y <= (SLICE_LENGTH * (SLICE_LENGTH - 1u)); y += SLICE_LENGTH){
-      for(x = 0u; x < SLICE_LENGTH; x++)
-      {
+      for(x = 0u; x < SLICE_LENGTH; x++){
         C[x] = info->state[y + x];
       }
 
-      for(x = 0u; x < SLICE_LENGTH; x++)
-      {
+      for(x = 0u; x < SLICE_LENGTH; x++){
         info->state[y + x] ^= (~C[(x + 1u) % SLICE_LENGTH]) & C[(x + 2u) % SLICE_LENGTH];
       }
     }
