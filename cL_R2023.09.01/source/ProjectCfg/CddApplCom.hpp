@@ -65,7 +65,7 @@ extern "C"
 #define MYCOM_BL_STATUS_MSG_SOADUL_COMIF_TXCONFIRMATION   STD_OFF
 #define MYCOM_BL_STATUS_MSG_SOADUL_COMTP_RX  STD_OFF
 #define MYCOM_BL_STATUS_MSG_SOADUL_COMTP_TX  STD_OFF
-#define MyCom_Bl_Status_MsgConf_CddPduRUpperLayerTxPdu_BootId_oP1951001_0_003_01_24_Rivian_A1_V_f6c6c016_Tx 0
+#define MyCom_Bl_Status_MsgConf_CddPduRUpperLayerTxPdu_BootId_oP1951001_0_003_01_24_RAJA_A1_V_f6c6c016_Tx 0
 
 #define MYCOM_BL_STATUS_MSG_START_SEC_CODE
 #include "MemMap.hpp"

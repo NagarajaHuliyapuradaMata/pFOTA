@@ -259,16 +259,16 @@
 
 #define kCanNumberOfPhysChannels             1u
 
-#define CanConf_CanController_CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3 0u
+#define CanConf_CanController_CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3 0u
 
-#define CanConf_CN_P1951001_0_003_01_24_Rivian_A1_V_244b719d_Tx 0u
-#define CanConf_CN_P1951001_0_003_01_24_Rivian_A1_V_79155c6f_Rx 1u
+#define CanConf_CN_P1951001_0_003_01_24_RAJA_A1_V_244b719d_Tx 0u
+#define CanConf_CN_P1951001_0_003_01_24_RAJA_A1_V_79155c6f_Rx 1u
 
-#define CanConf_ControllerBaudrateConfig_CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3_CanControllerBaudrateConfig 0u
+#define CanConf_ControllerBaudrateConfig_CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3_CanControllerBaudrateConfig 0u
 
 #define CanConf_MemorySection_RxBuffer 2u
 #define CanConf_MemorySection_RxFifo 1u
-#define CanConf_MemorySection_TxBuffer_CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3 0u
+#define CanConf_MemorySection_TxBuffer_CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3 0u
 
 #define kCanBaseAdr                          0xFFD00000uL
 #define kCanIntcRxFifoBaseAdr                0xFFFF901EuL

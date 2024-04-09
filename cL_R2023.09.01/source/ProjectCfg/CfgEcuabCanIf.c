@@ -45,7 +45,7 @@ CONST(Type_EcuabCanIf_FctConfirmationTx, CANIF_CONST) EcuabCanIf_ListFctConfirma
 
 CONST(Type_EcuabCanIf_PduTx, CANIF_CONST) EcuabCanIf_PduTx[2] = {
       {0x077Au, CanTpConf_CanTpTxFcNPdu_CanTpTxFcNPdu_307d0297                           , 0u, 8u, 0u, 1u}
-   ,  {0x057Au, PduRConf_PduRDestPdu_BootId_oP1951001_0_003_01_24_Rivian_A1_V_3098033a_Tx, 0u, 8u, 0u, 2u}
+   ,  {0x057Au, PduRConf_PduRDestPdu_BootId_oP1951001_0_003_01_24_RAJA_A1_V_3098033a_Tx, 0u, 8u, 0u, 2u}
 };
 
 CONST(Type_EcuabCanIf_IndexQueuePduTx, CANIF_CONST) EcuabCanIf_IndexQueuePduTx[2] = {

@@ -772,10 +772,10 @@ Global Symbols (sorted numerically)
  .text            00004840+000020 _PRODFLASH_GetVin
  .text            00004860+00003a _PRODFLASH_GetEcuProgramFingerprintApplication
  .text            0000489a+00003a _PRODFLASH_GetEcuProgramFingerprintBootloader
- .text            000048d4+000020 _PRODFLASH_GetRivianEcuSerialNumber
- .text            000048f4+000020 _PRODFLASH_GetRivianBoardSerialNumber
- .text            00004914+000020 _PRODFLASH_GetRivianEcuPartNumber
- .text            00004934+000020 _PRODFLASH_GetRivianBoardPartNumber
+ .text            000048d4+000020 _PRODFLASH_GetRAJAEcuSerialNumber
+ .text            000048f4+000020 _PRODFLASH_GetRAJABoardSerialNumber
+ .text            00004914+000020 _PRODFLASH_GetRAJAEcuPartNumber
+ .text            00004934+000020 _PRODFLASH_GetRAJABoardPartNumber
  .text            00004954+00000e _PRODFLASH_GetManufacturingSupportMode
  .text            00004962+000020 _PRODFLASH_GetApplicationSignature
  .text            00004982+00001c _PRODFLASH_GetGenealogyCrc32
@@ -787,10 +787,10 @@ Global Symbols (sorted numerically)
  .text            00004a00+00000e _PRODFLASH_GetEolCheckerByte
  .text            00004a0e+00000c _PRODFLASH_PutVin
  .text            00004a1a+000022 _PRODFLASH_PutFingerprintApp
- .text            00004a3c+00000e _PRODFLASH_PutRivianBoardPartnumber
- .text            00004a4a+00000e _PRODFLASH_PutRivianBoardSerialnumber
- .text            00004a58+00000e _PRODFLASH_PutRivianEcuPartnumber
- .text            00004a66+00000e _PRODFLASH_PutRivianEcuSerialnumber
+ .text            00004a3c+00000e _PRODFLASH_PutRAJABoardPartnumber
+ .text            00004a4a+00000e _PRODFLASH_PutRAJABoardSerialnumber
+ .text            00004a58+00000e _PRODFLASH_PutRAJAEcuPartnumber
+ .text            00004a66+00000e _PRODFLASH_PutRAJAEcuSerialnumber
  .text            00004a74+00000c _PRODFLASH_PutManufacturingSupportMode
  .text            00004a80+00000c _PRODFLASH_PutAuxId
  .text            00004a8c+00000c _PRODFLASH_PutPcbaId
@@ -3416,10 +3416,10 @@ Global Symbols (sorted alphabetically)
  .text            00004954+00000e _PRODFLASH_GetManufacturingSupportMode
  .text            000049e4+00001c _PRODFLASH_GetModeId
  .text            000049ac+00000e _PRODFLASH_GetPcbaId
- .text            00004934+000020 _PRODFLASH_GetRivianBoardPartNumber
- .text            000048f4+000020 _PRODFLASH_GetRivianBoardSerialNumber
- .text            00004914+000020 _PRODFLASH_GetRivianEcuPartNumber
- .text            000048d4+000020 _PRODFLASH_GetRivianEcuSerialNumber
+ .text            00004934+000020 _PRODFLASH_GetRAJABoardPartNumber
+ .text            000048f4+000020 _PRODFLASH_GetRAJABoardSerialNumber
+ .text            00004914+000020 _PRODFLASH_GetRAJAEcuPartNumber
+ .text            000048d4+000020 _PRODFLASH_GetRAJAEcuSerialNumber
  .text            00004840+000020 _PRODFLASH_GetVin
  .text            00004abc+00000e _PRODFLASH_PutApplicationSignature
  .text            00004a80+00000c _PRODFLASH_PutAuxId
@@ -3431,10 +3431,10 @@ Global Symbols (sorted alphabetically)
  .text            00004a74+00000c _PRODFLASH_PutManufacturingSupportMode
  .text            00004aa4+00000c _PRODFLASH_PutModeId
  .text            00004a8c+00000c _PRODFLASH_PutPcbaId
- .text            00004a3c+00000e _PRODFLASH_PutRivianBoardPartnumber
- .text            00004a4a+00000e _PRODFLASH_PutRivianBoardSerialnumber
- .text            00004a58+00000e _PRODFLASH_PutRivianEcuPartnumber
- .text            00004a66+00000e _PRODFLASH_PutRivianEcuSerialnumber
+ .text            00004a3c+00000e _PRODFLASH_PutRAJABoardPartnumber
+ .text            00004a4a+00000e _PRODFLASH_PutRAJABoardSerialnumber
+ .text            00004a58+00000e _PRODFLASH_PutRAJAEcuPartnumber
+ .text            00004a66+00000e _PRODFLASH_PutRAJAEcuSerialnumber
  .text            00004a0e+00000c _PRODFLASH_PutVin
  .text            000046cc+00002c _PRODFLASH__EraseFlashBlock..C.3A.5C_ECU1.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CProductionFlashInterface.
  .text            000044e6+0001ae _PRODFLASH__GetAddressOfMember..C.3A.5C_ECU1.5Crepo_projects.5CpFOTA.5CcL_LATEST.5Cmake.5Cobj.5CProductionFlashInterface.
@@ -5796,14 +5796,14 @@ _PRODFLASH_GetModeId SUPPLIER1_CustomFunctions.o 004e9f
 _PRODFLASH_GetPcbaId SUPPLIER1_CustomFunctions.o 004ee7
                     fbl_apdi.o              007ccf
                     fbl_diag_oem.o          00a2a7
-_PRODFLASH_GetRivianBoardPartNumber fbl_apdi.o              007c89 007ce7
+_PRODFLASH_GetRAJABoardPartNumber fbl_apdi.o              007c89 007ce7
                     fbl_diag_oem.o          009fa5
-_PRODFLASH_GetRivianBoardSerialNumber fbl_apdi.o              007c75 007cef
+_PRODFLASH_GetRAJABoardSerialNumber fbl_apdi.o              007c75 007cef
                     fbl_diag_oem.o          00a051
-_PRODFLASH_GetRivianEcuPartNumber fbl_apdi.o              007c7f 007cf7
+_PRODFLASH_GetRAJAEcuPartNumber fbl_apdi.o              007c7f 007cf7
                     fbl_diag_oem.o          009ffb
                     version.o               00e41f
-_PRODFLASH_GetRivianEcuSerialNumber fbl_apdi.o              007bbb 007cff
+_PRODFLASH_GetRAJAEcuSerialNumber fbl_apdi.o              007bbb 007cff
                     fbl_diag_oem.o          00a0a7
 _PRODFLASH_GetVin   fbl_apdi.o              007d37
                     fbl_diag_oem.o          00a0fd
@@ -5823,14 +5823,14 @@ _PRODFLASH_PutManufacturingSupportMode SUPPLIER1_CustomFunctions.o 004d41
 _PRODFLASH_PutModeId SUPPLIER1_CustomFunctions.o 004e51
                     fbl_diag_oem.o          009c49
 _PRODFLASH_PutPcbaId fbl_diag_oem.o          009ca5
-_PRODFLASH_PutRivianBoardPartnumber SUPPLIER1_CustomFunctions.o 004bd3
+_PRODFLASH_PutRAJABoardPartnumber SUPPLIER1_CustomFunctions.o 004bd3
                     fbl_diag_oem.o          009c51
-_PRODFLASH_PutRivianBoardSerialnumber SUPPLIER1_CustomFunctions.o 004c2f
+_PRODFLASH_PutRAJABoardSerialnumber SUPPLIER1_CustomFunctions.o 004c2f
                     fbl_diag_oem.o          009c59
-_PRODFLASH_PutRivianEcuPartnumber SUPPLIER1_CustomFunctions.o 004c8b
+_PRODFLASH_PutRAJAEcuPartnumber SUPPLIER1_CustomFunctions.o 004c8b
                     fbl_diag_oem.o          009c61
                     version.o               00e45b
-_PRODFLASH_PutRivianEcuSerialnumber SUPPLIER1_CustomFunctions.o 004ce7
+_PRODFLASH_PutRAJAEcuSerialnumber SUPPLIER1_CustomFunctions.o 004ce7
                     fbl_diag_oem.o          009c69
 _PRODFLASH_PutVin   SUPPLIER1_CustomFunctions.o 004d9d
                     fbl_diag_oem.o          009c01

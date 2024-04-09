@@ -4,9 +4,9 @@
 #include "Platform_Types.hpp"
 #include "Types_SwcServiceCom.hpp"
 
-#define DcmConf_DcmDslProtocolRx_UDS_Rx_Functional_oP1951001_0_003_01_24_Rivian_A1_V_e1de61a7_Rx_00673789 0
-#define DcmConf_DcmDslProtocolRx_UDS_Rx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_3425a492_Rx_6829a205   1
-#define DcmConf_DcmDslProtocolTx_UDS_Tx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_4bb359b8_Tx_0ffb8362   0
+#define DcmConf_DcmDslProtocolRx_UDS_Rx_Functional_oP1951001_0_003_01_24_RAJA_A1_V_e1de61a7_Rx_00673789 0
+#define DcmConf_DcmDslProtocolRx_UDS_Rx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_3425a492_Rx_6829a205   1
+#define DcmConf_DcmDslProtocolTx_UDS_Tx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_4bb359b8_Tx_0ffb8362   0
 
 #define FBLCW_START_SEC_CODE
 #include "MemMap.hpp"

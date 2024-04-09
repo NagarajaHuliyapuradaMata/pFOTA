@@ -114,15 +114,15 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_TXBUFFER_HANDLINGTYPE_PRIOBYCANID                                                             1u
 #define CANIF_TXBUFFER_HANDLINGTYPE_FIFO                                                                    2u
 #define CANIF_TXBUFFER_HANDLINGTYPE_NONE                                                                    3u
-#define CanIfConf_CanIfCtrlCfg_CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3                         0u
-#define CanIfTxPduHnd_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_bbbad787_Tx              0u
-#define CanIfTxPduHnd_BootId_oP1951001_0_003_01_24_Rivian_A1_V_4c4265eb_Tx                          1u
-#define CanIfRxPduHnd_UDS_Rx_Functional_Tp_oP1951001_0_003_01_24_Rivian_A1_V_6536114b_Rx            0u
-#define CanIfRxPduHnd_UDS_Rx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_8c6ce0f5_Rx              1u
-#define CanIfConf_CanIfTxPduCfg_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_bbbad787_Tx    0u
-#define CanIfConf_CanIfTxPduCfg_BootId_oP1951001_0_003_01_24_Rivian_A1_V_4c4265eb_Tx                1u
-#define CanIfConf_CanIfRxPduCfg_UDS_Rx_Functional_Tp_oP1951001_0_003_01_24_Rivian_A1_V_6536114b_Rx  0u
-#define CanIfConf_CanIfRxPduCfg_UDS_Rx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_8c6ce0f5_Rx    1u
+#define CanIfConf_CanIfCtrlCfg_CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3                         0u
+#define CanIfTxPduHnd_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_bbbad787_Tx              0u
+#define CanIfTxPduHnd_BootId_oP1951001_0_003_01_24_RAJA_A1_V_4c4265eb_Tx                          1u
+#define CanIfRxPduHnd_UDS_Rx_Functional_Tp_oP1951001_0_003_01_24_RAJA_A1_V_6536114b_Rx            0u
+#define CanIfRxPduHnd_UDS_Rx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_8c6ce0f5_Rx              1u
+#define CanIfConf_CanIfTxPduCfg_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_bbbad787_Tx    0u
+#define CanIfConf_CanIfTxPduCfg_BootId_oP1951001_0_003_01_24_RAJA_A1_V_4c4265eb_Tx                1u
+#define CanIfConf_CanIfRxPduCfg_UDS_Rx_Functional_Tp_oP1951001_0_003_01_24_RAJA_A1_V_6536114b_Rx  0u
+#define CanIfConf_CanIfRxPduCfg_UDS_Rx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_8c6ce0f5_Rx    1u
 #define CanIfTxBufferType                    BYTE_QUEUE
 #define  EcuabCanIf_RxIndication(Hrh, CanId, CanDlc, CanSduPtr) EcuabCanIf_RxIndicationAsr403((Hrh), (CanId), (CanDlc), (CanSduPtr))
 #define CANIF_CFG_MAXRXDLC_PLUS_MAXMETADATA     0u
@@ -705,7 +705,7 @@ typedef struct sType_EcuabCanIf_IndexQueuePduTx{
 }Type_EcuabCanIf_IndexQueuePduTx;
 
 typedef struct EcuabCanIf_StatesCtrlStructSTag{
-  EcuabCanIf_StatesCtrlType CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3;
+  EcuabCanIf_StatesCtrlType CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3;
 }EcuabCanIf_StatesCtrlStructSType;
 
 typedef struct EcuabCanIf_BufferTxPrioByIdCanBaseStructSTag{
@@ -713,8 +713,8 @@ typedef struct EcuabCanIf_BufferTxPrioByIdCanBaseStructSTag{
 }EcuabCanIf_BufferTxPrioByIdCanBaseStructSType;
 
 typedef struct EcuabCanIf_QueueTxStructSTag{
-  CanIf_TxPrioByCanIdByteQueueType UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_bbbad787_Tx;
-  CanIf_TxPrioByCanIdByteQueueType BootId_oP1951001_0_003_01_24_Rivian_A1_V_4c4265eb_Tx;
+  CanIf_TxPrioByCanIdByteQueueType UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_bbbad787_Tx;
+  CanIf_TxPrioByCanIdByteQueueType BootId_oP1951001_0_003_01_24_RAJA_A1_V_4c4265eb_Tx;
 }EcuabCanIf_QueueTxStructSType;
 
 typedef union EcuabCanIf_StatesCtrlUTag{

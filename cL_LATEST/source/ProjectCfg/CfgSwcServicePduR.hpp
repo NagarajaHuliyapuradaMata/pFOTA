@@ -77,15 +77,15 @@
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_83bcc558                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_75211821                       0u
 
-#define PduRConf_PduRDestPdu_BootId_oP1951001_0_003_01_24_Rivian_A1_V_3098033a_Tx 0u
+#define PduRConf_PduRDestPdu_BootId_oP1951001_0_003_01_24_RAJA_A1_V_3098033a_Tx 0u
 
-#define PduRConf_PduRDestPdu_UDS_Rx_Functional_oP1951001_0_003_01_24_Rivian_A1_V_554b448d_Rx_985a394f_Rx 0u
-#define PduRConf_PduRDestPdu_UDS_Rx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_f138e866_Rx_096fbb61_Rx 1u
+#define PduRConf_PduRDestPdu_UDS_Rx_Functional_oP1951001_0_003_01_24_RAJA_A1_V_554b448d_Rx_985a394f_Rx 0u
+#define PduRConf_PduRDestPdu_UDS_Rx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_f138e866_Rx_096fbb61_Rx 1u
 
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_096fbb61                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_985a394f                       0u
 
-#define PduRConf_PduRDestPdu_UDS_Tx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_abd46ddc_Tx 0u
+#define PduRConf_PduRDestPdu_UDS_Tx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_abd46ddc_Tx 0u
 
 #endif
 

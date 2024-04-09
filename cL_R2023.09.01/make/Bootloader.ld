@@ -4,7 +4,7 @@ MEMORY {
   iBMHeader       : ORIGIN = 0x00000300, LENGTH = 0x60
   iFbl            : ORIGIN = 0x00000360, LENGTH = 0x20000-0x360-0x100-0x2800
   iFlashDrvRom    : ORIGIN = 0x0001D700, LENGTH = 0x2800   /* Flash driver im Rom */
-  iFblDescBlock   : ORIGIN = 0x0001FF00, LENGTH = 0x100    /* 256 bytes for Rivian Bootloader descriptor block */
+  iFblDescBlock   : ORIGIN = 0x0001FF00, LENGTH = 0x100    /* 256 bytes for RAJA Bootloader descriptor block */
   iApplBMHeaderHdr: ORIGIN = 0x00020000, LENGTH = 0x100
   iAppl           : ORIGIN = 0x00020100, LENGTH = 0x57B00  /* application 20100-77C00 */
   iPresencePat    : ORIGIN = 0x00077C00, LENGTH = 0x400    /* FBL writes Presence Patterns here */
@@ -61,7 +61,7 @@ SECTIONS {
   .romsdata              ROM(.sdata)      :>. /* init values for .sdata (copied to RAM at startup) */
   .romtdata              ROM(.tdata)      :>. /* init values for .tdata (copied to RAM at startup) */
   .roFlashDrvRom         align(4)         :>iFlashDrvRom   /* -RST- Flashdriver location */
-  .roFBL_METADATA        align(4)         :>iFblDescBlock  /* -RST- Rivian bootloader descriptor block */
+  .roFBL_METADATA        align(4)         :>iFblDescBlock  /* -RST- RAJA bootloader descriptor block */
 
   /********************************************************************************************************************/
   /* ROM AREA (iROM_1)*/                                                                                                

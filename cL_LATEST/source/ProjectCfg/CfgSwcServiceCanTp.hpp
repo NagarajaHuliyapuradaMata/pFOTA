@@ -407,11 +407,11 @@
 #define CANTP_EQ2_RXSDUCFGUSEDOFRXSDUSNV2HDL                                                        TRUE
 #define CANTP_EQ2_CANTYPEOFTXSDUCFG                                                                 CANTP_CAN20_CANTYPEOFTXSDUCFG
 #define CANTP_EQ2_CHANNELMODEOFTXSDUCFG                                                             CANTP_FULL_DUPLEX_CHANNELMODEOFTXSDUCFG
-#define CANTP_EQ2_LOLAYERTXPDUIDOFTXSDUCFG                                                          CanIfConf_CanIfTxPduCfg_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_bbbad787_Tx
+#define CANTP_EQ2_LOLAYERTXPDUIDOFTXSDUCFG                                                          CanIfConf_CanIfTxPduCfg_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_bbbad787_Tx
 #define CANTP_EQ2_NASOFTXSDUCFG                                                                     21u
 #define CANTP_EQ2_NBSOFTXSDUCFG                                                                     101u
 #define CANTP_EQ2_NCSOFTXSDUCFG                                                                     41u
-#define CANTP_EQ2_PDURTXSDUIDOFTXSDUCFG                                                             PduRConf_PduRDestPdu_UDS_Tx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_abd46ddc_Tx
+#define CANTP_EQ2_PDURTXSDUIDOFTXSDUCFG                                                             PduRConf_PduRDestPdu_UDS_Tx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_abd46ddc_Tx
 #define CANTP_EQ2_RXFCADDRESSOFTXSDUCFG                                                             255u
 #define CANTP_EQ2_RXFCPDUIDOFTXSDUCFG                                                               CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_1287d665
 #define CANTP_EQ2_RXSDUCFGIDXOFTXSDUCFG                                                             1u
@@ -528,11 +528,11 @@
 #define CanTp_GetSizeOfTxState()                                                                    CanTp_GetSizeOfTxStateOfPCConfig()
 #define CanTp_GetCanTypeOfTxSduCfg(Index)                                                           CANTP_CAN20_CANTYPEOFTXSDUCFG
 #define CanTp_GetChannelModeOfTxSduCfg(Index)                                                       CANTP_FULL_DUPLEX_CHANNELMODEOFTXSDUCFG
-#define CanTp_GetLoLayerTxPduIdOfTxSduCfg(Index)                                                    CanIfConf_CanIfTxPduCfg_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_Rivian_A1_V_bbbad787_Tx
+#define CanTp_GetLoLayerTxPduIdOfTxSduCfg(Index)                                                    CanIfConf_CanIfTxPduCfg_UDS_Tx_Physical_Tp_oP1951001_0_003_01_24_RAJA_A1_V_bbbad787_Tx
 #define CanTp_GetNAsOfTxSduCfg(Index)                                                               21u
 #define CanTp_GetNBsOfTxSduCfg(Index)                                                               101u
 #define CanTp_GetNCsOfTxSduCfg(Index)                                                               41u
-#define CanTp_GetPduRTxSduIdOfTxSduCfg(Index)                                                       PduRConf_PduRDestPdu_UDS_Tx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_abd46ddc_Tx
+#define CanTp_GetPduRTxSduIdOfTxSduCfg(Index)                                                       PduRConf_PduRDestPdu_UDS_Tx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_abd46ddc_Tx
 #define CanTp_GetRxFcAddressOfTxSduCfg(Index)                                                       255u
 #define CanTp_GetRxFcPduIdOfTxSduCfg(Index)                                                         CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_1287d665
 #define CanTp_GetRxSduCfgIdxOfTxSduCfg(Index)                                                       1u

@@ -64,10 +64,10 @@ CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[4] = {
 #include "MemMap.hpp"
 
 CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[4] = {
-  {                       CanIfConf_CanIfTxPduCfg_BootId_oP1951001_0_003_01_24_Rivian_A1_V_4c4265eb_Tx, PDUR_TX_DIRECTIONOFRMGDESTROM,       0u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           1u }
+  {                       CanIfConf_CanIfTxPduCfg_BootId_oP1951001_0_003_01_24_RAJA_A1_V_4c4265eb_Tx, PDUR_TX_DIRECTIONOFRMGDESTROM,       0u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           1u }
    ,  {                                                         CanTpConf_CanTpTxNSdu_CanTpTxNSdu_eb0c53ed, PDUR_TX_DIRECTIONOFRMGDESTROM,       1u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           2u }
-   ,  {  DcmConf_DcmDslProtocolRx_UDS_Rx_Functional_oP1951001_0_003_01_24_Rivian_A1_V_e1de61a7_Rx_00673789, PDUR_RX_DIRECTIONOFRMGDESTROM,       2u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           3u }
-   ,  {    DcmConf_DcmDslProtocolRx_UDS_Rx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_3425a492_Rx_6829a205, PDUR_RX_DIRECTIONOFRMGDESTROM,       2u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           0u }
+   ,  {  DcmConf_DcmDslProtocolRx_UDS_Rx_Functional_oP1951001_0_003_01_24_RAJA_A1_V_e1de61a7_Rx_00673789, PDUR_RX_DIRECTIONOFRMGDESTROM,       2u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           3u }
+   ,  {    DcmConf_DcmDslProtocolRx_UDS_Rx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_3425a492_Rx_6829a205, PDUR_RX_DIRECTIONOFRMGDESTROM,       2u, PDUR_IMMEDIATE_PDURDESTPDUPROCESSINGOFRMGDESTROM,           0u }
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 
@@ -80,8 +80,8 @@ CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[4] = {
 CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[4] = {
   {        1u,              1u,                3u,                                                                            PDUR_NO_SRCHNDOFRMSRCROM }
    ,  {        1u,              1u,                0u,                                                                            PDUR_NO_SRCHNDOFRMSRCROM }
-   ,  {        3u,              1u,                1u, MyCom_Bl_Status_MsgConf_CddPduRUpperLayerTxPdu_BootId_oP1951001_0_003_01_24_Rivian_A1_V_f6c6c016_Tx }
-   ,  {        2u,              1u,                2u,     DcmConf_DcmDslProtocolTx_UDS_Tx_Physical_oP1951001_0_003_01_24_Rivian_A1_V_4bb359b8_Tx_0ffb8362 }
+   ,  {        3u,              1u,                1u, MyCom_Bl_Status_MsgConf_CddPduRUpperLayerTxPdu_BootId_oP1951001_0_003_01_24_RAJA_A1_V_f6c6c016_Tx }
+   ,  {        2u,              1u,                2u,     DcmConf_DcmDslProtocolTx_UDS_Tx_Physical_oP1951001_0_003_01_24_RAJA_A1_V_4bb359b8_Tx_0ffb8362 }
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 

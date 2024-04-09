@@ -17,7 +17,7 @@
 #include "MemMap.hpp"
 
 CONST(FblCw_CanIfCtrlInfoType, FBLCW_CONST) FblCw_CanIfCtrlInfo[1] = {
-    CanIfConf_CanIfCtrlCfg_CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3
+    CanIfConf_CanIfCtrlCfg_CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3
 };
 #define FBLCW_STOP_SEC_CONST_8BIT
 
@@ -28,7 +28,7 @@ CONST(FblCw_CanIfCtrlInfoType, FBLCW_CONST) FblCw_CanIfCtrlInfo[1] = {
 #include "MemMap.hpp"
 
 CONST(FblCw_DcmDslConnectionInfoType, FBLCW_CONST) FblCw_DcmDslConnectionInfo[1] = {
-  {  0x00000FFFuL, FBLCW_CAN_BUSTYPEOFDCMDSLCONNECTIONINFO, CanIfConf_CanIfCtrlCfg_CT_P1951001_0_003_01_24_Rivian_A1_V_b79a45a3,                    0u, PduRConf_PduRSrcPdu_PduRSrcPdu_83bcc558 }
+  {  0x00000FFFuL, FBLCW_CAN_BUSTYPEOFDCMDSLCONNECTIONINFO, CanIfConf_CanIfCtrlCfg_CT_P1951001_0_003_01_24_RAJA_A1_V_b79a45a3,                    0u, PduRConf_PduRSrcPdu_PduRSrcPdu_83bcc558 }
 };
 #define FBLCW_STOP_SEC_CONST_UNSPECIFIED
 
